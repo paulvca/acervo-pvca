@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import {
   catalogPreview,
   type CatalogPreviewFilm,
+  type CatalogCopyInfo,
 } from '../../data/catalog-preview';
 
 export function getStaticPaths() {
@@ -34,16 +35,29 @@ const workRows = [
   film.genres?.length && ['Gênero', film.genres.join(', ')],
 ].filter(Boolean) as [string, string][];
 
-const copyRows = [
-  film.copy?.video && ['Vídeo', film.copy.video],
-  film.copy?.audio?.length && ['Áudio', film.copy.audio.join(', ')],
-  film.copy?.subtitles?.length && ['Legendas', film.copy.subtitles.join(', ')],
-  film.copy?.availability && ['Disponibilidade', film.copy.availability],
-].filter(Boolean) as [string, string][];
-
-const hasCopyDetails = copyRows.length > 0;
 const hasSelections = Boolean(film.selections?.length);
 const hasEditorialSummary = Boolean(film.synopsis);
+const copies = film.copies ?? [];
+const publicAccess = film.publicAccess ?? [];
+
+const formatGiB = (value: number) =>
+  `${new Intl.NumberFormat('pt-BR', {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  }).format(value)} GiB`;
+
+const copyRows = (copy: CatalogCopyInfo) => [
+  copy.resolution && ['Resolução', copy.resolution],
+  copy.sizeGiB != null && ['Tamanho', formatGiB(copy.sizeGiB)],
+  copy.audio?.length && ['Áudio', copy.audio.join(', ')],
+  copy.subtitles?.length && ['Legendas', copy.subtitles.join(', ')],
+  copy.edition && ['Versão', copy.edition],
+].filter(Boolean) as [string, string][];
+
+const copyLabelForAccess = (copyId?: string) => {
+  if (!copyId) return null;
+  return copies.find((copy) => copy.id === copyId)?.label ?? null;
+};
 ---
 
 <BaseLayout
@@ -109,36 +123,95 @@ const hasEditorialSummary = Boolean(film.synopsis);
       <h2>No acervo</h2>
 
       {
-        hasCopyDetails ? (
-          <>
-            <dl class="film-facts">
-              {
-                copyRows.map(([label, value]) => (
-                  <>
-                    <dt>{label}</dt>
-                    <dd>{value}</dd>
-                  </>
-                ))
-              }
-            </dl>
-
+        copies.length > 0 ? (
+          <div class="film-copies">
             {
-              film.copy?.archiveUrl && (
-                <a
-                  class="archive-link"
-                  href={film.copy.archiveUrl}
-                  rel="external"
-                >
-                  ver no Internet Archive ↗
-                </a>
-              )
+              copies.map((copy) => {
+                const rows = copyRows(copy);
+
+                return (
+                  <article class="film-copy">
+                    <h3>{copy.label}</h3>
+
+                    {
+                      rows.length > 0 ? (
+                        <dl class="film-facts">
+                          {
+                            rows.map(([label, value]) => (
+                              <>
+                                <dt>{label}</dt>
+                                <dd>{value}</dd>
+                              </>
+                            ))
+                          }
+                        </dl>
+                      ) : (
+                        <p class="copy-pending">
+                          Dados técnicos da cópia ainda não importados.
+                        </p>
+                      )
+                    }
+                  </article>
+                );
+              })
             }
-          </>
+          </div>
         ) : (
-          <dl class="film-facts">
-            <dt>Status</dt>
-            <dd>{film.availability}</dd>
-          </dl>
+          <p class="copy-pending">
+            Dados da cópia ainda não importados.
+          </p>
+        )
+      }
+    </section>
+
+    <div class="wrap rule" aria-hidden="true"></div>
+
+    <section class="wrap film-detail-section film-access">
+      <h2>Acesso</h2>
+
+      {
+        publicAccess.length > 0 ? (
+          <div class="access-list">
+            {
+              publicAccess.map((access) => (
+                <article class="access-entry">
+                  <div class="access-provider-line">
+                    <span class="access-dot" aria-hidden="true"></span>
+                    <strong>{access.provider}</strong>
+                  </div>
+
+                  {
+                    copyLabelForAccess(access.copyId) && (
+                      <p class="access-copy">
+                        {copyLabelForAccess(access.copyId)}
+                      </p>
+                    )
+                  }
+
+                  {
+                    access.url ? (
+                      <a
+                        class="archive-link"
+                        href={access.url}
+                        rel="external"
+                      >
+                        Acessar cópia pública ↗
+                      </a>
+                    ) : (
+                      <p class="access-pending">
+                        Link público ainda não integrado ao catálogo.
+                      </p>
+                    )
+                  }
+                </article>
+              ))
+            }
+          </div>
+        ) : (
+          <div class="collection-only">
+            <strong>Somente no acervo</strong>
+            <p>Nenhum acesso público está vinculado a esta ficha.</p>
+          </div>
         )
       }
     </section>

@@ -24,19 +24,43 @@ Campos públicos permitidos, quando houver evidência suficiente:
 
 Esses campos descrevem a obra cinematográfica. Ausência de dado não deve gerar conteúdo inventado ou uma linha vazia na interface.
 
-## Cópia no acervo
+## Cópias / variantes públicas
 
-Campos públicos permitidos, quando aprovados e comprovados:
+A ficha pode publicar uma ou mais cópias ou variantes quando a distinção for útil. Cada cópia pública deve ter identidade própria e pode conter:
 
-- resolução ou descrição pública do vídeo;
+- rótulo editorial, como `Cópia principal`;
+- resolução;
+- tamanho arredondado em GiB;
 - idioma ou idiomas de áudio;
 - idioma ou idiomas de legenda;
-- disponibilidade pública;
-- URL pública do Internet Archive;
+- versão, edição ou restauração.
+
+O tamanho público é deliberadamente arredondado. O tamanho exato em bytes pode permanecer na fonte privada e ser transformado durante a geração da projeção pública.
+
+Resolução, tamanho, áudio, legendas e versão pertencem à cópia/variante, não ao filme abstratamente.
+
+## Acesso público
+
+Acesso é uma camada separada da cópia e da localização interna de armazenamento.
+
+Campos públicos permitidos:
+
+- provedor público;
+- URL deliberadamente pública;
+- referência opcional à cópia pública correspondente.
+
+O Internet Archive pode ser apresentado como acesso público quando houver evidência e vínculo deliberado.
+
+Google Drive só deve aparecer quando existir um link deliberadamente público para visitantes. O fato de um arquivo estar armazenado em um Drive privado não autoriza publicar o provedor, caminho, identificador ou URL.
+
+Quando nenhuma forma de acesso público estiver vinculada, a interface pode informar `Somente no acervo`.
+
+## Editorial
+
+Também podem ser publicados:
+
 - nota editorial do acervo;
 - seleções públicas às quais o filme pertence.
-
-A ficha deve distinguir visualmente a obra cinematográfica da cópia mantida no Acervo PVCA.
 
 ## Dados que permanecem privados
 
@@ -45,7 +69,9 @@ Continuam fora da projeção pública:
 - caminhos locais;
 - nomes de mounts;
 - hashes e evidências operacionais;
-- inventário privado do Google Drive;
+- tamanho exato em bytes quando mantido apenas como evidência técnica;
+- inventário e localização privada no Google Drive;
+- IDs privados de arquivos remotos;
 - filas;
 - logs;
 - estados detalhados de QA;

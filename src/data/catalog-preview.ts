@@ -1,9 +1,17 @@
 export interface CatalogCopyInfo {
-  video?: string;
+  id: string;
+  label: string;
+  resolution?: string;
+  sizeGiB?: number;
   audio?: string[];
   subtitles?: string[];
-  availability?: string;
-  archiveUrl?: string;
+  edition?: string;
+}
+
+export interface CatalogPublicAccess {
+  provider: 'Internet Archive' | 'Google Drive' | 'Outro';
+  copyId?: string;
+  url?: string;
 }
 
 export interface CatalogPreviewFilm {
@@ -20,7 +28,8 @@ export interface CatalogPreviewFilm {
   availability: string;
   searchable: string;
   collectionNote?: string;
-  copy?: CatalogCopyInfo;
+  copies?: CatalogCopyInfo[];
+  publicAccess?: CatalogPublicAccess[];
   selections?: string[];
 }
 
@@ -33,12 +42,21 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     country: 'Japão',
     availability: 'Archive',
     searchable: 'ikiru akira kurosawa 1952 japão archive',
-    copy: {
-      video: '1080p',
-      audio: ['Japonês'],
-      subtitles: ['Português (Brasil)', 'English'],
-      availability: 'Internet Archive',
-    },
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        resolution: '1080p',
+        audio: ['Japonês'],
+        subtitles: ['Português (Brasil)', 'English'],
+      },
+    ],
+    publicAccess: [
+      {
+        provider: 'Internet Archive',
+        copyId: 'primary',
+      },
+    ],
     selections: [
       'Japão depois da guerra',
       'Cinema japonês',
@@ -60,9 +78,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     availability: 'pt-BR',
     searchable:
       'tokyo story 東京物語 tōkyō monogatari yasujirō ozu 1953 japão drama pt-br',
-    copy: {
-      subtitles: ['Português (Brasil)'],
-    },
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        subtitles: ['Português (Brasil)'],
+      },
+    ],
     selections: [
       'Japão depois da guerra',
       'Cinema japonês',
@@ -76,6 +98,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1954,
     availability: 'pt-BR',
     searchable: 'sansho the bailiff kenji mizoguchi 1954 pt-br',
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        subtitles: ['Português (Brasil)'],
+      },
+    ],
   },
   {
     slug: 'the-offence-1973',
@@ -84,6 +113,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1973,
     availability: 'Archive',
     searchable: 'the offence sidney lumet 1973 archive',
+    publicAccess: [{ provider: 'Internet Archive' }],
   },
   {
     slug: 'days-of-heaven-1978',
@@ -92,6 +122,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1978,
     availability: '2160p',
     searchable: 'days of heaven terrence malick 1978 2160p',
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        resolution: '2160p',
+      },
+    ],
   },
   {
     slug: 'late-spring-1949',
@@ -100,6 +137,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1949,
     availability: 'pt-BR',
     searchable: 'late spring yasujirō ozu 1949 pt-br',
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        subtitles: ['Português (Brasil)'],
+      },
+    ],
   },
   {
     slug: 'senso-1954',
@@ -108,6 +152,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1954,
     availability: '2160p',
     searchable: 'senso luchino visconti 1954 2160p',
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        resolution: '2160p',
+      },
+    ],
   },
   {
     slug: 'napoleon-1927',
@@ -127,6 +178,13 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1994,
     availability: 'pt-BR',
     searchable: 'the friends shinji sōmai somai 1994 pt-br',
+    copies: [
+      {
+        id: 'primary',
+        label: 'Cópia principal',
+        subtitles: ['Português (Brasil)'],
+      },
+    ],
   },
   {
     slug: 'the-blue-dahlia-1946',
@@ -135,6 +193,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1946,
     availability: 'Archive',
     searchable: 'the blue dahlia george marshall 1946 archive',
+    publicAccess: [{ provider: 'Internet Archive' }],
   },
   {
     slug: 'the-letter-1940',
@@ -143,5 +202,6 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1940,
     availability: 'Archive',
     searchable: 'the letter william wyler 1940 archive',
+    publicAccess: [{ provider: 'Internet Archive' }],
   },
 ];

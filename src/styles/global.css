@@ -731,7 +731,7 @@ nav a.active {
   color: var(--color-text-body);
 }
 
-/* v0.4 — ficha editorial do filme */
+/* v0.4.1 — filme / cópia / acesso */
 
 .catalog-row {
   color: inherit;
@@ -855,6 +855,18 @@ nav a.active {
   padding: 42px 0 46px;
 }
 
+.film-copies {
+  display: grid;
+  gap: 34px;
+}
+
+.film-copy h3 {
+  margin: 0 0 14px;
+  color: var(--color-text-ui);
+  font-size: 13px;
+  font-weight: 560;
+}
+
 .film-facts {
   display: grid;
   grid-template-columns: 130px minmax(0, 520px);
@@ -862,9 +874,52 @@ nav a.active {
   margin: 0;
 }
 
+.copy-pending,
+.access-pending,
+.collection-only p,
+.access-copy {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.access-list {
+  display: grid;
+  gap: 26px;
+}
+
+.access-entry {
+  max-width: 620px;
+}
+
+.access-provider-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.access-provider-line strong,
+.collection-only strong {
+  color: var(--color-text-ui);
+  font-size: 13px;
+  font-weight: 560;
+}
+
+.access-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+  flex: 0 0 auto;
+}
+
+.access-copy {
+  margin-top: 5px;
+}
+
 .archive-link {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 14px;
   color: var(--color-text-ui);
   font-size: 12px;
 }
@@ -872,6 +927,14 @@ nav a.active {
 .archive-link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.access-pending {
+  margin-top: 8px;
+}
+
+.collection-only p {
+  margin-top: 5px;
 }
 
 .film-collection-note p {
