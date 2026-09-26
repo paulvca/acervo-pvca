@@ -20,21 +20,30 @@ interface Props {
 
 const { film } = Astro.props;
 
-const meta = [
+const headingMeta = [
   film.director,
   String(film.year),
   film.country,
 ].filter(Boolean).join(' · ');
 
+const workRows = [
+  ['Direção', film.director],
+  ['Ano', String(film.year)],
+  film.country && ['País', film.country],
+  film.runtimeMinutes && ['Duração', `${film.runtimeMinutes} min`],
+  film.genres?.length && ['Gênero', film.genres.join(', ')],
+].filter(Boolean) as [string, string][];
+
 const copyRows = [
   film.copy?.video && ['Vídeo', film.copy.video],
   film.copy?.audio?.length && ['Áudio', film.copy.audio.join(', ')],
   film.copy?.subtitles?.length && ['Legendas', film.copy.subtitles.join(', ')],
-  film.copy?.availability && ['Disponível', film.copy.availability],
+  film.copy?.availability && ['Disponibilidade', film.copy.availability],
 ].filter(Boolean) as [string, string][];
 
 const hasCopyDetails = copyRows.length > 0;
 const hasSelections = Boolean(film.selections?.length);
+const hasEditorialSummary = Boolean(film.synopsis);
 ---
 
 <BaseLayout
@@ -49,8 +58,18 @@ const hasSelections = Boolean(film.selections?.length);
 
       <div class="film-title-block">
         <h1>{film.title}</h1>
-        {film.originalTitle && <p class="original-title">{film.originalTitle}</p>}
-        <p class="film-detail-meta">{meta}</p>
+
+        {
+          (film.originalTitle || film.romanizedTitle) && (
+            <p class="original-title">
+              {[film.originalTitle, film.romanizedTitle]
+                .filter(Boolean)
+                .join(' · ')}
+            </p>
+          )
+        }
+
+        <p class="film-detail-meta">{headingMeta}</p>
       </div>
     </section>
 
@@ -61,31 +80,37 @@ const hasSelections = Boolean(film.selections?.length);
         aria-label={`Espaço reservado para o pôster de ${film.title}`}
       ></div>
 
-      <div class="film-editorial">
+      <div class="film-work">
         {
-          film.note ? (
-            <>
-              <p class="eyebrow">Nota do acervo</p>
-              <p>{film.note}</p>
-            </>
-          ) : (
-            <p class="film-status">
-              <span>Status no acervo</span>
-              <strong>{film.availability}</strong>
-            </p>
+          hasEditorialSummary && (
+            <div class="film-synopsis">
+              <p class="eyebrow">Sinopse</p>
+              <p>{film.synopsis}</p>
+            </div>
           )
         }
+
+        <dl class:list={['film-core-facts', { 'without-synopsis': !hasEditorialSummary }]}>
+          {
+            workRows.map(([label, value]) => (
+              <>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </>
+            ))
+          }
+        </dl>
       </div>
     </section>
 
-    {
-      hasCopyDetails && (
-        <>
-          <div class="wrap rule" aria-hidden="true"></div>
+    <div class="wrap rule" aria-hidden="true"></div>
 
-          <section class="wrap film-detail-section">
-            <h2>No acervo</h2>
+    <section class="wrap film-detail-section">
+      <h2>No acervo</h2>
 
+      {
+        hasCopyDetails ? (
+          <>
             <dl class="film-facts">
               {
                 copyRows.map(([label, value]) => (
@@ -96,6 +121,36 @@ const hasSelections = Boolean(film.selections?.length);
                 ))
               }
             </dl>
+
+            {
+              film.copy?.archiveUrl && (
+                <a
+                  class="archive-link"
+                  href={film.copy.archiveUrl}
+                  rel="external"
+                >
+                  ver no Internet Archive ↗
+                </a>
+              )
+            }
+          </>
+        ) : (
+          <dl class="film-facts">
+            <dt>Status</dt>
+            <dd>{film.availability}</dd>
+          </dl>
+        )
+      }
+    </section>
+
+    {
+      film.collectionNote && (
+        <>
+          <div class="wrap rule" aria-hidden="true"></div>
+
+          <section class="wrap film-detail-section film-collection-note">
+            <h2>Nota do acervo</h2>
+            <p>{film.collectionNote}</p>
           </section>
         </>
       )
@@ -111,22 +166,6 @@ const hasSelections = Boolean(film.selections?.length);
             <div class="film-selection-links">
               {film.selections?.map((selection) => <span>{selection}</span>)}
             </div>
-          </section>
-        </>
-      )
-    }
-
-    {
-      !hasCopyDetails && !hasSelections && (
-        <>
-          <div class="wrap rule" aria-hidden="true"></div>
-
-          <section class="wrap film-detail-section film-minimal-state">
-            <h2>No acervo</h2>
-            <p>
-              <span>Status</span>
-              <strong>{film.availability}</strong>
-            </p>
           </section>
         </>
       )

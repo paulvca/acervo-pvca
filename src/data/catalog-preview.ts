@@ -3,18 +3,23 @@ export interface CatalogCopyInfo {
   audio?: string[];
   subtitles?: string[];
   availability?: string;
+  archiveUrl?: string;
 }
 
 export interface CatalogPreviewFilm {
   slug: string;
   title: string;
   originalTitle?: string;
+  romanizedTitle?: string;
   director: string;
   year: number;
   country?: string;
+  runtimeMinutes?: number;
+  genres?: string[];
+  synopsis?: string;
   availability: string;
   searchable: string;
-  note?: string;
+  collectionNote?: string;
   copy?: CatalogCopyInfo;
   selections?: string[];
 }
@@ -28,8 +33,6 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     country: 'Japão',
     availability: 'Archive',
     searchable: 'ikiru akira kurosawa 1952 japão archive',
-    note:
-      'Um pequeno espaço para contexto pessoal sobre o filme, a cópia ou o motivo de ele aparecer no acervo.',
     copy: {
       video: '1080p',
       audio: ['Japonês'],
@@ -45,10 +48,26 @@ export const catalogPreview: CatalogPreviewFilm[] = [
   {
     slug: 'tokyo-story-1953',
     title: 'Tokyo Story',
+    originalTitle: '東京物語',
+    romanizedTitle: 'Tōkyō monogatari',
     director: 'Yasujirō Ozu',
     year: 1953,
+    country: 'Japão',
+    runtimeMinutes: 136,
+    genres: ['Drama'],
+    synopsis:
+      'Um casal idoso deixa Onomichi para visitar os filhos adultos em Tóquio. Ocupados com suas próprias vidas, eles têm pouco tempo para os pais; quem os acolhe com maior atenção é Noriko, a nora viúva.',
     availability: 'pt-BR',
-    searchable: 'tokyo story yasujirō ozu 1953 pt-br',
+    searchable:
+      'tokyo story 東京物語 tōkyō monogatari yasujirō ozu 1953 japão drama pt-br',
+    copy: {
+      subtitles: ['Português (Brasil)'],
+    },
+    selections: [
+      'Japão depois da guerra',
+      'Cinema japonês',
+      'Anos 1950',
+    ],
   },
   {
     slug: 'sansho-the-bailiff-1954',
@@ -98,7 +117,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     country: 'França',
     availability: 'em revisão',
     searchable: 'napoléon napoleon abel gance 1927 frança em revisão',
-    note:
+    collectionNote:
       'Uma das cópias que estou revisando com mais cuidado no momento. A restauração, a duração e o trabalho de legenda tornam este um dos filmes mais trabalhosos — e interessantes — dentro do acervo.',
   },
   {
