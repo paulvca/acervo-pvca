@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acervo PVCA — conceito pessoal dark</title>
+<meta name="description" content="Protótipo editorial e pessoal para o Acervo PVCA.">
+<style>
+:root{
+  --bg:#100f0f;
+  --text:#cecdc3;
+  --strong:#ece9df;
+  --muted:#878580;
+  --soft:#b7b5ac;
+  --line:#2d2b2a;
+  --hover:#191817;
+  --green:#879a39;
+  --yellow:#d0a215;
+  --red:#d14d41;
+  --blue:#4385be;
+  --max:980px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.55;
+  letter-spacing:-.012em;
+}
+button,input{font:inherit}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+
+header{
+  padding:28px 0 8px;
+}
+.top{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+.name{
+  color:var(--strong);
+  font-weight:650;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+}
+nav{
+  display:flex;
+  gap:6px;
+  margin-left:auto;
+  align-items:center;
+}
+nav button{
+  border:0;
+  background:none;
+  color:var(--muted);
+  padding:7px 8px;
+  cursor:pointer;
+  border-radius:7px;
+}
+nav button:hover,
+nav button.active{
+  color:var(--strong);
+  background:var(--hover);
+}
+
+.view{display:none}
+.view.active{display:block}
+
+.intro{
+  padding:84px 0 68px;
+}
+.intro h1{
+  margin:0;
+  color:var(--strong);
+  font-size:clamp(44px,8vw,76px);
+  line-height:.97;
+  font-weight:560;
+  letter-spacing:-.065em;
+  max-width:760px;
+}
+.intro p{
+  margin:24px 0 0;
+  max-width:690px;
+  color:var(--soft);
+  font-size:18px;
+  line-height:1.55;
+}
+.intro .aside{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:13px;
+  max-width:650px;
+}
+
+.rule{border-top:1px solid var(--line)}
+
+.section{
+  padding:54px 0;
+}
+.section-title{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:22px;
+}
+.section-title h2{
+  margin:0;
+  color:var(--strong);
+  font-size:18px;
+  letter-spacing:-.025em;
+  font-weight:630;
+}
+.section-title span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.feature{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:30px;
+  align-items:start;
+}
+.feature-poster{
+  aspect-ratio:2/3;
+  border-radius:3px;
+  background:
+    radial-gradient(circle at 25% 20%,rgba(255,255,255,.07),transparent 34%),
+    linear-gradient(145deg,#302827,#171514);
+  box-shadow:0 18px 48px rgba(0,0,0,.24);
+}
+.feature-copy h3{
+  margin:0;
+  color:var(--strong);
+  font-size:30px;
+  line-height:1.05;
+  letter-spacing:-.045em;
+  font-weight:580;
+}
+.feature-meta{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:13px;
+}
+.feature-copy p{
+  margin:20px 0 0;
+  color:var(--soft);
+  max-width:630px;
+}
+.inline-link{
+  display:inline-block;
+  margin-top:20px;
+  color:var(--strong);
+  font-size:13px;
+}
+.inline-link:hover{text-decoration:underline}
+
+.index-group{
+  margin-top:42px;
+}
+.index-group:first-of-type{margin-top:0}
+.index-group h3{
+  margin:0 0 10px;
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.11em;
+  font-weight:650;
+}
+.index-list{
+  border-top:1px solid var(--line);
+}
+.index-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:20px;
+  align-items:center;
+  min-height:48px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;
+  padding:7px 2px;
+}
+.index-row:hover{
+  background:var(--hover);
+}
+.index-row .left{
+  min-width:0;
+}
+.index-row .title{
+  color:var(--strong);
+  font-size:14px;
+}
+.index-row .meta{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:2px;
+}
+.index-row .right{
+  color:var(--muted);
+  font-size:11px;
+  white-space:nowrap;
+}
+
+.stats-line{
+  color:var(--soft);
+  font-size:17px;
+  line-height:1.7;
+  max-width:760px;
+}
+.stats-line strong{
+  color:var(--strong);
+  font-weight:600;
+}
+.micro-bars{
+  margin-top:28px;
+  max-width:680px;
+}
+.micro-row{
+  display:grid;
+  grid-template-columns:170px 1fr 38px;
+  gap:12px;
+  align-items:center;
+  margin:9px 0;
+}
+.micro-row span{
+  color:var(--muted);
+  font-size:11px;
+}
+.micro-track{
+  height:4px;
+  background:#1d1c1b;
+  overflow:hidden;
+}
+.micro-fill{
+  height:100%;
+  background:var(--soft);
+  opacity:.55;
+}
+.micro-value{text-align:right}
+
+.footer-note{
+  color:var(--muted);
+  font-size:11px;
+  padding:30px 0 54px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+.private{
+  opacity:.45;
+  cursor:pointer;
+}
+.private:hover{opacity:1}
+
+.page-head{
+  padding:70px 0 32px;
+}
+.page-head h1{
+  margin:0;
+  color:var(--strong);
+  font-size:48px;
+  line-height:1;
+  letter-spacing:-.055em;
+  font-weight:570;
+}
+.page-head p{
+  margin:16px 0 0;
+  color:var(--muted);
+  max-width:620px;
+}
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:24px;
+}
+.filters input{
+  flex:1;
+  min-width:240px;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  color:var(--text);
+  padding:8px 0;
+  outline:none;
+}
+.filters button{
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  padding:8px 9px;
+  cursor:pointer;
+}
+.filters button:hover{color:var(--strong)}
+
+.catalog{
+  padding:20px 0 70px;
+}
+.catalog-row{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(0,1fr) 70px 90px;
+  gap:18px;
+  align-items:center;
+  padding:11px 2px;
+  border-bottom:1px solid var(--line);
+  cursor:pointer;
+}
+.catalog-row:first-child{border-top:1px solid var(--line)}
+.catalog-row:hover{background:var(--hover)}
+.catalog-row .t{color:var(--strong);font-size:13px}
+.catalog-row .d,
+.catalog-row .y,
+.catalog-row .a{color:var(--muted);font-size:11px}
+.catalog-row .a{text-align:right}
+.catalog-row .dot{
+  display:inline-block;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--green);
+  margin-right:6px;
+}
+
+.selection-list{
+  padding:18px 0 70px;
+}
+.selection-row{
+  display:grid;
+  grid-template-columns:120px 1fr auto;
+  gap:24px;
+  align-items:start;
+  padding:22px 0;
+  border-bottom:1px solid var(--line);
+}
+.selection-row:first-child{border-top:1px solid var(--line)}
+.selection-stack{
+  display:flex;
+  gap:4px;
+}
+.selection-stack i{
+  display:block;
+  width:24px;
+  height:36px;
+  background:#252321;
+  border-radius:1px;
+}
+.selection-row h3{
+  margin:0;
+  color:var(--strong);
+  font-size:19px;
+  font-weight:590;
+  letter-spacing:-.03em;
+}
+.selection-row p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-size:12px;
+  max-width:560px;
+}
+.selection-row .count{
+  color:var(--muted);
+  font-size:11px;
+  white-space:nowrap;
+}
+
+.about-copy{
+  padding:22px 0 70px;
+  max-width:720px;
+}
+.about-copy p{
+  color:var(--soft);
+  margin:0 0 16px;
+}
+.about-copy h2{
+  color:var(--strong);
+  font-size:15px;
+  margin:38px 0 10px;
+}
+
+.admin-shell{
+  min-height:100vh;
+  background:#0d0c0c;
+}
+.admin-top{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+.admin-top strong{color:var(--strong)}
+.admin-top span{color:var(--muted);font-size:11px}
+.admin-grid{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  min-height:calc(100vh - 65px);
+}
+.admin-side{
+  border-right:1px solid var(--line);
+  padding:28px 18px;
+}
+.admin-side button{
+  width:100%;
+  text-align:left;
+  border:0;
+  background:none;
+  color:var(--muted);
+  padding:8px 9px;
+  border-radius:7px;
+  cursor:pointer;
+}
+.admin-side button.active,.admin-side button:hover{
+  background:var(--hover);color:var(--strong)
+}
+.admin-main{
+  padding:36px 38px 70px;
+}
+.admin-main h1{
+  margin:0;
+  color:var(--strong);
+  font-size:28px;
+  letter-spacing:-.04em;
+}
+.admin-kpis{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px;
+  margin-top:30px;
+  padding-bottom:26px;
+  border-bottom:1px solid var(--line);
+}
+.admin-kpi strong{
+  display:block;color:var(--strong);font-size:24px;font-weight:590
+}
+.admin-kpi span{
+  color:var(--muted);font-size:10px
+}
+.admin-sub{
+  margin-top:34px;
+}
+.admin-sub h2{
+  margin:0 0 14px;color:var(--strong);font-size:14px
+}
+.admin-table{
+  border-top:1px solid var(--line);
+}
+.admin-row{
+  display:grid;
+  grid-template-columns:1.5fr .8fr .8fr 1.2fr;
+  gap:14px;
+  padding:10px 2px;
+  border-bottom:1px solid var(--line);
+  font-size:11px;
+}
+.admin-row .film{color:var(--strong)}
+.admin-row span{color:var(--muted)}
+.badge{
+  display:inline-block;
+  padding:2px 6px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--soft)!important;
+}
+
+.backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.52);
+  opacity:0;pointer-events:none;transition:.18s;z-index:50
+}
+.modal{
+  position:fixed;
+  z-index:51;
+  left:50%;top:50%;
+  transform:translate(-50%,-46%);
+  width:min(620px,calc(100% - 28px));
+  max-height:84vh;
+  overflow:auto;
+  background:#141313;
+  border:1px solid var(--line);
+  border-radius:10px;
+  opacity:0;pointer-events:none;
+  transition:.2s;
+}
+.backdrop.open{opacity:1;pointer-events:auto}
+.modal.open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.modal-in{padding:24px}
+.modal-top{display:flex;justify-content:space-between;gap:20px}
+.modal-top button{
+  border:0;background:none;color:var(--muted);cursor:pointer;font-size:20px
+}
+.modal h2{
+  margin:0;color:var(--strong);font-size:31px;letter-spacing:-.045em
+}
+.modal .meta{color:var(--muted);font-size:12px;margin-top:4px}
+.modal section{border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+.modal h3{
+  margin:0 0 8px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.1em
+}
+.modal p{margin:0;color:var(--soft);font-size:13px}
+.detail-grid{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:7px 12px;
+  font-size:12px;
+}
+.detail-grid .k{color:var(--muted)}
+.archive-link{
+  display:inline-block;margin-top:14px;color:var(--strong);font-size:12px
+}
+.archive-link:hover{text-decoration:underline}
+
+@media(max-width:760px){
+  .top{align-items:flex-start}
+  nav{gap:0}
+  nav button{font-size:12px;padding:6px}
+  .intro{padding-top:62px}
+  .feature{grid-template-columns:115px 1fr;gap:18px}
+  .catalog-row{grid-template-columns:1fr 64px}
+  .catalog-row .d,.catalog-row .a{display:none}
+  .selection-row{grid-template-columns:78px 1fr}
+  .selection-row .count{display:none}
+  .admin-grid{display:block}
+  .admin-side{display:none}
+  .admin-main{padding:26px 18px 60px}
+  .admin-kpis{grid-template-columns:1fr 1fr}
+  .footer-note{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div id="publicApp">
+<header>
+  <div class="wrap top">
+    <a class="name" href="#" data-view="home">Acervo PVCA</a>
+    <nav>
+      <button class="active" data-view="home">Início</button>
+      <button data-view="films">Filmes</button>
+      <button data-view="selections">Seleções</button>
+      <button data-view="about">Sobre</button>
+    </nav>
+  </div>
+</header>
+
+<main id="view-home" class="view active">
+  <section class="wrap intro">
+    <h1>Meu acervo pessoal de cinema.</h1>
+    <p>Filmes que fui reunindo, preservando, legendando e organizando ao longo do tempo.</p>
+    <div class="aside">Este site é uma forma simples de abrir parte dessa coleção para quem quiser explorar — sem transformar o acervo em uma plataforma impessoal.</div>
+  </section>
+
+  <div class="wrap rule"></div>
+
+  <section class="wrap section">
+    <div class="section-title"><h2>Em destaque</h2><span>uma escolha do momento</span></div>
+    <div class="feature">
+      <div class="feature-poster"></div>
+      <div class="feature-copy">
+        <h3>Napoléon</h3>
+        <div class="feature-meta">Abel Gance · 1927 · França</div>
+        <p>Uma das cópias que estou revisando com mais cuidado no momento. A restauração, a duração e o trabalho de legenda tornam este um dos filmes mais trabalhosos — e interessantes — dentro do acervo.</p>
+        <a class="inline-link open-film" href="#" data-title="Napoléon">ver ficha →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap rule"></div>
+
+  <section class="wrap section">
+    <div class="section-title"><h2>Recentemente</h2><span>últimas adições e revisões</span></div>
+
+    <div class="index-group">
+      <div class="index-list">
+        <div class="index-row open-film" data-title="The Blue Dahlia"><div class="left"><div class="title">The Blue Dahlia</div><div class="meta">George Marshall · 1946</div></div><div class="right">Archive</div></div>
+        <div class="index-row open-film" data-title="The Letter"><div class="left"><div class="title">The Letter</div><div class="meta">William Wyler · 1940</div></div><div class="right">Archive</div></div>
+        <div class="index-row open-film" data-title="The Friends"><div class="left"><div class="title">The Friends</div><div class="meta">Shinji Sōmai · 1994</div></div><div class="right">pt-BR</div></div>
+        <div class="index-row open-film" data-title="Napoléon"><div class="left"><div class="title">Napoléon</div><div class="meta">Abel Gance · 1927</div></div><div class="right">em revisão</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap rule"></div>
+
+  <section class="wrap section">
+    <div class="section-title"><h2>Seleções</h2><span>algumas formas de atravessar o acervo</span></div>
+
+    <div class="index-group">
+      <h3>Por interesse</h3>
+      <div class="index-list">
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Japão depois da guerra</div><div class="meta">Ozu, Mizoguchi, Kurosawa, Naruse e outros</div></div><div class="right">18 filmes</div></div>
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Sidney Lumet</div><div class="meta">instituições, culpa e conflito moral</div></div><div class="right">11 filmes</div></div>
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Noir americano</div><div class="meta">crime, fatalismo e cidades noturnas</div></div><div class="right">24 filmes</div></div>
+      </div>
+    </div>
+
+    <div class="index-group">
+      <h3>Por cópia</h3>
+      <div class="index-list">
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Com legendas em português</div><div class="meta">filmes com pt-BR comprovado no acervo</div></div><div class="right">81</div></div>
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Disponíveis no Internet Archive</div><div class="meta">cópias públicas já verificadas</div></div><div class="right">310</div></div>
+        <div class="index-row" data-view="selections"><div class="left"><div class="title">Em 4K</div><div class="meta">cópias principais em 2160p</div></div><div class="right">52</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap rule"></div>
+
+  <section class="wrap section">
+    <div class="section-title"><h2>O acervo</h2><span>alguns números</span></div>
+    <p class="stats-line"><strong>424 filmes</strong> catalogados até agora. <strong>310</strong> estão disponíveis no Internet Archive, <strong>81</strong> têm legenda em português do Brasil e <strong>52</strong> têm uma cópia principal em 2160p.</p>
+
+    <div class="micro-bars">
+      <div class="micro-row"><span>Cinema japonês</span><div class="micro-track"><div class="micro-fill" style="width:100%"></div></div><span class="micro-value">84</span></div>
+      <div class="micro-row"><span>Cinema francês</span><div class="micro-track"><div class="micro-fill" style="width:74%"></div></div><span class="micro-value">62</span></div>
+      <div class="micro-row"><span>Norte-americano</span><div class="micro-track"><div class="micro-fill" style="width:69%"></div></div><span class="micro-value">58</span></div>
+      <div class="micro-row"><span>Cinema italiano</span><div class="micro-track"><div class="micro-fill" style="width:49%"></div></div><span class="micro-value">41</span></div>
+    </div>
+  </section>
+</main>
+
+<main id="view-films" class="view">
+  <section class="wrap page-head">
+    <h1>Filmes</h1>
+    <p>O acervo inteiro em uma lista simples. A ideia aqui é encontrar rápido, não transformar cada filme em um card.</p>
+    <div class="filters">
+      <input id="filmSearch" placeholder="buscar por título ou diretor">
+      <button>cinema</button>
+      <button>década</button>
+      <button>legenda</button>
+      <button>disponibilidade</button>
+    </div>
+  </section>
+
+  <section class="wrap catalog" id="catalog">
+    <div class="catalog-row open-film" data-title="Ikiru" data-search="ikiru akira kurosawa"><div class="t">Ikiru</div><div class="d">Akira Kurosawa</div><div class="y">1952</div><div class="a"><span class="dot"></span>Archive</div></div>
+    <div class="catalog-row open-film" data-title="Tokyo Story" data-search="tokyo story yasujirō ozu"><div class="t">Tokyo Story</div><div class="d">Yasujirō Ozu</div><div class="y">1953</div><div class="a">pt-BR</div></div>
+    <div class="catalog-row open-film" data-title="Sansho the Bailiff" data-search="sansho bailiff kenji mizoguchi"><div class="t">Sansho the Bailiff</div><div class="d">Kenji Mizoguchi</div><div class="y">1954</div><div class="a">pt-BR</div></div>
+    <div class="catalog-row open-film" data-title="The Offence" data-search="the offence sidney lumet"><div class="t">The Offence</div><div class="d">Sidney Lumet</div><div class="y">1973</div><div class="a"><span class="dot"></span>Archive</div></div>
+    <div class="catalog-row open-film" data-title="Days of Heaven" data-search="days heaven terrence malick"><div class="t">Days of Heaven</div><div class="d">Terrence Malick</div><div class="y">1978</div><div class="a">2160p</div></div>
+    <div class="catalog-row open-film" data-title="Late Spring" data-search="late spring yasujirō ozu"><div class="t">Late Spring</div><div class="d">Yasujirō Ozu</div><div class="y">1949</div><div class="a">pt-BR</div></div>
+    <div class="catalog-row open-film" data-title="Senso" data-search="senso luchino visconti"><div class="t">Senso</div><div class="d">Luchino Visconti</div><div class="y">1954</div><div class="a">2160p</div></div>
+    <div class="catalog-row open-film" data-title="Napoléon" data-search="napoleon abel gance"><div class="t">Napoléon</div><div class="d">Abel Gance</div><div class="y">1927</div><div class="a">em revisão</div></div>
+    <div class="catalog-row open-film" data-title="The Friends" data-search="the friends shinji somai sōmai"><div class="t">The Friends</div><div class="d">Shinji Sōmai</div><div class="y">1994</div><div class="a">pt-BR</div></div>
+    <div class="catalog-row open-film" data-title="The Blue Dahlia" data-search="blue dahlia george marshall"><div class="t">The Blue Dahlia</div><div class="d">George Marshall</div><div class="y">1946</div><div class="a"><span class="dot"></span>Archive</div></div>
+  </section>
+</main>
+
+<main id="view-selections" class="view">
+  <section class="wrap page-head">
+    <h1>Seleções</h1>
+    <p>Agrupamentos pessoais. Alguns são bem definidos; outros só refletem o que estou vendo, revisando ou pensando no momento.</p>
+  </section>
+
+  <section class="wrap selection-list">
+    <article class="selection-row">
+      <div class="selection-stack"><i></i><i></i><i></i></div>
+      <div><h3>Japão depois da guerra</h3><p>Família, trabalho, deslocamento e mudança social entre o fim dos anos 1940 e os anos 1960.</p></div>
+      <div class="count">18 filmes</div>
+    </article>
+    <article class="selection-row">
+      <div class="selection-stack"><i></i><i></i><i></i></div>
+      <div><h3>Sidney Lumet</h3><p>Instituições, culpa, responsabilidade e conflito moral.</p></div>
+      <div class="count">11 filmes</div>
+    </article>
+    <article class="selection-row">
+      <div class="selection-stack"><i></i><i></i><i></i></div>
+      <div><h3>Noir americano</h3><p>Crime, fatalismo, luzes noturnas e personagens encurralados.</p></div>
+      <div class="count">24 filmes</div>
+    </article>
+    <article class="selection-row">
+      <div class="selection-stack"><i></i><i></i><i></i></div>
+      <div><h3>Com legendas em português</h3><p>Filmes com uma faixa pt-BR comprovada em pelo menos uma cópia inspecionada.</p></div>
+      <div class="count">81 filmes</div>
+    </article>
+  </section>
+</main>
+
+<main id="view-about" class="view">
+  <section class="wrap page-head">
+    <h1>Sobre</h1>
+    <p>Por que este acervo existe e o que exatamente aparece aqui.</p>
+  </section>
+
+  <section class="wrap about-copy">
+    <p>O Acervo PVCA começou como uma forma de organizar meus próprios filmes. Com o tempo, passou a incluir diferentes cópias, legendas revisadas, metadados técnicos e um histórico do que já foi preparado ou publicado.</p>
+    <p>Este site existe para tornar essa coleção navegável sem tirar dela o caráter pessoal. A ideia não é fingir que isto é uma instituição ou um serviço de streaming; é simplesmente abrir uma parte da minha estante para outras pessoas explorarem.</p>
+
+    <h2>O que fica público</h2>
+    <p>Filmes, disponibilidade, resolução principal, idiomas, legendas, seleções pessoais e algumas estatísticas gerais.</p>
+
+    <h2>O que fica privado</h2>
+    <p>Hashes, caminhos locais, pendências, filas, QA, estados de publicação e o restante da operação do acervo.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-note">
+    <span>Acervo PVCA · protótipo visual</span>
+    <a class="private" id="openAdmin" href="#">painel privado</a>
+  </div>
+</footer>
+</div>
+
+<div id="adminApp" class="admin-shell" style="display:none">
+  <div class="wrap admin-top">
+    <strong>Acervo PVCA</strong>
+    <span>/ painel privado</span>
+    <div style="flex:1"></div>
+    <a id="closeAdmin" href="#" style="color:var(--muted);font-size:12px">voltar ao site</a>
+  </div>
+
+  <div class="admin-grid">
+    <aside class="admin-side">
+      <button class="active">Visão geral</button>
+      <button>Filmes</button>
+      <button>Pendências</button>
+      <button>Seleções</button>
+      <button>Publicação</button>
+      <button>QA</button>
+      <button>Histórico</button>
+    </aside>
+
+    <section class="admin-main">
+      <h1>Visão geral</h1>
+
+      <div class="admin-kpis">
+        <div class="admin-kpi"><strong>424</strong><span>filmes</span></div>
+        <div class="admin-kpi"><strong>310</strong><span>Archive</span></div>
+        <div class="admin-kpi"><strong>139</strong><span>Drive</span></div>
+        <div class="admin-kpi"><strong>9</strong><span>aguardando</span></div>
+        <div class="admin-kpi"><strong>26</strong><span>revisar</span></div>
+      </div>
+
+      <div class="admin-sub">
+        <h2>Armazenamento</h2>
+        <div class="index-list">
+          <div class="index-row"><div class="left"><div class="title">Google Drive</div></div><div class="right">3,91 TB</div></div>
+          <div class="index-row"><div class="left"><div class="title">Internet Archive</div></div><div class="right">5,48 TB</div></div>
+          <div class="index-row"><div class="left"><div class="title">Local</div></div><div class="right">167,7 GB</div></div>
+        </div>
+      </div>
+
+      <div class="admin-sub">
+        <h2>Próximas ações</h2>
+        <div class="admin-table">
+          <div class="admin-row"><div class="film">Napoléon (1927)</div><span><span class="badge">alta</span></span><span>QA</span><span>validar mídia e legenda</span></div>
+          <div class="admin-row"><div class="film">Senso (1954)</div><span><span class="badge">normal</span></span><span>publicação</span><span>preparar Archive</span></div>
+          <div class="admin-row"><div class="film">The Letter (1940)</div><span><span class="badge">normal</span></span><span>confirmação</span><span>reconciliar remoto</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="backdrop" class="backdrop"></div>
+<div id="filmModal" class="modal">
+  <div class="modal-in">
+    <div class="modal-top">
+      <div>
+        <h2 id="modalTitle">Ikiru</h2>
+        <div class="meta">Akira Kurosawa · 1952 · Japão</div>
+      </div>
+      <button id="modalClose">×</button>
+    </div>
+
+    <section>
+      <h3>Nota do acervo</h3>
+      <p>Um pequeno espaço opcional para contexto pessoal sobre o filme, a cópia ou o motivo de ele aparecer em determinada seleção.</p>
+    </section>
+
+    <section>
+      <h3>No acervo</h3>
+      <div class="detail-grid">
+        <div class="k">Vídeo</div><div>1080p</div>
+        <div class="k">Áudio</div><div>Japonês</div>
+        <div class="k">Legendas</div><div>Português (Brasil), English</div>
+        <div class="k">Disponível</div><div>Internet Archive</div>
+      </div>
+      <a href="#" class="archive-link">ver no Internet Archive ↗</a>
+    </section>
+
+    <section>
+      <h3>Também aparece em</h3>
+      <p>Japão depois da guerra · Cinema japonês · Anos 1950</p>
+    </section>
+  </div>
+</div>
+
+<script>
+const publicApp=document.getElementById('publicApp');
+const adminApp=document.getElementById('adminApp');
+const views=document.querySelectorAll('.view');
+
+function showView(name){
+  views.forEach(v=>v.classList.toggle('active',v.id==='view-'+name));
+  document.querySelectorAll('nav [data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===name));
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+document.querySelectorAll('[data-view]').forEach(el=>{
+  el.addEventListener('click',e=>{
+    const v=el.dataset.view;
+    if(!v) return;
+    e.preventDefault();
+    showView(v);
+  });
+});
+
+const backdrop=document.getElementById('backdrop');
+const modal=document.getElementById('filmModal');
+const modalTitle=document.getElementById('modalTitle');
+
+function openFilm(title){
+  modalTitle.textContent=title;
+  backdrop.classList.add('open');
+  modal.classList.add('open');
+}
+function closeFilm(){
+  backdrop.classList.remove('open');
+  modal.classList.remove('open');
+}
+document.querySelectorAll('.open-film').forEach(el=>el.addEventListener('click',e=>{
+  e.preventDefault();
+  openFilm(el.dataset.title||'Filme');
+}));
+document.getElementById('modalClose').onclick=closeFilm;
+backdrop.onclick=closeFilm;
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeFilm()});
+
+const search=document.getElementById('filmSearch');
+search?.addEventListener('input',()=>{
+  const q=search.value.trim().toLowerCase();
+  document.querySelectorAll('#catalog .catalog-row').forEach(row=>{
+    row.style.display=!q||row.dataset.search.includes(q)?'':'none';
+  });
+});
+
+document.getElementById('openAdmin').addEventListener('click',e=>{
+  e.preventDefault();
+  publicApp.style.display='none';
+  adminApp.style.display='block';
+  window.scrollTo(0,0);
+});
+document.getElementById('closeAdmin').addEventListener('click',e=>{
+  e.preventDefault();
+  adminApp.style.display='none';
+  publicApp.style.display='block';
+  window.scrollTo(0,0);
+});
+</script>
+</body>
+</html>
