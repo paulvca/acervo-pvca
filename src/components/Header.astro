@@ -1,0 +1,34 @@
+---
+interface Props {
+  active?: 'home' | 'films' | 'selections' | 'about';
+}
+
+const { active = 'home' } = Astro.props;
+
+const links = [
+  { id: 'home', href: '/', label: 'Início' },
+  { id: 'films', href: '/filmes/', label: 'Filmes' },
+  { id: 'selections', href: '/selecoes/', label: 'Seleções' },
+  { id: 'about', href: '/sobre/', label: 'Sobre' },
+] as const;
+---
+
+<header class="site-header">
+  <div class="wrap top">
+    <a class="name" href="/">Acervo PVCA</a>
+
+    <nav aria-label="Navegação principal">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class:list={{ active: active === link.id }}
+            aria-current={active === link.id ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import {
+  catalogPreview,
+  type CatalogPreviewFilm,
+} from '../../data/catalog-preview';
+
+export function getStaticPaths() {
+  return catalogPreview.map((film) => ({
+    params: { slug: film.slug },
+    props: { film },
+  }));
+}
+
+interface Props {
+  film: CatalogPreviewFilm;
+}
+
+const { film } = Astro.props;
+
+const meta = [
+  film.director,
+  String(film.year),
+  film.country,
+].filter(Boolean).join(' · ');
+
+const copyRows = [
+  film.copy?.video && ['Vídeo', film.copy.video],
+  film.copy?.audio?.length && ['Áudio', film.copy.audio.join(', ')],
+  film.copy?.subtitles?.length && ['Legendas', film.copy.subtitles.join(', ')],
+  film.copy?.availability && ['Disponível', film.copy.availability],
+].filter(Boolean) as [string, string][];
+
+const hasCopyDetails = copyRows.length > 0;
+const hasSelections = Boolean(film.selections?.length);
+---
+
+<BaseLayout
+  title={`${film.title} — Acervo PVCA`}
+  description={`${film.title}, ${film.director}, ${film.year} no Acervo PVCA.`}
+>
+  <Header active="films" />
+
+  <main class="film-detail">
+    <section class="wrap film-detail-head">
+      <a class="back-link" href="/filmes/">← Filmes</a>
+
+      <div class="film-title-block">
+        <h1>{film.title}</h1>
+        {film.originalTitle && <p class="original-title">{film.originalTitle}</p>}
+        <p class="film-detail-meta">{meta}</p>
+      </div>
+    </section>
+
+    <section class="wrap film-hero">
+      <div
+        class="film-detail-poster"
+        role="img"
+        aria-label={`Espaço reservado para o pôster de ${film.title}`}
+      ></div>
+
+      <div class="film-editorial">
+        {
+          film.note ? (
+            <>
+              <p class="eyebrow">Nota do acervo</p>
+              <p>{film.note}</p>
+            </>
+          ) : (
+            <p class="film-status">
+              <span>Status no acervo</span>
+              <strong>{film.availability}</strong>
+            </p>
+          )
+        }
+      </div>
+    </section>
+
+    {
+      hasCopyDetails && (
+        <>
+          <div class="wrap rule" aria-hidden="true"></div>
+
+          <section class="wrap film-detail-section">
+            <h2>No acervo</h2>
+
+            <dl class="film-facts">
+              {
+                copyRows.map(([label, value]) => (
+                  <>
+                    <dt>{label}</dt>
+                    <dd>{value}</dd>
+                  </>
+                ))
+              }
+            </dl>
+          </section>
+        </>
+      )
+    }
+
+    {
+      hasSelections && (
+        <>
+          <div class="wrap rule" aria-hidden="true"></div>
+
+          <section class="wrap film-detail-section">
+            <h2>Também aparece em</h2>
+            <div class="film-selection-links">
+              {film.selections?.map((selection) => <span>{selection}</span>)}
+            </div>
+          </section>
+        </>
+      )
+    }
+
+    {
+      !hasCopyDetails && !hasSelections && (
+        <>
+          <div class="wrap rule" aria-hidden="true"></div>
+
+          <section class="wrap film-detail-section film-minimal-state">
+            <h2>No acervo</h2>
+            <p>
+              <span>Status</span>
+              <strong>{film.availability}</strong>
+            </p>
+          </section>
+        </>
+      )
+    }
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import type { FilmSummary } from '../lib/types';
+
+interface Props {
+  film: FilmSummary;
+}
+
+const { film } = Astro.props;
+---
+
+<a class="index-row" href={film.href}>
+  <span class="left">
+    <span class="title">{film.title}</span>
+    <span class="meta">{film.director} · {film.year}</span>
+  </span>
+  <span class="right">{film.status}</span>
+</a>

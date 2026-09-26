@@ -1,0 +1,28 @@
+---
+import type { CatalogPreviewFilm } from '../data/catalog-preview';
+
+interface Props {
+  film: CatalogPreviewFilm;
+}
+
+const { film } = Astro.props;
+---
+
+<a
+  class="catalog-row"
+  href={`/filmes/${film.slug}/`}
+  data-search={film.searchable.toLocaleLowerCase('pt-BR')}
+>
+  <div class="t">{film.title}</div>
+  <div class="d">{film.director}</div>
+  <div class="y">{film.year}</div>
+  <div
+    class:list={[
+      'a',
+      { review: film.availability === 'em revisão' },
+    ]}
+  >
+    {film.availability === 'Archive' && <span class="dot" aria-hidden="true"></span>}
+    {film.availability}
+  </div>
+</a>

@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CatalogRow from '../../components/CatalogRow.astro';
+import { catalogPreview } from '../../data/catalog-preview';
+---
+
+<BaseLayout
+  title="Filmes — Acervo PVCA"
+  description="O acervo de filmes em uma lista simples e pesquisável."
+>
+  <Header active="films" />
+
+  <main>
+    <section class="wrap page-head">
+      <h1>Filmes</h1>
+      <p>
+        O acervo inteiro em uma lista simples. A ideia aqui é encontrar rápido,
+        não transformar cada filme em um card.
+      </p>
+
+      <div class="catalog-tools">
+        <label class="search-field">
+          <span class="sr-only">Buscar no catálogo</span>
+          <input
+            id="filmSearch"
+            type="search"
+            autocomplete="off"
+            placeholder="buscar por título, diretor ou ano"
+          />
+        </label>
+        <span id="resultCount" class="result-count">
+          {catalogPreview.length} filmes nesta prévia
+        </span>
+      </div>
+    </section>
+
+    <section class="wrap catalog" id="catalog" aria-live="polite">
+      {catalogPreview.map((film) => <CatalogRow film={film} />)}
+      <p id="emptyCatalog" class="empty-state" hidden>
+        Nenhum filme encontrado nesta prévia.
+      </p>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script>
+    const search = document.querySelector('#filmSearch');
+    const rows = Array.from(document.querySelectorAll('#catalog .catalog-row'));
+    const counter = document.querySelector('#resultCount');
+    const empty = document.querySelector('#emptyCatalog');
+
+    function normalize(value) {
+      return value
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '')
+        .toLocaleLowerCase('pt-BR');
+    }
+
+    function applySearch(value) {
+      const query = normalize(value.trim());
+      let visible = 0;
+
+      for (const row of rows) {
+        const haystack = normalize(row.dataset.search ?? '');
+        const show = !query || haystack.includes(query);
+        row.hidden = !show;
+        if (show) visible += 1;
+      }
+
+      if (counter) {
+        counter.textContent =
+          `${visible} ${visible === 1 ? 'filme' : 'filmes'} nesta prévia`;
+      }
+
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    if (search instanceof HTMLInputElement) {
+      const query = new URLSearchParams(window.location.search).get('q') ?? '';
+      search.value = query;
+      applySearch(query);
+      search.addEventListener('input', () => applySearch(search.value));
+    }
+  </script>
+</BaseLayout>

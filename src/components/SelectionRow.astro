@@ -1,0 +1,17 @@
+---
+import type { SelectionSummary } from '../lib/types';
+
+interface Props {
+  selection: SelectionSummary;
+}
+
+const { selection } = Astro.props;
+---
+
+<a class="index-row" href={selection.href}>
+  <span class="left">
+    <span class="title">{selection.title}</span>
+    <span class="meta">{selection.description}</span>
+  </span>
+  <span class="right">{selection.count}</span>
+</a>

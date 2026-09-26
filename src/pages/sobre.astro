@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Sobre — Acervo PVCA"
+  description="Por que o Acervo PVCA existe e o que aparece publicamente no site."
+>
+  <Header active="about" />
+
+  <main>
+    <section class="wrap page-head">
+      <h1>Sobre</h1>
+      <p>Por que este acervo existe e o que exatamente aparece aqui.</p>
+    </section>
+
+    <section class="wrap about-copy">
+      <p>
+        O Acervo PVCA começou como uma forma de organizar meus próprios filmes.
+        Com o tempo, passou a incluir diferentes cópias, legendas revisadas,
+        metadados técnicos e um histórico do que já foi preparado ou publicado.
+      </p>
+
+      <p>
+        Este site existe para tornar essa coleção navegável sem tirar dela o
+        caráter pessoal. A ideia não é fingir que isto é uma instituição ou um
+        serviço de streaming; é simplesmente abrir uma parte da minha estante
+        para outras pessoas explorarem.
+      </p>
+
+      <h2>O que fica público</h2>
+      <p>
+        Filmes, disponibilidade, resolução principal, idiomas, legendas,
+        seleções pessoais e algumas estatísticas gerais.
+      </p>
+
+      <h2>O que fica privado</h2>
+      <p>
+        Hashes, caminhos locais, pendências, filas, QA, estados de publicação e
+        o restante da operação do acervo.
+      </p>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
