@@ -1,0 +1,52 @@
+# Secrets / local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
+.next/
+.astro/
+.cache/
+coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private or operational collection data
+data/private/
+private/
+**/drive-all-objects.json
+**/drive-all-files.json
+**/drive-video-files.*
+**/drive_lsjson.json
+**/ia-all-items.ndjson
+**/ia-movies.ndjson
+**/state/
+**/*CANONICO*.json
+**/*CANONICO*.xlsx
+**/*canonic*.json
+**/*canonic*.xlsx
+
+# Local captures / raw crawls
+references/**/raw-capture/
+references/**/node_modules/
+
+# Temporary
+*.tmp
+*.part
+*.bak
+*~

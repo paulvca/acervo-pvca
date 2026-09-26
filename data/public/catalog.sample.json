@@ -1,0 +1,18 @@
+[
+  {
+    "id": "PVCA-000001",
+    "slug": "exemplo-1948",
+    "title": "Exemplo",
+    "original_title": null,
+    "year": 1948,
+    "directors": ["Diretor"],
+    "countries": [],
+    "poster": null,
+    "technical": { "resolution": null },
+    "audio_languages": [],
+    "subtitle_languages": [],
+    "pt_br": false,
+    "archive": { "available": false, "url": null },
+    "selections": []
+  }
+]
