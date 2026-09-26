@@ -2,25 +2,24 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import CatalogRow from '../../components/CatalogRow.astro';
+import FilmCard from '../../components/FilmCard.astro';
 import { catalogPreview } from '../../data/catalog-preview';
 ---
 
 <BaseLayout
   title="Filmes — Acervo PVCA"
-  description="O acervo de filmes em uma lista simples e pesquisável."
+  description="Catálogo visual do Acervo PVCA."
 >
   <Header active="films" />
 
   <main>
-    <section class="wrap page-head">
+    <section class="wrap page-head catalog-page-head">
       <h1>Filmes</h1>
       <p>
-        O acervo inteiro em uma lista simples. A ideia aqui é encontrar rápido,
-        não transformar cada filme em um card.
+        O acervo inteiro, organizado para explorar ou encontrar rápido.
       </p>
 
-      <div class="catalog-tools">
+      <div class="catalog-search-row">
         <label class="search-field">
           <span class="sr-only">Buscar no catálogo</span>
           <input
@@ -30,27 +29,105 @@ import { catalogPreview } from '../../data/catalog-preview';
             placeholder="buscar por título, diretor ou ano"
           />
         </label>
-        <span id="resultCount" class="result-count">
+
+        <span id="resultCount" class="result-count" aria-live="polite">
           {catalogPreview.length} filmes nesta prévia
         </span>
       </div>
+
+      <div class="catalog-controls" aria-label="Controles do catálogo">
+        <div class="catalog-filters" aria-label="Filtrar filmes">
+          <button
+            class="catalog-filter active"
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            Todos
+          </button>
+          <button
+            class="catalog-filter"
+            type="button"
+            data-filter="ptbr"
+            aria-pressed="false"
+          >
+            pt-BR
+          </button>
+          <button
+            class="catalog-filter"
+            type="button"
+            data-filter="4k"
+            aria-pressed="false"
+          >
+            4K
+          </button>
+        </div>
+
+        <div class="catalog-display-controls">
+          <label class="catalog-sort">
+            <span class="sr-only">Ordenar filmes</span>
+            <select id="filmSort">
+              <option value="title">Título A–Z</option>
+              <option value="year-desc">Ano: mais recente</option>
+              <option value="year-asc">Ano: mais antigo</option>
+            </select>
+          </label>
+
+          <div class="catalog-view-switch" aria-label="Visualização">
+            <button
+              type="button"
+              class="catalog-view active"
+              data-view="grid"
+              aria-pressed="true"
+            >
+              Grade
+            </button>
+            <button
+              type="button"
+              class="catalog-view"
+              data-view="list"
+              aria-pressed="false"
+            >
+              Lista
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="wrap catalog" id="catalog" aria-live="polite">
-      {catalogPreview.map((film) => <CatalogRow film={film} />)}
-      <p id="emptyCatalog" class="empty-state" hidden>
-        Nenhum filme encontrado nesta prévia.
-      </p>
+    <section
+      class="wrap film-catalog"
+      id="catalog"
+      data-view="grid"
+    >
+      {catalogPreview.map((film) => <FilmCard film={film} />)}
     </section>
+
+    <p class="wrap empty-state catalog-empty" id="emptyCatalog" hidden>
+      Nenhum filme encontrado nesta prévia.
+    </p>
   </main>
 
   <Footer />
 
   <script>
+    const catalog = document.querySelector('#catalog');
     const search = document.querySelector('#filmSearch');
-    const rows = Array.from(document.querySelectorAll('#catalog .catalog-row'));
     const counter = document.querySelector('#resultCount');
     const empty = document.querySelector('#emptyCatalog');
+    const sort = document.querySelector('#filmSort');
+    const filterButtons = Array.from(
+      document.querySelectorAll<HTMLButtonElement>('.catalog-filter')
+    );
+    const viewButtons = Array.from(
+      document.querySelectorAll<HTMLButtonElement>('.catalog-view')
+    );
+
+    const cards = catalog
+      ? Array.from(catalog.querySelectorAll<HTMLElement>('.film-card'))
+      : [];
+
+    let activeFilter = 'all';
 
     function normalize(value) {
       return value
@@ -59,15 +136,55 @@ import { catalogPreview } from '../../data/catalog-preview';
         .toLocaleLowerCase('pt-BR');
     }
 
-    function applySearch(value) {
-      const query = normalize(value.trim());
+    function matchesFilter(card) {
+      if (activeFilter === 'ptbr') {
+        return card.dataset.ptbr === 'true';
+      }
+
+      if (activeFilter === '4k') {
+        return card.dataset.resolution === '2160p';
+      }
+
+      return true;
+    }
+
+    function compareCards(a, b) {
+      const mode =
+        sort instanceof HTMLSelectElement ? sort.value : 'title';
+
+      if (mode === 'year-desc') {
+        return Number(b.dataset.year) - Number(a.dataset.year);
+      }
+
+      if (mode === 'year-asc') {
+        return Number(a.dataset.year) - Number(b.dataset.year);
+      }
+
+      return (a.dataset.title ?? '').localeCompare(
+        b.dataset.title ?? '',
+        'pt-BR'
+      );
+    }
+
+    function applyCatalog() {
+      const query =
+        search instanceof HTMLInputElement
+          ? normalize(search.value.trim())
+          : '';
+
+      const ordered = [...cards].sort(compareCards);
       let visible = 0;
 
-      for (const row of rows) {
-        const haystack = normalize(row.dataset.search ?? '');
-        const show = !query || haystack.includes(query);
-        row.hidden = !show;
+      for (const card of ordered) {
+        const haystack = normalize(card.dataset.search ?? '');
+        const show =
+          (!query || haystack.includes(query)) &&
+          matchesFilter(card);
+
+        card.hidden = !show;
+
         if (show) visible += 1;
+        catalog?.append(card);
       }
 
       if (counter) {
@@ -78,11 +195,56 @@ import { catalogPreview } from '../../data/catalog-preview';
       if (empty) empty.hidden = visible !== 0;
     }
 
-    if (search instanceof HTMLInputElement) {
-      const query = new URLSearchParams(window.location.search).get('q') ?? '';
-      search.value = query;
-      applySearch(query);
-      search.addEventListener('input', () => applySearch(search.value));
+    function setFilter(button) {
+      activeFilter = button.dataset.filter ?? 'all';
+
+      for (const candidate of filterButtons) {
+        const selected = candidate === button;
+        candidate.classList.toggle('active', selected);
+        candidate.setAttribute(
+          'aria-pressed',
+          selected ? 'true' : 'false'
+        );
+      }
+
+      applyCatalog();
     }
+
+    function setView(button) {
+      const view = button.dataset.view === 'list' ? 'list' : 'grid';
+
+      catalog?.setAttribute('data-view', view);
+
+      for (const candidate of viewButtons) {
+        const selected = candidate === button;
+        candidate.classList.toggle('active', selected);
+        candidate.setAttribute(
+          'aria-pressed',
+          selected ? 'true' : 'false'
+        );
+      }
+    }
+
+    if (search instanceof HTMLInputElement) {
+      const query =
+        new URLSearchParams(window.location.search).get('q') ?? '';
+
+      search.value = query;
+      search.addEventListener('input', applyCatalog);
+    }
+
+    if (sort instanceof HTMLSelectElement) {
+      sort.addEventListener('change', applyCatalog);
+    }
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => setFilter(button));
+    }
+
+    for (const button of viewButtons) {
+      button.addEventListener('click', () => setView(button));
+    }
+
+    applyCatalog();
   </script>
 </BaseLayout>

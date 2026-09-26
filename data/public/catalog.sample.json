@@ -4,15 +4,32 @@
     "slug": "exemplo-1948",
     "title": "Exemplo",
     "original_title": null,
+    "romanized_title": null,
     "year": 1948,
-    "directors": ["Diretor"],
+    "directors": [
+      "Diretor"
+    ],
     "countries": [],
-    "poster": null,
-    "technical": { "resolution": null },
-    "audio_languages": [],
-    "subtitle_languages": [],
-    "pt_br": false,
-    "archive": { "available": false, "url": null },
+    "runtime_minutes": null,
+    "genres": [],
+    "synopsis": null,
+    "poster": "/posters/exemplo-1948.jpg",
+    "copies": [
+      {
+        "id": "primary",
+        "label": null,
+        "resolution": "1080p",
+        "size_gib": 18.7,
+        "audio_languages": [],
+        "subtitle_languages": [
+          "Português (Brasil)"
+        ],
+        "edition": null
+      }
+    ],
+    "catalog_copy_id": "primary",
+    "external_links": [],
+    "collection_note": null,
     "selections": []
   }
 ]

@@ -38,7 +38,7 @@ const workRows = [
 const hasSelections = Boolean(film.selections?.length);
 const hasEditorialSummary = Boolean(film.synopsis);
 const copies = film.copies ?? [];
-const publicAccess = film.publicAccess ?? [];
+const externalLinks = film.externalLinks ?? [];
 const hasMultipleCopies = copies.length > 1;
 
 const formatGiB = (value: number) =>
@@ -167,42 +167,36 @@ const copyLabelForAccess = (copyId?: string) => {
           </p>
         )
       }
-    </section>
-
-    <div class="wrap rule" aria-hidden="true"></div>
-
-    <section class="wrap film-detail-section film-access">
-      <h2>Acesso</h2>
-
       {
-        publicAccess.some((access) => Boolean(access.url)) ? (
-          <div class="access-actions">
+        externalLinks.some((link) => Boolean(link.url)) && (
+          <div class="access-actions film-public-links">
             {
-              publicAccess
-                .filter((access) => Boolean(access.url))
-                .map((access) => (
+              externalLinks
+                .filter((link) => Boolean(link.url))
+                .map((link) => (
                   <a
                     class="access-button"
-                    href={access.url}
+                    href={link.url}
                     rel="external"
                   >
-                    <span>{access.provider}</span>
+                    <span>{link.provider}</span>
                     <span aria-hidden="true">↗</span>
                     {
                       hasMultipleCopies &&
-                      copyLabelForAccess(access.copyId) && (
-                        <small>{copyLabelForAccess(access.copyId)}</small>
+                      copyLabelForAccess(link.copyId) && (
+                        <small>{copyLabelForAccess(link.copyId)}</small>
                       )
                     }
                   </a>
                 ))
             }
           </div>
-        ) : (
-          <p class="no-public-access">Não há acesso público.</p>
         )
       }
+
     </section>
+
+
 
     {
       film.collectionNote && (

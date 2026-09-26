@@ -8,7 +8,7 @@ export interface CatalogCopyInfo {
   edition?: string;
 }
 
-export interface CatalogPublicAccess {
+export interface CatalogExternalLink {
   provider: 'Internet Archive' | 'Google Drive' | 'Outro';
   copyId?: string;
   url?: string;
@@ -25,11 +25,13 @@ export interface CatalogPreviewFilm {
   runtimeMinutes?: number;
   genres?: string[];
   synopsis?: string;
+  poster?: string;
+  catalogCopyId?: string;
   availability: string;
   searchable: string;
   collectionNote?: string;
   copies?: CatalogCopyInfo[];
-  publicAccess?: CatalogPublicAccess[];
+  externalLinks?: CatalogExternalLink[];
   selections?: string[];
 }
 
@@ -41,7 +43,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     year: 1952,
     country: 'Japão',
     availability: 'Archive',
-    searchable: 'ikiru akira kurosawa 1952 japão archive',
+    searchable: 'ikiru akira kurosawa 1952 japão',
     copies: [
       {
         id: 'primary',
@@ -49,12 +51,6 @@ export const catalogPreview: CatalogPreviewFilm[] = [
         resolution: '1080p',
         audio: ['Japonês'],
         subtitles: ['Português (Brasil)', 'English'],
-      },
-    ],
-    publicAccess: [
-      {
-        provider: 'Internet Archive',
-        copyId: 'primary',
       },
     ],
     selections: [
@@ -112,8 +108,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     director: 'Sidney Lumet',
     year: 1973,
     availability: 'Archive',
-    searchable: 'the offence sidney lumet 1973 archive',
-    publicAccess: [{ provider: 'Internet Archive' }],
+    searchable: 'the offence sidney lumet 1973',
   },
   {
     slug: 'days-of-heaven-1978',
@@ -192,8 +187,7 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     director: 'George Marshall',
     year: 1946,
     availability: 'Archive',
-    searchable: 'the blue dahlia george marshall 1946 archive',
-    publicAccess: [{ provider: 'Internet Archive' }],
+    searchable: 'the blue dahlia george marshall 1946',
   },
   {
     slug: 'the-letter-1940',
@@ -201,7 +195,6 @@ export const catalogPreview: CatalogPreviewFilm[] = [
     director: 'William Wyler',
     year: 1940,
     availability: 'Archive',
-    searchable: 'the letter william wyler 1940 archive',
-    publicAccess: [{ provider: 'Internet Archive' }],
+    searchable: 'the letter william wyler 1940',
   },
 ];

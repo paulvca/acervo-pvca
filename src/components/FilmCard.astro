@@ -1,0 +1,87 @@
+---
+import type {
+  CatalogCopyInfo,
+  CatalogPreviewFilm,
+} from '../data/catalog-preview';
+
+interface Props {
+  film: CatalogPreviewFilm;
+}
+
+const { film } = Astro.props;
+
+const catalogCopy: CatalogCopyInfo | undefined =
+  film.catalogCopyId
+    ? film.copies?.find((copy) => copy.id === film.catalogCopyId)
+    : film.copies?.[0];
+
+const resolution = catalogCopy?.resolution ?? '—';
+
+const size =
+  catalogCopy?.sizeGiB != null
+    ? `${new Intl.NumberFormat('pt-BR', {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1,
+      }).format(catalogCopy.sizeGiB)} GiB`
+    : '—';
+
+const hasPtBr = Boolean(
+  catalogCopy?.subtitles?.some((subtitle) => {
+    const normalized = subtitle
+      .normalize('NFD')
+      .replace(/\p{Diacritic}/gu, '')
+      .toLocaleLowerCase('pt-BR');
+
+    return normalized === 'pt-br' || normalized.includes('portugues (brasil)');
+  })
+);
+
+const normalizedTitle = film.title
+  .normalize('NFD')
+  .replace(/\p{Diacritic}/gu, '')
+  .toLocaleLowerCase('pt-BR');
+---
+
+<a
+  class="film-card"
+  href={`/filmes/${film.slug}/`}
+  data-search={film.searchable.toLocaleLowerCase('pt-BR')}
+  data-title={normalizedTitle}
+  data-year={film.year}
+  data-ptbr={hasPtBr ? 'true' : 'false'}
+  data-resolution={catalogCopy?.resolution ?? ''}
+>
+  {
+    film.poster ? (
+      <img
+        class="film-card-poster"
+        src={film.poster}
+        alt={`Pôster de ${film.title}`}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <div
+        class="film-card-poster film-card-poster-placeholder"
+        aria-label={`Pôster de ${film.title} ainda não importado`}
+        role="img"
+      ></div>
+    )
+  }
+
+  <h2 class="film-card-title">{film.title}</h2>
+
+  <p class="film-card-byline">
+    {film.director} · {film.year}
+  </p>
+
+  <p class="film-card-technical">
+    <span>{resolution}</span>
+    <span aria-hidden="true">·</span>
+    <span>{size}</span>
+  </p>
+
+  <p class="film-card-flags">
+    {hasPtBr ? 'pt-BR' : '\u00a0'}
+  </p>
+</a>
