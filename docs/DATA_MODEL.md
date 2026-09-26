@@ -78,3 +78,14 @@ Continuam fora da projeção pública:
 - dados internos de publicação;
 - credenciais e material de autenticação;
 - arquivos canônicos privados completos.
+
+## Regra de apresentação
+
+A taxonomia interna de cópias não deve criar rótulos redundantes na interface pública.
+
+- quando houver uma única cópia, mostrar seus campos diretamente em `No acervo`, sem o subtítulo `Cópia principal`;
+- quando houver duas ou mais cópias, mostrar rótulos editoriais que realmente as distingam;
+- em `Acesso`, provedores com URL pública deliberada podem aparecer como controles de link com aparência de botão;
+- não renderizar um botão para um provedor sem URL pública;
+- quando não houver URL pública, usar apenas a mensagem `Não há acesso público.`;
+- se houver várias cópias e um acesso estiver ligado a uma cópia específica, o controle pode mostrar o rótulo dessa cópia como texto secundário.

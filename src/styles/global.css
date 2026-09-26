@@ -731,7 +731,7 @@ nav a.active {
   color: var(--color-text-body);
 }
 
-/* v0.4.1 — filme / cópia / acesso */
+/* v0.4.2 — acesso público e hierarquia simplificada */
 
 .catalog-row {
   color: inherit;
@@ -875,66 +875,47 @@ nav a.active {
 }
 
 .copy-pending,
-.access-pending,
-.collection-only p,
-.access-copy {
+.no-public-access {
   margin: 0;
   color: var(--color-text-muted);
   font-size: 12px;
 }
 
-.access-list {
-  display: grid;
-  gap: 26px;
-}
-
-.access-entry {
-  max-width: 620px;
-}
-
-.access-provider-line {
+.access-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.access-button {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 2px 10px;
   align-items: center;
-  gap: 9px;
-}
-
-.access-provider-line strong,
-.collection-only strong {
-  color: var(--color-text-ui);
-  font-size: 13px;
-  font-weight: 560;
-}
-
-.access-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--color-success);
-  flex: 0 0 auto;
-}
-
-.access-copy {
-  margin-top: 5px;
-}
-
-.archive-link {
-  display: inline-block;
-  margin-top: 14px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg-1);
   color: var(--color-text-ui);
   font-size: 12px;
+  line-height: 1.2;
+  transition:
+    background-color 100ms ease,
+    border-color 100ms ease,
+    color 100ms ease;
 }
 
-.archive-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.access-button:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-bg-2);
+  color: var(--color-text-head);
 }
 
-.access-pending {
-  margin-top: 8px;
-}
-
-.collection-only p {
-  margin-top: 5px;
+.access-button small {
+  grid-column: 1 / -1;
+  color: var(--color-text-muted);
+  font-size: 10px;
 }
 
 .film-collection-note p {
@@ -1005,5 +986,9 @@ nav a.active {
   .film-facts {
     grid-template-columns: 92px minmax(0, 1fr);
     gap: 8px 14px;
+  }
+
+  .access-button {
+    min-height: 40px;
   }
 }

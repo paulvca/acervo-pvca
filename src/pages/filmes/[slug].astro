@@ -39,6 +39,7 @@ const hasSelections = Boolean(film.selections?.length);
 const hasEditorialSummary = Boolean(film.synopsis);
 const copies = film.copies ?? [];
 const publicAccess = film.publicAccess ?? [];
+const hasMultipleCopies = copies.length > 1;
 
 const formatGiB = (value: number) =>
   `${new Intl.NumberFormat('pt-BR', {
@@ -131,7 +132,11 @@ const copyLabelForAccess = (copyId?: string) => {
 
                 return (
                   <article class="film-copy">
-                    <h3>{copy.label}</h3>
+                    {
+                      hasMultipleCopies && (
+                        <h3>{copy.label}</h3>
+                      )
+                    }
 
                     {
                       rows.length > 0 ? (
@@ -170,48 +175,31 @@ const copyLabelForAccess = (copyId?: string) => {
       <h2>Acesso</h2>
 
       {
-        publicAccess.length > 0 ? (
-          <div class="access-list">
+        publicAccess.some((access) => Boolean(access.url)) ? (
+          <div class="access-actions">
             {
-              publicAccess.map((access) => (
-                <article class="access-entry">
-                  <div class="access-provider-line">
-                    <span class="access-dot" aria-hidden="true"></span>
-                    <strong>{access.provider}</strong>
-                  </div>
-
-                  {
-                    copyLabelForAccess(access.copyId) && (
-                      <p class="access-copy">
-                        {copyLabelForAccess(access.copyId)}
-                      </p>
-                    )
-                  }
-
-                  {
-                    access.url ? (
-                      <a
-                        class="archive-link"
-                        href={access.url}
-                        rel="external"
-                      >
-                        Acessar cópia pública ↗
-                      </a>
-                    ) : (
-                      <p class="access-pending">
-                        Link público ainda não integrado ao catálogo.
-                      </p>
-                    )
-                  }
-                </article>
-              ))
+              publicAccess
+                .filter((access) => Boolean(access.url))
+                .map((access) => (
+                  <a
+                    class="access-button"
+                    href={access.url}
+                    rel="external"
+                  >
+                    <span>{access.provider}</span>
+                    <span aria-hidden="true">↗</span>
+                    {
+                      hasMultipleCopies &&
+                      copyLabelForAccess(access.copyId) && (
+                        <small>{copyLabelForAccess(access.copyId)}</small>
+                      )
+                    }
+                  </a>
+                ))
             }
           </div>
         ) : (
-          <div class="collection-only">
-            <strong>Somente no acervo</strong>
-            <p>Nenhum acesso público está vinculado a esta ficha.</p>
-          </div>
+          <p class="no-public-access">Não há acesso público.</p>
         )
       }
     </section>
