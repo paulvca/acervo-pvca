@@ -1,0 +1,14 @@
+---
+import {catalogPreview} from '../data/catalog-preview';
+import {catalogCopy, hasPtBr} from '../lib/catalog';
+import {selections} from '../data/selections';
+const stats = [
+ [catalogPreview.length, 'filmes nesta prévia'],
+ [catalogPreview.filter(hasPtBr).length, 'com legenda em português'],
+ [catalogPreview.filter(film => catalogCopy(film)?.resolution === '2160p').length, 'em 2160p'],
+ [catalogPreview.filter(film => catalogCopy(film)?.resolution === '1080p').length, 'em 1080p'],
+ [selections.filter(selection => selection.films.length).length, 'seleções com filmes'],
+];
+---
+<dl class="collection-stats">{stats.map(([value,label]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+<p class="data-note">Contagens dos registros desta prévia, não do acervo completo. Dados ausentes ainda não entram nas contagens técnicas.</p>

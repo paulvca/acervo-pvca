@@ -2,41 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { selections } from '../../data/selections';
+import Poster from '../../components/Poster.astro';
+import {selections} from '../../data/selections';
 ---
-
-<BaseLayout
-  title="Seleções — Acervo PVCA"
-  description="Agrupamentos pessoais e caminhos para atravessar o acervo."
->
-  <Header active="selections" />
-
-  <main>
-    <section class="wrap page-head">
-      <h1>Seleções</h1>
-      <p>
-        Agrupamentos pessoais. Alguns são bem definidos; outros só refletem o
-        que estou vendo, revisando ou pensando no momento.
-      </p>
-    </section>
-
-    <section class="wrap selection-list">
-      {
-        selections.map((selection) => (
-          <article class="selection-row" id={selection.id}>
-            <div class="selection-stack" aria-hidden="true">
-              <i></i><i></i><i></i>
-            </div>
-            <div>
-              <h2>{selection.title}</h2>
-              <p>{selection.description}</p>
-            </div>
-            <div class="count">{selection.count}</div>
-          </article>
-        ))
-      }
-    </section>
-  </main>
-
-  <Footer />
-</BaseLayout>
+<BaseLayout title="Seleções — Acervo PVCA"><Header active="selections" /><main id="main">
+<section class="wrap page-head"><h1>Seleções</h1><p>Agrupamentos pessoais. Alguns são bem definidos, outros só refletem o que estou vendo, revisando ou pensando no momento.</p></section>
+<section class="wrap selection-list">{selections.map(selection => <article class="selection-row" id={selection.id}>
+<div class="selection-strip">{selection.films.slice(0,3).map(film => <a href={`/filmes/${film.slug}/`} aria-label={`Ver ficha de ${film.title}`}><Poster film={film} /></a>)}</div>
+<div class="selection-copy"><h2>{selection.title}</h2><p>{selection.description}</p><p class="count">{selection.films.length} {selection.films.length === 1 ? 'filme' : 'filmes'} nesta prévia</p><div class="selection-film-links">{selection.films.map(film => <a href={`/filmes/${film.slug}/`}>{film.title} →</a>)}</div></div>
+</article>)}</section></main><Footer /></BaseLayout>

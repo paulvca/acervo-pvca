@@ -2,148 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FilmRow from '../components/FilmRow.astro';
-import SelectionRow from '../components/SelectionRow.astro';
-
-import {
-  collectionStats,
-  copySelections,
-  countryStats,
-  featuredFilm,
-  interestSelections,
-  recentFilms,
-} from '../data/home';
-
-const maxCountryCount = Math.max(...countryStats.map((item) => item.value));
+import Poster from '../components/Poster.astro';
+import CollectionStats from '../components/CollectionStats.astro';
+import {featuredFilm, recentFilms} from '../data/home';
+import {selections} from '../data/selections';
 ---
-
-<BaseLayout
-  title="Acervo PVCA"
-  description="Filmes que fui reunindo, preservando, legendando e organizando ao longo do tempo."
->
-  <Header active="home" />
-
-  <main>
-    <section class="wrap intro">
-      <h1>Meu acervo pessoal de cinema.</h1>
-      <p>
-        Filmes que fui reunindo, preservando, legendando e organizando ao longo
-        do tempo.
-      </p>
-      <p class="aside">
-        Este site é uma forma simples de abrir parte dessa coleção para quem
-        quiser explorar — sem transformar o acervo em uma plataforma impessoal.
-      </p>
-    </section>
-
-    <div class="wrap rule" aria-hidden="true"></div>
-
-    <section class="wrap section" aria-labelledby="featured-heading">
-      <div class="section-title">
-        <h2 id="featured-heading">Em destaque</h2>
-        <span>uma escolha do momento</span>
-      </div>
-
-      <div class="feature">
-        <div
-          class="feature-poster"
-          role="img"
-          aria-label={`Espaço reservado para o pôster de ${featuredFilm.title}`}
-        ></div>
-
-        <div class="feature-copy">
-          <h3>{featuredFilm.title}</h3>
-          <p class="feature-meta">
-            {featuredFilm.director} · {featuredFilm.year} · {featuredFilm.country}
-          </p>
-          <p>{featuredFilm.note}</p>
-          <a class="inline-link" href={featuredFilm.href}>ver ficha →</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap rule" aria-hidden="true"></div>
-
-    <section class="wrap section" aria-labelledby="recent-heading">
-      <div class="section-title">
-        <h2 id="recent-heading">Recentemente</h2>
-        <span>últimas adições e revisões</span>
-      </div>
-
-      <div class="index-list">
-        {recentFilms.map((film) => <FilmRow film={film} />)}
-      </div>
-    </section>
-
-    <div class="wrap rule" aria-hidden="true"></div>
-
-    <section class="wrap section" aria-labelledby="selections-heading">
-      <div class="section-title">
-        <h2 id="selections-heading">Seleções</h2>
-        <span>algumas formas de atravessar o acervo</span>
-      </div>
-
-      <div class="index-group">
-        <h3>Por interesse</h3>
-        <div class="index-list">
-          {
-            interestSelections.map((selection) => (
-              <SelectionRow selection={selection} />
-            ))
-          }
-        </div>
-      </div>
-
-      <div class="index-group">
-        <h3>Por cópia</h3>
-        <div class="index-list">
-          {
-            copySelections.map((selection) => (
-              <SelectionRow selection={selection} />
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap rule" aria-hidden="true"></div>
-
-    <section class="wrap section" aria-labelledby="collection-heading">
-      <div class="section-title">
-        <h2 id="collection-heading">O acervo</h2>
-        <span>alguns números</span>
-      </div>
-
-      <p class="stats-line">
-        <strong>{collectionStats.films} filmes</strong> catalogados até agora.
-        <strong> {collectionStats.archive}</strong> estão disponíveis no Internet
-        Archive, <strong>{collectionStats.ptBr}</strong> têm legenda em português
-        do Brasil e <strong>{collectionStats.uhd}</strong> têm uma cópia principal
-        em 2160p.
-      </p>
-
-      <div class="micro-bars" aria-label="Distribuição de alguns cinemas no acervo">
-        {
-          countryStats.map((item) => {
-            const percentage = (item.value / maxCountryCount) * 100;
-
-            return (
-              <div class="micro-row">
-                <span>{item.label}</span>
-                <div class="micro-track" aria-hidden="true">
-                  <div
-                    class="micro-fill"
-                    style={`width:${percentage.toFixed(2)}%`}
-                  ></div>
-                </div>
-                <span class="micro-value">{item.value}</span>
-              </div>
-            );
-          })
-        }
-      </div>
-    </section>
-  </main>
-
-  <Footer />
-</BaseLayout>
+<BaseLayout><Header active="home" /><main id="main">
+<section class="wrap intro"><h1>Meu acervo pessoal de cinema.</h1><p>Filmes que fui reunindo, preservando, legendando e organizando ao longo do tempo.</p><p class="aside">Este site é uma forma simples de abrir parte dessa coleção para quem quiser explorar — sem transformar o acervo em uma plataforma impessoal.</p></section>
+<div class="wrap rule"></div>
+<section class="wrap section"><div class="section-title"><h2>Em destaque</h2><span>uma escolha do momento</span></div>
+<div class="feature"><Poster film={featuredFilm} eager /><div class="feature-copy"><h3>{featuredFilm.title}</h3><p class="feature-meta">{featuredFilm.director} · {featuredFilm.year} · {featuredFilm.country}</p><p>{featuredFilm.collectionNote}</p><a class="inline-link" href={`/filmes/${featuredFilm.slug}/`}>Ver ficha →</a></div></div></section>
+<div class="wrap rule"></div>
+<section class="wrap section"><div class="section-title"><h2>Recentemente</h2><span>últimas adições e revisões</span></div><div class="recent-films">{recentFilms.map(film => <a href={`/filmes/${film.slug}/`}><Poster film={film} /><h3>{film.title}</h3><p>{film.director} · {film.year}</p></a>)}</div></section>
+<div class="wrap rule"></div>
+<section class="wrap section"><div class="section-title"><h2>Seleções</h2><span>algumas formas de atravessar o acervo</span></div><div class="home-selections">{selections.filter(selection => selection.films.length).slice(0,4).map(selection => <a href={`/selecoes/#${selection.id}`}><h3>{selection.title}</h3><p>{selection.description}</p><span>Ver seleção →</span></a>)}</div></section>
+<div class="wrap rule"></div><section class="wrap section"><div class="section-title"><h2>O acervo</h2><span>alguns números</span></div><CollectionStats /></section>
+</main><Footer /></BaseLayout>

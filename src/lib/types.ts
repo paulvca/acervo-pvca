@@ -2,7 +2,6 @@ export interface FilmSummary {
   title: string;
   director: string;
   year: number;
-  status: string;
   href: string;
 }
 

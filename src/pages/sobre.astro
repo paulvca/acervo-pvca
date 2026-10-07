@@ -2,47 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CollectionStats from '../components/CollectionStats.astro';
 ---
-
-<BaseLayout
-  title="Sobre — Acervo PVCA"
-  description="Por que o Acervo PVCA existe e o que aparece publicamente no site."
->
-  <Header active="about" />
-
-  <main>
-    <section class="wrap page-head">
-      <h1>Sobre</h1>
-      <p>Por que este acervo existe e o que exatamente aparece aqui.</p>
-    </section>
-
-    <section class="wrap about-copy">
-      <p>
-        O Acervo PVCA começou como uma forma de organizar meus próprios filmes.
-        Com o tempo, passou a incluir diferentes cópias, legendas revisadas,
-        metadados técnicos e um histórico do que já foi preparado ou publicado.
-      </p>
-
-      <p>
-        Este site existe para tornar essa coleção navegável sem tirar dela o
-        caráter pessoal. A ideia não é fingir que isto é uma instituição ou um
-        serviço de streaming; é simplesmente abrir uma parte da minha estante
-        para outras pessoas explorarem.
-      </p>
-
-      <h2>O que fica público</h2>
-      <p>
-        Filmes, disponibilidade, resolução principal, idiomas, legendas,
-        seleções pessoais e algumas estatísticas gerais.
-      </p>
-
-      <h2>O que fica privado</h2>
-      <p>
-        Hashes, caminhos locais, pendências, filas, QA, estados de publicação e
-        o restante da operação do acervo.
-      </p>
-    </section>
-  </main>
-
-  <Footer />
-</BaseLayout>
+<BaseLayout title="Sobre — Acervo PVCA"><Header active="about" /><main id="main">
+<section class="wrap page-head"><h1>Sobre</h1><p>Por que este acervo existe e o que exatamente aparece aqui.</p></section>
+<section class="wrap about-intro"><p>O Acervo PVCA começou como uma forma de organizar minha coleção pessoal de filmes. Com o tempo, passou a reunir diferentes cópias, legendas revisadas e metadados consistentes.</p><p>Este site torna a coleção navegável e pesquisável, apresentando informações úteis para quem se interessa por cinema, sem expor detalhes operacionais ou dados internos.</p></section>
+<div class="wrap rule"></div><div class="wrap about-columns">
+<section><h2>O que aparece aqui</h2><p>Título, ano, direção e informações sobre cada filme. Resolução, tamanho, formato, áudio e legendas pertencem à cópia selecionada para representar a obra.</p><p>Seleções pessoais e notas editoriais ajudam a explorar a coleção. Nesta prévia, pôsteres e dados ainda não importados permanecem indicados como pendentes.</p></section>
+<section><h2>Como o acervo é organizado</h2><p>Cada filme é tratado como uma obra. Diferentes cópias, versões ou edições são variantes dessa mesma obra, com seus próprios metadados técnicos.</p><p>O catálogo apresenta a cópia escolhida para representar cada filme. Na ficha, você encontra suas características e, quando houver outras versões preservadas, as diferenças entre elas.</p></section>
+<section><h2>O que fica fora do site</h2><p>Caminhos locais, mounts, hashes, logs, notas internas, filas, estados de QA, credenciais e informações privadas de armazenamento permanecem fora do site.</p><p>O foco aqui é o conteúdo cinematográfico e as informações que ajudam na descoberta e no contexto dos filmes.</p></section>
+</div><div class="wrap rule"></div><section class="wrap section"><h2>O acervo em números</h2><CollectionStats /></section></main><Footer /></BaseLayout>

@@ -1,8 +1,7 @@
 ---
-import type {
-  CatalogCopyInfo,
-  CatalogPreviewFilm,
-} from '../data/catalog-preview';
+import type { CatalogPreviewFilm } from '../data/catalog-preview';
+import Poster from './Poster.astro';
+import {catalogCopy, formatGiB, hasPtBr} from '../lib/catalog';
 
 interface Props {
   film: CatalogPreviewFilm;
@@ -10,31 +9,10 @@ interface Props {
 
 const { film } = Astro.props;
 
-const catalogCopy: CatalogCopyInfo | undefined =
-  film.catalogCopyId
-    ? film.copies?.find((copy) => copy.id === film.catalogCopyId)
-    : film.copies?.[0];
-
-const resolution = catalogCopy?.resolution ?? '—';
-
-const size =
-  catalogCopy?.sizeGiB != null
-    ? `${new Intl.NumberFormat('pt-BR', {
-        minimumFractionDigits: 1,
-        maximumFractionDigits: 1,
-      }).format(catalogCopy.sizeGiB)} GiB`
-    : '—';
-
-const hasPtBr = Boolean(
-  catalogCopy?.subtitles?.some((subtitle) => {
-    const normalized = subtitle
-      .normalize('NFD')
-      .replace(/\p{Diacritic}/gu, '')
-      .toLocaleLowerCase('pt-BR');
-
-    return normalized === 'pt-br' || normalized.includes('portugues (brasil)');
-  })
-);
+const copy = catalogCopy(film);
+const resolution = copy?.resolution ?? 'Resolução pendente';
+const size = copy?.sizeGiB != null ? formatGiB(copy.sizeGiB) : 'Tamanho pendente';
+const ptBr = hasPtBr(film);
 
 const normalizedTitle = film.title
   .normalize('NFD')
@@ -48,26 +26,10 @@ const normalizedTitle = film.title
   data-search={film.searchable.toLocaleLowerCase('pt-BR')}
   data-title={normalizedTitle}
   data-year={film.year}
-  data-ptbr={hasPtBr ? 'true' : 'false'}
-  data-resolution={catalogCopy?.resolution ?? ''}
+  data-ptbr={ptBr ? 'true' : 'false'}
+  data-resolution={copy?.resolution ?? ''}
 >
-  {
-    film.poster ? (
-      <img
-        class="film-card-poster"
-        src={film.poster}
-        alt={`Pôster de ${film.title}`}
-        loading="lazy"
-        decoding="async"
-      />
-    ) : (
-      <div
-        class="film-card-poster film-card-poster-placeholder"
-        aria-label={`Pôster de ${film.title} ainda não importado`}
-        role="img"
-      ></div>
-    )
-  }
+  <Poster film={film} />
 
   <h2 class="film-card-title">{film.title}</h2>
 
@@ -82,6 +44,6 @@ const normalizedTitle = film.title
   </p>
 
   <p class="film-card-flags">
-    {hasPtBr ? 'pt-BR' : '\u00a0'}
+    {ptBr ? 'pt-BR' : ''}
   </p>
 </a>

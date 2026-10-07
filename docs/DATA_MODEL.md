@@ -114,3 +114,25 @@ Continuam fora da projeção pública:
 - dados internos de publicação;
 - credenciais e material de autenticação;
 - arquivos canônicos privados completos.
+
+## Development preview and final projection
+
+The runtime preview in `src/data/catalog-preview.ts` intentionally allows missing
+poster and copy metadata. It is not the final public catalog and does not import
+`catalog.sample.json`, which remains a schema example rather than verified data.
+Statistics count only runtime preview records and the explicitly selected copy.
+No operational availability field is used in the interface.
+
+`src/lib/catalog.ts` resolves `catalogCopyId` without a fallback to array order or
+resolution. Preview records with a selected copy now declare that identifier.
+The final export schema keeps its existing snake_case field names; an importer
+must explicitly map them to runtime camelCase names. Copy `format` and work
+`originalLanguages` are supported separately from audio languages. Never infer
+the original language from a particular copy's audio track.
+
+Before a final projection is accepted, validate that copy identifiers are unique,
+`catalog_copy_id` references an existing copy with verified resolution and size,
+and the poster exists. JSON Schema alone cannot enforce the cross-reference.
+External links with `copy_id` must reference an existing copy. Only deliberately
+shared URLs are eligible for export. Neither source file locations nor private
+remote identifiers belong in that projection.

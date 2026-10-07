@@ -1,0 +1,6 @@
+---
+import type { CatalogPreviewFilm } from '../data/catalog-preview';
+interface Props { film: CatalogPreviewFilm; eager?: boolean; }
+const {film, eager = false} = Astro.props;
+---
+{film.poster ? <img class="poster" src={film.poster} alt={`Pôster de ${film.title}`} loading={eager ? 'eager' : 'lazy'} decoding="async" width="400" height="600" /> : <div class="poster poster-placeholder" role="img" aria-label={`Pôster de ${film.title} ainda não importado`}><span>Pôster pendente</span></div>}

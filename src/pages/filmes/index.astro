@@ -12,7 +12,7 @@ import { catalogPreview } from '../../data/catalog-preview';
 >
   <Header active="films" />
 
-  <main>
+  <main id="main">
     <section class="wrap page-head catalog-page-head">
       <h1>Filmes</h1>
       <p>
@@ -95,12 +95,14 @@ import { catalogPreview } from '../../data/catalog-preview';
       </div>
     </section>
 
+    <p class="wrap data-note">Prévia de desenvolvimento: pôsteres, resoluções e tamanhos ausentes estão indicados como pendentes.</p>
     <section
+      aria-label="Filmes do catálogo"
       class="wrap film-catalog"
       id="catalog"
       data-view="grid"
     >
-      {catalogPreview.map((film) => <FilmCard film={film} />)}
+      {[...catalogPreview].sort((a,b) => a.title.localeCompare(b.title, 'pt-BR')).map((film) => <FilmCard film={film} />)}
     </section>
 
     <p class="wrap empty-state catalog-empty" id="emptyCatalog" hidden>
@@ -129,14 +131,14 @@ import { catalogPreview } from '../../data/catalog-preview';
 
     let activeFilter = 'all';
 
-    function normalize(value) {
+    function normalize(value: string) {
       return value
         .normalize('NFD')
         .replace(/\p{Diacritic}/gu, '')
         .toLocaleLowerCase('pt-BR');
     }
 
-    function matchesFilter(card) {
+    function matchesFilter(card: HTMLElement) {
       if (activeFilter === 'ptbr') {
         return card.dataset.ptbr === 'true';
       }
@@ -148,7 +150,7 @@ import { catalogPreview } from '../../data/catalog-preview';
       return true;
     }
 
-    function compareCards(a, b) {
+    function compareCards(a: HTMLElement, b: HTMLElement) {
       const mode =
         sort instanceof HTMLSelectElement ? sort.value : 'title';
 
@@ -195,7 +197,7 @@ import { catalogPreview } from '../../data/catalog-preview';
       if (empty) empty.hidden = visible !== 0;
     }
 
-    function setFilter(button) {
+    function setFilter(button: HTMLButtonElement) {
       activeFilter = button.dataset.filter ?? 'all';
 
       for (const candidate of filterButtons) {
@@ -210,7 +212,7 @@ import { catalogPreview } from '../../data/catalog-preview';
       applyCatalog();
     }
 
-    function setView(button) {
+    function setView(button: HTMLButtonElement) {
       const view = button.dataset.view === 'list' ? 'list' : 'grid';
 
       catalog?.setAttribute('data-view', view);

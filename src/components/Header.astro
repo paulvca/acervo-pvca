@@ -1,34 +1,42 @@
 ---
-interface Props {
-  active?: 'home' | 'films' | 'selections' | 'about';
-}
-
-const { active = 'home' } = Astro.props;
-
-const links = [
-  { id: 'home', href: '/', label: 'Início' },
-  { id: 'films', href: '/filmes/', label: 'Filmes' },
-  { id: 'selections', href: '/selecoes/', label: 'Seleções' },
-  { id: 'about', href: '/sobre/', label: 'Sobre' },
-] as const;
+interface Props { active?: 'home' | 'films' | 'selections' | 'about'; }
+const {active = 'home'} = Astro.props;
+const links = [ {id:'home',href:'/',label:'Início'}, {id:'films',href:'/filmes/',label:'Filmes'}, {id:'selections',href:'/selecoes/',label:'Seleções'}, {id:'about',href:'/sobre/',label:'Sobre'} ];
 ---
-
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
 <header class="site-header">
-  <div class="wrap top">
-    <a class="name" href="/">Acervo PVCA</a>
-
-    <nav aria-label="Navegação principal">
-      {
-        links.map((link) => (
-          <a
-            href={link.href}
-            class:list={{ active: active === link.id }}
-            aria-current={active === link.id ? 'page' : undefined}
-          >
-            {link.label}
-          </a>
-        ))
-      }
-    </nav>
-  </div>
+ <div class="wrap top">
+  <a class="name" href="/">Acervo PVCA</a>
+  <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation" hidden><span></span><span></span><span></span></button>
+  <nav id="main-navigation" aria-label="Navegação principal">{links.map(link => <a href={link.href} class:list={{active:active === link.id}} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}</nav>
+ </div>
 </header>
+<script>
+ const header = document.querySelector<HTMLElement>('.site-header')!;
+ const toggle = header.querySelector<HTMLButtonElement>('.menu-toggle')!;
+ const nav = header.querySelector<HTMLElement>('nav')!;
+ const main = document.querySelector<HTMLElement>('main');
+ const footer = document.querySelector<HTMLElement>('footer');
+ toggle.hidden = false;
+ header.classList.add('menu-ready');
+ function setOpen(open: boolean) {
+  header.classList.toggle('menu-open',open);
+  toggle.setAttribute('aria-expanded',String(open));
+  toggle.setAttribute('aria-label',open ? 'Fechar menu' : 'Abrir menu');
+  document.body.classList.toggle('menu-open',open);
+  if (main) main.inert = open;
+  if (footer) footer.inert = open;
+ }
+ toggle.addEventListener('click',() => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+ header.addEventListener('keydown',event => {
+  if (toggle.getAttribute('aria-expanded') !== 'true') return;
+  if (event.key === 'Escape') {setOpen(false); toggle.focus();}
+  if (event.key === 'Tab') {
+   const items = [header.querySelector<HTMLAnchorElement>('.name')!, toggle, ...nav.querySelectorAll<HTMLAnchorElement>('a')];
+   const first = items[0], last = items[items.length-1];
+   if (event.shiftKey && document.activeElement === first) {event.preventDefault(); last.focus();}
+   else if (!event.shiftKey && document.activeElement === last) {event.preventDefault(); first.focus();}
+  }
+ });
+ matchMedia('(min-width: 641px)').addEventListener('change',event => {if(event.matches) setOpen(false);});
+</script>

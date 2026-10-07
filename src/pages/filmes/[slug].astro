@@ -1,4 +1,7 @@
 ---
+import Poster from '../../components/Poster.astro';
+import {formatGiB} from '../../lib/catalog';
+import {selections} from '../../data/selections';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
@@ -33,23 +36,19 @@ const workRows = [
   film.country && ['País', film.country],
   film.runtimeMinutes && ['Duração', `${film.runtimeMinutes} min`],
   film.genres?.length && ['Gênero', film.genres.join(', ')],
+  film.originalLanguages?.length && ['Idioma original', film.originalLanguages.join(', ')],
 ].filter(Boolean) as [string, string][];
 
-const hasSelections = Boolean(film.selections?.length);
+const hasSelections = selections.some(selection => selection.films.some(member => member.slug === film.slug));
 const hasEditorialSummary = Boolean(film.synopsis);
 const copies = film.copies ?? [];
 const externalLinks = film.externalLinks ?? [];
 const hasMultipleCopies = copies.length > 1;
 
-const formatGiB = (value: number) =>
-  `${new Intl.NumberFormat('pt-BR', {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
-  }).format(value)} GiB`;
-
 const copyRows = (copy: CatalogCopyInfo) => [
-  copy.resolution && ['Resolução', copy.resolution],
-  copy.sizeGiB != null && ['Tamanho', formatGiB(copy.sizeGiB)],
+  ['Resolução', copy.resolution ?? 'Ainda não importada'],
+  ['Tamanho', copy.sizeGiB != null ? formatGiB(copy.sizeGiB) : 'Ainda não importado'],
+  copy.format && ['Formato', copy.format],
   copy.audio?.length && ['Áudio', copy.audio.join(', ')],
   copy.subtitles?.length && ['Legendas', copy.subtitles.join(', ')],
   copy.edition && ['Versão', copy.edition],
@@ -67,7 +66,7 @@ const copyLabelForAccess = (copyId?: string) => {
 >
   <Header active="films" />
 
-  <main class="film-detail">
+  <main id="main" class="film-detail">
     <section class="wrap film-detail-head">
       <a class="back-link" href="/filmes/">← Filmes</a>
 
@@ -89,11 +88,7 @@ const copyLabelForAccess = (copyId?: string) => {
     </section>
 
     <section class="wrap film-hero">
-      <div
-        class="film-detail-poster"
-        role="img"
-        aria-label={`Espaço reservado para o pôster de ${film.title}`}
-      ></div>
+      <Poster film={film} eager />
 
       <div class="film-work">
         {
@@ -134,7 +129,7 @@ const copyLabelForAccess = (copyId?: string) => {
                   <article class="film-copy">
                     {
                       hasMultipleCopies && (
-                        <h3>{copy.label}</h3>
+                        <h3>{copy.label ?? `Variante ${copy.id}`}</h3>
                       )
                     }
 
@@ -219,7 +214,7 @@ const copyLabelForAccess = (copyId?: string) => {
           <section class="wrap film-detail-section">
             <h2>Também aparece em</h2>
             <div class="film-selection-links">
-              {film.selections?.map((selection) => <span>{selection}</span>)}
+              {selections.filter(selection => selection.films.some(member => member.slug === film.slug)).map(selection => <a href={`/selecoes/#${selection.id}`}>{selection.title}</a>)}
             </div>
           </section>
         </>

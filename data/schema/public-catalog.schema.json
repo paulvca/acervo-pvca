@@ -139,6 +139,13 @@
                 "string",
                 "null"
               ]
+            },
+            "format": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
             }
           }
         }
@@ -184,6 +191,13 @@
         ]
       },
       "selections": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "original_languages": {
         "type": "array",
         "items": {
           "type": "string",

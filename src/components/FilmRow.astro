@@ -1,17 +1,6 @@
 ---
-import type { FilmSummary } from '../lib/types';
-
-interface Props {
-  film: FilmSummary;
-}
-
-const { film } = Astro.props;
+import type {CatalogPreviewFilm} from '../data/catalog-preview';
+interface Props {film: CatalogPreviewFilm;}
+const {film} = Astro.props;
 ---
-
-<a class="index-row" href={film.href}>
-  <span class="left">
-    <span class="title">{film.title}</span>
-    <span class="meta">{film.director} · {film.year}</span>
-  </span>
-  <span class="right">{film.status}</span>
-</a>
+<a class="index-row" href={`/filmes/${film.slug}/`}><span>{film.title}</span><span>{film.director} · {film.year}</span></a>
