@@ -1112,14 +1112,14 @@ nav a.active {
 
 .film-card-title {
   display: -webkit-box;
-  min-height: 2.5em;
+  min-height: 2.56em;
   margin: 12px 0 0;
   overflow: hidden;
   color: var(--color-text-head);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 580;
   letter-spacing: -0.025em;
-  line-height: 1.25;
+  line-height: 1.28;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -1128,8 +1128,20 @@ nav a.active {
 .film-card-technical,
 .film-card-flags {
   margin: 0;
-  font-size: 10.5px;
   line-height: 1.45;
+}
+
+.film-card-byline {
+  font-size: 11px;
+}
+
+.film-card-technical {
+  font-size: 11.5px;
+  font-weight: 550;
+}
+
+.film-card-flags {
+  font-size: 10.5px;
 }
 
 .film-card-byline {
@@ -1199,11 +1211,17 @@ nav a.active {
 }
 
 .film-catalog[data-view='list'] .film-card-title {
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.film-catalog[data-view='list'] .film-card-byline,
-.film-catalog[data-view='list'] .film-card-technical,
+.film-catalog[data-view='list'] .film-card-byline {
+  font-size: 11px;
+}
+
+.film-catalog[data-view='list'] .film-card-technical {
+  font-size: 11.5px;
+}
+
 .film-catalog[data-view='list'] .film-card-flags {
   font-size: 10.5px;
 }
