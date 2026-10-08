@@ -1,0 +1,18 @@
+{
+  "data/public/catalog.sample.json": "4e837541d206d153c5797336593242ff2c9bb398ea8c52e3e890dcee673c4ab9",
+  "prototype/v3/START_HERE_PROMPT.md": "c60b841c9893a02be2d3dc6c8c2609268a6e700477d884246c47025ccce49623",
+  "prototype/v3/acervo_pvca_noah_dark_concept_v3.html": "56a61fba923febd932a55073fe43d48df703afd69170b2af35a95816fa6de30c",
+  "references/noahzender/AUDIT.md": "7030a806aa59639b81e37209ec33319d4efbb5c8c20df0b016b3173eb850f2f9",
+  "src/components/DecadeChart.astro": "13df44f87afb2323f6e3fbe55bcc027a832cfd826bb54f2d80b08fe82156db5e",
+  "src/components/FilmRow.astro": "9a1c05bacb3667bf4a9ec8a173270ee0256b44ec6c5d447695f47991320e71fa",
+  "src/components/Footer.astro": "62e895f71d3cbc2cc214b3d0b914759f85332b36628b78207683b82c23634b28",
+  "src/components/SelectionRow.astro": "a18855c22f0ef18d6a5e4e58d512bfc7f71113dd72bd8405366964d6718f39c1",
+  "src/pages/en/filmes/[slug].astro": "7c1b96d1e657a16cb1f6cb5fd2f918e509fc2bee2ebd61cc49baf3f5de4b65ae",
+  "src/pages/en/filmes/index.astro": "8f7f336bd6ea7a330eb757fe24b44dbb78255dccbf2e12ac7ecb1323ae8bf40e",
+  "src/pages/en/index.astro": "1f374acc74e83e242f9faba1450cc8301587082a165ba19d0284dfa27ea525e1",
+  "src/pages/en/selecoes/[slug].astro": "968e7e58c4bee3ee5af63c05cea8300d19b95eb1b02fe366ffcc654550539c9d",
+  "src/pages/en/selecoes/index.astro": "c0c27105bd741989af37518f079ad4bd4ad0ccda831de4da596dae3634573be0",
+  "src/pages/en/sobre.astro": "0e161bab2ecba1d05d52e98807907dc682d0d856ad36cfbf5dfcb5f07bed225b",
+  "src/pages/filmes/index.astro": "a2b30f43d22dfd85cf2a97cb46348446380c331463e2ba2d5f13d3573762407e",
+  "src/pages/selecoes/[slug].astro": "be2ce2bfaf4680b966d1a11e232f93d5c224f5d9e266a5eab1762e554fc4ce76"
+}

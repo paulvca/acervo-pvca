@@ -1,20 +1,128 @@
 ---
-import {getI18n,assetPath} from '../lib/i18n';
-const {lang,t,path}=getI18n(Astro.url);
+import { getI18n, assetPath } from "../lib/i18n";
+const { t } = getI18n(Astro.url);
 
-import {isPreview} from '../data/catalog';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import CollectionStats from '../components/CollectionStats.astro';
+import { isPreview } from "../data/catalog";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CollectionStats from "../components/CollectionStats.astro";
 ---
-<BaseLayout title="Sobre — Acervo PVCA"><Header active="about" /><main id="main">
-<section class="wrap page-head"><h1>{t("Sobre")}</h1></section>
-<section class="wrap about-intro"><p>{t("O Acervo PVCA nasceu da organização da minha coleção pessoal de cinema. Ao longo do tempo, passou a reunir diferentes cópias, legendas revisadas e informações sobre cada obra.")}</p><p>{t("Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e percorrer a coleção pelas minhas seleções.")}</p></section>
-<div class="wrap rule"></div><div class="wrap about-columns">
-<section><h2>{t("Os filmes e suas cópias")}</h2><p>{t("Cada ficha apresenta a obra e a cópia preservada no acervo: direção, ano, país e duração, além de resolução, tamanho, áudio e legendas. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.")}</p><p>{t("Os links disponíveis levam às cópias que escolhi compartilhar.")}{isPreview && t(' Nesta prévia, pôsteres e dados ainda não importados permanecem indicados como pendentes.')}</p></section>
-<section><h2>{t("Minhas redes sociais")}</h2><ul class="social-links"><li><a href="https://x.com/vaidadehumana" rel="me">X ↗</a></li><li><a href="https://letterboxd.com/pvca/" rel="me">Letterboxd ↗</a></li><li><a href="https://www.instagram.com/paulovcaragao/" rel="me">Instagram ↗</a></li><li><a href="https://rateyourmusic.com/~pvca" rel="me">Rate Your Music ↗</a></li></ul></section>
 
-</div><div class="wrap rule"></div><section class="wrap section"><h2>{t("O acervo em números")}</h2><CollectionStats /></section><section class="wrap section tmdb-credit"><a href="https://www.themoviedb.org/" aria-label="TMDB"><img src={assetPath('/credits/tmdb.svg')} alt="TMDB" width="93" height="67" loading="lazy" /></a><p>{t('Metadados e pôsteres obtidos do TMDB quando disponíveis.')}<br />This product uses the TMDB API but is not endorsed or certified by TMDB.</p></section></main><Footer /></BaseLayout>
+<BaseLayout
+  title="Sobre — Acervo PVCA"
+  description={t(
+    "Conheça a história e a organização do Acervo PVCA, minha coleção pessoal de cinema."
+  )}
+>
+  <Header active="about" />
+  <main id="main">
+    <section class="wrap page-head">
+      <h1>{t("Sobre")}</h1>
+    </section>
+    <div class="wrap about-intro">
+      <p>
+        {t(
+          "O Acervo PVCA nasceu da organização da minha coleção pessoal de cinema. Ao longo do tempo, passou a reunir diferentes cópias, legendas revisadas e informações sobre cada obra."
+        )}
+      </p>
+      <p>
+        {t(
+          "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e percorrer a coleção pelas minhas seleções."
+        )}
+      </p>
+    </div>
+    <div class="wrap rule"></div>
+    <div class="wrap about-columns">
+      <section>
+        <h2>{t("Os filmes e suas cópias")}</h2>
+        <p>
+          {t(
+            "Cada ficha apresenta a obra e a cópia preservada no acervo: direção, ano, país e duração, além de resolução, tamanho, áudio e legendas. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página."
+          )}
+        </p>
+        <p>
+          {t("Os links disponíveis levam às cópias que escolhi compartilhar.")}
+          {isPreview &&
+            t(
+              " Nesta prévia, pôsteres e dados ainda não importados permanecem indicados como pendentes."
+            )}
+        </p>
+      </section>
+      <section>
+        <h2>{t("Minhas redes sociais")}</h2>
+        <ul class="social-links">
+          <li>
+            <a href="https://x.com/vaidadehumana" rel="me">
+              X ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://letterboxd.com/pvca/" rel="me">
+              Letterboxd ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/paulovcaragao/" rel="me">
+              Instagram ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://rateyourmusic.com/~pvca" rel="me">
+              Rate Your Music ↗
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="wrap rule"></div>
+    <section class="wrap section">
+      <h2>{t("O acervo em números")}</h2>
+      <CollectionStats />
+    </section>
+    <div class="wrap section tmdb-credit">
+      <a href="https://www.themoviedb.org/" aria-label="TMDB">
+        <img
+          src={assetPath("/credits/tmdb.svg")}
+          alt="TMDB"
+          width="93"
+          height="67"
+          loading="lazy"
+        />
+      </a>
+      <p>
+        {t("Metadados e pôsteres obtidos do TMDB quando disponíveis.")}
+        <br />
+        This product uses the TMDB API but is not endorsed or certified by TMDB.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
 
-<style>.tmdb-credit{display:flex;align-items:center;gap:24px;border-top:1px solid var(--border, #343331)}.tmdb-credit img{filter:grayscale(1) brightness(0) invert(1);max-width:none}.tmdb-credit p{font-size:.875rem;color:#9F9D96}@media(max-width:600px){.tmdb-credit{align-items:flex-start;gap:16px}.tmdb-credit img{width:70px;height:auto}}</style>
+<style>
+  .tmdb-credit {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--color-border);
+  }
+  .tmdb-credit img {
+    filter: grayscale(1) brightness(0) invert(1);
+    max-width: none;
+  }
+  .tmdb-credit p {
+    font-size: 0.875rem;
+    color: #9f9d96;
+  }
+  @media (max-width: 600px) {
+    .tmdb-credit {
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .tmdb-credit img {
+      width: 70px;
+      height: auto;
+    }
+  }
+</style>

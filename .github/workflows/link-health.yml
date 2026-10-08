@@ -1,0 +1,25 @@
+name: Public link health
+on:
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - name: Check public source links (maintenance only)
+        run: node scripts/link-health.mjs
+      - name: Save actionable link report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: link-health
+          path: reports/link-health/
+          if-no-files-found: warn

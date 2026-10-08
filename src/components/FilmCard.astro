@@ -1,38 +1,39 @@
 ---
-import {getI18n,localizeFilm} from '../lib/i18n';
-const {lang,t,path}=getI18n(Astro.url);
+import { getI18n, localizeFilm } from "../lib/i18n";
+const { lang, t, path } = getI18n(Astro.url);
 
-import type { CatalogPreviewFilm } from '../data/catalog-preview';
-import Poster from './Poster.astro';
-import {catalogCopy, formatGiB, hasPtBr} from '../lib/catalog';
+import type { CatalogPreviewFilm } from "../data/catalog-preview";
+import Poster from "./Poster.astro";
+import { catalogCopy, formatGiB, hasPtBr } from "../lib/catalog";
 
 interface Props {
   film: CatalogPreviewFilm;
 }
 
-const film=localizeFilm(Astro.props.film,lang);
+const film = localizeFilm(Astro.props.film, lang);
 
 const copy = catalogCopy(film);
-const resolution = copy?.resolution ?? t('Resolução pendente');
-const size = copy?.sizeGiB != null ? formatGiB(copy.sizeGiB,lang) : t('Tamanho pendente');
+const resolution = copy?.resolution ?? t("Resolução pendente");
+const size =
+  copy?.sizeGiB != null ? formatGiB(copy.sizeGiB, lang) : t("Tamanho pendente");
 const ptBr = hasPtBr(Astro.props.film);
 
 const normalizedTitle = film.title
-  .normalize('NFD')
-  .replace(/\p{Diacritic}/gu, '')
-  .toLocaleLowerCase('pt-BR');
+  .normalize("NFD")
+  .replace(/\p{Diacritic}/gu, "")
+  .toLocaleLowerCase("pt-BR");
 ---
 
 <a
   class="film-card"
   href={path(`/filmes/${film.slug}/`)}
-  data-search={film.searchable.toLocaleLowerCase('pt-BR')}
+  data-search={film.searchable.toLocaleLowerCase("pt-BR")}
   data-title={normalizedTitle}
   data-year={film.year}
-  data-ptbr={ptBr ? 'true' : 'false'}
-  data-resolution={copy?.resolution ?? ''}
+  data-ptbr={ptBr ? "true" : "false"}
+  data-resolution={copy?.resolution ?? ""}
 >
-  <Poster film={film} />
+  <Poster film={film} decorative />
 
   <h2 class="film-card-title">{film.title}</h2>
 
@@ -46,7 +47,5 @@ const normalizedTitle = film.title
     <span>{size}</span>
   </p>
 
-  <p class="film-card-flags">
-    {ptBr ? 'pt-BR' : ''}
-  </p>
+  <p class="film-card-flags">{ptBr ? "pt-BR" : ""}</p>
 </a>

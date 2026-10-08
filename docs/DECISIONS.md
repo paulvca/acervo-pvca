@@ -1,18 +1,21 @@
-# Decisões
+# Decisions
 
-## Confirmadas
+## Confirmed
 
-- Repositório inicial privado.
-- Site público e operação privada compartilham a mesma identidade de acervo, mas não a mesma superfície de dados.
-- A referência Noah Zender é estrutural, não uma licença para copiar conteúdo.
-- Flexoki Dark é a direção visual.
-- Admin não bloqueia o primeiro release público.
+- Astro produces a static, bilingual PT-BR/English public site on GitHub Pages.
+- Flexoki Dark, editorial typography and negative space remain the visual direction.
+- Public source repository and public site are separate from private collection operations.
+- The normalized private database is authoritative. Only validated public projections and approved poster assets are published.
+- The admin runs locally; it is not a public route and does not require remote authentication.
+- Film slugs and work/copy identities are stable. One selected copy represents each film; real copies and source links remain separate from deduplicated technical presentations.
+- Home collection figures are in the introduction, as established by the published implementation and subsequent revisions. The decade chart follows selections; both home statistics obey `showStats`.
+- Explicit locale URLs determine language. Manual switching preserves equivalent routes, query strings and fragments.
+- The Noah Zender reference informs structure; its content is not reused.
+- Pull requests must pass source, artifact and representative browser checks before merging. Deployment is exclusive to main.
 
-## Em aberto
+## Still open
 
-- stack final;
-- hospedagem final;
-- autenticação/admin;
-- política de licença do código;
-- formato definitivo da projeção pública;
-- estratégia final para pôsteres.
+- Code licensing policy.
+- Optional Movie JSON-LD and editorial decisions about additional structured data.
+
+Repository history and previous design documents are dated evidence, not a second implementation contract.

@@ -69,3 +69,19 @@ export function distinctCopyDetails(
     return true;
   });
 }
+
+/** Name each distinct presentation; source labels and editions take precedence. */
+export function copyDetailHeading(
+  copy: CatalogCopyInfo,
+  index: number,
+  total: number,
+  t: (text: string) => string
+) {
+  return (
+    copy.label ||
+    copy.edition ||
+    (index === 0
+      ? t("Cópia do catálogo")
+      : t("Outra cópia") + (total > 2 ? ` ${index + 1}` : ""))
+  );
+}

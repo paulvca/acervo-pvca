@@ -1,8 +1,17 @@
 export const en = {
+  "Página não encontrada": "Page not found",
+  "Este endereço não existe no acervo. Você pode voltar ao início ou explorar os filmes.":
+    "This address does not exist in the collection. You can return home or browse the films.",
+  "Explorar filmes": "Browse films",
+  "Acervo pessoal de cinema: filmes, cópias preservadas e seleções para explorar.":
+    "A personal cinema collection: films, preserved copies and selections to explore.",
+  "Conheça a história e a organização do Acervo PVCA, minha coleção pessoal de cinema.":
+    "Learn about the history and organization of Acervo PVCA, my personal cinema collection.",
+  "Percursos pessoais pelos filmes do Acervo PVCA, reunidos em seleções temáticas.":
+    "Personal paths through Acervo PVCA films, brought together in thematic selections.",
   "Filmes por década": "Films by decade",
-  filme: "film",
-  filmes: "films",
   "Outra cópia": "Another copy",
+  "Cópia do catálogo": "Catalog copy",
   "Os filmes e suas cópias": "The films and their copies",
   "Cada ficha apresenta a obra e a cópia preservada no acervo: direção, ano, país e duração, além de resolução, tamanho, áudio e legendas. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.":
     "Each film page presents the work and the preserved copy: director, year, country and running time, alongside resolution, file size, audio and subtitles. Details of different versions or editions appear on the same page.",
@@ -215,6 +224,8 @@ export function languagePath(lang, pathname, basePath = "/") {
   const route =
     routePath(pathname, basePath).replace(/^\/en(?=\/|$)/, "") || "/";
   const prefix = basePath.replace(/\/$/, "");
+  if (["/404", "/404/", "/404.html"].includes(route))
+    return prefix + (lang === "en" ? "/en/404/" : "/404.html");
   return (
     prefix +
     (lang === "en" ? "/en" : "") +

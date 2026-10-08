@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getI18n } from "../lib/i18n";
+const { lang, t, path } = getI18n(Astro.url);
+---
+
+<BaseLayout title={t("Página não encontrada")} noindex>
+  <Header active="none" />
+  <main id="main">
+    <section class="wrap page-head">
+      <p class="eyebrow">404</p>
+      <h1>{t("Página não encontrada")}</h1>
+      <p>
+        {t(
+          "Este endereço não existe no acervo. Você pode voltar ao início ou explorar os filmes."
+        )}
+      </p>
+      {lang === "pt-BR" && (
+        <p lang="en">
+          Page not found. Return home or browse the films. You can also choose
+          EN above.
+        </p>
+      )}
+      <p>
+        <a class="inline-link" href={path("/")}>
+          {t("Início")}
+        </a>{" "}
+        ·{" "}
+        <a class="inline-link" href={path("/filmes/")}>
+          {t("Explorar filmes")}
+        </a>
+      </p>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

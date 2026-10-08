@@ -1,10 +1,10 @@
 ---
-import {getI18n,localizeFilm} from '../lib/i18n';
-const {lang,t,path}=getI18n(Astro.url);
-
-import FilmCard from './FilmCard.astro';
-import type {CatalogPreviewFilm} from '../data/catalog-preview';
-interface Props {film: CatalogPreviewFilm;}
-const {film} = Astro.props;
+import FilmCard from "./FilmCard.astro";
+import type { CatalogPreviewFilm } from "../data/catalog-preview";
+interface Props {
+  film: CatalogPreviewFilm;
+}
+const { film } = Astro.props;
 ---
+
 <FilmCard film={film} />

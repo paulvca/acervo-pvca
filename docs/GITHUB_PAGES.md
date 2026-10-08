@@ -23,11 +23,34 @@ Normal local previews retain `/` as their base path. To test the Pages path:
 
 ```sh
 npx --no-install astro build --site https://paulvca.github.io --base /acervo-pvca
-python3 scripts/site_check.py --base /acervo-pvca
+python3 scripts/site_check.py --site https://paulvca.github.io --base /acervo-pvca
 ```
 
 Navigation, language switching and poster URLs use Astro's deployment base.
-Language detection retains the current page under that base path.
+Explicit language URLs are authoritative: `/` is Portuguese and `/en/` is English.
+Manual switching retains the equivalent page, query string and fragment; the saved
+preference never redirects an explicit locale URL.
+
+## Quality gate
+
+The deployment runs `npm ci`, `npm run format:check`, `npm run lint`, `npm run check`, `npm test`,
+`npm run catalog:check`, the Pages build, generated-artifact validation and Playwright/axe before
+upload and deployment. TMDB tests are fully mocked and require no credentials.
+Astro check dependencies and the Astro Prettier plugin are installed explicitly.
+
+`format:check` checks every Git-managed supported file, including new files. The
+16 untouched legacy files in `scripts/format-baseline.json` are exempt only while
+their exact content hash matches; edits require formatting. This avoids a broad
+whitespace-only change. Pre-commit continues formatting supported staged files.
+Remove obsolete baseline entries as those files are formatted.
+
+The artifact validator checks self canonicals, absolute language alternatives,
+existing counterparts, semantic groups/sections, poster alternatives, links,
+assets, public boundaries and sitemap completeness. Sitemap uses Astro's effective
+`site` and `base`, just like canonical and social metadata.
+
+`showStats` controls the home statistics, including the decade chart, using the
+existing admin home setting. No second flag or data migration is required.
 
 ## Updating the catalog later
 
@@ -37,8 +60,9 @@ public data/assets and relevant code, then push to `main` to rebuild the site.
 Private drafts and `.local-admin/` remain outside Git and outside the deployed site.
 
 No TMDB credential is needed in GitHub Actions: enrichment happens locally before
-publication. Missing real catalog data remains a development preview, with honest
-placeholders; publishing does not certify its completeness.
+publication. The current publication uses the validated real catalog. An empty projection
+retains the explicit development fallback; it does not describe the live baseline.
+Publishing does not certify completeness of the private collection.
 
 References: [Astro deployment guide](https://docs.astro.build/en/guides/deploy/github/)
 and [GitHub Pages publishing sources](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
