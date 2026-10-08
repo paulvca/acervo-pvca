@@ -14,6 +14,10 @@ Playwright covers seven representative pages in each locale, a real Pages 404 fa
 
 The same workflow validates `pull_request` to main, main pushes and manual main runs. Pages configuration/upload/deploy are skipped for PRs. Fork PRs run with read-only permissions, without secrets or previews. Browser reports/traces are uploaded as GitHub artifacts on success or failure. Main deploy depends on the quality job.
 
+## Local commits
+
+Husky runs staged-only Prettier through lint-staged, followed by `npm run check` (the existing Astro/TypeScript check) and `npm test`. The hook is executable and `npm ci` installs it through the existing prepare script. Failed formatting, type checks or regressions stop the commit; browser and artifact checks remain in CI.
+
 ## Async maintenance
 
 - Dependabot opens weekly npm and GitHub Actions update PRs. No auto-merge is configured; majors follow the same CI as other PRs.
