@@ -19,7 +19,7 @@
     {
       "id": "japao-depois-da-guerra",
       "title": "Japão depois da guerra",
-      "description": "Família, trabalho e transformação social no Japão do pós-guerra, em filmes ambientados entre os anos 1940 e 1960.",
+      "description": "Casamentos, laços familiares e formas de sobreviver num Japão que se transforma depois da guerra.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -55,14 +55,14 @@
       ],
       "localized": {
         "en": {
-          "description": "Family, work and social change in postwar Japan, in films set between the 1940s and 1960s."
+          "description": "Marriage, family ties and ways of making a living in a Japan transformed by the war."
         }
       }
     },
     {
       "id": "sidney-lumet",
       "title": "Sidney Lumet",
-      "description": "Instituições, responsabilidade e conflitos morais nos filmes de Sidney Lumet.",
+      "description": "Da sala de julgamento às ruas da cidade, pessoas confrontam o poder, a culpa e os limites da própria consciência.",
       "rule": "manual",
       "filmSlugs": [
         "the-offence-1973",
@@ -97,12 +97,17 @@
         "gloria-1999",
         "power-1986",
         "12-angry-men-1957"
-      ]
+      ],
+      "localized": {
+        "en": {
+          "description": "From the courtroom to the city streets, people confront power, guilt and the limits of their own conscience."
+        }
+      }
     },
     {
       "id": "noir-americano",
       "title": "Noir americano",
-      "description": "Crime e fatalismo entre ruas noturnas e personagens encurralados.",
+      "description": "Detetives, desejos e crimes que cobram seu preço. Histórias em que escapar do passado raramente é simples.",
       "rule": "manual",
       "filmSlugs": [
         "out-of-the-past-1947",
@@ -110,26 +115,41 @@
         "kiss-me-deadly-1955",
         "touch-of-evil-1958",
         "the-lady-from-shanghai-1947"
-      ]
+      ],
+      "localized": {
+        "en": {
+          "description": "Detectives, desire and crimes that exact a price. Stories in which escaping the past is rarely simple."
+        }
+      }
     },
     {
       "id": "legendas-em-portugues",
       "title": "Com legendas em português",
-      "description": "Filmes cuja cópia apresentada no catálogo inclui legendas em português do Brasil.",
+      "description": "Filmes com legendas em português do Brasil na cópia apresentada no catálogo.",
       "rule": "pt-br",
-      "filmSlugs": []
+      "filmSlugs": [],
+      "localized": {
+        "en": {
+          "description": "Films with Brazilian Portuguese subtitles in the copy shown in the catalog."
+        }
+      }
     },
     {
       "id": "4k",
       "title": "Em 4K",
-      "description": "Filmes cuja cópia apresentada no catálogo tem resolução 2160p.",
+      "description": "Filmes cuja cópia escolhida para o catálogo está em 2160p, a resolução 4K.",
       "rule": "4k",
-      "filmSlugs": []
+      "filmSlugs": [],
+      "localized": {
+        "en": {
+          "description": "Films whose selected catalog copy is in 2160p, or 4K resolution."
+        }
+      }
     },
     {
       "id": "cinema-japones",
       "title": "Cinema japonês",
-      "description": "Um percurso pelo cinema japonês, dos filmes silenciosos às obras contemporâneas.",
+      "description": "Dos dramas familiares de Ozu e Mizoguchi às rupturas de Ōshima e Tsukamoto, diferentes maneiras de olhar o Japão.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -240,14 +260,14 @@
       "localized": {
         "en": {
           "title": "Japanese cinema",
-          "description": "A path through Japanese cinema, from silent films to contemporary works."
+          "description": "From the family dramas of Ozu and Mizoguchi to the radical departures of Ōshima and Tsukamoto, different ways of looking at Japan."
         }
       }
     },
     {
       "id": "anos-1950",
       "title": "Anos 1950",
-      "description": "Filmes de uma década marcada por mudanças na sociedade e no cinema.",
+      "description": "Famílias em mudança, cidades inquietas e fronteiras em disputa. Um encontro com o cinema dos anos 1950.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -365,12 +385,17 @@
         "some-like-it-hot-1959",
         "the-400-blows-1959",
         "black-orpheus-1959"
-      ]
+      ],
+      "localized": {
+        "en": {
+          "description": "Changing families, restless cities and contested frontiers. An encounter with the cinema of the 1950s."
+        }
+      }
     },
     {
       "id": "john-ford",
       "title": "John Ford",
-      "description": "Comunidades, paisagens e histórias dos Estados Unidos, entre faroestes, dramas e documentários.",
+      "description": "A formação das comunidades, suas promessas e contradições, vista entre paisagens do Oeste, dramas e documentários.",
       "rule": "manual",
       "filmSlugs": [
         "the-man-who-shot-liberty-valance-1962",
@@ -441,14 +466,14 @@
       "localized": {
         "en": {
           "title": "John Ford",
-          "description": "Communities, landscapes and American histories, through westerns, dramas and documentaries."
+          "description": "The making of communities, their promises and contradictions, across Western landscapes, dramas and documentaries."
         }
       }
     },
     {
       "id": "kenji-mizoguchi",
       "title": "Kenji Mizoguchi",
-      "description": "Desejo, convenções sociais e destinos de mulheres, dos dramas históricos ao Japão de seu tempo.",
+      "description": "Mulheres enfrentam as exigências da família, do dinheiro e das convenções sociais, em histórias do Japão antigo e moderno.",
       "rule": "manual",
       "filmSlugs": [
         "a-geisha-1953",
@@ -483,14 +508,14 @@
       "localized": {
         "en": {
           "title": "Kenji Mizoguchi",
-          "description": "Desire, social conventions and the lives of women, from historical dramas to the Japan of his time."
+          "description": "Women face the demands of family, money and social convention in stories of old and modern Japan."
         }
       }
     },
     {
       "id": "michelangelo-antonioni",
       "title": "Michelangelo Antonioni",
-      "description": "Relações, paisagens e formas de olhar, entre ficção e documentário.",
+      "description": "Amores que se desfazem e pessoas que parecem perder seu lugar, entre ruas, interiores e paisagens em transformação.",
       "rule": "manual",
       "filmSlugs": [
         "la-notte-1961",
@@ -517,14 +542,14 @@
       "localized": {
         "en": {
           "title": "Michelangelo Antonioni",
-          "description": "Relationships, landscapes and ways of seeing, across fiction and documentary."
+          "description": "Love comes apart and people seem to lose their bearings amid streets, interiors and changing landscapes."
         }
       }
     },
     {
       "id": "orson-welles",
       "title": "Orson Welles",
-      "description": "Poder, memória e encenação nos filmes dirigidos ou codirigidos por Orson Welles presentes na coleção.",
+      "description": "A ambição, o poder e as versões de uma história, num cinema que faz da própria encenação parte do conflito.",
       "rule": "manual",
       "filmSlugs": [
         "the-magnificent-ambersons-1942",
@@ -545,14 +570,14 @@
       "localized": {
         "en": {
           "title": "Orson Welles",
-          "description": "Power, memory and performance in the films directed or co-directed by Orson Welles in the collection."
+          "description": "Ambition, power and competing versions of a story, in films where staging itself becomes part of the conflict."
         }
       }
     },
     {
       "id": "akira-kurosawa",
       "title": "Akira Kurosawa",
-      "description": "Escolhas morais e conflitos humanos, do Japão histórico às cidades do pós-guerra.",
+      "description": "Samurais, policiais e homens comuns diante de escolhas difíceis. A responsabilidade de agir num mundo em conflito.",
       "rule": "manual",
       "filmSlugs": [
         "throne-of-blood-1957",
@@ -569,14 +594,14 @@
       "localized": {
         "en": {
           "title": "Akira Kurosawa",
-          "description": "Moral choices and human conflict, from historical Japan to postwar cities."
+          "description": "Samurai, police officers and ordinary people facing difficult choices. The responsibility to act in a world of conflict."
         }
       }
     },
     {
       "id": "yasujiro-ozu",
       "title": "Yasujirō Ozu",
-      "description": "Famílias, gerações e mudanças discretas na vida cotidiana.",
+      "description": "Pais e filhos, casamentos e despedidas. Nas conversas de cada dia, uma família muda e o tempo deixa suas marcas.",
       "rule": "manual",
       "filmSlugs": [
         "an-autumn-afternoon-1962",
@@ -592,14 +617,14 @@
       "localized": {
         "en": {
           "title": "Yasujirō Ozu",
-          "description": "Families, generations and quiet changes in everyday life."
+          "description": "Parents and children, marriages and farewells. In everyday conversations, a family changes and time leaves its marks."
         }
       }
     },
     {
       "id": "jacques-tourneur",
       "title": "Jacques Tourneur",
-      "description": "Sombras, ameaças e atmosferas inquietantes, entre noir, horror e faroeste.",
+      "description": "O perigo nem sempre se deixa ver. Sombras, suspeitas e ameaças atravessam seus filmes de horror, noir e faroeste.",
       "rule": "manual",
       "filmSlugs": [
         "i-walked-with-a-zombie-1943",
@@ -619,14 +644,14 @@
       "localized": {
         "en": {
           "title": "Jacques Tourneur",
-          "description": "Shadows, threats and unsettling atmospheres, across noir, horror and westerns."
+          "description": "Danger does not always reveal itself. Shadows, suspicion and threats run through his horror films, noirs and westerns."
         }
       }
     },
     {
       "id": "michael-mann",
       "title": "Michael Mann",
-      "description": "Crime, trabalho e obsessão nas trajetórias de homens submetidos a seus próprios códigos.",
+      "description": "Homens definidos pelo que fazem, entre o crime e a lei. O trabalho, a obsessão e o preço de viver segundo um código.",
       "rule": "manual",
       "filmSlugs": [
         "the-keep-1983",
@@ -639,14 +664,14 @@
       "localized": {
         "en": {
           "title": "Michael Mann",
-          "description": "Crime, work and obsession in the lives of men bound by their own codes."
+          "description": "Men defined by what they do, on both sides of the law. Work, obsession and the cost of living by a code."
         }
       }
     },
     {
       "id": "cinema-italiano",
       "title": "Cinema italiano",
-      "description": "Um recorte do cinema italiano, entre neorrealismo, cinema moderno, gêneros populares e obras de seus cineastas realizadas no exterior.",
+      "description": "Das ruas de Rossellini aos mundos de Fellini e Antonioni, a vida social encontra novas formas de aparecer na tela.",
       "rule": "manual",
       "filmSlugs": [
         "misunderstood-1967",
@@ -696,14 +721,14 @@
       "localized": {
         "en": {
           "title": "Italian cinema",
-          "description": "A selection of Italian cinema, spanning neorealism, modern cinema, popular genres and works made abroad by its filmmakers."
+          "description": "From Rossellini's streets to the worlds of Fellini and Antonioni, social life finds new ways to appear on screen."
         }
       }
     },
     {
       "id": "cinema-frances",
       "title": "Cinema francês",
-      "description": "Um recorte do cinema francês, de Renoir e Bresson à Nouvelle Vague e aos seus desdobramentos.",
+      "description": "De Renoir e Bresson à Nouvelle Vague, encontros entre a vida íntima, as tensões sociais e a liberdade de experimentar.",
       "rule": "manual",
       "filmSlugs": [
         "lancelot-of-the-lake-1974",
@@ -766,14 +791,14 @@
       "localized": {
         "en": {
           "title": "French cinema",
-          "description": "A selection of French cinema, from Renoir and Bresson to the New Wave and its successors."
+          "description": "From Renoir and Bresson to the New Wave, encounters between private lives, social tensions and the freedom to experiment."
         }
       }
     },
     {
       "id": "cinema-de-hong-kong",
       "title": "Cinema de Hong Kong",
-      "description": "Crime, ação e relações em transformação nas produções de Hong Kong presentes no acervo.",
+      "description": "Lealdades postas à prova, violência e vidas em movimento, dos filmes de John Woo aos de Johnnie To e Stanley Kwan.",
       "rule": "manual",
       "filmSlugs": [
         "the-killer-1989",
@@ -789,14 +814,14 @@
       "localized": {
         "en": {
           "title": "Hong Kong cinema",
-          "description": "Crime, action and changing relationships in the Hong Kong productions in the collection."
+          "description": "Loyalties tested, violence and lives in motion, from the films of John Woo to those of Johnnie To and Stanley Kwan."
         }
       }
     },
     {
       "id": "cinema-brasileiro",
       "title": "Cinema brasileiro",
-      "description": "Conflitos sociais, invenção formal e vidas à margem nos filmes brasileiros da coleção.",
+      "description": "Do sertão às ruas das cidades, histórias de trabalho, desigualdade e invenção que interrogam o país.",
       "rule": "manual",
       "filmSlugs": [
         "they-don-t-wear-black-tie-1981",
@@ -824,14 +849,14 @@
       "localized": {
         "en": {
           "title": "Brazilian cinema",
-          "description": "Social conflict, formal invention and life on the margins in the Brazilian films in the collection."
+          "description": "From the sertão to city streets, stories of work, inequality and invention that question the country."
         }
       }
     },
     {
       "id": "cinema-portugues",
       "title": "Cinema português",
-      "description": "Um percurso pelo cinema português através dos filmes de João César Monteiro e Manoel de Oliveira.",
+      "description": "João César Monteiro e Manoel de Oliveira entre o desejo, a memória e o prazer de dar à palavra um lugar no cinema.",
       "rule": "manual",
       "filmSlugs": [
         "hovering-over-the-water-1986",
@@ -848,14 +873,14 @@
       "localized": {
         "en": {
           "title": "Portuguese cinema",
-          "description": "A path through Portuguese cinema through the films of João César Monteiro and Manoel de Oliveira."
+          "description": "João César Monteiro and Manoel de Oliveira explore desire, memory and the pleasure of giving words a place in cinema."
         }
       }
     },
     {
       "id": "cinema-sovietico",
       "title": "Cinema soviético",
-      "description": "As produções soviéticas da coleção, entre história, guerra e imaginação.",
+      "description": "A guerra, a memória e a vida cotidiana em filmes que perguntam qual é o lugar de cada pessoa diante da história.",
       "rule": "manual",
       "filmSlugs": [
         "the-cranes-are-flying-1957",
@@ -871,14 +896,14 @@
       "localized": {
         "en": {
           "title": "Soviet cinema",
-          "description": "The Soviet productions in the collection, across history, war and imagination."
+          "description": "War, memory and everyday life in films that ask where each person stands in relation to history."
         }
       }
     },
     {
       "id": "infancia-e-formacao",
       "title": "Infância e formação",
-      "description": "Aprender, crescer e encontrar um lugar no mundo, entre vínculos familiares, amizade e abandono.",
+      "description": "Crescer entre a proteção e o abandono, descobrir amizades e procurar um lugar num mundo organizado pelos adultos.",
       "rule": "manual",
       "filmSlugs": [
         "the-friends-1994",
@@ -895,14 +920,14 @@
       "localized": {
         "en": {
           "title": "Childhood and growing up",
-          "description": "Learning, growing up and finding a place in the world, through family ties, friendship and abandonment."
+          "description": "Growing up between care and abandonment, discovering friendships and seeking a place in a world shaped by adults."
         }
       }
     },
     {
       "id": "trabalho-e-desigualdade",
       "title": "Trabalho e desigualdade",
-      "description": "Trabalho, sobrevivência e conflitos de classe vistos por quem enfrenta os limites de uma sociedade desigual.",
+      "description": "Ganhar a vida, sustentar uma família, resistir. Histórias em que o trabalho revela as distâncias entre as pessoas.",
       "rule": "manual",
       "filmSlugs": [
         "the-grapes-of-wrath-1940",
@@ -918,14 +943,14 @@
       "localized": {
         "en": {
           "title": "Work and inequality",
-          "description": "Work, survival and class conflict through the lives of people facing an unequal society."
+          "description": "Earning a living, supporting a family, resisting. Stories in which work reveals the divides between people."
         }
       }
     },
     {
       "id": "justica-e-instituicoes",
       "title": "Justiça e instituições",
-      "description": "Tribunais, investigações e conflitos entre a consciência individual e o poder das instituições.",
+      "description": "Quem julga, quem investiga e quem responde por seus atos? Filmes sobre a distância entre a lei, o poder e a justiça.",
       "rule": "manual",
       "filmSlugs": [
         "12-angry-men-1957",
@@ -944,14 +969,14 @@
       "localized": {
         "en": {
           "title": "Justice and institutions",
-          "description": "Courts, investigations and conflicts between individual conscience and institutional power."
+          "description": "Who judges, who investigates and who answers for their actions? Films about the distance between law, power and justice."
         }
       }
     },
     {
       "id": "guerra-e-suas-marcas",
       "title": "Guerra e suas marcas",
-      "description": "A guerra nas relações, na memória e na vida de quem precisa atravessá-la ou conviver com suas consequências.",
+      "description": "No combate ou longe dele, a guerra altera os vínculos, atravessa a memória e continua a pesar sobre quem sobrevive.",
       "rule": "manual",
       "filmSlugs": [
         "the-deer-hunter-1978",
@@ -971,14 +996,14 @@
       "localized": {
         "en": {
           "title": "War and its aftermath",
-          "description": "War in relationships, memory and the lives of those who endure it or live with its consequences."
+          "description": "In combat or far from it, war changes relationships, enters memory and continues to weigh on those who survive."
         }
       }
     },
     {
       "id": "territorios-do-faroeste",
       "title": "Territórios do faroeste",
-      "description": "Fronteiras, comunidades e disputas por terra nos faroestes presentes na coleção.",
+      "description": "Terra, lei e violência na disputa por um lugar. Faroestes em que construir uma comunidade também significa decidir quem fica de fora.",
       "rule": "manual",
       "filmSlugs": [
         "heaven-s-gate-1980",
@@ -1017,7 +1042,7 @@
       "localized": {
         "en": {
           "title": "Western territories",
-          "description": "Frontiers, communities and struggles over land in the westerns in the collection."
+          "description": "Land, law and violence in the struggle for a place. Westerns in which building a community also means deciding who is left out."
         }
       }
     }

@@ -4,7 +4,7 @@ export const en = {
     "Each film page presents the work and the preserved copy: director, year, country and running time, alongside resolution, file size, audio and subtitles. Details of different versions or editions appear on the same page.",
   "Os links disponíveis levam às cópias que escolhi compartilhar.":
     "The available links lead to copies I have chosen to share.",
-  "Em outros lugares": "Elsewhere",
+  "Minhas redes sociais": "My social media",
 
   "Filmes que venho reunindo, preservando e organizando ao longo do tempo.":
     "Films I have been collecting, preserving and organizing over time.",
