@@ -1,4 +1,7 @@
 ---
+import {getI18n,localizeFilm} from '../lib/i18n';
+const {lang,t,path}=getI18n(Astro.url);
+
 import type { CatalogPreviewFilm } from '../data/catalog-preview';
 import Poster from './Poster.astro';
 import {catalogCopy, formatGiB, hasPtBr} from '../lib/catalog';
@@ -7,12 +10,12 @@ interface Props {
   film: CatalogPreviewFilm;
 }
 
-const { film } = Astro.props;
+const film=localizeFilm(Astro.props.film,lang);
 
 const copy = catalogCopy(film);
-const resolution = copy?.resolution ?? 'Resolução pendente';
-const size = copy?.sizeGiB != null ? formatGiB(copy.sizeGiB) : 'Tamanho pendente';
-const ptBr = hasPtBr(film);
+const resolution = copy?.resolution ?? t('Resolução pendente');
+const size = copy?.sizeGiB != null ? formatGiB(copy.sizeGiB,lang) : t('Tamanho pendente');
+const ptBr = hasPtBr(Astro.props.film);
 
 const normalizedTitle = film.title
   .normalize('NFD')
@@ -22,7 +25,7 @@ const normalizedTitle = film.title
 
 <a
   class="film-card"
-  href={`/filmes/${film.slug}/`}
+  href={path(`/filmes/${film.slug}/`)}
   data-search={film.searchable.toLocaleLowerCase('pt-BR')}
   data-title={normalizedTitle}
   data-year={film.year}

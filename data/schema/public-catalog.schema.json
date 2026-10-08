@@ -19,6 +19,10 @@
       "selections"
     ],
     "properties": {
+      "added_at": {
+        "type": ["string", "null"],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
       "id": {
         "type": "string",
         "minLength": 1
@@ -33,16 +37,10 @@
         "minLength": 1
       },
       "original_title": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "romanized_title": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "year": {
         "type": "integer",
@@ -65,10 +63,7 @@
         }
       },
       "runtime_minutes": {
-        "type": [
-          "integer",
-          "null"
-        ],
+        "type": ["integer", "null"],
         "minimum": 1
       },
       "genres": {
@@ -79,10 +74,7 @@
         }
       },
       "synopsis": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "poster": {
         "type": "string",
@@ -107,10 +99,7 @@
               "minLength": 1
             },
             "label": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "resolution": {
               "type": "string",
@@ -135,16 +124,10 @@
               }
             },
             "edition": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             },
             "format": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "minLength": 1
             }
           }
@@ -159,36 +142,23 @@
         "items": {
           "type": "object",
           "additionalProperties": false,
-          "required": [
-            "provider",
-            "url"
-          ],
+          "required": ["provider", "url"],
           "properties": {
             "provider": {
-              "enum": [
-                "internet_archive",
-                "google_drive",
-                "other"
-              ]
+              "enum": ["internet_archive", "google_drive", "other"]
             },
             "url": {
               "type": "string",
               "format": "uri"
             },
             "copy_id": {
-              "type": [
-                "string",
-                "null"
-              ]
+              "type": ["string", "null"]
             }
           }
         }
       },
       "collection_note": {
-        "type": [
-          "string",
-          "null"
-        ]
+        "type": ["string", "null"]
       },
       "selections": {
         "type": "array",
@@ -202,6 +172,108 @@
         "items": {
           "type": "string",
           "minLength": 1
+        }
+      },
+      "tmdb_id": {
+        "type": ["integer", "null"],
+        "minimum": 1
+      },
+      "imdb_id": {
+        "type": ["string", "null"],
+        "pattern": "^tt[0-9]+$"
+      },
+      "release_date": {
+        "type": ["string", "null"],
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "translations": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pt-BR": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": ["string", "null"]
+              },
+              "synopsis": {
+                "type": ["string", "null"]
+              },
+              "collection_note": {
+                "type": ["string", "null"]
+              }
+            }
+          },
+          "en": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": ["string", "null"]
+              },
+              "synopsis": {
+                "type": ["string", "null"]
+              },
+              "collection_note": {
+                "type": ["string", "null"]
+              }
+            }
+          }
+        }
+      },
+      "localized_metadata": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "pt-BR": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "countries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "genres": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "original_languages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "en": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "countries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "genres": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "original_languages": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       }
     }

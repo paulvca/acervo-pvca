@@ -1,0 +1,69 @@
+{
+  "featuredSlug": "napoleon-1927",
+  "featuredNote": null,
+  "recentLimit": 4,
+  "previewRecentSlugs": [
+    "the-blue-dahlia-1946",
+    "the-letter-1940",
+    "the-friends-1994",
+    "napoleon-1927"
+  ],
+  "homeSelectionIds": [
+    "japao-depois-da-guerra",
+    "sidney-lumet",
+    "legendas-em-portugues",
+    "4k"
+  ],
+  "showStats": true,
+  "selections": [
+    {
+      "id": "japao-depois-da-guerra",
+      "title": "Japão depois da guerra",
+      "description": "Família, trabalho, deslocamento e mudança social entre o fim dos anos 1940 e os anos 1960.",
+      "rule": "manual",
+      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+    },
+    {
+      "id": "sidney-lumet",
+      "title": "Sidney Lumet",
+      "description": "Instituições, culpa, responsabilidade e conflito moral.",
+      "rule": "manual",
+      "filmSlugs": ["the-offence-1973"]
+    },
+    {
+      "id": "noir-americano",
+      "title": "Noir americano",
+      "description": "Crime, fatalismo, luzes noturnas e personagens encurralados.",
+      "rule": "manual",
+      "filmSlugs": []
+    },
+    {
+      "id": "legendas-em-portugues",
+      "title": "Com legendas em português",
+      "description": "Filmes com legendas em Português (Brasil) na cópia selecionada.",
+      "rule": "pt-br",
+      "filmSlugs": []
+    },
+    {
+      "id": "4k",
+      "title": "Em 4K",
+      "description": "Filmes com uma cópia selecionada em 2160p.",
+      "rule": "4k",
+      "filmSlugs": []
+    },
+    {
+      "id": "cinema-japones",
+      "title": "Cinema japonês",
+      "description": "Um percurso pelos filmes japoneses do acervo.",
+      "rule": "manual",
+      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+    },
+    {
+      "id": "anos-1950",
+      "title": "Anos 1950",
+      "description": "Retratos de um período de transição, dentro e fora do cinema.",
+      "rule": "manual",
+      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+    }
+  ]
+}

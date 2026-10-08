@@ -29,6 +29,7 @@ Thumbs.db
 # Private or operational collection data
 data/private/
 private/
+.local-admin/
 **/drive-all-objects.json
 **/drive-all-files.json
 **/drive-video-files.*

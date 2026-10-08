@@ -1,0 +1,268 @@
+import {
+  en as publicEnglish,
+  preferredLanguage,
+  countryHint,
+} from "./public.mjs";
+export { preferredLanguage, countryHint };
+export const en = {
+  ...publicEnglish,
+  "Filme inválido.": "Invalid film.",
+  "Campo de cópia fora do cadastro público.":
+    "Copy field outside the public record.",
+  "Campo de link fora do cadastro público.":
+    "Link field outside the public record.",
+  "Origem inválida.": "Invalid origin.",
+  "Formato de pedido inválido.": "Invalid request format.",
+  "Aguarde a geração da prévia terminar.":
+    "Wait for the preview build to finish.",
+  "Aguarde a validação da importação terminar.":
+    "Wait for import validation to finish.",
+  "O JSON deve conter uma lista de até 10.000 filmes.":
+    "JSON must contain a list of up to 10,000 films.",
+  "Formato de pôster inválido.": "Invalid poster format.",
+  "Pôster deve ter até 5 MiB.": "Poster must be at most 5 MiB.",
+  "Arquivo muito grande (limite 8 MiB).": "File too large (8 MiB limit).",
+  "Arquivo não corresponde ao formato da imagem.":
+    "File does not match its image format.",
+  "Configuração editorial inválida.": "Invalid editorial settings.",
+  "Escolha um destaque ou nenhum.": "Choose a featured film or none.",
+  "Nota do destaque inválida.": "Invalid featured note.",
+  "Exibição dos números inválida.": "Invalid statistics visibility setting.",
+  "Lista editorial inválida.": "Invalid editorial list.",
+  "Seleções inválidas.": "Invalid selections.",
+  "Seleção inválida.": "Invalid selection.",
+  "Endereço de seleção inválido ou repetido.":
+    "Invalid or repeated selection address.",
+  "Preencha título e descrição da seleção.":
+    "Fill in the selection title and description.",
+  "Regra ou filmes da seleção inválidos.": "Invalid selection rule or films.",
+  "Disponibilidade não é uma seleção editorial.":
+    "Availability is not an editorial selection.",
+  "Seleção da home inexistente.": "Home page selection does not exist.",
+  "Tradução da seleção inválida.": "Invalid selection translation.",
+  "domínio não corresponde ao Internet Archive.":
+    "domain does not match Internet Archive.",
+  "domínio não corresponde ao Google Drive.":
+    "domain does not match Google Drive.",
+  "URL inválida.": "Invalid URL.",
+  "Limite de 10.000 filmes por importação.":
+    "Limit of 10,000 films per import.",
+  "Referências de entidades inválidas.": "Invalid entity references.",
+  "Título (en)": "Title (en)",
+  "Sinopse (pt-BR)": "Synopsis (pt-BR)",
+  "Sinopse (en)": "Synopsis (en)",
+  "Nota editorial (en)": "Editorial note (en)",
+  "Nota do destaque (en)": "Featured note (en)",
+  "Descrição (en)": "Description (en)",
+  "Painel local": "Local editor",
+  "Seu acervo, organizado por você.": "Your collection, organized by you.",
+  "Edite aqui e confira a prévia. As alterações ficam neste computador até você publicar o site.":
+    "Edit here and review the preview. Changes stay on this computer until you publish the site.",
+  Painel: "Editor",
+  "Gerar prévia": "Build preview",
+  "Abrir prévia ↗": "Open preview ↗",
+  "Filme em destaque": "Featured film",
+  "Nota do destaque": "Featured note",
+  "Vazio: usa a nota editorial do filme":
+    "Leave blank to use the film’s editorial note",
+  "Quantidade em Recentemente": "Number of recent additions",
+  "O catálogo real usa a data de entrada de cada filme, com os mais novos primeiro. A prévia atual ainda usa exemplos sem datas reais.":
+    "The real catalog uses each film’s entry date, newest first. The current preview uses examples without actual entry dates.",
+  "Seleções na home": "Selections on the home page",
+  "Mostrar os números do acervo": "Show collection statistics",
+  "Os números são calculados pelos filmes e cópias cadastrados.":
+    "Statistics are calculated from the registered films and copies.",
+  "Salvar início": "Save home page",
+  "Escolher filme": "Choose film",
+  "Novo filme": "New film",
+  "Rascunhos podem ficar incompletos. “Aplicar ao catálogo” exige os dados necessários e não publica o site.":
+    "Drafts may be incomplete. “Apply to catalog” requires the necessary data and does not publish the site.",
+  "Cópias preservadas": "Preserved copies",
+  "Resolução, tamanho, áudios e legendas pertencem à cópia. Marque qual representa o filme na grade.":
+    "Resolution, size, audio and subtitles belong to each copy. Select the one representing the film in the grid.",
+  "Adicionar cópia": "Add copy",
+  "Destinos compartilhados": "Shared destinations",
+  "Inclua somente links que você decidiu compartilhar. Os campos podem ficar vazios.":
+    "Only add links you have decided to share. These fields may remain empty.",
+  "Adicionar destino": "Add destination",
+  "Salvar rascunho": "Save draft",
+  "Aplicar ao catálogo": "Apply to catalog",
+  "Escolher seleção": "Choose selection",
+  "Nova seleção": "New selection",
+  Título: "Title",
+  Endereço: "Address",
+  Descrição: "Description",
+  "Como reunir os filmes": "How to group films",
+  "Escolher os filmes": "Choose films",
+  "Legendas em Português (Brasil)": "Brazilian Portuguese subtitles",
+  "Cópia selecionada em 2160p": "Selected copy in 2160p",
+  "Filmes desta seleção": "Films in this selection",
+  "Salvar seleção": "Save selection",
+  "Remover seleção": "Remove selection",
+  "Ferramenta privada de edição local. Não faz parte das páginas geradas para visitantes.":
+    "Private local editing tool. It is not included in the pages generated for visitors.",
+  "Sem destaque": "No featured film",
+  "Escolha um filme ou crie um novo": "Choose a film or create a new one",
+  "Escolha uma seleção": "Choose a selection",
+  "O catálogo real está vazio. O site usa os exemplos da prévia; eles não são filmes importados.":
+    "The real catalog is empty. The site uses preview examples; they are not imported films.",
+  "Título original": "Original title",
+  "Título romanizado": "Romanized title",
+  "Direção (separe nomes com ;)": "Directors (separate names with ;)",
+  "Países (separe com ;)": "Countries (separate with ;)",
+  "Endereço da ficha": "Film page address",
+  "Data de entrada no catálogo": "Catalog entry date",
+  "Duração em minutos": "Runtime in minutes",
+  "Gêneros (separe com ;)": "Genres (separate with ;)",
+  "Idiomas originais (separe com ;)": "Original languages (separate with ;)",
+  "Caminho do pôster": "Poster path",
+  "Nota editorial pública": "Public editorial note",
+  "Escolher imagem do pôster": "Choose a poster image",
+  "Cópia preservada": "Preserved copy",
+  "Identificador da cópia": "Copy identifier",
+  "Rótulo (se houver variantes)": "Label (for multiple variants)",
+  "Resolução (ex.: 1080p ou 2160p)": "Resolution (e.g. 1080p or 2160p)",
+  "Tamanho em GiB": "Size in GiB",
+  "Edição / restauração": "Edition / restoration",
+  "Áudios (separe idiomas com ;)": "Audio languages (separate with ;)",
+  "Legendas (separe idiomas com ;)": "Subtitle languages (separate with ;)",
+  "Usar esta cópia no catálogo": "Use this copy in the catalog",
+  "Remover cópia": "Remove copy",
+  Destino: "Destination",
+  "URL compartilhada": "Shared URL",
+  "Identificador da cópia (opcional)": "Copy identifier (optional)",
+  "Remover destino": "Remove destination",
+  " (rascunho)": " (draft)",
+  "Pôster guardado localmente. Salve o filme para associá-lo.":
+    "Poster saved locally. Save the film to associate it.",
+  "Escolha um filme ou clique em Novo filme.":
+    "Choose a film or click New film.",
+  "Início salvo. Gere a prévia para conferir.":
+    "Home page saved. Build the preview to review it.",
+  "Novo rascunho. Preencha somente informações comprovadas.":
+    "New draft. Only enter verified information.",
+  "Crie ou escolha um filme primeiro.": "Create or choose a film first.",
+  "Rascunho salvo. O catálogo do site não foi alterado.":
+    "Draft saved. The site catalog has not changed.",
+  "Filme aplicado ao catálogo local. Gere a prévia para revisar; nada foi publicado.":
+    "Film applied to the local catalog. Build the preview to review it; nothing was published.",
+  "Endereço de seleção já usado.": "Selection address already used.",
+  "Seleção salva localmente.": "Selection saved locally.",
+  "Escolha uma seleção.": "Choose a selection.",
+  "Remover esta seleção? Os filmes serão preservados.":
+    "Remove this selection? The films will be preserved.",
+  "Seleção removida; filmes preservados.":
+    "Selection removed; films preserved.",
+  "Gerando prévia…": "Building preview…",
+  "Prévia gerada. Abra o site para conferir.":
+    "Preview built. Open the site to review it.",
+  "Alterações salvas localmente.": "Changes saved locally.",
+  "Importar JSON": "Import JSON",
+  "Arquivo JSON": "JSON file",
+  "Enriquecer pelo TMDB": "Enrich using TMDB",
+  "Validar e mostrar prévia": "Validate and preview",
+  "Confirmar importação": "Confirm import",
+  "A importação preserva campos editados manualmente. Registros incompletos entram como rascunhos.":
+    "Imports preserve manually edited fields. Incomplete records become drafts.",
+  "Verificar conexão TMDB": "Check TMDB connection",
+  "Validando importação…": "Validating import…",
+  "Importação concluída localmente.": "Import completed locally.",
+  "Prévia expirada. Valide o JSON novamente.":
+    "Preview expired. Validate the JSON again.",
+  "O catálogo mudou. Valide o JSON novamente.":
+    "The catalog changed. Validate the JSON again.",
+  created: "Created",
+  updated: "Updated",
+  ignored: "Ignored",
+  rejected: "Rejected",
+  "Campos manuais preservados": "Manual fields preserved",
+  "Rascunho — faltam dados para o site":
+    "Draft — data still missing for the site",
+  "Pronto para o site": "Ready for the site",
+  "JSON inválido.": "Invalid JSON.",
+  "Selecione um JSON primeiro.": "Choose a JSON file first.",
+  TMDB_CREDENTIAL_MISSING: "TMDB credential unavailable on this computer.",
+  TMDB_CREDENTIAL_INSECURE:
+    "TMDB credential refused: local file protection needs review.",
+  TMDB_AUTH_FAILED: "TMDB authentication failed.",
+  TMDB_NOT_FOUND: "Film not found on TMDB.",
+  TMDB_NETWORK_OR_CONFIGURATION_FAILED:
+    "TMDB connection or local configuration unavailable.",
+  TMDB_API_FAILED: "TMDB request failed.",
+  TMDB_ID_INVALID: "Invalid TMDB identifier.",
+  TMDB_IDENTITY_MISMATCH: "TMDB returned a different film identifier.",
+  TMDB_IMAGE_INVALID: "TMDB poster could not be verified.",
+  TMDB_IMAGE_PATH_INVALID: "Invalid TMDB image path.",
+  TMDB_IMAGE_HOST_INVALID: "Invalid TMDB image host.",
+  TMDB_REDIRECT_REFUSED: "TMDB redirect refused.",
+  TMDB_RATE_LIMIT: "TMDB rate limit reached.",
+  "TMDB disponível neste computador.":
+    "TMDB credential available on this computer.",
+  "campo obrigatório ausente.": "required field is missing.",
+  "preencher este campo.": "fill in this field.",
+  "lista incompleta.": "incomplete list.",
+  "opção não permitida.": "option not allowed.",
+  "formato inválido.": "invalid format.",
+  "campo fora da projeção pública; remova antes de importar.":
+    "field outside the public projection; remove before importing.",
+  "escolha explicitamente uma cópia existente.":
+    "explicitly select an existing copy.",
+  "use um arquivo existente em public/posters/ (jpg, png, webp ou avif).":
+    "use an existing file in public/posters/ (jpg, png, webp or avif).",
+  "filme duplicado.": "duplicate film.",
+  "identificador duplicado.": "duplicate identifier.",
+  "cópia duplicada.": "duplicate copy.",
+  "cópia inexistente.": "copy does not exist.",
+  "data inválida.": "invalid date.",
+  "use HTTPS sem credenciais ou parâmetros secretos.":
+    "use HTTPS without credentials or secret parameters.",
+  "Preencha título e endereço do filme.": "Fill in the film title and address.",
+  "Identidade em conflito.": "Conflicting identity.",
+  "O JSON deve conter uma lista de filmes.":
+    "JSON must contain a list of films.",
+  "Registro inválido.": "Invalid record.",
+  "Informe tmdb_id ou id, slug e título estáveis.":
+    "Provide tmdb_id or a stable id, slug and title.",
+  "Identificadores apontam para filmes diferentes.":
+    "Identifiers refer to different films.",
+  "Registro repetido no mesmo arquivo.": "Repeated record in the same file.",
+  "tmdb_id em conflito.": "Conflicting tmdb_id.",
+  "Endereço local inválido.": "Invalid local address.",
+  "Abra o painel local para salvar.": "Open the local editor to save.",
+  "Pedido inválido.": "Invalid request.",
+  "Página inexistente.": "Page not found.",
+  "Operação inexistente.": "Operation not found.",
+  "Campo fora do cadastro público.": "Field outside the public record.",
+  "Cópias e links inválidos.": "Invalid copies and links.",
+  "Endereço ou identificador em uso.": "Address or identifier already in use.",
+  "Filme em destaque inexistente.": "Featured film does not exist.",
+  "Filme de seleção inexistente.": "Selection film does not exist.",
+  "Não foi possível gerar a prévia.": "Could not build the preview.",
+  "A prévia não pôde ser gerada. Confira os dados e o terminal.":
+    "Could not build the preview. Check the data and terminal.",
+};
+export function translateAdmin(lang, text) {
+  if (lang !== "en") return text;
+  if (en[text]) return en[text];
+  return String(text)
+    .replace(/tipo inválido; esperado /g, "invalid type; expected ")
+    .replace(/ ou /g, " or ")
+    .replace(/precisa ser maior que /g, "must be greater than ")
+    .replace(/valor abaixo do mínimo\./g, "value below the minimum.")
+    .replace(/valor acima do máximo\./g, "value above the maximum.")
+    .split("\n")
+    .map((line) => {
+      const separator = line.indexOf(": ");
+      if (separator >= 0) {
+        const suffix = line.slice(separator + 2);
+        if (en[suffix])
+          return (
+            line.slice(0, separator).replace("catálogo", "catalog") +
+            ": " +
+            en[suffix]
+          );
+      }
+      return line.replace(" (rascunho)", " (draft)");
+    })
+    .join("\n");
+}

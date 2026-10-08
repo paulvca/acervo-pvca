@@ -1,6 +1,11 @@
+---
+import {getI18n,localizeFilm} from '../lib/i18n';
+const {lang,t,path}=getI18n(Astro.url);
+
+---
 <footer>
   <div class="wrap footer-note">
     <span>Acervo PVCA</span>
-    <span>acervo pessoal de cinema</span>
+    <span>{t("acervo pessoal de cinema")}</span>
   </div>
 </footer>

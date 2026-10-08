@@ -1,13 +1,17 @@
 ---
+import {getI18n,localizeFilm} from '../../lib/i18n';
+const {lang,t,path}=getI18n(Astro.url);
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Poster from '../../components/Poster.astro';
+import {isPreview} from '../../data/catalog';
 import {selections} from '../../data/selections';
 ---
 <BaseLayout title="Seleções — Acervo PVCA"><Header active="selections" /><main id="main">
-<section class="wrap page-head"><h1>Seleções</h1><p>Agrupamentos pessoais. Alguns são bem definidos, outros só refletem o que estou vendo, revisando ou pensando no momento.</p></section>
-<section class="wrap selection-list">{selections.map(selection => <article class="selection-row" id={selection.id}>
-<div class="selection-strip">{selection.films.slice(0,3).map(film => <a href={`/filmes/${film.slug}/`} aria-label={`Ver ficha de ${film.title}`}><Poster film={film} /></a>)}</div>
-<div class="selection-copy"><h2>{selection.title}</h2><p>{selection.description}</p><p class="count">{selection.films.length} {selection.films.length === 1 ? 'filme' : 'filmes'} nesta prévia</p><div class="selection-film-links">{selection.films.map(film => <a href={`/filmes/${film.slug}/`}>{film.title} →</a>)}</div></div>
+<section class="wrap page-head"><h1>{t("Seleções")}</h1><p>{t("Agrupamentos pessoais. Alguns são bem definidos, outros só refletem o que estou vendo, revisando ou pensando no momento.")}</p></section>
+<section class="wrap selection-list">{selections.filter(selection => isPreview || selection.films.length > 0).map(selection => <article class="selection-row" id={selection.id}>
+<div class="selection-strip">{selection.films.slice(0,3).map(film => <a href={path(`/filmes/${film.slug}/`)} aria-label={`${t("Ver ficha →")} ${localizeFilm(film,lang).title}`}><Poster film={film} /></a>)}</div>
+<div class="selection-copy"><h2>{t(selection.localized?.[lang]?.title || selection.title)}</h2><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><p class="count">{selection.films.length} {t(selection.films.length === 1 ? 'filme' : 'filmes')}{isPreview ? t(' nesta prévia') : ''}</p><div class="selection-film-links">{selection.films.map(film => <a href={path(`/filmes/${film.slug}/`)}>{localizeFilm(film,lang).title} →</a>)}</div></div>
 </article>)}</section></main><Footer /></BaseLayout>

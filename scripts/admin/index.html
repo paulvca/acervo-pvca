@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Painel local — Acervo PVCA</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/">Acervo PVCA</a><span>Painel local</span
+      ><label
+        >Idioma<select id="admin-language">
+          <option value="pt-BR">PT</option>
+          <option value="en">EN</option>
+        </select></label
+      >
+    </header>
+    <main>
+      <h1>Seu acervo, organizado por você.</h1>
+      <p>
+        Edite aqui e confira a prévia. As alterações ficam neste computador até
+        você publicar o site.
+      </p>
+      <nav aria-label="Painel">
+        <button data-tab="home" aria-pressed="true">Início</button
+        ><button data-tab="films" aria-pressed="false">Filmes</button
+        ><button data-tab="selections" aria-pressed="false">Seleções</button
+        ><button data-tab="import" aria-pressed="false">Importar JSON</button
+        ><button id="build">Gerar prévia</button
+        ><a href="http://127.0.0.1:4322/" target="_blank" rel="noopener"
+          >Abrir prévia ↗</a
+        >
+      </nav>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p id="preview-note"></p>
+      <section id="home">
+        <h2>Início</h2>
+        <form id="home-form">
+          <label>Filme em destaque<select name="featuredSlug"></select></label
+          ><label
+            >Nota do destaque<textarea
+              name="featuredNote"
+              placeholder="Vazio: usa a nota editorial do filme"
+            ></textarea>
+          </label>
+          <label
+            >Nota do destaque (en)<textarea
+              name="featuredNoteEn"
+            ></textarea></label
+          ><label
+            >Quantidade em Recentemente<input
+              name="recentLimit"
+              type="number"
+              min="1"
+              max="12"
+              required
+          /></label>
+          <p>
+            O catálogo real usa a data de entrada de cada filme, com os mais
+            novos primeiro. A prévia atual ainda usa exemplos sem datas reais.
+          </p>
+          <fieldset id="home-selections">
+            <legend>Seleções na home</legend>
+          </fieldset>
+          <label class="check"
+            ><input name="showStats" type="checkbox" />Mostrar os números do
+            acervo</label
+          >
+          <p>Os números são calculados pelos filmes e cópias cadastrados.</p>
+          <button type="submit">Salvar início</button>
+        </form>
+      </section>
+      <section id="films" hidden>
+        <h2>Filmes</h2>
+        <div class="actions">
+          <select id="film-picker" aria-label="Escolher filme"></select
+          ><button id="new-film">Novo filme</button>
+        </div>
+        <p>
+          Rascunhos podem ficar incompletos. “Aplicar ao catálogo” exige os
+          dados necessários e não publica o site.
+        </p>
+        <form id="film-form">
+          <div id="film-fields" class="fields"></div>
+          <h3>Cópias preservadas</h3>
+          <p>
+            Resolução, tamanho, áudios e legendas pertencem à cópia. Marque qual
+            representa o filme na grade.
+          </p>
+          <div id="copies"></div>
+          <button id="add-copy" type="button">Adicionar cópia</button>
+          <h3>Destinos compartilhados</h3>
+          <p>
+            Inclua somente links que você decidiu compartilhar. Os campos podem
+            ficar vazios.
+          </p>
+          <div id="links"></div>
+          <button id="add-link" type="button">Adicionar destino</button>
+          <div class="actions">
+            <button type="submit">Salvar rascunho</button
+            ><button id="apply" type="button">Aplicar ao catálogo</button>
+          </div>
+        </form>
+      </section>
+      <section id="selections" hidden>
+        <h2>Seleções</h2>
+        <div class="actions">
+          <select id="selection-picker" aria-label="Escolher seleção"></select
+          ><button id="new-selection">Nova seleção</button>
+        </div>
+        <form id="selection-form">
+          <label>Título<input name="title" required /></label
+          ><label
+            >Endereço<input name="id" required pattern="[-a-z0-9]+" /></label
+          ><label>Descrição<textarea name="description"></textarea></label
+          ><label>Título (en)<input name="title_en" /></label
+          ><label
+            >Descrição (en)<textarea name="description_en"></textarea></label
+          ><label
+            >Como reunir os filmes<select name="rule">
+              <option value="manual">Escolher os filmes</option>
+              <option value="pt-br">Legendas em Português (Brasil)</option>
+              <option value="4k">Cópia selecionada em 2160p</option>
+            </select></label
+          >
+          <fieldset id="selection-films">
+            <legend>Filmes desta seleção</legend>
+          </fieldset>
+          <div class="actions">
+            <button type="submit">Salvar seleção</button
+            ><button type="button" id="remove-selection">
+              Remover seleção
+            </button>
+          </div>
+        </form>
+      </section>
+      <section id="import" hidden>
+        <h2>Importar JSON</h2>
+        <p>
+          A importação preserva campos editados manualmente. Registros
+          incompletos entram como rascunhos.
+        </p>
+        <label
+          >Arquivo JSON<input
+            type="file"
+            id="import-file"
+            accept="application/json,.json" /></label
+        ><label class="check"
+          ><input type="checkbox" id="enrich-tmdb" checked />Enriquecer pelo
+          TMDB</label
+        >
+        <div class="actions">
+          <button id="import-preview">Validar e mostrar prévia</button
+          ><button id="tmdb-status">Verificar conexão TMDB</button
+          ><button id="import-confirm" disabled>Confirmar importação</button>
+        </div>
+        <div id="import-results"></div>
+      </section>
+    </main>
+    <footer>
+      Ferramenta privada de edição local. Não faz parte das páginas geradas para
+      visitantes.
+    </footer>
+  </body>
+</html>

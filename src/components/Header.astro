@@ -1,17 +1,22 @@
 ---
+import {getI18n,localizeFilm} from '../lib/i18n';
+const {lang,t,path,languageHref}=getI18n(Astro.url);
+
 interface Props { active?: 'home' | 'films' | 'selections' | 'about'; }
 const {active = 'home'} = Astro.props;
-const links = [ {id:'home',href:'/',label:'Início'}, {id:'films',href:'/filmes/',label:'Filmes'}, {id:'selections',href:'/selecoes/',label:'Seleções'}, {id:'about',href:'/sobre/',label:'Sobre'} ];
+const links = [ {id:'home',href:'/',label:t('Início')}, {id:'films',href:'/filmes/',label:t('Filmes')}, {id:'selections',href:'/selecoes/',label:t('Seleções')}, {id:'about',href:'/sobre/',label:t('Sobre')} ];
 ---
-<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<a class="skip-link" href="#main">{t("Ir para o conteúdo")}</a>
 <header class="site-header">
  <div class="wrap top">
-  <a class="name" href="/">Acervo PVCA</a>
-  <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation" hidden><span></span><span></span><span></span></button>
-  <nav id="main-navigation" aria-label="Navegação principal">{links.map(link => <a href={link.href} class:list={{active:active === link.id}} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}</nav>
+  <a class="name" href={path("/")}>Acervo PVCA</a>
+  <button class="menu-toggle" type="button" aria-label={t("Abrir menu")} aria-expanded="false" aria-controls="main-navigation" hidden><span></span><span></span><span></span></button>
+  <nav id="main-navigation" aria-label={t("Navegação principal")}>{links.map(link => <a href={path(link.href)} class:list={{active:active === link.id}} aria-current={active === link.id ? 'page' : undefined}>{link.label}</a>)}<span class="language-switch" aria-label={t("Idioma")}><a href={languageHref("pt-BR")} data-language="pt-BR" lang="pt-BR" hreflang="pt-BR">PT</a><a href={languageHref("en")} data-language="en" lang="en" hreflang="en">EN</a></span></nav>
  </div>
 </header>
 <script>
+ import {translate} from "../../scripts/i18n/public.mjs";
+ const t=(text:string)=>translate(document.documentElement.lang,text);
  const header = document.querySelector<HTMLElement>('.site-header')!;
  const toggle = header.querySelector<HTMLButtonElement>('.menu-toggle')!;
  const nav = header.querySelector<HTMLElement>('nav')!;
@@ -22,7 +27,7 @@ const links = [ {id:'home',href:'/',label:'Início'}, {id:'films',href:'/filmes/
  function setOpen(open: boolean) {
   header.classList.toggle('menu-open',open);
   toggle.setAttribute('aria-expanded',String(open));
-  toggle.setAttribute('aria-label',open ? 'Fechar menu' : 'Abrir menu');
+  toggle.setAttribute('aria-label',open ? t('Fechar menu') : t('Abrir menu'));
   document.body.classList.toggle('menu-open',open);
   if (main) main.inert = open;
   if (footer) footer.inert = open;

@@ -1,4 +1,7 @@
 ---
+import {getI18n,localizeFilm} from '../lib/i18n';
+const {lang,t,path,languageHref}=getI18n(Astro.url);
+
 import '../styles/global.css';
 
 interface Props {
@@ -8,20 +11,32 @@ interface Props {
 
 const {
   title = 'Acervo PVCA',
-  description = 'Meu acervo pessoal de cinema.',
+  description = t('Meu acervo pessoal de cinema.'),
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-BR" data-theme="flexoki-dark">
+<html lang={lang} data-theme="flexoki-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{t(title)}</title>
+<link rel="alternate" hreflang="pt-BR" href={languageHref("pt-BR")} />
+<link rel="alternate" hreflang="en" href={languageHref("en")} />
   </head>
   <body>
     <slot />
-  </body>
+  <script>
+import {preferredLanguage,languagePath,countryHint} from "../../scripts/i18n/public.mjs";
+let manual:string|null=null;try{manual=localStorage.getItem("pvca-language");}catch{}
+const languages=navigator.languages?.length?navigator.languages:[navigator.language];
+const country=countryHint(languages[0],Intl.DateTimeFormat().resolvedOptions().timeZone);
+const preferred=preferredLanguage(manual,languages,country);
+const target=languagePath(preferred,location.pathname,import.meta.env.BASE_URL);
+if(target!==location.pathname)location.replace(target+location.search+location.hash);
+for(const link of document.querySelectorAll<HTMLAnchorElement>("[data-language]")){link.addEventListener("click",()=>{try{localStorage.setItem("pvca-language",link.dataset.language!);}catch{}link.href+=location.search+location.hash;});}
+</script>
+</body>
 </html>

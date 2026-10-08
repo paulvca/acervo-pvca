@@ -1,0 +1,34 @@
+[
+  {
+    "id": "",
+    "added_at": null,
+    "slug": "",
+    "title": "",
+    "original_title": null,
+    "romanized_title": null,
+    "directors": [],
+    "year": null,
+    "countries": [],
+    "runtime_minutes": null,
+    "genres": [],
+    "original_languages": [],
+    "synopsis": null,
+    "poster": "",
+    "catalog_copy_id": "",
+    "copies": [
+      {
+        "id": "",
+        "label": null,
+        "resolution": "",
+        "size_gib": null,
+        "format": null,
+        "audio_languages": [],
+        "subtitle_languages": [],
+        "edition": null
+      }
+    ],
+    "external_links": [],
+    "selections": [],
+    "collection_note": null
+  }
+]

@@ -1,50 +1,49 @@
 ---
+import {getI18n,localizeFilm} from '../../lib/i18n';
+const {lang,t,path}=getI18n(Astro.url);
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import FilmCard from '../../components/FilmCard.astro';
-import { catalogPreview } from '../../data/catalog-preview';
+import {catalog as catalogPreview, isPreview} from '../../data/catalog';
 ---
 
 <BaseLayout
   title="Filmes — Acervo PVCA"
-  description="Catálogo visual do Acervo PVCA."
+  description={t("Catálogo visual do Acervo PVCA.")}
 >
   <Header active="films" />
 
   <main id="main">
     <section class="wrap page-head catalog-page-head">
-      <h1>Filmes</h1>
-      <p>
-        O acervo inteiro, organizado para explorar ou encontrar rápido.
-      </p>
+      <h1>{t("Filmes")}</h1>
+      <p>{t("O acervo inteiro, organizado para explorar ou encontrar rápido.")}</p>
 
       <div class="catalog-search-row">
         <label class="search-field">
-          <span class="sr-only">Buscar no catálogo</span>
+          <span class="sr-only">{t("Buscar no catálogo")}</span>
           <input
             id="filmSearch"
             type="search"
             autocomplete="off"
-            placeholder="buscar por título, diretor ou ano"
+            placeholder={t("buscar por título, diretor ou ano")}
           />
         </label>
 
         <span id="resultCount" class="result-count" aria-live="polite">
-          {catalogPreview.length} filmes nesta prévia
+          {catalogPreview.length} {t('filmes')}{isPreview ? t(' nesta prévia') : ''}
         </span>
       </div>
 
-      <div class="catalog-controls" aria-label="Controles do catálogo">
-        <div class="catalog-filters" aria-label="Filtrar filmes">
+      <div class="catalog-controls" aria-label={t("Controles do catálogo")}>
+        <div class="catalog-filters" aria-label={t("Filtrar filmes")}>
           <button
             class="catalog-filter active"
             type="button"
             data-filter="all"
             aria-pressed="true"
-          >
-            Todos
-          </button>
+          >{t("Todos")}</button>
           <button
             class="catalog-filter"
             type="button"
@@ -65,54 +64,55 @@ import { catalogPreview } from '../../data/catalog-preview';
 
         <div class="catalog-display-controls">
           <label class="catalog-sort">
-            <span class="sr-only">Ordenar filmes</span>
+            <span class="sr-only">{t("Ordenar filmes")}</span>
             <select id="filmSort">
-              <option value="title">Título A–Z</option>
-              <option value="year-desc">Ano: mais recente</option>
-              <option value="year-asc">Ano: mais antigo</option>
+              <option value="title">{t("Título A–Z")}</option>
+              <option value="year-desc">{t("Ano: mais recente")}</option>
+              <option value="year-asc">{t("Ano: mais antigo")}</option>
             </select>
           </label>
 
-          <div class="catalog-view-switch" aria-label="Visualização">
+          <div class="catalog-view-switch" aria-label={t("Visualização")}>
             <button
               type="button"
               class="catalog-view active"
               data-view="grid"
+      data-preview={isPreview ? 'true' : 'false'}
               aria-pressed="true"
-            >
-              Grade
-            </button>
+            >{t("Grade")}</button>
             <button
               type="button"
               class="catalog-view"
               data-view="list"
               aria-pressed="false"
-            >
-              Lista
-            </button>
+            >{t("Lista")}</button>
           </div>
         </div>
       </div>
     </section>
 
-    <p class="wrap data-note">Prévia de desenvolvimento: pôsteres, resoluções e tamanhos ausentes estão indicados como pendentes.</p>
+    {isPreview && <p class="wrap data-note">{t("Prévia de desenvolvimento: pôsteres, resoluções e tamanhos ausentes estão indicados como pendentes.")}</p>}
     <section
-      aria-label="Filmes do catálogo"
+      aria-label={t("Filmes do catálogo")}
       class="wrap film-catalog"
       id="catalog"
       data-view="grid"
+      data-preview={isPreview ? 'true' : 'false'}
     >
-      {[...catalogPreview].sort((a,b) => a.title.localeCompare(b.title, 'pt-BR')).map((film) => <FilmCard film={film} />)}
+      {[...catalogPreview].sort((a,b) => localizeFilm(a,lang).title.localeCompare(localizeFilm(b,lang).title, lang)).map((film) => <FilmCard film={film} />)}
     </section>
 
     <p class="wrap empty-state catalog-empty" id="emptyCatalog" hidden>
-      Nenhum filme encontrado nesta prévia.
+      {t('Nenhum filme encontrado')}{isPreview ? t(' nesta prévia') : ''}.
     </p>
   </main>
 
   <Footer />
 
   <script>
+import {translate} from "../../../scripts/i18n/public.mjs";
+const lang=document.documentElement.lang;
+const t=(text:string)=>translate(lang,text);
     const catalog = document.querySelector('#catalog');
     const search = document.querySelector('#filmSearch');
     const counter = document.querySelector('#resultCount');
@@ -164,7 +164,7 @@ import { catalogPreview } from '../../data/catalog-preview';
 
       return (a.dataset.title ?? '').localeCompare(
         b.dataset.title ?? '',
-        'pt-BR'
+        lang
       );
     }
 
@@ -191,7 +191,7 @@ import { catalogPreview } from '../../data/catalog-preview';
 
       if (counter) {
         counter.textContent =
-          `${visible} ${visible === 1 ? 'filme' : 'filmes'} nesta prévia`;
+          `${visible} ${t(visible === 1 ? 'filme' : 'filmes')}${catalog?.getAttribute('data-preview') === 'true' ? t(' nesta prévia') : ''}`;
       }
 
       if (empty) empty.hidden = visible !== 0;

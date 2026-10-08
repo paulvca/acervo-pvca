@@ -10,6 +10,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "admin": "node scripts/admin.mjs",
+    "admin:test": "node --test scripts/admin.test.mjs",
+    "data:test": "node --test scripts/database.test.mjs",
+    "tmdb:test": "python3 scripts/tmdb_test.py",
+    "catalog:check": "node scripts/catalog.mjs check",
+    "catalog:import": "node scripts/catalog.mjs import",
+    "catalog:test": "node --test scripts/catalog.test.mjs",
     "prepare": "husky"
   },
   "dependencies": {

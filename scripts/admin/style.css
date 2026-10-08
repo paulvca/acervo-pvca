@@ -1,0 +1,182 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #100f0f;
+  color: #cecdc3;
+  line-height: 1.5;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header,
+main,
+footer {
+  max-width: 980px;
+  margin: auto;
+  padding: 24px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #343331;
+}
+header a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fffcf0;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+legend {
+  color: #fffcf0;
+}
+h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.15;
+}
+p,
+footer {
+  color: #9f9d96;
+}
+nav,
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav {
+  border-block: 1px solid #343331;
+  padding: 16px 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: #fffcf0;
+  background: #100f0f;
+  border: 1px solid #343331;
+  border-radius: 4px;
+  padding: 10px;
+  min-height: 44px;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  background: #1c1b1a;
+}
+button[aria-pressed="true"] {
+  border-color: #9f9d96;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+input,
+select,
+textarea {
+  width: 100%;
+}
+label {
+  display: block;
+  margin: 16px 0;
+}
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+fieldset {
+  margin: 24px 0;
+  padding: 16px 0;
+  border: 0;
+  border-block: 1px solid #343331;
+}
+fieldset label,
+.check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  min-height: 20px;
+  accent-color: #cecdc3;
+}
+label input,
+label select,
+label textarea {
+  display: block;
+  margin-top: 6px;
+}
+fieldset input,
+.check input {
+  margin: 0;
+}
+section {
+  padding-top: 24px;
+}
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 24px;
+}
+.wide {
+  grid-column: 1/-1;
+}
+.actions {
+  margin: 20px 0;
+}
+.actions select {
+  width: auto;
+  flex: 1;
+}
+#status {
+  white-space: pre-wrap;
+  color: #fffcf0;
+}
+#preview-note {
+  font-size: 14px;
+}
+:focus-visible {
+  outline: 2px solid #fffcf0;
+  outline-offset: 3px;
+}
+[hidden] {
+  display: none !important;
+}
+footer {
+  border-top: 1px solid #343331;
+  margin-top: 40px;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  header,
+  main,
+  footer {
+    padding: 20px;
+  }
+  .fields {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    gap: 8px;
+  }
+  .actions {
+    align-items: stretch;
+  }
+  .actions > * {
+    flex: 1;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}

@@ -120,7 +120,7 @@ Continuam fora da projeção pública:
 The runtime preview in `src/data/catalog-preview.ts` intentionally allows missing
 poster and copy metadata. It is not the final public catalog and does not import
 `catalog.sample.json`, which remains a schema example rather than verified data.
-Statistics count only runtime preview records and the explicitly selected copy.
+Statistics count only the active runtime records and the explicitly selected copy.
 No operational availability field is used in the interface.
 
 `src/lib/catalog.ts` resolves `catalogCopyId` without a fallback to array order or
@@ -136,3 +136,20 @@ and the poster exists. JSON Schema alone cannot enforce the cross-reference.
 External links with `copy_id` must reference an existing copy. Only deliberately
 shared URLs are eligible for export. Neither source file locations nor private
 remote identifiers belong in that projection.
+
+`src/data/catalog.ts` now reads `data/public/catalog.json`, validates it during
+build and explicitly maps snake_case fields into the runtime shape. An empty
+public catalog activates the existing development preview. A nonempty public
+catalog replaces that preview for every route and statistic. See
+[DATA_INTAKE.md](DATA_INTAKE.md) for preparation and local import commands, and
+[CAMPOS_DO_ACERVO.md](CAMPOS_DO_ACERVO.md) for the field guide.
+
+## Normalized editor database and localized projection
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the canonical normalized editor model,
+entity identities, manual field locks, transactional projection and idempotent
+JSON import. Public `translations` supports `pt-BR` and `en` title, synopsis and
+editorial note. `tmdb_id` is the preferred external work identity, independent of
+stable local `id` and `slug`. Country/genre display labels may be localized while
+the editor stores reusable relationship IDs. Copy facts are never enriched from
+TMDB. Work-only imports remain drafts when technical publication data is missing.

@@ -8,7 +8,7 @@ O projeto parte de uma base canônica privada e publica apenas uma projeção sa
 
 - `docs/` — produto, arquitetura, design, dados, privacidade e roadmap.
 - `prototype/` — protótipos aprovados antes da implementação final.
-- `src/` — aplicação/site quando a stack for definida.
+- `src/` — site estático em Astro, TypeScript e CSS próprio.
 - `public/` — assets públicos.
 - `data/public/` — projeções sanitizadas para o frontend.
 - `data/schema/` — contratos dos dados públicos.
@@ -19,8 +19,20 @@ O projeto parte de uma base canônica privada e publica apenas uma projeção sa
 
 O frontend nunca deve consumir diretamente inventários operacionais, caminhos locais, hashes, estados privados de QA ou dados internos do Google Drive.
 
-## Próximo marco
+## Local development and data intake
 
-**Public Site v0.1**: consolidar o protótipo v3, separar tokens/estilos, implementar Home, catálogo, ficha de filme, seleções e Sobre, gerar catálogo público sanitizado e validar desktop/mobile.
+Use `npm run dev` for local development and `npm run build` for the static build.
+The final public catalog starts empty, preserving the existing development preview.
+
+The [field guide](docs/CAMPOS_DO_ACERVO.md) explains the supported information.
+Use `npm run admin` for the private local editor; see the
+[panel guide](docs/PAINEL_LOCAL.md) and [technical setup](docs/LOCAL_ADMIN.md).
+The [intake workflow](docs/DATA_INTAKE.md) documents validation and local imports.
+The [architecture guide](docs/ARCHITECTURE.md) describes bilingual routes,
+normalized local storage, import previews, editorial protection and TMDB enrichment.
+The environment does not require a spreadsheet. Later, compare the real catalog
+with the supported fields and review the result locally before any publication.
+Use `npm run catalog:test`, `npm run data:test`, `npm run admin:test` and
+`npm run tmdb:test` to verify the ingestion and local administration workflows.
 
 A licença do código ainda não foi definida.

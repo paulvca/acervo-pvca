@@ -1,4 +1,8 @@
 ---
+import {getI18n,localizeFilm} from '../../lib/i18n';
+const {lang,t,path}=getI18n(Astro.url);
+
+import { catalog as catalogPreview } from '../../data/catalog';
 import Poster from '../../components/Poster.astro';
 import {formatGiB} from '../../lib/catalog';
 import {selections} from '../../data/selections';
@@ -6,7 +10,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import {
-  catalogPreview,
   type CatalogPreviewFilm,
   type CatalogCopyInfo,
 } from '../../data/catalog-preview';
@@ -22,7 +25,7 @@ interface Props {
   film: CatalogPreviewFilm;
 }
 
-const { film } = Astro.props;
+const film=localizeFilm(Astro.props.film,lang);
 
 const headingMeta = [
   film.director,
@@ -31,12 +34,12 @@ const headingMeta = [
 ].filter(Boolean).join(' · ');
 
 const workRows = [
-  ['Direção', film.director],
-  ['Ano', String(film.year)],
-  film.country && ['País', film.country],
-  film.runtimeMinutes && ['Duração', `${film.runtimeMinutes} min`],
-  film.genres?.length && ['Gênero', film.genres.join(', ')],
-  film.originalLanguages?.length && ['Idioma original', film.originalLanguages.join(', ')],
+  [t('Direção'), film.director],
+  [t('Ano'), String(film.year)],
+  film.country && [t('País'), t(film.country)],
+  film.runtimeMinutes && [t('Duração'), `${film.runtimeMinutes} min`],
+  film.genres?.length && [t('Gênero'), film.genres.map(t).join(', ')],
+  film.originalLanguages?.length && [t('Idioma original'), film.originalLanguages.map(t).join(', ')],
 ].filter(Boolean) as [string, string][];
 
 const hasSelections = selections.some(selection => selection.films.some(member => member.slug === film.slug));
@@ -46,12 +49,12 @@ const externalLinks = film.externalLinks ?? [];
 const hasMultipleCopies = copies.length > 1;
 
 const copyRows = (copy: CatalogCopyInfo) => [
-  ['Resolução', copy.resolution ?? 'Ainda não importada'],
-  ['Tamanho', copy.sizeGiB != null ? formatGiB(copy.sizeGiB) : 'Ainda não importado'],
-  copy.format && ['Formato', copy.format],
-  copy.audio?.length && ['Áudio', copy.audio.join(', ')],
-  copy.subtitles?.length && ['Legendas', copy.subtitles.join(', ')],
-  copy.edition && ['Versão', copy.edition],
+  [t('Resolução'), copy.resolution ?? t('Ainda não importada')],
+  [t('Tamanho'), copy.sizeGiB != null ? formatGiB(copy.sizeGiB,lang) : t('Ainda não importado')],
+  copy.format && [t('Formato'), copy.format],
+  copy.audio?.length && [t('Áudio'), copy.audio.map(t).join(', ')],
+  copy.subtitles?.length && [t('Legendas'), copy.subtitles.map(t).join(', ')],
+  copy.edition && [t('Versão'), copy.edition],
 ].filter(Boolean) as [string, string][];
 
 const copyLabelForAccess = (copyId?: string) => {
@@ -62,13 +65,13 @@ const copyLabelForAccess = (copyId?: string) => {
 
 <BaseLayout
   title={`${film.title} — Acervo PVCA`}
-  description={`${film.title}, ${film.director}, ${film.year} no Acervo PVCA.`}
+  description={`${film.title}, ${film.director}, ${film.year} ${lang === "en" ? "in" : "no"} Acervo PVCA.`}
 >
   <Header active="films" />
 
   <main id="main" class="film-detail">
     <section class="wrap film-detail-head">
-      <a class="back-link" href="/filmes/">← Filmes</a>
+      <a class="back-link" href={path("/filmes/")}>{t("← Filmes")}</a>
 
       <div class="film-title-block">
         <h1>{film.title}</h1>
@@ -94,7 +97,7 @@ const copyLabelForAccess = (copyId?: string) => {
         {
           hasEditorialSummary && (
             <div class="film-synopsis">
-              <p class="eyebrow">Sinopse</p>
+              <p class="eyebrow">{t("Sinopse")}</p>
               <p>{film.synopsis}</p>
             </div>
           )
@@ -116,7 +119,7 @@ const copyLabelForAccess = (copyId?: string) => {
     <div class="wrap rule" aria-hidden="true"></div>
 
     <section class="wrap film-detail-section">
-      <h2>No acervo</h2>
+      <h2>{t("No acervo")}</h2>
 
       {
         copies.length > 0 ? (
@@ -128,8 +131,8 @@ const copyLabelForAccess = (copyId?: string) => {
                 return (
                   <article class="film-copy">
                     {
-                      hasMultipleCopies && (
-                        <h3>{copy.label ?? `Variante ${copy.id}`}</h3>
+                      hasMultipleCopies && (copy.label || copy.edition) && (
+                        <h3>{copy.label || copy.edition}</h3>
                       )
                     }
 
@@ -146,9 +149,7 @@ const copyLabelForAccess = (copyId?: string) => {
                           }
                         </dl>
                       ) : (
-                        <p class="copy-pending">
-                          Dados técnicos da cópia ainda não importados.
-                        </p>
+                        <p class="copy-pending">{t("Dados técnicos da cópia ainda não importados.")}</p>
                       )
                     }
                   </article>
@@ -157,9 +158,7 @@ const copyLabelForAccess = (copyId?: string) => {
             }
           </div>
         ) : (
-          <p class="copy-pending">
-            Dados da cópia ainda não importados.
-          </p>
+          <p class="copy-pending">{t("Dados da cópia ainda não importados.")}</p>
         )
       }
       {
@@ -199,7 +198,7 @@ const copyLabelForAccess = (copyId?: string) => {
           <div class="wrap rule" aria-hidden="true"></div>
 
           <section class="wrap film-detail-section film-collection-note">
-            <h2>Nota do acervo</h2>
+            <h2>{t("Nota do acervo")}</h2>
             <p>{film.collectionNote}</p>
           </section>
         </>
@@ -212,9 +211,9 @@ const copyLabelForAccess = (copyId?: string) => {
           <div class="wrap rule" aria-hidden="true"></div>
 
           <section class="wrap film-detail-section">
-            <h2>Também aparece em</h2>
+            <h2>{t("Também aparece em")}</h2>
             <div class="film-selection-links">
-              {selections.filter(selection => selection.films.some(member => member.slug === film.slug)).map(selection => <a href={`/selecoes/#${selection.id}`}>{selection.title}</a>)}
+              {selections.filter(selection => selection.films.some(member => member.slug === film.slug)).map(selection => <a href={path(`/selecoes/#${selection.id}`)}>{t(selection.localized?.[lang]?.title || selection.title)}</a>)}
             </div>
           </section>
         </>

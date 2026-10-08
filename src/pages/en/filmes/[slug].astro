@@ -1,0 +1,6 @@
+---
+import Page from '../../filmes/[slug].astro';
+import {catalog} from '../../../data/catalog';
+export function getStaticPaths(){return catalog.map(film=>({params:{slug:film.slug},props:{film}}));}
+---
+<Page film={Astro.props.film} />
