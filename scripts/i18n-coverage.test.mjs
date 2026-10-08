@@ -54,13 +54,13 @@ test("all static public t() interface strings have English coverage", () => {
     const parts = file.endsWith(".astro")
       ? [
           raw.match(/^---\s*\n([\s\S]*?)\n---/)?.[1] ?? "",
-          ...[...raw.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].map(
+          ...[...raw.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(
             (match) => match[1]
           ),
           "<>" +
             raw
               .replace(/^---\s*\n[\s\S]*?\n---/, "")
-              .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/g, "") +
+              .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, " ") +
             "</>",
         ]
       : [raw];

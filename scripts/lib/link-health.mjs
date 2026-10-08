@@ -3,11 +3,10 @@ export function classify(status, host, finalUrl) {
   if (
     status === 401 ||
     status === 403 ||
-    finalUrl?.includes("accounts.google.com")
+    (finalUrl && new URL(finalUrl).hostname === "accounts.google.com")
   )
     return "inconclusive";
-  if (status === 404 && host.endsWith("drive.google.com"))
-    return "inconclusive";
+  if (status === 404 && host === "drive.google.com") return "inconclusive";
   if (status === 404 || status === 410) return "broken-http";
   if (status >= 200 && status < 400) return "http-reachable";
   return "inconclusive";

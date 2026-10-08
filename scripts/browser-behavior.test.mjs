@@ -10,7 +10,7 @@ function runComponent(file, context) {
     new URL(`../src/${file}`, import.meta.url),
     "utf8"
   )
-    .match(/<script>([\s\S]*?)<\/script>/)[1]
+    .match(/<script>([\s\S]*?)<\/script>/i)[1]
     .replace(/import[\s\S]*?from\s*["'][^"']+["'];/g, "")
     .replaceAll("import.meta.env.BASE_URL", '"/acervo-pvca"');
   vm.runInNewContext(

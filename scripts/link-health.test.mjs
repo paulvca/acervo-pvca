@@ -4,6 +4,12 @@ import { checkLink, classify } from "./lib/link-health.mjs";
 test("link health distinguishes broken HTTP, rate limits and provider ambiguity", () => {
   assert.equal(classify(404, "archive.org"), "broken-http");
   assert.equal(classify(404, "drive.google.com"), "inconclusive");
+  assert.equal(classify(404, "notdrive.google.com"), "broken-http");
+  assert.equal(classify(404, "drive.google.com.example.org"), "broken-http");
+  assert.equal(
+    classify(200, "example.org", "https://example.org/accounts.google.com"),
+    "http-reachable"
+  );
   assert.equal(classify(403, "archive.org"), "inconclusive");
   assert.equal(classify(429, "archive.org"), "rate-limit");
   assert.equal(
