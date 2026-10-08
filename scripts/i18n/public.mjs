@@ -1,4 +1,16 @@
 export const en = {
+  filmes: "films",
+  "Dados técnicos pendentes": "Technical details pending",
+  "Não informado": "Not specified",
+  "Ver no": "View on",
+  "Compartilhar filme": "Share film",
+  "Link copiado": "Link copied",
+  "Copie o endereço desta página": "Copy this page’s address",
+  "Cópia do Archive": "Archive copy",
+  "Cópia do Drive": "Drive copy",
+  "Cópias do Archive e do Drive": "Archive and Drive copies",
+  "Link do filme": "Film link",
+
   "Página não encontrada": "Page not found",
   "Este endereço não existe no acervo. Você pode voltar ao início ou explorar os filmes.":
     "This address does not exist in the collection. You can return home or browse the films.",
@@ -13,8 +25,8 @@ export const en = {
   "Outra cópia": "Another copy",
   "Cópia do catálogo": "Catalog copy",
   "Os filmes e suas cópias": "The films and their copies",
-  "Cada ficha apresenta a obra e a cópia preservada no acervo: direção, ano, país e duração, além de resolução, tamanho, áudio e legendas. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.":
-    "Each film page presents the work and the preserved copy: director, year, country and running time, alongside resolution, file size, audio and subtitles. Details of different versions or editions appear on the same page.",
+  "Em cada filme, você encontra direção, ano, país e duração, além de resolução, tamanho, áudio e legendas da cópia preservada no acervo. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.":
+    "Each film includes director, year, country and running time, alongside resolution, file size, audio and subtitles for the copy preserved in the collection. Details of different versions or editions appear on the same page.",
   "Os links disponíveis levam às cópias que escolhi compartilhar.":
     "The available links lead to copies I have chosen to share.",
   "Minhas redes sociais": "My social media",
@@ -26,14 +38,14 @@ export const en = {
   "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e percorrer a coleção pelas minhas seleções.":
     "This site opens the collection to visitors. Here, you can browse the films, learn about the preserved copies and explore the collection through my selections.",
   "O que você encontra": "What you will find",
-  "Cada ficha reúne informações sobre o filme, como direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, formato, áudio e legendas.":
-    "Each film page brings together information such as director, year, country and running time, alongside the details of the preserved copy: resolution, file size, format, audio and subtitles.",
-  "As seleções aproximam filmes por diferentes critérios e interesses. Os links nas fichas levam às cópias que escolhi compartilhar.":
+  "Na página de cada filme, você encontra direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, áudio e legendas.":
+    "Each film page includes director, year, country and running time, alongside the details of the preserved copy: resolution, file size, audio and subtitles.",
+  "As seleções aproximam filmes por diferentes critérios e interesses. Os links dos filmes levam às cópias que escolhi compartilhar.":
     "Selections bring films together around different interests and criteria. Links on the film pages lead to copies I have chosen to share.",
   "Como a coleção é organizada": "How the collection is organized",
-  "Cada filme tem uma ficha que reúne suas cópias, versões e edições, com as características próprias de cada uma.":
+  "Cada filme reúne suas cópias, versões e edições, com as características próprias de cada uma.":
     "Each film has a page that brings together its copies, versions and editions, with the characteristics of each.",
-  "Uma dessas cópias representa o filme no catálogo. A ficha apresenta seus detalhes e, quando existem outras versões no acervo, permite conhecer as diferenças entre elas.":
+  "Uma dessas cópias representa o filme no catálogo. A página do filme apresenta seus detalhes e, quando existem outras versões no acervo, permite conhecer as diferenças entre elas.":
     "One copy represents the film in the catalog. The film page describes it and, when other versions are in the collection, lets you see how they differ.",
   "Percursos pessoais pela coleção. Alguns seguem um cineasta, uma época ou uma cinematografia; outros acompanham interesses e aproximações que surgem ao longo do tempo.":
     "Personal paths through the collection. Some follow a filmmaker, a period or a national cinema; others reflect interests and connections that emerge over time.",
@@ -74,7 +86,7 @@ export const en = {
     "This site opens part of my collection to anyone who wants to explore it, keeping it personal.",
   "Em destaque": "Featured",
   "uma escolha do momento": "a current choice",
-  "Ver ficha →": "View film →",
+  "Ver filme →": "View film →",
   Recentemente: "Recently added",
   "últimas adições": "latest additions",
   "algumas formas de atravessar o acervo": "some paths through the collection",
@@ -102,7 +114,6 @@ export const en = {
     "Development preview: missing posters, resolutions and file sizes are marked as pending.",
   "Nenhum filme encontrado": "No films found",
   filme: "film",
-  filmes: "films",
   " nesta prévia": " in this preview",
   "Resolução pendente": "Resolution pending",
   "Tamanho pendente": "Size pending",
@@ -161,7 +172,7 @@ export const en = {
     " In this preview, posters and data not yet imported remain marked as pending.",
   "Cada filme é tratado como uma obra. Diferentes cópias, versões ou edições são variantes dessa mesma obra, com seus próprios metadados técnicos.":
     "Each film is treated as a work. Different copies, versions or editions are variants of that work, with their own technical metadata.",
-  "O catálogo apresenta a cópia escolhida para representar cada filme. Na ficha, você encontra suas características e, quando houver outras versões preservadas, as diferenças entre elas.":
+  "O catálogo apresenta a cópia escolhida para representar cada filme. No filme, você encontra as características da cópia e, quando houver outras versões preservadas, as diferenças entre elas.":
     "The catalog shows the copy selected to represent each film. Its page describes that copy and the differences between any other preserved versions.",
   "Caminhos locais, mounts, hashes, logs, notas internas, filas, estados de QA, credenciais e informações privadas de armazenamento permanecem fora do site.":
     "Local paths, mounts, hashes, logs, internal notes, queues, quality assurance states, credentials and private storage information stay outside the site.",

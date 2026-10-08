@@ -118,3 +118,91 @@ test("invalid year types never create decades or inflate the work count", () => 
     [{ decade: 1950, count: 1 }]
   );
 });
+
+test("copy access follows IDs, preserving selected order and links of equivalent copies", async () => {
+  const { copyAccessGroups, copyAccessHeading } =
+    await import("../src/lib/catalog.ts");
+  const film = {
+    catalogCopyId: "drive",
+    copies: [
+      { id: "archive", resolution: "1080p", subtitles: ["pt-BR"] },
+      { id: "drive", resolution: "1080p", subtitles: ["en"] },
+      { id: "mirror", resolution: "1080p", subtitles: ["en"] },
+    ],
+    externalLinks: [
+      {
+        copyId: "archive",
+        provider: "Internet Archive",
+        url: "https://archive.org/details/example",
+      },
+      {
+        copyId: "drive",
+        provider: "Google Drive",
+        url: "https://drive.google.com/drive/folders/example",
+      },
+      {
+        copyId: "mirror",
+        provider: "Google Drive",
+        url: "https://drive.google.com/drive/folders/mirror",
+      },
+      { provider: "Outro", url: "https://example.org/" },
+    ],
+  };
+  const before = structuredClone(film);
+  const { groups, remainingLinks } = copyAccessGroups(film);
+  assert.deepEqual(
+    groups.map((group) => group.copy.id),
+    ["drive", "archive"]
+  );
+  assert.deepEqual(
+    groups[0].links.map((link) => link.copyId),
+    ["drive", "mirror"]
+  );
+  assert.deepEqual(
+    groups[1].links.map((link) => link.copyId),
+    ["archive"]
+  );
+  assert.equal(
+    copyAccessHeading(groups, 0, (text) => text),
+    "Cópia do Drive"
+  );
+  assert.equal(
+    copyAccessHeading(groups, 1, (text) => text),
+    "Cópia do Archive"
+  );
+  assert.deepEqual(remainingLinks, [film.externalLinks[3]]);
+  assert.deepEqual(film, before);
+});
+
+test("equivalent cross-provider copies share details and retain both access actions", async () => {
+  const { copyAccessGroups, copyAccessHeading } =
+    await import("../src/lib/catalog.ts");
+  const film = {
+    catalogCopyId: "archive",
+    copies: [
+      { id: "archive", resolution: "1080p" },
+      { id: "drive", resolution: "1080p" },
+    ],
+    externalLinks: [
+      {
+        copyId: "drive",
+        provider: "Google Drive",
+        url: "https://drive.google.com/drive/folders/example",
+      },
+      {
+        copyId: "archive",
+        provider: "Internet Archive",
+        url: "https://archive.org/details/example",
+      },
+    ],
+  };
+  const { groups, remainingLinks } = copyAccessGroups(film);
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].copy.id, "archive");
+  assert.equal(groups[0].links.length, 2);
+  assert.deepEqual(remainingLinks, []);
+  assert.equal(
+    copyAccessHeading(groups, 0, (text) => text),
+    "Cópias do Archive e do Drive"
+  );
+});

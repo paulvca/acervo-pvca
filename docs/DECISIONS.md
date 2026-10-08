@@ -31,3 +31,13 @@ Primary prototype source: local branch `prototype/home-intro-20261008`, commit `
 Selected by the user after a three-variant comparison. At widths up to 760px, use one chronological sequence of horizontal bars with direct decade and count labels, keeping the same maximum across all decades. Preserve the desktop columns, filmsByDecade calculation and showStats gate. No chart library or additional runtime is needed.
 
 Primary prototype source: local branch `prototype/decade-mobile-20261008`, commit `8d474ad`.
+
+## Movie detail layout approved on 2026-10-08
+
+Use one responsive editorial composition: poster left, the work in the central column, archived copies and their access actions in a right-hand card. On mobile, retain the reading order of localized title, original title, metadata, poster, synopsis, editorial facts, archived copies and related selections. Preserve the canonical sans-serif family, weight, letter spacing and line height. Original titles retain diacritics and do not repeat an identical localized title.
+
+Each technical presentation carries its source-specific heading and access links. Equivalent copies remain visually deduplicated without removing any source links. Selection cards reuse the first three posters from the selections index and use the same 4px corner radius as the archive card. Keep the synopsis 32px below the title block; a tall archive card must not stretch the title row.
+
+Primary source: local branch `prototype/movie-detail-20261008`, component `src/components/MovieDetailPrototype.astro`, including the user's copy/access and selection-card adjustments. Production uses `FilmDetail.astro`; prototype controls and routes are excluded. Sharing uses the canonical URL of the current locale, with a manual copy fallback when browser sharing or clipboard access is unavailable.
+
+The approved technical summary shows resolution and size together (for example `1080p · 42,2 GiB`). File/container formats are retained in the data model and local admin but omitted from public film details, matching the existing catalog cards.
