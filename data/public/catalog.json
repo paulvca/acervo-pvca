@@ -29,6 +29,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/heavens-gate-1980-michael-cimino-1080p",
         "copy_id": "pvca-000001-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1vAMmFQgdMleDnJIg-N7HxkAyN1yZXgWX",
+        "copy_id": "pvca-000001-drive"
       }
     ],
     "selections": ["Trabalho e desigualdade", "Territórios do faroeste"],
@@ -242,7 +247,13 @@
     ],
     "catalog_copy_id": "pvca-000005-drive",
     "poster": "/posters/tmdb-14839-7WBBcgzESyX1qEq9x7tg22dlORL.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1U9yDxBev39Wy_JzSq7F1e3LdCkTmCUII",
+        "copy_id": "pvca-000005-drive"
+      }
+    ],
     "selections": ["Trabalho e desigualdade"],
     "tmdb_id": 14839,
     "original_title": "Blue Collar",
@@ -292,7 +303,13 @@
     ],
     "catalog_copy_id": "pvca-000006-drive",
     "poster": "/posters/tmdb-26198-yd9wU3oajNxwaFHQ02rtTBuSFJD.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1u_Svvf4-3hNZO0jtOZVRsTYCqtbIqpFu",
+        "copy_id": "pvca-000006-drive"
+      }
+    ],
     "selections": ["Michael Mann"],
     "tmdb_id": 26198,
     "original_title": "The Keep",
@@ -342,7 +359,13 @@
     ],
     "catalog_copy_id": "pvca-000007-drive",
     "poster": "/posters/tmdb-104292-x5kP8vla1Nk41kgHV0ZKsrx9JHU.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1kPz6o_3XRcwO7zAaPVz0EU2owu6BR3kS",
+        "copy_id": "pvca-000007-drive"
+      }
+    ],
     "selections": ["Cinema japonês"],
     "tmdb_id": 104292,
     "original_title": "さらば箱舟",
@@ -510,7 +533,13 @@
     ],
     "catalog_copy_id": "pvca-000010-drive",
     "poster": "/posters/tmdb-27130-uoyBR8XNxPQRojujtczfG1qJezY.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1VnWITkcftkHcloWIy8qJOPUbgOkr38MH",
+        "copy_id": "pvca-000010-drive"
+      }
+    ],
     "selections": ["Jacques Tourneur"],
     "tmdb_id": 27130,
     "original_title": "I Walked with a Zombie",
@@ -1020,7 +1049,13 @@
     ],
     "catalog_copy_id": "pvca-000019-drive",
     "poster": "/posters/tmdb-25508-xbe5w7MXOdqsu0ZZRiHHAh6oQlc.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/15GEVLm9zCldwAznPg5o8p7gXpdyJLP1w",
+        "copy_id": "pvca-000019-drive"
+      }
+    ],
     "selections": ["Jacques Tourneur"],
     "tmdb_id": 25508,
     "original_title": "Cat People",
@@ -1176,7 +1211,13 @@
     ],
     "catalog_copy_id": "pvca-000022-drive",
     "poster": "/posters/tmdb-11163-if8ipWNybQPRjvxuo4uYV3GEMC1.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1cR_mat0jIOvP8s7rGtZ5qeTVAb_IPsF1",
+        "copy_id": "pvca-000022-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 11163,
     "original_title": "Fellini – satyricon",
@@ -1804,7 +1845,13 @@
     ],
     "catalog_copy_id": "pvca-000033-drive",
     "poster": "/posters/tmdb-27064-dV5MrkN3lkPrzeL1TQkCb5t7ZPE.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/10FSupMSTETAGngsydch9apTrizDji_Rq",
+        "copy_id": "pvca-000033-drive"
+      }
+    ],
     "selections": ["Cinema japonês"],
     "tmdb_id": 27064,
     "original_title": "Mishima: A Life in Four Chapters",
@@ -1867,6 +1914,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/night-of-the-demon-1957-1080p-pvca",
         "copy_id": "pvca-000034-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1hH0zeSYuwlZg5e4MhfRWMolzw_j-WUsd",
+        "copy_id": "pvca-000034-drive"
       }
     ],
     "selections": ["Anos 1950", "Jacques Tourneur"],
@@ -2377,7 +2429,13 @@
     ],
     "catalog_copy_id": "pvca-000043-drive",
     "poster": "/posters/tmdb-11454-6rb24x39vV8n5301IelC8rCPJTH.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1VU5TLh4Gkmsug1lx3H73ZNMRdrw9eAkO",
+        "copy_id": "pvca-000043-drive"
+      }
+    ],
     "selections": ["Michael Mann"],
     "tmdb_id": 11454,
     "original_title": "Manhunter",
@@ -2483,7 +2541,13 @@
     ],
     "catalog_copy_id": "pvca-000045-drive",
     "poster": "/posters/tmdb-20115-zjXubVgUO9TZhZjQsWJkWwiiwNx.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Bs3IW21vtqnLLfNjR49ZQ-gnQuhKd0vm",
+        "copy_id": "pvca-000045-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 20115,
     "original_title": "Opera",
@@ -2533,7 +2597,13 @@
     ],
     "catalog_copy_id": "pvca-000046-drive",
     "poster": "/posters/tmdb-29161-dhk14s8ogQkbf6re3HLKV2UBHjx.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1O0x8f_ylbgZAlPAWYmA3DH-WKSxx6sHb",
+        "copy_id": "pvca-000046-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 29161,
     "original_title": "Phenomena",
@@ -2674,7 +2744,13 @@
     ],
     "catalog_copy_id": "pvca-000048-drive",
     "poster": "/posters/tmdb-3112-8Xs3TNgxdiJqUiBOpFYxF0W9yoo.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1B0VZP8ef321p0ZVvxgrKvVz0U8bx7QX4",
+        "copy_id": "pvca-000048-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 3112,
     "original_title": "The Night of the Hunter",
@@ -2830,7 +2906,13 @@
     ],
     "catalog_copy_id": "pvca-000051-drive",
     "poster": "/posters/tmdb-678-yAnhMsPxDNjAEhOZ9iNlgU29Zfc.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1KfzyJhyw3p4UpXRqxuutCDS7Cu_e7n1s",
+        "copy_id": "pvca-000051-drive"
+      }
+    ],
     "selections": ["Noir americano", "Jacques Tourneur"],
     "tmdb_id": 678,
     "original_title": "Out of the Past",
@@ -2936,7 +3018,13 @@
     ],
     "catalog_copy_id": "pvca-000053-drive",
     "poster": "/posters/tmdb-28448-s1UlxUB5KXZYkuXQBXt3Ig3SkPz.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1pt4JDzca3zLfdhkLrLHEQvMge-o0cIaX",
+        "copy_id": "pvca-000053-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 28448,
     "original_title": "Walker",
@@ -3519,7 +3607,13 @@
     ],
     "catalog_copy_id": "pvca-000063-drive",
     "poster": "/posters/tmdb-82-iJPSls4taB09EUKtLj6FjFSprb3.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1EQLMODszDG85DARw_xjYrs2QVz8L0L1i",
+        "copy_id": "pvca-000063-drive"
+      }
+    ],
     "selections": ["Michael Mann"],
     "tmdb_id": 82,
     "original_title": "Miami Vice",
@@ -3737,7 +3831,13 @@
     ],
     "catalog_copy_id": "pvca-000067-drive",
     "poster": "/posters/tmdb-13446-fAaF0qyjJJuAZO7viwYUaO2XNlF.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ehMA7BUzKjLa_bsYoo1kcJhlG4Kk7KOh",
+        "copy_id": "pvca-000067-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 13446,
     "original_title": "Withnail & I",
@@ -3787,7 +3887,13 @@
     ],
     "catalog_copy_id": "pvca-000068-drive",
     "poster": "/posters/tmdb-11906-5ya8jTbNZTrCFUx9OwpNBjCivXY.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1AXx1u7d3sblAi12am1HZC2OOTj6u03xp",
+        "copy_id": "pvca-000068-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 11906,
     "original_title": "Suspiria",
@@ -3893,7 +3999,13 @@
     ],
     "catalog_copy_id": "pvca-000070-drive",
     "poster": "/posters/tmdb-38985-2b7oexm173SF1FSEq0DdgxZZNRH.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1PrgsSf3D4eDLbqhM1RjfIpUGzaVXkn2-",
+        "copy_id": "pvca-000070-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 38985,
     "original_title": "Sorcerer",
@@ -5351,7 +5463,13 @@
     ],
     "catalog_copy_id": "pvca-000095-drive",
     "poster": "/posters/tmdb-1942-zsZ2PAMMyBhkn5OSC8Qnror2KCA.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1x0mVVFRRnSh4bIKfJgAavUA-Szwykq5u",
+        "copy_id": "pvca-000095-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 1942,
     "original_title": "Bunny Lake Is Missing",
@@ -5457,7 +5575,13 @@
     ],
     "catalog_copy_id": "pvca-000097-drive",
     "poster": "/posters/tmdb-195-8GSvDG2FaaHdpufDyjvtwlO38Ex.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1JybUSKRD2i50UeuWk8KVr864pa859GSW",
+        "copy_id": "pvca-000097-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 195,
     "original_title": "Trouble in Paradise",
@@ -5563,7 +5687,13 @@
     ],
     "catalog_copy_id": "pvca-000099-drive",
     "poster": "/posters/tmdb-57666-qWNG9XNEbsu4aAR30WkpHA4xjWs.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1FJrr2X7zXeC48jFOeIh-mFjPFxRvKhZw",
+        "copy_id": "pvca-000099-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 57666,
     "original_title": "The Appointment",
@@ -6018,6 +6148,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/anne-of-the-indies-1951-1080p-pvca",
         "copy_id": "pvca-000107-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1YvruP0mLQ3csosq5zbkWgy6AOqBJBZwz",
+        "copy_id": "pvca-000107-drive"
       }
     ],
     "selections": ["Anos 1950", "Jacques Tourneur"],
@@ -6306,6 +6441,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/circle-of-danger-1951-1080p-pvca",
         "copy_id": "pvca-000112-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/12pXuSiSmY9qW5pq61ZcuWDXNRbDixECw",
+        "copy_id": "pvca-000112-drive"
       }
     ],
     "selections": ["Anos 1950", "Jacques Tourneur"],
@@ -6916,6 +7056,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/the-sunchaser-1996-720p-pvca",
         "copy_id": "pvca-000121-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1njEgxH7_UZXsAwOmL7mWYzXFxw2vrvmM",
+        "copy_id": "pvca-000121-drive"
       }
     ],
     "selections": [],
@@ -7050,7 +7195,13 @@
     ],
     "catalog_copy_id": "pvca-000123-drive",
     "poster": "/posters/tmdb-11527-nNgSBynGP63B7g0A9AGq3EQIPwS.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1JY8X8130n-qSgwiakWTa3INWrRypeDtl",
+        "copy_id": "pvca-000123-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 11527,
     "original_title": "Excalibur",
@@ -7289,7 +7440,13 @@
     ],
     "catalog_copy_id": "pvca-000127-drive",
     "poster": "/posters/tmdb-1091-tzGY49kseSE9QAKk47uuDGwnSCu.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1NZ1F-qQvryZ94Bx_IQhtrGR9Gcr17vur",
+        "copy_id": "pvca-000127-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 1091,
     "original_title": "The Thing",
@@ -7339,7 +7496,13 @@
     ],
     "catalog_copy_id": "pvca-000128-drive",
     "poster": "/posters/tmdb-26596-slMEKsaly6DlkjQKbrdRIUG92iC.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/183tURAKUmm7ZRRDMlxIyvU6Yl6vGq1iJ",
+        "copy_id": "pvca-000128-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 26596,
     "original_title": "Johnny Guitar",
@@ -7445,7 +7608,13 @@
     ],
     "catalog_copy_id": "pvca-000130-drive",
     "poster": "/posters/tmdb-68-d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1kEj9E_a9Gu1Z5P5BY42ZyHFLb8ssQcJo",
+        "copy_id": "pvca-000130-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 68,
     "original_title": "Brazil",
@@ -7633,7 +7802,13 @@
     ],
     "catalog_copy_id": "pvca-000133-drive",
     "poster": "/posters/tmdb-965-4QvsFW2cRY20GVpMQNcG406YVxP.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Sx4UdBliaqGipZmhBYvj-syeesx8rsAJ",
+        "copy_id": "pvca-000133-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 965,
     "original_title": "The Magnificent Ambersons",
@@ -7795,7 +7970,13 @@
     ],
     "catalog_copy_id": "pvca-000136-drive",
     "poster": "/posters/tmdb-11018-jdnGXZE2Ty2OcRGFwDZRpglODrp.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Sn9jjOmBrWD14K8kuEPXTtIyPNnOy7Yh",
+        "copy_id": "pvca-000136-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 11018,
     "original_title": "Year of the Dragon",
@@ -7845,7 +8026,13 @@
     ],
     "catalog_copy_id": "pvca-000137-drive",
     "poster": "/posters/tmdb-1939-utpUn9TdBIx6x2QX91YhYzFZxg1.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1scstWKpTGOEDlcyPFhUA-xgD0FdWnjdu",
+        "copy_id": "pvca-000137-drive"
+      }
+    ],
     "selections": ["Noir americano"],
     "tmdb_id": 1939,
     "original_title": "Laura",
@@ -8600,7 +8787,13 @@
     ],
     "catalog_copy_id": "pvca-000149-drive",
     "poster": "/posters/tmdb-111910-8qO1DmHYIRyniR1Goye0x5oi8M6.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1_u1WQKv0xHv45xH8jg46ZUS26M5pQPqb",
+        "copy_id": "pvca-000149-drive"
+      }
+    ],
     "selections": ["Sidney Lumet", "Anos 1950"],
     "tmdb_id": 111910,
     "original_title": "Stage Struck",
@@ -9223,7 +9416,13 @@
     ],
     "catalog_copy_id": "pvca-000160-drive",
     "poster": "/posters/tmdb-179144-d6AfFUHuWHQaw8uzOnBhb0I5hcb.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1OGR-Kujy1RlMJNZHwhga14EusCZrpnDK",
+        "copy_id": "pvca-000160-drive"
+      }
+    ],
     "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 179144,
     "original_title": "La grande bellezza",
@@ -9304,7 +9503,13 @@
     ],
     "catalog_copy_id": "pvca-000161-drive",
     "poster": "/posters/tmdb-3175-A0byHUHMwZ7dtBQtfZ44QIgDbjo.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/12Gz1Dt5nP0tpZcPclrU53AcZwlZdz4hj",
+        "copy_id": "pvca-000161-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 3175,
     "original_title": "Barry Lyndon",
@@ -9460,7 +9665,13 @@
     ],
     "catalog_copy_id": "pvca-000164-drive",
     "poster": "/posters/tmdb-82460-nuUCEkpNf4bEQoSEv6sn1W8eDro.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1njrw_BO8DUDhkuKcIjSxaK9VK2KCSwxn",
+        "copy_id": "pvca-000164-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 82460,
     "original_title": "Bye Bye Braverman",
@@ -9622,7 +9833,13 @@
     ],
     "catalog_copy_id": "pvca-000167-drive",
     "poster": "/posters/tmdb-14674-fh9vTJ5mOkKK5nZ1LRhfvP5JrD7.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ljKiTn12mID3peWrvN_vFT9iS2SwnXYt",
+        "copy_id": "pvca-000167-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 14674,
     "original_title": "Man of the West",
@@ -9672,7 +9889,13 @@
     ],
     "catalog_copy_id": "pvca-000168-drive",
     "poster": "/posters/tmdb-38027-3lXWCXumFeoJQLgW4YiOtTweilO.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1bYBF8qyne6vAAg01dF7cRjRHrUN4AWDU",
+        "copy_id": "pvca-000168-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 38027,
     "original_title": "Mandingo",
@@ -9974,7 +10197,13 @@
     ],
     "catalog_copy_id": "pvca-000173-drive",
     "poster": "/posters/tmdb-10774-gZ8hhuVEQ78CLND09trZJ45Eiy8.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1kOv0fj_eGEB3F1_fSbIE9ymXxLI__Vxb",
+        "copy_id": "pvca-000173-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 10774,
     "original_title": "Network",
@@ -10215,7 +10444,13 @@
     ],
     "catalog_copy_id": "pvca-000177-drive",
     "poster": "/posters/tmdb-93-z43hDtfTTwPEEJXbkg6DZ0s9QE8.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1My_ULDvBErVjw80cKbTvExo_OQSD9q5b",
+        "copy_id": "pvca-000177-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 93,
     "original_title": "Anatomy of a Murder",
@@ -10726,7 +10961,13 @@
     ],
     "catalog_copy_id": "pvca-000185-drive",
     "poster": "/posters/tmdb-1480-1pvRgmfBaoMczIJBOi9gCOZ4FMC.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1PvSo-geIKTj12HpAXjbK6rprBnUsTee6",
+        "copy_id": "pvca-000185-drive"
+      }
+    ],
     "selections": [
       "Noir americano",
       "Anos 1950",
@@ -11715,7 +11956,13 @@
     ],
     "catalog_copy_id": "pvca-000201-drive",
     "poster": "/posters/tmdb-1018-tVxGt7uffLVhIIcwuldXOMpFBPX.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1mE4HVkiQ5MoK8Z6m0GGGzBvwfL6S5lOQ",
+        "copy_id": "pvca-000201-drive"
+      }
+    ],
     "selections": ["Cinema francês"],
     "tmdb_id": 1018,
     "original_title": "Mulholland Drive",
@@ -11841,7 +12088,13 @@
     ],
     "catalog_copy_id": "pvca-000203-drive",
     "poster": "/posters/tmdb-1712-wXGmfJkU83daBsqp9R8LeWguIZd.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/12Gnn_LAEIxLLdkX02ndR8ifKGp2rXlvF",
+        "copy_id": "pvca-000203-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 1712,
     "original_title": "Giant",
@@ -12175,6 +12428,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/the-deer-hunter-1978-2160p-pvca",
         "copy_id": "pvca-000208-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1D5kmSCFRwYDCQ7uoYLGRXTtmZ1tqvKV3",
+        "copy_id": "pvca-000208-drive"
       }
     ],
     "selections": ["Guerra e suas marcas"],
@@ -12239,7 +12497,13 @@
     ],
     "catalog_copy_id": "pvca-000209-drive",
     "poster": "/posters/tmdb-576-8j9yEC3xjy1PJDSizIbaxcHaSph.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1EYLZiEG64qNMfNc0WGt6jQfwIZPwpjfl",
+        "copy_id": "pvca-000209-drive"
+      }
+    ],
     "selections": ["Territórios do faroeste"],
     "tmdb_id": 576,
     "original_title": "The Wild Bunch",
@@ -12410,7 +12674,13 @@
     ],
     "catalog_copy_id": "pvca-000212-drive",
     "poster": "/posters/tmdb-28162-diYVom5WuqNzhlRceem8onA197e.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1URWsW1u3tkDFiBtlao0byOrP9GksBGpi",
+        "copy_id": "pvca-000212-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 28162,
     "original_title": "A Matter of Life and Death",
@@ -13176,7 +13446,13 @@
     ],
     "catalog_copy_id": "pvca-000225-drive",
     "poster": "/posters/tmdb-184799-pecdbYnTijuZBsQ4USuEFtQOR5u.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ersT06x4-eg0w_Uh4GUhZYPKVqtclac6",
+        "copy_id": "pvca-000225-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 184799,
     "original_title": "Just Tell Me What You Want",
@@ -13476,7 +13752,13 @@
     ],
     "catalog_copy_id": "pvca-000230-drive",
     "poster": "/posters/tmdb-301-5hFxzqpucuT3AjnvcO1pHkR122S.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/16g759VHjjJgS4t-7MXMf3kDoxA3jiD6w",
+        "copy_id": "pvca-000230-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 301,
     "original_title": "Rio Bravo",
@@ -13526,7 +13808,13 @@
     ],
     "catalog_copy_id": "pvca-000231-drive",
     "poster": "/posters/tmdb-85-ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1EoeHtmzageRcM2zOXwWLtJc-mPAVyS47",
+        "copy_id": "pvca-000231-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 85,
     "original_title": "Raiders of the Lost Ark",
@@ -13757,6 +14045,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/canyon-passage-1946-1080p-pvca",
         "copy_id": "pvca-000235-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1bTzIRt--WkNUComcnl9GI_aEbAPmUUIK",
+        "copy_id": "pvca-000235-drive"
       }
     ],
     "selections": ["Jacques Tourneur", "Territórios do faroeste"],
@@ -13864,7 +14157,13 @@
     ],
     "catalog_copy_id": "pvca-000237-drive",
     "poster": "/posters/tmdb-28438-g6TH86P6JwFmGh4Zvyct4gq2AkI.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1AAoG68FApRAvVzUy5cOj1WAY95Eywpkp",
+        "copy_id": "pvca-000237-drive"
+      }
+    ],
     "selections": ["Jacques Tourneur"],
     "tmdb_id": 28438,
     "original_title": "The Leopard Man",
@@ -13941,7 +14240,13 @@
     ],
     "catalog_copy_id": "pvca-000238-drive",
     "poster": "/posters/tmdb-213-i3g0KIoXYx5RvyVaraYx9n2LCli.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1NlIzZK4tMZO5Eb6h-4-YBOI-39JdY9Fu",
+        "copy_id": "pvca-000238-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 213,
     "original_title": "North by Northwest",
@@ -14103,7 +14408,13 @@
     ],
     "catalog_copy_id": "pvca-000241-drive",
     "poster": "/posters/tmdb-5924-iEX7InvPSZeMzBVjYrEnD3Od7ZY.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1OQ2_ARdPxYXSgPUrPm-3UihXXO7optk1",
+        "copy_id": "pvca-000241-drive"
+      }
+    ],
     "selections": ["Cinema francês"],
     "tmdb_id": 5924,
     "original_title": "Papillon",
@@ -14153,7 +14464,13 @@
     ],
     "catalog_copy_id": "pvca-000242-drive",
     "poster": "/posters/tmdb-279-i3OzDlVauzqzrpTUlMwqwSu6YjW.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1pmw-VJo3JLIZTURrHpvxssj50W0G0PSm",
+        "copy_id": "pvca-000242-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 279,
     "original_title": "Amadeus",
@@ -14229,7 +14546,13 @@
     ],
     "catalog_copy_id": "pvca-000243-drive",
     "poster": "/posters/tmdb-947-AiAm0EtDvyGqNpVoieRw4u65vD1.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1xOneCjzGDagetD_lkMP6_htLaO7HbReX",
+        "copy_id": "pvca-000243-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 947,
     "original_title": "Lawrence of Arabia",
@@ -14407,7 +14730,13 @@
     ],
     "catalog_copy_id": "pvca-000246-drive",
     "poster": "/posters/tmdb-58192-55ocOIOUVya5I6Ihiek4WNw9qh4.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1vpStdMqv2EVrOocttHhmsR2IXy1hP8Y9",
+        "copy_id": "pvca-000246-drive"
+      }
+    ],
     "selections": ["Guerra e suas marcas"],
     "tmdb_id": 58192,
     "original_title": "Broken Lullaby",
@@ -14750,6 +15079,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/desperate-hours-1990-1080p-pvca",
         "copy_id": "pvca-000252-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1wISp3usiT8ZgX9yYXjY3QRj7ErIWUvp0",
+        "copy_id": "pvca-000252-drive"
       }
     ],
     "selections": [],
@@ -14801,7 +15135,13 @@
     ],
     "catalog_copy_id": "pvca-000253-drive",
     "poster": "/posters/tmdb-61391-vgj6RPSCpyK2mgfPJY1TvQ3NUBw.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1t2qyYrkgLWdLkifqpw5F8ZPkrnNA7ns9",
+        "copy_id": "pvca-000253-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 61391,
     "original_title": "Distant Drums",
@@ -15317,7 +15657,13 @@
     ],
     "catalog_copy_id": "pvca-000262-drive",
     "poster": "/posters/tmdb-11385-2FAIj6rsHoDjmOzXUb7Gt0Pe4tq.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ZPU1CQpvCVAQC1qrzCURE7xP-5XAE-fE",
+        "copy_id": "pvca-000262-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 11385,
     "original_title": "Hatari!",
@@ -15423,7 +15769,13 @@
     ],
     "catalog_copy_id": "pvca-000264-drive",
     "poster": "/posters/tmdb-17590-fwrqCTcu5rAkU2dL2YqG6jjrLPn.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1mhRJn1-nc_apdWbeEF0Ri4qRPCaLMEqO",
+        "copy_id": "pvca-000264-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 17590,
     "original_title": "Deathtrap",
@@ -15813,7 +16165,13 @@
     ],
     "catalog_copy_id": "pvca-000271-drive",
     "poster": "/posters/tmdb-63096-aLxxI4CVTLOcV3NKxI8l5h2b79Y.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1oK4yIS16p0eEAalI1t5UBeXmntb6UzZd",
+        "copy_id": "pvca-000271-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Infância e formação"],
     "tmdb_id": 63096,
     "original_title": "Tea and Sympathy",
@@ -16031,7 +16389,13 @@
     ],
     "catalog_copy_id": "pvca-000275-drive",
     "poster": "/posters/tmdb-118910-i9aQURs2c3xvH7ah1VQF8JoDr5K.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/18LrC2hJ1lrb2KU5kV1qEawAnwIdFqxLl",
+        "copy_id": "pvca-000275-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 118910,
     "original_title": "The Court-Martial of Billy Mitchell",
@@ -16094,6 +16458,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/the-fearmakers-1958-1080p-pvca",
         "copy_id": "pvca-000276-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1RP44ScKkXunqpc6pR-Eeg9wZUNDbpZqH",
+        "copy_id": "pvca-000276-drive"
       }
     ],
     "selections": ["Anos 1950", "Jacques Tourneur"],
@@ -16460,6 +16829,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/thunderbolt-and-lightfoot-1974-1080p-pvca",
         "copy_id": "pvca-000282-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/127l3MOYbdr_UejPw-Qk0TNtbZaZnmw_Z",
+        "copy_id": "pvca-000282-drive"
       }
     ],
     "selections": [],
@@ -16710,6 +17084,11 @@
         "provider": "internet_archive",
         "url": "https://archive.org/details/way-of-a-gaucho-1952-1080p-pvca",
         "copy_id": "pvca-000286-archive"
+      },
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1fp_JrzM677GwR6HPpFvgM1rKhRYxS1ac",
+        "copy_id": "pvca-000286-drive"
       }
     ],
     "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
@@ -16761,7 +17140,13 @@
     ],
     "catalog_copy_id": "pvca-000287-drive",
     "poster": "/posters/tmdb-114975-wUPhJkTgTnYlU83JHIKTrUIvQkF.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1oe7AIpeP8A8apakmYjC2mW4mIscDSsPc",
+        "copy_id": "pvca-000287-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 114975,
     "original_title": "Wichita",
@@ -17091,7 +17476,13 @@
     ],
     "catalog_copy_id": "pvca-000293-drive",
     "poster": "/posters/tmdb-94192-ghQY8BJfQKHMk6OQV79gW7X1k1D.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1G545Ai0iXsrO1NYkXJOfL8rjQiquRKiz",
+        "copy_id": "pvca-000293-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 94192,
     "original_title": "Great Day in the Morning",
@@ -17197,7 +17588,13 @@
     ],
     "catalog_copy_id": "pvca-000295-drive",
     "poster": "/posters/tmdb-89484-cE52KPgeJqDyaVu29OFGKqSDyET.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1yRXOzf9LjfsKPUKlpBluEgKcJtGp3bo7",
+        "copy_id": "pvca-000295-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 89484,
     "original_title": "Home from the Hill",
@@ -17359,7 +17756,13 @@
     ],
     "catalog_copy_id": "pvca-000298-drive",
     "poster": "/posters/tmdb-39231-ntfUs7PpyYhfmtM7sZjvDdkC7bA.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1lG_npSLnddG6e1UuDigvxR1beQW_bl3d",
+        "copy_id": "pvca-000298-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 39231,
     "original_title": "Man's Favorite Sport?",
@@ -17969,7 +18372,13 @@
     ],
     "catalog_copy_id": "pvca-000309-drive",
     "poster": "/posters/tmdb-111390-nKE6dBnB5W4AosuCrwILhnSDmUc.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1hG_b3H8aHeD7-E57pXNGu-JAu8AJFK8N",
+        "copy_id": "pvca-000309-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 111390,
     "original_title": "Stars in My Crown",
@@ -18579,7 +18988,13 @@
     ],
     "catalog_copy_id": "pvca-000320-drive",
     "poster": "/posters/tmdb-46948-6sj8HFCODqHah4DTCWs8uPp4IyL.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1uj2GO6B6FoOyTqTu6JPmy-coiOTsGg-H",
+        "copy_id": "pvca-000320-drive"
+      }
+    ],
     "selections": ["Sidney Lumet"],
     "tmdb_id": 46948,
     "original_title": "Power",
@@ -18909,7 +19324,13 @@
     ],
     "catalog_copy_id": "pvca-000326-drive",
     "poster": "/posters/tmdb-74436-jjPLFmZ8HZGYHZDinjtFjmI941y.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1KrWPlDSzW-G8qEsc0yw6TRYWne-gXK_w",
+        "copy_id": "pvca-000326-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 74436,
     "original_title": "The World in His Arms",
@@ -19083,7 +19504,13 @@
     ],
     "catalog_copy_id": "pvca-000329-drive",
     "poster": "/posters/tmdb-10354-z7pFkTjZL927IzDuDqMIQCFd6ku.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1f7NYDe_ZMVFfDRZr_6gnT0eUoviFB_tk",
+        "copy_id": "pvca-000329-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 10354,
     "original_title": "True Crime",
@@ -19357,7 +19784,13 @@
     ],
     "catalog_copy_id": "pvca-000334-drive",
     "poster": "/posters/tmdb-176923-zWb01HKEZbMVKFQSRaItjCdNllc.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/11r9MyiQbrcBgDW9b4a3dnaksVy_LV4z8",
+        "copy_id": "pvca-000334-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 176923,
     "original_title": "Sombra Verde",
@@ -19607,7 +20040,13 @@
     ],
     "catalog_copy_id": "pvca-000339-drive",
     "poster": "/posters/tmdb-949-umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1NI_X2U4-8hpKntysAST0rJ_Lb3WNxboF",
+        "copy_id": "pvca-000339-drive"
+      }
+    ],
     "selections": ["Michael Mann"],
     "tmdb_id": 949,
     "original_title": "Heat",
@@ -21448,7 +21887,13 @@
     ],
     "catalog_copy_id": "pvca-000371-drive",
     "poster": "/posters/tmdb-232-1bf7WKqEtRyA8US8smF2qdWQExb.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1f4SyyfRM3rf8VL0V7Cj4obGoB-Zr6moA",
+        "copy_id": "pvca-000371-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 232,
     "original_title": "Rumble Fish",
@@ -21498,7 +21943,13 @@
     ],
     "catalog_copy_id": "pvca-000372-drive",
     "poster": "/posters/tmdb-1052-tiq3QOrJqlVlN8q6bJqVsTzKyrb.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1KvaAcOUA6iUp-UOby8pSwaDJOm6fLkdW",
+        "copy_id": "pvca-000372-drive"
+      }
+    ],
     "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 1052,
     "original_title": "Blow-Up",
@@ -21598,7 +22049,13 @@
     ],
     "catalog_copy_id": "pvca-000374-drive",
     "poster": "/posters/tmdb-25673-zeVrXwljdJ7O9ZJiJPYCQ9ur2qI.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Pqk7JB66Wbw19D-SwknlNLpMJHrSshxS",
+        "copy_id": "pvca-000374-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 25673,
     "original_title": "A Place in the Sun",
@@ -22155,7 +22612,7 @@
     "external_links": [
       {
         "provider": "google_drive",
-        "url": "https://drive.google.com/drive/folders/1pypDiUiyLavHtaUGBJe46LCAtId99nlK",
+        "url": "https://drive.google.com/drive/folders/1Z-rL2UJIEaQXXpuMpMYsiYAgQGWus6bT",
         "copy_id": "pvca-000384-drive"
       }
     ],
@@ -22208,7 +22665,13 @@
     ],
     "catalog_copy_id": "pvca-000385-drive",
     "poster": "/posters/tmdb-49065-x44v3FixjxC7fB8Q5CDVFBhmS7r.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1sfBPzNzEY6MPYCz1SHLbv7DblMlDUGMz",
+        "copy_id": "pvca-000385-drive"
+      }
+    ],
     "selections": ["Cinema francês"],
     "tmdb_id": 49065,
     "original_title": "Portrait d'un assassin",
@@ -22258,7 +22721,13 @@
     ],
     "catalog_copy_id": "pvca-000386-drive",
     "poster": "/posters/tmdb-225117-gSyCFr1mC6xdA78k8TSTVDtNhtv.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/13Io3ghaz1kJ4OQagWDOaYhbMKu0tMuA1",
+        "copy_id": "pvca-000386-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 225117,
     "original_title": "King Lear",
@@ -22308,7 +22777,13 @@
     ],
     "catalog_copy_id": "pvca-000387-drive",
     "poster": "/posters/tmdb-48445-yvn2Et5uS8BmsbDDNqfU5zlOFpj.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1_i1QT8097IpLsg6hLzEwHNK58Y2YGvjL",
+        "copy_id": "pvca-000387-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Orson Welles"],
     "tmdb_id": 48445,
     "original_title": "Orson Welles at Large: Portrait of Gina",
@@ -22358,7 +22833,13 @@
     ],
     "catalog_copy_id": "pvca-000388-drive",
     "poster": "/posters/tmdb-140032-lPEeC7TgWLD96UZDWIYU8BGbA9U.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1QBt2qCIZMLr1J3cx_EPKyGLydpBtuclI",
+        "copy_id": "pvca-000388-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Orson Welles"],
     "tmdb_id": 140032,
     "original_title": "The Fountain of Youth",
@@ -22408,7 +22889,13 @@
     ],
     "catalog_copy_id": "pvca-000389-drive",
     "poster": "/posters/tmdb-464074-dK2gPzCYx9Q561eXFQcnZ7EZA10.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Hpppfo_GqGVmiJHhf3VgNipj7nqD5_J9",
+        "copy_id": "pvca-000389-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 464074,
     "original_title": "Désordre",
@@ -22458,7 +22945,13 @@
     ],
     "catalog_copy_id": "pvca-000390-drive",
     "poster": "/posters/tmdb-109386-bn9hQCyuk8EAf2d4PPcPYpPqF3R.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1A2MkOc-9B6A9LIhk4KLAx--Xpnmy-m4f",
+        "copy_id": "pvca-000390-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 109386,
     "original_title": "Vienna",
@@ -22508,7 +23001,13 @@
     ],
     "catalog_copy_id": "pvca-000391-drive",
     "poster": "/posters/tmdb-92750-iTnBlaRc6GmFAq3hcEYqGAqcfLv.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1XuZdHExDttwYo2sSraOXQP0NaytUjK1i",
+        "copy_id": "pvca-000391-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 92750,
     "original_title": "David e Golia",
@@ -22558,7 +23057,13 @@
     ],
     "catalog_copy_id": "pvca-000392-drive",
     "poster": "/posters/tmdb-139453-fiuzwdZYSqs7CsJKJmoYRBMv03Z.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1NEf7lnP_4RAqxBMDfG98s2BVmW0ENby5",
+        "copy_id": "pvca-000392-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 139453,
     "original_title": "Trouble in the Glen",
@@ -22608,7 +23113,13 @@
     ],
     "catalog_copy_id": "pvca-000393-drive",
     "poster": "/posters/tmdb-139058-6NuB5BEf9UKmpOFF0WjpxEJSUM7.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1TySD0CvglQ8yACAdrw-ez9OlNi-YTJ8V",
+        "copy_id": "pvca-000393-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 139058,
     "original_title": "I'll Never Forget What's'isname",
@@ -22658,7 +23169,13 @@
     ],
     "catalog_copy_id": "pvca-000394-drive",
     "poster": "/posters/tmdb-55381-hvXjKU5c15iV7G8E7v3jQIYHVKp.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/11mqRgZ6L4XKoYVWIV4KJ52TLIWKNxZbH",
+        "copy_id": "pvca-000394-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 55381,
     "original_title": "Trent's Last Case",
@@ -22708,7 +23225,13 @@
     ],
     "catalog_copy_id": "pvca-000395-drive",
     "poster": "/posters/tmdb-183841-uAImJthnukKD8AJ2IOB4T07CJJv.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ZTmwtlbBYoerzyDrmn0K9HyIG6olsxEy",
+        "copy_id": "pvca-000395-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 183841,
     "original_title": "Return to Glennascaul",
@@ -22758,7 +23281,13 @@
     ],
     "catalog_copy_id": "pvca-000396-drive",
     "poster": "/posters/tmdb-207790-tM2DhNJ3XsEsvLoAy0VWHHHstks.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Fgs9HO9l8gSj_5zQ_K53WHKz_xAUEkLO",
+        "copy_id": "pvca-000396-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 207790,
     "original_title": "I tartari",
@@ -22808,7 +23337,13 @@
     ],
     "catalog_copy_id": "pvca-000397-drive",
     "poster": "/posters/tmdb-409972-2J8i3NCru9SR9vRU0vIsP5tyZHU.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1gKd93vIHdFaQIb340Vjxn6wrO3-pL3Zz",
+        "copy_id": "pvca-000397-drive"
+      }
+    ],
     "selections": ["Cinema francês"],
     "tmdb_id": 409972,
     "original_title": "Portrait d'Orson Welles",
@@ -22858,7 +23393,13 @@
     ],
     "catalog_copy_id": "pvca-000398-drive",
     "poster": "/posters/tmdb-45577-y4XHdfPCG21hpRohwdh6vhjr7iM.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/18_U-mgWn2VLacxBz659ZVDVtO2_VtvJz",
+        "copy_id": "pvca-000398-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 45577,
     "original_title": "Three Cases of Murder",
@@ -22908,7 +23449,13 @@
     ],
     "catalog_copy_id": "pvca-000399-drive",
     "poster": "/posters/tmdb-193315-3M5nR79sR1CASVvMMiM1lLTas6T.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1iY9xup1ZidRRrSGmzT0ln6-Gtik9KIrK",
+        "copy_id": "pvca-000399-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 193315,
     "original_title": "Too Much Johnson",
@@ -22958,7 +23505,13 @@
     ],
     "catalog_copy_id": "pvca-000400-drive",
     "poster": "/posters/tmdb-84636-cI0IdXJWemWTyombF1n1FwK6KYT.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/16u_99QFVwM8hgy8_ycvUK1ER1E7ld0Rv",
+        "copy_id": "pvca-000400-drive"
+      }
+    ],
     "selections": ["Orson Welles", "Cinema francês"],
     "tmdb_id": 84636,
     "original_title": "The Immortal Story",
@@ -23008,7 +23561,13 @@
     ],
     "catalog_copy_id": "pvca-000401-drive",
     "poster": "/posters/tmdb-35921-fdYoG4uxbTbQ8Wv4BLxWiP7rrkm.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1LV5kkFwQitjZQ-nvNfmmfTNQvrwaob2S",
+        "copy_id": "pvca-000401-drive"
+      }
+    ],
     "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 35921,
     "original_title": "Compulsion",
@@ -23058,7 +23617,13 @@
     ],
     "catalog_copy_id": "pvca-000402-drive",
     "poster": "/posters/tmdb-37222-rlDromcNudpKl69gzqnBNotu9lo.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1tCub_Tmf80hqC2kjXThjqJD_yYNKxWL7",
+        "copy_id": "pvca-000402-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 37222,
     "original_title": "The V.I.P.s",
@@ -23108,7 +23673,13 @@
     ],
     "catalog_copy_id": "pvca-000403-drive",
     "poster": "/posters/tmdb-75799-o61Y2bK2Oqnc48C6rUM7hecpUBs.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1Gc-qZJrb9z3aVjNsnCDIW7oR767taccL",
+        "copy_id": "pvca-000403-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 75799,
     "original_title": "The Roots of Heaven",
@@ -23158,7 +23729,13 @@
     ],
     "catalog_copy_id": "pvca-000404-drive",
     "poster": "/posters/tmdb-44100-ib4gnOTYD2cDGCQgz4Lf6pSaVcO.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1QHujuHQbeSnoqRIg817D4jUW1etUqAhT",
+        "copy_id": "pvca-000404-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 44100,
     "original_title": "Tomorrow Is Forever",
@@ -23208,7 +23785,13 @@
     ],
     "catalog_copy_id": "pvca-000405-drive",
     "poster": "/posters/tmdb-44398-qtnEO3IBtdf6EfAQ9gNvGFjyovp.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1z2r-DPUzqr5903At9eS5aTtUrGGIFUWJ",
+        "copy_id": "pvca-000405-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 44398,
     "original_title": "The Black Rose",
@@ -23258,7 +23841,13 @@
     ],
     "catalog_copy_id": "pvca-000406-drive",
     "poster": "/posters/tmdb-44533-oeZRbsXUpmnX1s7Ralg8SKKWVHZ.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1aoN5jxglgXmawDqwKSCCdOvBZEH3sWyX",
+        "copy_id": "pvca-000406-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 44533,
     "original_title": "Prince of Foxes",
@@ -23308,7 +23897,13 @@
     ],
     "catalog_copy_id": "pvca-000407-drive",
     "poster": "/posters/tmdb-22744-eC3aradopHU4Uoxmx3nByFwSnmo.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1WtdAfUqtJjJjk1dd4shefx3ylbcFiPv3",
+        "copy_id": "pvca-000407-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 22744,
     "original_title": "Jane Eyre",
@@ -23358,7 +23953,13 @@
     ],
     "catalog_copy_id": "pvca-000408-drive",
     "poster": "/posters/tmdb-20246-c7qmGFZrj5AaDz9NKMeaajW38fC.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1sxLohQQ59yZe2Fp2_rlzC6awhi80dCbo",
+        "copy_id": "pvca-000408-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 20246,
     "original_title": "The Stranger",
@@ -23408,7 +24009,13 @@
     ],
     "catalog_copy_id": "pvca-000409-drive",
     "poster": "/posters/tmdb-27883-4DbzuePqGcUY7olAKzGly7kCEmU.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1kx6xuqjfpUR2-M4ZWt0dxpvF22AWP3gA",
+        "copy_id": "pvca-000409-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 27883,
     "original_title": "Macbeth",
@@ -23458,7 +24065,13 @@
     ],
     "catalog_copy_id": "pvca-000410-drive",
     "poster": "/posters/tmdb-47697-61A7EJqfMsrQO0YWsUWq8gbgbu0.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1ITX6AdFzKieumD91UDOVGMn_xvSL3YgA",
+        "copy_id": "pvca-000410-drive"
+      }
+    ],
     "selections": [
       "Anos 1950",
       "Orson Welles",
@@ -23513,7 +24126,13 @@
     ],
     "catalog_copy_id": "pvca-000411-drive",
     "poster": "/posters/tmdb-92796-lhs9JE5WxzcBKzXMp19bTcLIPMm.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1_Ak6prbP_6_YoJEmIQJ89hDj3MP71Az8",
+        "copy_id": "pvca-000411-drive"
+      }
+    ],
     "selections": ["Cinema italiano"],
     "tmdb_id": 92796,
     "original_title": "Black Magic",
@@ -23563,7 +24182,13 @@
     ],
     "catalog_copy_id": "pvca-000412-drive",
     "poster": "/posters/tmdb-32275-fS1zUgm51bHUTwXe5FpdsjAreqL.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/13soVBsTaTfsgFgjGm7gKW6F8_rQ0S16T",
+        "copy_id": "pvca-000412-drive"
+      }
+    ],
     "selections": ["Territórios do faroeste"],
     "tmdb_id": 32275,
     "original_title": "Duel in the Sun",
@@ -23613,7 +24238,13 @@
     ],
     "catalog_copy_id": "pvca-000413-drive",
     "poster": "/posters/tmdb-986-5Fjxyz3u2Zdco4WeuC3wQ6O5tYQ.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1f3OnKa97oYBxdEUia0y_8Voqy6uTORkK",
+        "copy_id": "pvca-000413-drive"
+      }
+    ],
     "selections": ["Orson Welles", "Cinema francês"],
     "tmdb_id": 986,
     "original_title": "Campanadas a medianoche",
@@ -23663,7 +24294,13 @@
     ],
     "catalog_copy_id": "pvca-000414-drive",
     "poster": "/posters/tmdb-3766-whqdqWavNMSoeXTx1X3DauO1LG6.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1XaemA-rtgfbM1GLhizzP846SyWcu66mj",
+        "copy_id": "pvca-000414-drive"
+      }
+    ],
     "selections": ["Noir americano", "Orson Welles"],
     "tmdb_id": 3766,
     "original_title": "The Lady from Shanghai",
@@ -23713,7 +24350,13 @@
     ],
     "catalog_copy_id": "pvca-000415-drive",
     "poster": "/posters/tmdb-36362-w7ZihCBZOVXL827GKUbYiGnWSdX.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1jkZABwrflGgwcLHx4eJRnbM3UmQMoU1c",
+        "copy_id": "pvca-000415-drive"
+      }
+    ],
     "selections": [],
     "tmdb_id": 36362,
     "original_title": "King of Kings",
@@ -23763,7 +24406,13 @@
     ],
     "catalog_copy_id": "pvca-000416-drive",
     "poster": "/posters/tmdb-3009-sl3sO7rwfNsVHeH3UHKaIV3A3MW.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1q1f4SpU1NecfjIjVLMciwK6-OlavSn5z",
+        "copy_id": "pvca-000416-drive"
+      }
+    ],
     "selections": [
       "Orson Welles",
       "Cinema italiano",
@@ -23818,7 +24467,13 @@
     ],
     "catalog_copy_id": "pvca-000417-drive",
     "poster": "/posters/tmdb-65912-hGTMVCRxJhgOeBzdDVHP0yaF4TN.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/12Dd1vfedvbJeVV0lT0HB3lnZSvxxH89Q",
+        "copy_id": "pvca-000417-drive"
+      }
+    ],
     "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 65912,
     "original_title": "La Fayette",
@@ -23878,7 +24533,13 @@
     ],
     "catalog_copy_id": "pvca-000418-drive",
     "poster": "/posters/tmdb-15-sav0jxhqiH0bPr2vZFU0Kjt2nZL.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1x8VjhhHs-r2rzDgXS91I75wprSByqnu3",
+        "copy_id": "pvca-000418-drive"
+      }
+    ],
     "selections": ["Orson Welles"],
     "tmdb_id": 15,
     "original_title": "Citizen Kane",
@@ -23928,7 +24589,13 @@
     ],
     "catalog_copy_id": "pvca-000419-drive",
     "poster": "/posters/tmdb-1692684-gv4nGcagWEgmct3XNJSesrKgVzm.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1k3rhkt1MEkzY8QO1cR-b9ibFFlXkUJ3_",
+        "copy_id": "pvca-000419-drive"
+      }
+    ],
     "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 1692684,
     "original_title": "La ricotta",
@@ -24042,7 +24709,13 @@
     ],
     "catalog_copy_id": "pvca-000421-drive",
     "poster": "/posters/tmdb-6620-r8woenvB9eqnlgXDzSt3pWTfWzq.jpg",
-    "external_links": [],
+    "external_links": [
+      {
+        "provider": "google_drive",
+        "url": "https://drive.google.com/drive/folders/1xA1c7fS_hYTD9K7BbghyfW0DNZheXxHv",
+        "copy_id": "pvca-000421-drive"
+      }
+    ],
     "selections": ["Anos 1950"],
     "tmdb_id": 6620,
     "original_title": "Sabrina",
