@@ -252,6 +252,11 @@ test("a real projection drives static pages without preview films or invented ed
   const editorial = JSON.parse(
     readFileSync(new URL("data/public/editorial.json", root), "utf8")
   );
+  // This isolated build contains one fixture, not the live catalog's members.
+  editorial.selections = editorial.selections.map((selection) => ({
+    ...selection,
+    filmSlugs: [],
+  }));
   editorial.selections.push({
     id: "selection-fixture",
     title: "Selection fixture",

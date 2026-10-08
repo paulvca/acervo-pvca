@@ -660,11 +660,7 @@
         "copy_id": "pvca-000012-archive"
       }
     ],
-    "selections": [
-      "Michelangelo Antonioni",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 41050,
     "original_title": "La notte",
     "release_date": "1961-01-24",
@@ -888,7 +884,7 @@
         "copy_id": "pvca-000016-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 55848,
     "original_title": "Lancelot du Lac",
     "release_date": "1974-04-23",
@@ -944,7 +940,7 @@
         "copy_id": "pvca-000017-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 48139,
     "original_title": "El sur",
     "release_date": "1983-05-19",
@@ -1162,7 +1158,7 @@
         "copy_id": "pvca-000021-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 19552,
     "original_title": "Mùi đu đủ xanh",
     "release_date": "1993-06-08",
@@ -1274,7 +1270,7 @@
         "copy_id": "pvca-000023-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": [],
     "tmdb_id": 8898,
     "original_title": "La mujer sin cabeza",
     "release_date": "2008-08-21",
@@ -1340,11 +1336,7 @@
         "copy_id": "pvca-000024-archive"
       }
     ],
-    "selections": [
-      "Michelangelo Antonioni",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 5165,
     "original_title": "L'avventura",
     "release_date": "1960-09-14",
@@ -1568,11 +1560,7 @@
         "copy_id": "pvca-000028-archive"
       }
     ],
-    "selections": [
-      "Cinema italiano",
-      "Cinema francês",
-      "Trabalho e desigualdade"
-    ],
+    "selections": ["Cinema italiano", "Trabalho e desigualdade"],
     "tmdb_id": 8422,
     "original_title": "Rocco e i suoi fratelli",
     "release_date": "1960-10-07",
@@ -2320,11 +2308,7 @@
         "copy_id": "pvca-000041-archive"
       }
     ],
-    "selections": [
-      "Michelangelo Antonioni",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 9652,
     "original_title": "Professione: reporter",
     "release_date": "1975-02-28",
@@ -4062,11 +4046,7 @@
         "copy_id": "pvca-000071-archive"
       }
     ],
-    "selections": [
-      "Michelangelo Antonioni",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 21135,
     "original_title": "L'eclisse",
     "release_date": "1962-04-13",
@@ -4122,7 +4102,7 @@
         "copy_id": "pvca-000072-archive"
       }
     ],
-    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
+    "selections": ["Anos 1950"],
     "tmdb_id": 70555,
     "original_title": "Das indische Grabmal",
     "release_date": "1959-03-05",
@@ -4945,7 +4925,7 @@
         "copy_id": "pvca-000086-archive"
       }
     ],
-    "selections": ["Cinema japonês", "Akira Kurosawa", "Cinema francês"],
+    "selections": ["Cinema japonês", "Akira Kurosawa"],
     "tmdb_id": 11645,
     "original_title": "乱",
     "release_date": "1985-06-01",
@@ -6504,7 +6484,7 @@
         "copy_id": "pvca-000113-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 3478,
     "original_title": "Ludwig",
     "release_date": "1973-03-07",
@@ -6776,7 +6756,7 @@
         "copy_id": "pvca-000117-archive"
       }
     ],
-    "selections": ["Sidney Lumet", "Cinema italiano", "Cinema francês"],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 183889,
     "original_title": "Vu du pont",
     "release_date": "1962-01-19",
@@ -7370,7 +7350,7 @@
         "copy_id": "pvca-000126-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 27904,
     "original_title": "แสงศตวรรษ",
     "release_date": "2006-08-31",
@@ -7977,7 +7957,7 @@
         "copy_id": "pvca-000136-drive"
       }
     ],
-    "selections": ["Cinema italiano"],
+    "selections": [],
     "tmdb_id": 11018,
     "original_title": "Year of the Dragon",
     "release_date": "1985-08-16",
@@ -8550,7 +8530,7 @@
         "copy_id": "pvca-000145-archive"
       }
     ],
-    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
+    "selections": ["Anos 1950", "Cinema italiano"],
     "tmdb_id": 12548,
     "original_title": "I vitelloni",
     "release_date": "1953-09-17",
@@ -9250,12 +9230,7 @@
         "copy_id": "pvca-000157-archive"
       }
     ],
-    "selections": [
-      "Cinema japonês",
-      "Anos 1950",
-      "Kenji Mizoguchi",
-      "Cinema de Hong Kong"
-    ],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 91426,
     "original_title": "楊貴妃",
     "release_date": "1955-05-03",
@@ -9423,7 +9398,7 @@
         "copy_id": "pvca-000160-drive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 179144,
     "original_title": "La grande bellezza",
     "release_date": "2013-05-21",
@@ -9784,7 +9759,7 @@
         "copy_id": "pvca-000166-archive"
       }
     ],
-    "selections": ["Cinema japonês"],
+    "selections": [],
     "tmdb_id": 31662,
     "original_title": "Affliction",
     "release_date": "1998-02-12",
@@ -11963,7 +11938,7 @@
         "copy_id": "pvca-000201-drive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 1018,
     "original_title": "Mulholland Drive",
     "release_date": "2001-06-06",
@@ -14415,7 +14390,7 @@
         "copy_id": "pvca-000241-drive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 5924,
     "original_title": "Papillon",
     "release_date": "1973-12-16",
@@ -15360,7 +15335,7 @@
     "catalog_copy_id": "pvca-000257-local",
     "poster": "/posters/tmdb-53156-kWIpbE4YZ9xp3SregE4h8577cI.jpg",
     "external_links": [],
-    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
+    "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 53156,
     "original_title": "Elena et les hommes",
     "release_date": "1956-09-12",
@@ -19219,7 +19194,7 @@
         "copy_id": "pvca-000324-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 35172,
     "original_title": "Le Fils",
     "release_date": "2002-10-04",
@@ -19966,7 +19941,7 @@
     "catalog_copy_id": "pvca-000337-local",
     "poster": "/posters/tmdb-56167-cDlxLnLMboEfdDcPelodOs71GVs.jpg",
     "external_links": [],
-    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
+    "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 56167,
     "original_title": "Le Carrosse d'or",
     "release_date": "1952-12-05",
@@ -20508,7 +20483,7 @@
         "copy_id": "pvca-000347-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 4286,
     "original_title": "L'innocente",
     "release_date": "1976-05-18",
@@ -20620,7 +20595,7 @@
         "copy_id": "pvca-000349-archive"
       }
     ],
-    "selections": ["Cinema de Hong Kong"],
+    "selections": [],
     "tmdb_id": 10997,
     "original_title": "霸王别姬",
     "release_date": "1993-01-01",
@@ -20900,7 +20875,7 @@
         "copy_id": "pvca-000354-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 10363,
     "original_title": "Plein soleil",
     "release_date": "1960-03-10",
@@ -20956,7 +20931,7 @@
         "copy_id": "pvca-000355-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 11553,
     "original_title": "千禧曼波",
     "release_date": "2001-10-31",
@@ -21012,11 +20987,7 @@
         "copy_id": "pvca-000356-archive"
       }
     ],
-    "selections": [
-      "Michelangelo Antonioni",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 26638,
     "original_title": "Il deserto rosso",
     "release_date": "1964-09-04",
@@ -22168,7 +22139,7 @@
         "copy_id": "pvca-000376-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema português"],
+    "selections": ["Cinema português"],
     "tmdb_id": 101342,
     "original_title": "As Bodas de Deus",
     "release_date": "1999-10-15",
@@ -22504,7 +22475,7 @@
         "copy_id": "pvca-000382-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema português"],
+    "selections": ["Cinema português"],
     "tmdb_id": 83228,
     "original_title": "Vai e Vem",
     "release_date": "2003-06-03",
@@ -24072,12 +24043,7 @@
         "copy_id": "pvca-000410-drive"
       }
     ],
-    "selections": [
-      "Anos 1950",
-      "Orson Welles",
-      "Cinema italiano",
-      "Cinema francês"
-    ],
+    "selections": ["Anos 1950", "Orson Welles"],
     "tmdb_id": 47697,
     "original_title": "Othello",
     "release_date": "1951-11-28",
@@ -24133,7 +24099,7 @@
         "copy_id": "pvca-000411-drive"
       }
     ],
-    "selections": ["Cinema italiano"],
+    "selections": [],
     "tmdb_id": 92796,
     "original_title": "Black Magic",
     "release_date": "1949-08-19",
@@ -24245,7 +24211,7 @@
         "copy_id": "pvca-000413-drive"
       }
     ],
-    "selections": ["Orson Welles", "Cinema francês"],
+    "selections": ["Orson Welles"],
     "tmdb_id": 986,
     "original_title": "Campanadas a medianoche",
     "release_date": "1965-12-22",
@@ -24413,12 +24379,7 @@
         "copy_id": "pvca-000416-drive"
       }
     ],
-    "selections": [
-      "Orson Welles",
-      "Cinema italiano",
-      "Cinema francês",
-      "Justiça e instituições"
-    ],
+    "selections": ["Orson Welles", "Cinema francês", "Justiça e instituições"],
     "tmdb_id": 3009,
     "original_title": "Le Procès",
     "release_date": "1962-08-25",
@@ -24474,7 +24435,7 @@
         "copy_id": "pvca-000417-drive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 65912,
     "original_title": "La Fayette",
     "release_date": "1962-02-16",
@@ -24596,7 +24557,7 @@
         "copy_id": "pvca-000419-drive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 1692684,
     "original_title": "La ricotta",
     "release_date": "1963-02-20",
@@ -24828,7 +24789,7 @@
         "copy_id": "pvca-000423-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 2786,
     "original_title": "Pierrot le fou",
     "release_date": "1965-11-05",
@@ -25407,7 +25368,7 @@
         "copy_id": "pvca-000433-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema português"],
+    "selections": ["Cinema português"],
     "tmdb_id": 103701,
     "original_title": "O Princípio da Incerteza",
     "release_date": "2002-05-17",
@@ -25464,7 +25425,7 @@
         "copy_id": "pvca-000434-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema português"],
+    "selections": ["Cinema português"],
     "tmdb_id": 83237,
     "original_title": "Le Bassin de J. W.",
     "release_date": "1997-10-29",
@@ -25806,7 +25767,7 @@
         "copy_id": "pvca-000440-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema português"],
+    "selections": ["Cinema português"],
     "tmdb_id": 107693,
     "original_title": "Vale Abraão",
     "release_date": "1993-09-01",
@@ -28036,7 +27997,7 @@
         "copy_id": "pvca-000482-archive"
       }
     ],
-    "selections": ["Japão depois da guerra", "Cinema japonês"],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 168295,
     "original_title": "死闘の伝説",
     "release_date": "1963-08-11",
@@ -28093,7 +28054,7 @@
         "copy_id": "pvca-000483-archive"
       }
     ],
-    "selections": ["Japão depois da guerra", "Cinema japonês"],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 3763,
     "original_title": "鬼婆",
     "release_date": "1964-11-21",
@@ -28507,7 +28468,7 @@
     "catalog_copy_id": "pvca-000491-drive",
     "poster": "/posters/tmdb-4191-j8Oi4qua86tpZSU3yjrRyGIvdaZ.jpg",
     "external_links": [],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 4191,
     "original_title": "La mariée était en noir",
     "release_date": "1968-03-22",
@@ -28558,7 +28519,7 @@
     "catalog_copy_id": "pvca-000492-drive",
     "poster": "/posters/tmdb-1651-mBiAHXw8Qn6ISKHAkd1HqlynzGE.jpg",
     "external_links": [],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 1651,
     "original_title": "La Sirène du Mississipi",
     "release_date": "1969-06-18",
@@ -28615,7 +28576,7 @@
         "copy_id": "pvca-000493-archive"
       }
     ],
-    "selections": ["Cinema francês", "Cinema brasileiro"],
+    "selections": ["Cinema brasileiro"],
     "tmdb_id": 74349,
     "original_title": "O Dragão da Maldade contra o Santo Guerreiro",
     "release_date": "1969-06-14",
@@ -28666,7 +28627,7 @@
     "catalog_copy_id": "pvca-000494-drive",
     "poster": "/posters/tmdb-258-it1CIdXuoaOQ7KDCRd90QaSIool.jpg",
     "external_links": [],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 258,
     "original_title": "Domicile conjugal",
     "release_date": "1970-09-09",
@@ -28774,7 +28735,7 @@
         "copy_id": "pvca-000496-archive"
       }
     ],
-    "selections": ["Cinema italiano", "Cinema francês", "Cinema brasileiro"],
+    "selections": ["Cinema brasileiro"],
     "tmdb_id": 186908,
     "original_title": "Der Leone Have Sept Cabeças",
     "release_date": "1971-08-03",
@@ -28984,7 +28945,7 @@
     "catalog_copy_id": "pvca-000500-drive",
     "poster": "/posters/tmdb-1675-vTT3I0KTP2N7OcEyWcHzwZ7CsxN.jpg",
     "external_links": [],
-    "selections": ["Cinema italiano", "Cinema francês"],
+    "selections": ["Cinema francês"],
     "tmdb_id": 1675,
     "original_title": "La Nuit américaine",
     "release_date": "1973-05-24",
@@ -29961,7 +29922,7 @@
     "catalog_copy_id": "pvca-000518-drive",
     "poster": "/posters/tmdb-41925-ePU1QvThfPUopPSo4mDUg55jVuD.jpg",
     "external_links": [],
-    "selections": ["Cinema italiano"],
+    "selections": [],
     "tmdb_id": 41925,
     "original_title": "The Comfort of Strangers",
     "release_date": "1990-11-01",
@@ -30354,7 +30315,7 @@
         "copy_id": "pvca-000525-archive"
       }
     ],
-    "selections": ["Cinema francês"],
+    "selections": [],
     "tmdb_id": 11554,
     "original_title": "最好的時光",
     "release_date": "2005-10-27",
@@ -30468,12 +30429,7 @@
         "copy_id": "pvca-000527-archive"
       }
     ],
-    "selections": [
-      "Anos 1950",
-      "Cinema italiano",
-      "Cinema francês",
-      "Cinema brasileiro"
-    ],
+    "selections": ["Anos 1950", "Cinema francês", "Cinema brasileiro"],
     "tmdb_id": 40423,
     "original_title": "Orfeu Negro",
     "release_date": "1959-06-12",
@@ -30530,7 +30486,7 @@
         "copy_id": "pvca-000139-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 184867,
     "original_title": "ふるさとの歌",
     "release_date": "1925-09-16",
@@ -30586,7 +30542,7 @@
         "copy_id": "pvca-000196-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 1198381,
     "original_title": "We Sail at Midnight",
     "release_date": "1943-10-30",

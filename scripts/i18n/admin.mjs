@@ -5,6 +5,11 @@ import {
 } from "./public.mjs";
 export { preferredLanguage, countryHint };
 export const en = {
+  "Título de seleção repetido.": "Duplicate selection title.",
+  "filme repetido.": "Duplicate film.",
+  "filme inexistente.": "Film not found.",
+  "regra automática não aceita filmes manuais.":
+    "Automatic rules do not accept manual film members.",
   "Identidade incompleta.": "Incomplete identity.",
   "Identidade duplicada no arquivo canônico.":
     "Duplicate identity in the canonical file.",
@@ -275,7 +280,10 @@ export function translateAdmin(lang, text) {
         const suffix = line.slice(separator + 2);
         if (en[suffix])
           return (
-            line.slice(0, separator).replace("catálogo", "catalog") +
+            line
+              .slice(0, separator)
+              .replace("catálogo", "catalog")
+              .replace(/^Seleção /, "Selection ") +
             ": " +
             en[suffix]
           );

@@ -347,6 +347,8 @@ export function createAdmin(root, port = 4323) {
         const films = catalog.length
           ? catalog
           : read("data/public/catalog.preview.json");
+        const referenceErrors = validateEditorial(data, films);
+        assert(!referenceErrors.length, referenceErrors.join("\n"));
         assert(
           !data.featuredSlug || films.some((f) => f.slug === data.featuredSlug),
           "Filme em destaque inexistente."

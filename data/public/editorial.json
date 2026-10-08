@@ -19,7 +19,7 @@
     {
       "id": "japao-depois-da-guerra",
       "title": "Japão depois da guerra",
-      "description": "Família, trabalho e transformação social no cinema japonês entre o fim dos anos 1940 e os anos 1960.",
+      "description": "Família, trabalho e transformação social no Japão do pós-guerra, em filmes ambientados entre os anos 1940 e 1960.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -49,12 +49,15 @@
         "the-approach-of-autumn-1960",
         "when-a-woman-ascends-the-stairs-1960",
         "a-woman-s-place-1962",
-        "a-legend-or-was-it-1963",
-        "onibaba-1964",
         "yearning-1964",
         "the-stranger-within-a-woman-1966",
         "death-by-hanging-1968"
-      ]
+      ],
+      "localized": {
+        "en": {
+          "description": "Family, work and social change in postwar Japan, in films set between the 1940s and 1960s."
+        }
+      }
     },
     {
       "id": "sidney-lumet",
@@ -126,7 +129,7 @@
     {
       "id": "cinema-japones",
       "title": "Cinema japonês",
-      "description": "Um percurso pelas produções e coproduções japonesas da coleção.",
+      "description": "Um percurso pelo cinema japonês, dos filmes silenciosos às obras contemporâneas.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -178,7 +181,6 @@
         "sisters-of-the-gion-1936",
         "the-47-ronin-1941",
         "portrait-of-madame-yuki-1950",
-        "affliction-1998",
         "the-straits-of-love-and-hate-1937",
         "utamaro-and-his-five-women-1946",
         "women-of-the-night-1948",
@@ -232,12 +234,13 @@
         "death-by-hanging-1968",
         "hotaru-firefly-2001",
         "cafe-lumiere-2004",
-        "ryuichi-sakamoto-opus-2023"
+        "ryuichi-sakamoto-opus-2023",
+        "song-of-home-1925"
       ],
       "localized": {
         "en": {
           "title": "Japanese cinema",
-          "description": "A path through the Japanese productions and co-productions in the collection."
+          "description": "A path through Japanese cinema, from silent films to contemporary works."
         }
       }
     },
@@ -432,7 +435,8 @@
         "wee-willie-winkie-1937",
         "what-price-glory-1952",
         "when-willie-comes-marching-home-1950",
-        "fort-apache-1948"
+        "fort-apache-1948",
+        "we-sail-at-midnight-1943"
       ],
       "localized": {
         "en": {
@@ -473,7 +477,8 @@
         "the-woman-in-the-rumor-1954",
         "miyamoto-musashi-1944",
         "oyuki-the-virgin-1935",
-        "poppy-1935"
+        "poppy-1935",
+        "song-of-home-1925"
       ],
       "localized": {
         "en": {
@@ -641,15 +646,13 @@
     {
       "id": "cinema-italiano",
       "title": "Cinema italiano",
-      "description": "Um percurso pelas produções e coproduções italianas da coleção.",
+      "description": "Um recorte do cinema italiano, entre neorrealismo, cinema moderno, gêneros populares e obras de seus cineastas realizadas no exterior.",
       "rule": "manual",
       "filmSlugs": [
         "misunderstood-1967",
         "senso-1954",
         "la-notte-1961",
-        "lancelot-of-the-lake-1974",
         "satyricon-1969",
-        "the-headless-woman-2008",
         "l-avventura-1960",
         "rocco-and-his-brothers-1960",
         "the-passenger-1975",
@@ -659,14 +662,11 @@
         "oedipus-rex-1967",
         "suspiria-1977",
         "l-eclisse-1962",
-        "the-indian-tomb-1959",
         "rome-open-city-1945",
         "the-funicular-of-mount-faloria-1950",
         "the-villa-of-monsters-1950",
         "ludwig-1973",
-        "a-view-from-the-bridge-1962",
         "once-upon-a-time-in-america-1984",
-        "year-of-the-dragon-1985",
         "i-vitelloni-1953",
         "the-good-the-bad-and-the-ugly-1966",
         "le-amiche-1955",
@@ -684,99 +684,55 @@
         "lies-of-love-1949",
         "sicily-1997",
         "seven-reeds-one-dress-1948",
-        "elena-and-her-men-1956",
         "the-name-of-the-rose-1986",
-        "the-golden-coach-1952",
         "the-innocent-1976",
-        "purple-noon-1960",
         "red-desert-1964",
         "blow-up-1966",
         "david-and-goliath-1960",
         "the-tartars-1961",
-        "othello-1951",
-        "black-magic-1949",
-        "the-trial-1962",
-        "lafayette-1962",
         "la-ricotta-1963",
-        "stromboli-1950",
-        "pierrot-le-fou-1965",
-        "the-bride-wore-black-1968",
-        "mississippi-mermaid-1969",
-        "bed-and-board-1970",
-        "der-leone-have-sept-cabecas-1971",
-        "day-for-night-1973",
-        "the-comfort-of-strangers-1990",
-        "black-orpheus-1959"
+        "stromboli-1950"
       ],
       "localized": {
         "en": {
           "title": "Italian cinema",
-          "description": "A path through the Italian productions and co-productions in the collection."
+          "description": "A selection of Italian cinema, spanning neorealism, modern cinema, popular genres and works made abroad by its filmmakers."
         }
       }
     },
     {
       "id": "cinema-frances",
       "title": "Cinema francês",
-      "description": "Um percurso pelas produções e coproduções francesas da coleção.",
+      "description": "Um recorte do cinema francês, de Renoir e Bresson à Nouvelle Vague e aos seus desdobramentos.",
       "rule": "manual",
       "filmSlugs": [
-        "la-notte-1961",
         "lancelot-of-the-lake-1974",
-        "el-sur-1983",
-        "the-scent-of-green-papaya-1993",
-        "the-headless-woman-2008",
-        "l-avventura-1960",
-        "rocco-and-his-brothers-1960",
-        "the-passenger-1975",
         "la-vie-de-boheme-1992",
-        "l-eclisse-1962",
-        "the-indian-tomb-1959",
-        "ran-1985",
         "la-musica-1967",
-        "ludwig-1973",
-        "a-view-from-the-bridge-1962",
         "picnic-on-the-grass-1959",
         "the-discreet-charm-of-the-bourgeoisie-1972",
-        "syndromes-and-a-century-2006",
-        "i-vitelloni-1953",
-        "the-great-beauty-2013",
         "the-rules-of-the-game-1939",
-        "mulholland-drive-2001",
-        "papillon-1973",
         "elena-and-her-men-1956",
         "the-name-of-the-rose-1986",
         "a-game-for-six-lovers-1960",
-        "the-son-2002",
         "the-golden-coach-1952",
         "the-river-1951",
-        "the-innocent-1976",
         "purple-noon-1960",
-        "millennium-mambo-2001",
-        "red-desert-1964",
         "the-young-girls-of-rochefort-1967",
         "a-nos-amours-1983",
         "celine-1992",
-        "the-spousals-of-god-1999",
-        "come-and-go-2003",
         "napoleon-1927",
         "portrait-of-a-murderer-1949",
         "disorder-1950",
         "portrait-orson-welles-1968",
         "the-immortal-story-1968",
-        "othello-1951",
-        "chimes-at-midnight-1965",
         "the-trial-1962",
         "lafayette-1962",
-        "la-ricotta-1963",
         "pierrot-le-fou-1965",
         "sound-and-fury-1988",
         "read-my-lips-2001",
-        "the-uncertainty-principle-2002",
-        "the-hips-of-j-w-1997",
         "lola-montes-1955",
         "in-praise-of-love-2001",
-        "abraham-s-valley-1993",
         "histoire-s-du-cinema-1989",
         "l-inhumaine-1924",
         "les-caves-du-majestic-1945",
@@ -790,10 +746,8 @@
         "stolen-kisses-1968",
         "the-bride-wore-black-1968",
         "mississippi-mermaid-1969",
-        "o-dragao-da-maldade-contra-o-santo-guerreiro-1969",
         "bed-and-board-1970",
         "l-enfant-sauvage-1970",
-        "der-leone-have-sept-cabecas-1971",
         "les-deux-anglaises-et-le-continent-1971",
         "a-gorgeous-girl-like-me-1972",
         "day-for-night-1973",
@@ -807,13 +761,12 @@
         "les-ombres-1982",
         "confidentially-yours-1983",
         "francois-truffaut-portraits-voles-1993",
-        "three-times-2005",
         "black-orpheus-1959"
       ],
       "localized": {
         "en": {
           "title": "French cinema",
-          "description": "A path through the French productions and co-productions in the collection."
+          "description": "A selection of French cinema, from Renoir and Bresson to the New Wave and its successors."
         }
       }
     },
@@ -831,9 +784,7 @@
         "a-better-tomorrow-ii-1987",
         "bullet-in-the-head-1990",
         "a-better-tomorrow-1986",
-        "princess-yang-kwei-fei-1955",
-        "devil-hunters-1989",
-        "farewell-my-concubine-1993"
+        "devil-hunters-1989"
       ],
       "localized": {
         "en": {
@@ -880,7 +831,7 @@
     {
       "id": "cinema-portugues",
       "title": "Cinema português",
-      "description": "As produções e coproduções portuguesas da coleção, reunidas em um mesmo percurso.",
+      "description": "Um percurso pelo cinema português através dos filmes de João César Monteiro e Manoel de Oliveira.",
       "rule": "manual",
       "filmSlugs": [
         "hovering-over-the-water-1986",
@@ -897,7 +848,7 @@
       "localized": {
         "en": {
           "title": "Portuguese cinema",
-          "description": "The Portuguese productions and co-productions in the collection, brought together in one path."
+          "description": "A path through Portuguese cinema through the films of João César Monteiro and Manoel de Oliveira."
         }
       }
     },

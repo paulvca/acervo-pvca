@@ -432,8 +432,7 @@ function editSelection(selection) {
       "filmSlugs",
       film.slug,
       film.title,
-      selection?.filmSlugs.includes(film.slug) ||
-        film.selections?.includes(selection?.title)
+      selection?.filmSlugs.includes(film.slug)
     );
   updateRule();
 }

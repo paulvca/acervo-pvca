@@ -136,3 +136,29 @@ confirmation and stale previews against a temporary server. `tmdb:test` uses moc
 responses to verify both locales, director IDs and poster selection/download.
 No tests populate the project's real catalog. The live connection probe validates
 configured authentication, not the accuracy of an unprovided movie collection.
+
+## Editorial selections
+
+`data/public/editorial.json` is the authoritative source of selection identity,
+localized descriptions, home placement and manual membership (`filmSlugs`).
+Manual membership is keyed by stable film slugs, not selection titles. The public
+site and admin picker must not union these members with imported `film.selections`
+strings. Those strings are a compatibility projection; they cannot reintroduce a
+film removed by the editor or change membership after a title translation.
+
+Only the `pt-br` and `4k` selections are automatic. They inspect the explicitly
+selected catalog copy. Director, period, national-cinema and thematic selections
+remain explicit, editable lists. Importing metadata or discovering another
+production country must not enroll a film into a curated selection.
+
+National cinema is an editorial context, not a database join on every production
+country. Minority financing, original language, director nationality and country
+array order are insufficient individually. International works can belong to more
+than one curated context where that choice is intentional. Preserve all production
+countries on the film record even when a curated membership is removed.
+
+`validateEditorial(config, catalog)` rejects missing film references, duplicate
+members/titles and manual members attached to automatic rules. Builds validate
+these references against the active public catalog; the admin validates against
+its current editable catalog before saving. Selection pages, counts, preview strips,
+home entries and film backlinks all derive from the same resolved selections.

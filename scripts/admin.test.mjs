@@ -74,6 +74,15 @@ test("local editor guards origins and preserves draft/public boundaries", async 
       join(dir, "data/public/editorial.json"),
       "utf8"
     );
+    for (const members of [["missing-film"], ["ikiru-1952", "ikiru-1952"]]) {
+      const invalidSelection = structuredClone(state.editorial);
+      invalidSelection.selections[0].filmSlugs = members;
+      assert.equal((await post("editorial", invalidSelection)).status, 400);
+      assert.equal(
+        readFileSync(join(dir, "data/public/editorial.json"), "utf8"),
+        initial
+      );
+    }
     assert.equal(
       (
         await post("editorial", state.editorial, {

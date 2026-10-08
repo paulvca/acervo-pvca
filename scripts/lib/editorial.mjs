@@ -1,4 +1,4 @@
-export function validateEditorial(value) {
+export function validateEditorial(value, catalog) {
   if (!value || typeof value !== "object" || Array.isArray(value))
     return ["Configuração editorial inválida."];
   const errors = [];
@@ -35,6 +35,8 @@ export function validateEditorial(value) {
   if (!Array.isArray(value.selections))
     return [...errors, "Seleções inválidas."];
   const ids = new Set();
+  const titles = new Set();
+  const slugs = catalog ? new Set(catalog.map((film) => film.slug)) : null;
   for (const s of value.selections) {
     if (
       !s ||
@@ -63,12 +65,24 @@ export function validateEditorial(value) {
       typeof s.description !== "string"
     )
       errors.push("Preencha título e descrição da seleção.");
+    if (titles.has(s.title)) errors.push("Título de seleção repetido.");
+    titles.add(s.title);
     if (
       !["manual", "pt-br", "4k"].includes(s.rule) ||
       !Array.isArray(s.filmSlugs) ||
       s.filmSlugs.some((slug) => typeof slug !== "string")
     )
       errors.push("Regra ou filmes da seleção inválidos.");
+    if (Array.isArray(s.filmSlugs)) {
+      if (new Set(s.filmSlugs).size !== s.filmSlugs.length)
+        errors.push(`Seleção ${s.id}: filme repetido.`);
+      if (slugs && s.filmSlugs.some((slug) => !slugs.has(slug)))
+        errors.push(`Seleção ${s.id}: filme inexistente.`);
+      if (s.rule !== "manual" && s.filmSlugs.length)
+        errors.push(
+          `Seleção ${s.id}: regra automática não aceita filmes manuais.`
+        );
+    }
     if (
       typeof s.title === "string" &&
       s.title.toLowerCase().includes("disponíveis no internet archive")
@@ -105,6 +119,12 @@ export function validateEditorial(value) {
     )
       errors.push("Tradução da seleção inválida.");
   return errors;
+}
+
+// Membership is keyed by stable slugs, never by translated selection titles.
+export function manualSelectionFilms(selection, catalog) {
+  const slugs = new Set(selection.filmSlugs);
+  return catalog.filter((film) => slugs.has(film.slug));
 }
 
 export function recentEntries(catalog, limit) {
