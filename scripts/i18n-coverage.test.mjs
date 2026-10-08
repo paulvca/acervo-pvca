@@ -48,13 +48,18 @@ export function staticTranslations(source) {
 export function astroParts(raw) {
   return [
     raw.match(/^---\s*\n([\s\S]*?)\n---/)?.[1] ?? "",
-    ...[...raw.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)].map(
-      (match) => match[1]
-    ),
+    ...[
+      ...raw.matchAll(
+        /<script(?:[\s/][^>]*)?>([\s\S]*?)<\/script(?:[\s/][^>]*)?>/gi
+      ),
+    ].map((match) => match[1]),
     "<>" +
       raw
         .replace(/^---\s*\n[\s\S]*?\n---/, "")
-        .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ") +
+        .replace(
+          /<(script|style)(?:[\s/][^>]*)?>[\s\S]*?<\/\1(?:[\s/][^>]*)?>/gi,
+          " "
+        ) +
       "</>",
   ];
 }
@@ -93,6 +98,14 @@ const title = t("filme");
 <SCRIPT>const label = t("filmes");</SCRIPT >
 <STYLE>p { color: red; }</STYLE >
 <p>{t("Missing UI")}</p>`);
+  const browserAcceptedEndTag = astroParts(
+    '<SCRIPT>t("filme");</SCRIPT\t\n bar>'
+  );
+  assert.equal(browserAcceptedEndTag[1], 't("filme");');
+  assert.equal(
+    astroParts('<script-custom>t("filme");</script-custom>').length,
+    2
+  );
   assert.deepEqual(
     parts.flatMap((part) => [...staticTranslations(part)]),
     ["filme", "filmes", "Missing UI"]
