@@ -34,6 +34,9 @@ const recentFilms = sourceRecent.map((film) => localizeFilm(film, lang));
           "Filmes que venho reunindo, preservando e organizando ao longo do tempo."
         )}
       </p>
+      <a class="intro-explore" href={path("/filmes/")}>
+        {t("Filmes")} <span aria-hidden="true">→</span>
+      </a>
       {editorial.showStats && (
         <div class="intro-stats">
           <CollectionStats />
