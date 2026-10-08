@@ -31,7 +31,7 @@
         "copy_id": "pvca-000001-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Trabalho e desigualdade", "Territórios do faroeste"],
     "tmdb_id": 10935,
     "original_title": "Heaven's Gate",
     "release_date": "1980-11-19",
@@ -87,7 +87,7 @@
         "copy_id": "pvca-000002-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Infância e formação"],
     "tmdb_id": 56978,
     "original_title": "Incompreso (Vita col figlio)",
     "release_date": "1967-01-21",
@@ -137,7 +137,7 @@
     "catalog_copy_id": "pvca-000003-local",
     "poster": "/posters/tmdb-43195-qLwENVUnmb6ULiUKAh6dzDTwxUI.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano"],
     "tmdb_id": 43195,
     "original_title": "Senso",
     "release_date": "1954-03-25",
@@ -193,7 +193,7 @@
         "copy_id": "pvca-000004-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês", "Yasujirō Ozu"],
     "tmdb_id": 50759,
     "original_title": "秋刀魚の味",
     "release_date": "1962-11-18",
@@ -243,7 +243,7 @@
     "catalog_copy_id": "pvca-000005-drive",
     "poster": "/posters/tmdb-14839-7WBBcgzESyX1qEq9x7tg22dlORL.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Trabalho e desigualdade"],
     "tmdb_id": 14839,
     "original_title": "Blue Collar",
     "release_date": "1978-02-10",
@@ -293,7 +293,7 @@
     "catalog_copy_id": "pvca-000006-drive",
     "poster": "/posters/tmdb-26198-yd9wU3oajNxwaFHQ02rtTBuSFJD.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 26198,
     "original_title": "The Keep",
     "release_date": "1983-12-16",
@@ -343,7 +343,7 @@
     "catalog_copy_id": "pvca-000007-drive",
     "poster": "/posters/tmdb-104292-x5kP8vla1Nk41kgHV0ZKsrx9JHU.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 104292,
     "original_title": "さらば箱舟",
     "release_date": "1984-09-08",
@@ -399,7 +399,13 @@
         "copy_id": "pvca-000008-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Kenji Mizoguchi",
+      "Trabalho e desigualdade"
+    ],
     "tmdb_id": 45991,
     "original_title": "祇園囃子",
     "release_date": "1953-08-12",
@@ -505,7 +511,7 @@
     "catalog_copy_id": "pvca-000010-drive",
     "poster": "/posters/tmdb-27130-uoyBR8XNxPQRojujtczfG1qJezY.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Jacques Tourneur"],
     "tmdb_id": 27130,
     "original_title": "I Walked with a Zombie",
     "release_date": "1943-04-21",
@@ -569,7 +575,7 @@
         "copy_id": "pvca-000011-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 10835,
     "original_title": "喋血雙雄",
     "release_date": "1989-03-24",
@@ -625,7 +631,11 @@
         "copy_id": "pvca-000012-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Michelangelo Antonioni",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 41050,
     "original_title": "La notte",
     "release_date": "1961-01-24",
@@ -681,7 +691,7 @@
         "copy_id": "pvca-000013-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema soviético", "Guerra e suas marcas"],
     "tmdb_id": 38360,
     "original_title": "Летят журавли",
     "release_date": "1957-10-12",
@@ -737,7 +747,7 @@
         "copy_id": "pvca-000014-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 18747,
     "original_title": "黑社會",
     "release_date": "2005-10-20",
@@ -849,7 +859,7 @@
         "copy_id": "pvca-000016-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 55848,
     "original_title": "Lancelot du Lac",
     "release_date": "1974-04-23",
@@ -905,7 +915,7 @@
         "copy_id": "pvca-000017-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 48139,
     "original_title": "El sur",
     "release_date": "1983-05-19",
@@ -961,7 +971,7 @@
         "copy_id": "pvca-000018-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 35861,
     "original_title": "近松物語",
     "release_date": "1954-11-23",
@@ -1011,7 +1021,7 @@
     "catalog_copy_id": "pvca-000019-drive",
     "poster": "/posters/tmdb-25508-xbe5w7MXOdqsu0ZZRiHHAh6oQlc.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Jacques Tourneur"],
     "tmdb_id": 25508,
     "original_title": "Cat People",
     "release_date": "1942-12-05",
@@ -1117,7 +1127,7 @@
         "copy_id": "pvca-000021-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 19552,
     "original_title": "Mùi đu đủ xanh",
     "release_date": "1993-06-08",
@@ -1167,7 +1177,7 @@
     "catalog_copy_id": "pvca-000022-drive",
     "poster": "/posters/tmdb-11163-if8ipWNybQPRjvxuo4uYV3GEMC1.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 11163,
     "original_title": "Fellini – satyricon",
     "release_date": "1969-09-18",
@@ -1223,7 +1233,7 @@
         "copy_id": "pvca-000023-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 8898,
     "original_title": "La mujer sin cabeza",
     "release_date": "2008-08-21",
@@ -1289,7 +1299,11 @@
         "copy_id": "pvca-000024-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Michelangelo Antonioni",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 5165,
     "original_title": "L'avventura",
     "release_date": "1960-09-14",
@@ -1401,7 +1415,7 @@
         "copy_id": "pvca-000026-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema brasileiro", "Trabalho e desigualdade"],
     "tmdb_id": 203158,
     "original_title": "Eles Não Usam Black-Tie",
     "release_date": "1981-09-28",
@@ -1457,7 +1471,7 @@
         "copy_id": "pvca-000027-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong", "Guerra e suas marcas"],
     "tmdb_id": 41244,
     "original_title": "英雄本色3：夕阳之歌",
     "release_date": "1989-10-20",
@@ -1513,7 +1527,11 @@
         "copy_id": "pvca-000028-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Cinema italiano",
+      "Cinema francês",
+      "Trabalho e desigualdade"
+    ],
     "tmdb_id": 8422,
     "original_title": "Rocco e i suoi fratelli",
     "release_date": "1960-10-07",
@@ -1625,7 +1643,7 @@
         "copy_id": "pvca-000030-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 315721,
     "original_title": "はるか、ノスタルジィ",
     "release_date": "1993-02-20",
@@ -1737,7 +1755,7 @@
         "copy_id": "pvca-000032-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 68004,
     "original_title": "阮玲玉",
     "release_date": "1991-11-29",
@@ -1787,7 +1805,7 @@
     "catalog_copy_id": "pvca-000033-drive",
     "poster": "/posters/tmdb-27064-dV5MrkN3lkPrzeL1TQkCb5t7ZPE.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 27064,
     "original_title": "Mishima: A Life in Four Chapters",
     "release_date": "1985-09-20",
@@ -1851,7 +1869,7 @@
         "copy_id": "pvca-000034-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur"],
     "tmdb_id": 25103,
     "original_title": "Night of the Demon",
     "release_date": "1957-11-09",
@@ -1907,7 +1925,7 @@
         "copy_id": "pvca-000035-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Noir americano", "Anos 1950"],
     "tmdb_id": 18030,
     "original_title": "Kiss Me Deadly",
     "release_date": "1955-04-28",
@@ -1963,7 +1981,7 @@
         "copy_id": "pvca-000036-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema brasileiro"],
     "tmdb_id": 186738,
     "original_title": "O Bandido da Luz Vermelha",
     "release_date": "1968-12-02",
@@ -2013,7 +2031,7 @@
     "catalog_copy_id": "pvca-000037-local",
     "poster": "/posters/tmdb-12622-lqqYxV1MJnCmPg7Na4XBupeAEDV.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 12622,
     "original_title": "その男、凶暴につき",
     "release_date": "1989-08-12",
@@ -2069,7 +2087,12 @@
         "copy_id": "pvca-000038-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Yasujirō Ozu"
+    ],
     "tmdb_id": 55192,
     "original_title": "東京暮色",
     "release_date": "1957-04-30",
@@ -2125,7 +2148,7 @@
         "copy_id": "pvca-000039-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Yasujirō Ozu"],
     "tmdb_id": 44163,
     "original_title": "浮草物語",
     "release_date": "1934-11-23",
@@ -2189,7 +2212,7 @@
         "copy_id": "pvca-000040-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 11782,
     "original_title": "辣手神探",
     "release_date": "1992-04-16",
@@ -2245,7 +2268,11 @@
         "copy_id": "pvca-000041-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Michelangelo Antonioni",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 9652,
     "original_title": "Professione: reporter",
     "release_date": "1975-02-28",
@@ -2301,7 +2328,7 @@
         "copy_id": "pvca-000042-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 18305,
     "original_title": "英雄本色2",
     "release_date": "1987-12-17",
@@ -2351,7 +2378,7 @@
     "catalog_copy_id": "pvca-000043-drive",
     "poster": "/posters/tmdb-11454-6rb24x39vV8n5301IelC8rCPJTH.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 11454,
     "original_title": "Manhunter",
     "release_date": "1986-08-15",
@@ -2407,7 +2434,7 @@
         "copy_id": "pvca-000044-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 130719,
     "original_title": "Il mistero di Oberwald",
     "release_date": "1981-09-03",
@@ -2457,7 +2484,7 @@
     "catalog_copy_id": "pvca-000045-drive",
     "poster": "/posters/tmdb-20115-zjXubVgUO9TZhZjQsWJkWwiiwNx.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 20115,
     "original_title": "Opera",
     "release_date": "1987-12-19",
@@ -2507,7 +2534,7 @@
     "catalog_copy_id": "pvca-000046-drive",
     "poster": "/posters/tmdb-29161-dhk14s8ogQkbf6re3HLKV2UBHjx.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 29161,
     "original_title": "Phenomena",
     "release_date": "1985-01-25",
@@ -2648,7 +2675,7 @@
     "catalog_copy_id": "pvca-000048-drive",
     "poster": "/posters/tmdb-3112-8Xs3TNgxdiJqUiBOpFYxF0W9yoo.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 3112,
     "original_title": "The Night of the Hunter",
     "release_date": "1955-07-26",
@@ -2704,7 +2731,7 @@
         "copy_id": "pvca-000049-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Infância e formação"],
     "tmdb_id": 21334,
     "original_title": "بچه‌های آسمان",
     "release_date": "1997-08-01",
@@ -2754,7 +2781,7 @@
     "catalog_copy_id": "pvca-000050-local",
     "poster": "/posters/tmdb-4291-1iKa2QriZ3C3uPRSYGM8mlzXrKr.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema japonês", "Infância e formação"],
     "tmdb_id": 4291,
     "original_title": "菊次郎の夏",
     "release_date": "1999-06-05",
@@ -2804,7 +2831,7 @@
     "catalog_copy_id": "pvca-000051-drive",
     "poster": "/posters/tmdb-678-yAnhMsPxDNjAEhOZ9iNlgU29Zfc.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Noir americano", "Jacques Tourneur"],
     "tmdb_id": 678,
     "original_title": "Out of the Past",
     "release_date": "1947-11-25",
@@ -2860,7 +2887,7 @@
         "copy_id": "pvca-000052-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong", "Guerra e suas marcas"],
     "tmdb_id": 11909,
     "original_title": "喋血街頭",
     "release_date": "1990-08-17",
@@ -3022,7 +3049,7 @@
         "copy_id": "pvca-000055-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 28212,
     "original_title": "La Vie de Bohème",
     "release_date": "1992-02-27",
@@ -3086,7 +3113,7 @@
         "copy_id": "pvca-000056-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 42691,
     "original_title": "Edipo re",
     "release_date": "1967-09-07",
@@ -3142,7 +3169,7 @@
         "copy_id": "pvca-000057-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês", "Yasujirō Ozu"],
     "tmdb_id": 28273,
     "original_title": "小早川家の秋",
     "release_date": "1961-10-29",
@@ -3265,7 +3292,7 @@
         "copy_id": "pvca-000059-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 33441,
     "original_title": "ロボット・カーニバル",
     "release_date": "1987-07-21",
@@ -3331,7 +3358,7 @@
         "copy_id": "pvca-000060-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 11524,
     "original_title": "Thief",
     "release_date": "1981-03-27",
@@ -3387,7 +3414,7 @@
         "copy_id": "pvca-000061-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Akira Kurosawa"],
     "tmdb_id": 3777,
     "original_title": "蜘蛛巣城",
     "release_date": "1957-01-15",
@@ -3443,7 +3470,7 @@
         "copy_id": "pvca-000062-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 1398,
     "original_title": "Сталкер",
     "release_date": "1979-05-25",
@@ -3493,7 +3520,7 @@
     "catalog_copy_id": "pvca-000063-drive",
     "poster": "/posters/tmdb-82-iJPSls4taB09EUKtLj6FjFSprb3.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 82,
     "original_title": "Miami Vice",
     "release_date": "2006-07-27",
@@ -3549,7 +3576,7 @@
         "copy_id": "pvca-000064-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 41428,
     "original_title": "鉄男",
     "release_date": "1989-07-01",
@@ -3605,7 +3632,7 @@
         "copy_id": "pvca-000065-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Yasujirō Ozu"],
     "tmdb_id": 27372,
     "original_title": "父ありき",
     "release_date": "1942-04-01",
@@ -3661,7 +3688,7 @@
         "copy_id": "pvca-000066-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 14696,
     "original_title": "雨月物語",
     "release_date": "1953-03-26",
@@ -3761,7 +3788,7 @@
     "catalog_copy_id": "pvca-000068-drive",
     "poster": "/posters/tmdb-11906-5ya8jTbNZTrCFUx9OwpNBjCivXY.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 11906,
     "original_title": "Suspiria",
     "release_date": "1977-02-01",
@@ -3817,7 +3844,7 @@
         "copy_id": "pvca-000069-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 19884,
     "original_title": "大菩薩峠",
     "release_date": "1966-02-25",
@@ -3923,7 +3950,11 @@
         "copy_id": "pvca-000071-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Michelangelo Antonioni",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 21135,
     "original_title": "L'eclisse",
     "release_date": "1962-04-13",
@@ -3979,7 +4010,7 @@
         "copy_id": "pvca-000072-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
     "tmdb_id": 70555,
     "original_title": "Das indische Grabmal",
     "release_date": "1959-03-05",
@@ -4035,7 +4066,7 @@
         "copy_id": "pvca-000073-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Guerra e suas marcas"],
     "tmdb_id": 33319,
     "original_title": "ビルマの竪琴",
     "release_date": "1956-01-21",
@@ -4211,7 +4242,7 @@
         "copy_id": "pvca-000076-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 43877,
     "original_title": "浪華悲歌",
     "release_date": "1936-05-28",
@@ -4267,7 +4298,7 @@
         "copy_id": "pvca-000077-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 7500,
     "original_title": "Sonatine",
     "release_date": "1993-09-10",
@@ -4323,7 +4354,7 @@
         "copy_id": "pvca-000078-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 20532,
     "original_title": "山椒大夫",
     "release_date": "1954-03-31",
@@ -4379,7 +4410,11 @@
         "copy_id": "pvca-000079-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Akira Kurosawa"
+    ],
     "tmdb_id": 30368,
     "original_title": "野良犬",
     "release_date": "1949-10-17",
@@ -4435,7 +4470,12 @@
         "copy_id": "pvca-000080-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Yasujirō Ozu"
+    ],
     "tmdb_id": 55197,
     "original_title": "お茶漬けの味",
     "release_date": "1952-10-01",
@@ -4491,7 +4531,7 @@
         "copy_id": "pvca-000081-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Guerra e suas marcas"],
     "tmdb_id": 31217,
     "original_title": "人間の條件　第１部純愛篇／第２部激怒篇",
     "release_date": "1959-01-15",
@@ -4547,7 +4587,7 @@
         "copy_id": "pvca-000082-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Guerra e suas marcas"],
     "tmdb_id": 34528,
     "original_title": "人間の條件　第３部望郷篇／第４部戦雲篇",
     "release_date": "1959-11-20",
@@ -4603,7 +4643,7 @@
         "copy_id": "pvca-000083-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Guerra e suas marcas"],
     "tmdb_id": 34530,
     "original_title": "人間の條件　完結篇",
     "release_date": "1961-01-28",
@@ -4725,7 +4765,7 @@
         "copy_id": "pvca-000085-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Akira Kurosawa"],
     "tmdb_id": 12516,
     "original_title": "夢",
     "release_date": "1990-05-11",
@@ -4793,7 +4833,7 @@
         "copy_id": "pvca-000086-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Akira Kurosawa", "Cinema francês"],
     "tmdb_id": 11645,
     "original_title": "乱",
     "release_date": "1985-06-01",
@@ -4849,7 +4889,7 @@
         "copy_id": "pvca-000087-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Justiça e instituições"],
     "tmdb_id": 32615,
     "original_title": "The Offence",
     "release_date": "1973-01-11",
@@ -4905,7 +4945,7 @@
         "copy_id": "pvca-000088-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 36894,
     "original_title": "東京行進曲",
     "release_date": "1929-05-31",
@@ -4961,7 +5001,7 @@
         "copy_id": "pvca-000089-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 307,
     "original_title": "Roma città aperta",
     "release_date": "1945-10-08",
@@ -5017,7 +5057,7 @@
         "copy_id": "pvca-000090-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 11471,
     "original_title": "英雄本色",
     "release_date": "1986-08-02",
@@ -5073,7 +5113,7 @@
         "copy_id": "pvca-000091-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 17991,
     "original_title": "鉄男II BODY HAMMER",
     "release_date": "1992-10-03",
@@ -5262,7 +5302,7 @@
         "copy_id": "pvca-000094-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 43364,
     "original_title": "西鶴一代女",
     "release_date": "1952-04-17",
@@ -5368,7 +5408,7 @@
         "copy_id": "pvca-000096-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Akira Kurosawa"],
     "tmdb_id": 11953,
     "original_title": "影武者",
     "release_date": "1980-04-26",
@@ -5474,7 +5514,7 @@
         "copy_id": "pvca-000098-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 20540,
     "original_title": "The Pawnbroker",
     "release_date": "1965-04-20",
@@ -5524,7 +5564,7 @@
     "catalog_copy_id": "pvca-000099-drive",
     "poster": "/posters/tmdb-57666-qWNG9XNEbsu4aAR30WkpHA4xjWs.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 57666,
     "original_title": "The Appointment",
     "release_date": "1969-05-22",
@@ -5580,7 +5620,7 @@
         "copy_id": "pvca-000100-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês", "Yasujirō Ozu"],
     "tmdb_id": 20530,
     "original_title": "晩春",
     "release_date": "1949-09-13",
@@ -5692,7 +5732,7 @@
         "copy_id": "pvca-000102-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 343198,
     "original_title": "右門捕物帖　地獄の風車",
     "release_date": "1960-03-01",
@@ -5748,7 +5788,7 @@
         "copy_id": "pvca-000103-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 306909,
     "original_title": "La funivia del Faloria",
     "release_date": "1950-04-01",
@@ -5804,7 +5844,7 @@
         "copy_id": "pvca-000104-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 285413,
     "original_title": "La Musica",
     "release_date": "1967-03-03",
@@ -5860,7 +5900,7 @@
         "copy_id": "pvca-000105-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 306911,
     "original_title": "La villa dei mostri",
     "release_date": "1950-04-01",
@@ -5980,7 +6020,7 @@
         "copy_id": "pvca-000107-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur"],
     "tmdb_id": 69784,
     "original_title": "Anne of the Indies",
     "release_date": "1951-10-18",
@@ -6036,7 +6076,7 @@
         "copy_id": "pvca-000108-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 44052,
     "original_title": "Black Widow",
     "release_date": "1954-10-28",
@@ -6148,7 +6188,7 @@
         "copy_id": "pvca-000110-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 14755,
     "original_title": "The Deadly Affair",
     "release_date": "1967-01-26",
@@ -6204,7 +6244,7 @@
         "copy_id": "pvca-000111-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 621109,
     "original_title": "The Dybbuk",
     "release_date": "1960-10-03",
@@ -6268,7 +6308,7 @@
         "copy_id": "pvca-000112-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur"],
     "tmdb_id": 49368,
     "original_title": "Circle of Danger",
     "release_date": "1951-04-17",
@@ -6324,7 +6364,7 @@
         "copy_id": "pvca-000113-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 3478,
     "original_title": "Ludwig",
     "release_date": "1973-03-07",
@@ -6380,7 +6420,7 @@
         "copy_id": "pvca-000114-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Akira Kurosawa", "Guerra e suas marcas"],
     "tmdb_id": 20645,
     "original_title": "八月の狂詩曲",
     "release_date": "1991-05-25",
@@ -6436,7 +6476,7 @@
         "copy_id": "pvca-000115-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 27045,
     "original_title": "The Crimson Kimono",
     "release_date": "1959-10-21",
@@ -6596,7 +6636,7 @@
         "copy_id": "pvca-000117-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Cinema italiano", "Cinema francês"],
     "tmdb_id": 183889,
     "original_title": "Vu du pont",
     "release_date": "1962-01-19",
@@ -6652,7 +6692,7 @@
         "copy_id": "pvca-000118-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Anos 1950"],
     "tmdb_id": 177474,
     "original_title": "That Kind of Woman",
     "release_date": "1959-09-11",
@@ -6764,7 +6804,7 @@
         "copy_id": "pvca-000119-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 426,
     "original_title": "Vertigo",
     "release_date": "1958-05-28",
@@ -6814,7 +6854,7 @@
     "catalog_copy_id": "pvca-000120-local",
     "poster": "/posters/tmdb-43101-1bTE3tN9cy2Cu8L6Opkr9EKIZeh.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 43101,
     "original_title": "Le Déjeuner sur l'herbe",
     "release_date": "1959-11-11",
@@ -7067,7 +7107,7 @@
         "copy_id": "pvca-000124-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 47837,
     "original_title": "The Fugitive Kind",
     "release_date": "1960-04-14",
@@ -7123,7 +7163,7 @@
         "copy_id": "pvca-000125-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 4593,
     "original_title": "Le Charme discret de la bourgeoisie",
     "release_date": "1972-09-15",
@@ -7179,7 +7219,7 @@
         "copy_id": "pvca-000126-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 27904,
     "original_title": "แสงศตวรรษ",
     "release_date": "2006-08-31",
@@ -7300,7 +7340,7 @@
     "catalog_copy_id": "pvca-000128-drive",
     "poster": "/posters/tmdb-26596-slMEKsaly6DlkjQKbrdRIUG92iC.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 26596,
     "original_title": "Johnny Guitar",
     "release_date": "1954-05-26",
@@ -7356,7 +7396,7 @@
         "copy_id": "pvca-000129-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês"],
     "tmdb_id": 117212,
     "original_title": "飢餓海峡",
     "release_date": "1965-01-15",
@@ -7494,7 +7534,7 @@
         "copy_id": "pvca-000131-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 311,
     "original_title": "Once Upon a Time in America",
     "release_date": "1984-05-23",
@@ -7594,7 +7634,7 @@
     "catalog_copy_id": "pvca-000133-drive",
     "poster": "/posters/tmdb-965-4QvsFW2cRY20GVpMQNcG406YVxP.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 965,
     "original_title": "The Magnificent Ambersons",
     "release_date": "1942-07-10",
@@ -7650,7 +7690,7 @@
         "copy_id": "pvca-000134-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês"],
     "tmdb_id": 126432,
     "original_title": "乱れ雲",
     "release_date": "1967-11-18",
@@ -7706,7 +7746,7 @@
         "copy_id": "pvca-000135-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Guerra e suas marcas"],
     "tmdb_id": 24395,
     "original_title": "The Hill",
     "release_date": "1965-06-11",
@@ -7756,7 +7796,7 @@
     "catalog_copy_id": "pvca-000136-drive",
     "poster": "/posters/tmdb-11018-jdnGXZE2Ty2OcRGFwDZRpglODrp.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 11018,
     "original_title": "Year of the Dragon",
     "release_date": "1985-08-16",
@@ -7806,7 +7846,7 @@
     "catalog_copy_id": "pvca-000137-drive",
     "poster": "/posters/tmdb-1939-utpUn9TdBIx6x2QX91YhYzFZxg1.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Noir americano"],
     "tmdb_id": 1939,
     "original_title": "Laura",
     "release_date": "1944-10-11",
@@ -7862,7 +7902,7 @@
         "copy_id": "pvca-000138-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 205460,
     "original_title": "折鶴お千",
     "release_date": "1935-01-20",
@@ -7918,7 +7958,12 @@
         "copy_id": "pvca-000140-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Kenji Mizoguchi",
+      "Justiça e instituições"
+    ],
     "tmdb_id": 277781,
     "original_title": "女性の勝利",
     "release_date": "1946-04-18",
@@ -8044,7 +8089,7 @@
         "copy_id": "pvca-000142-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 124994,
     "original_title": "わが恋は燃えぬ",
     "release_date": "1949-02-13",
@@ -8318,7 +8363,7 @@
         "copy_id": "pvca-000145-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
     "tmdb_id": 12548,
     "original_title": "I vitelloni",
     "release_date": "1953-09-17",
@@ -8389,7 +8434,7 @@
         "copy_id": "pvca-000146-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 11697,
     "original_title": "The Man Who Shot Liberty Valance",
     "release_date": "1962-04-13",
@@ -8445,7 +8490,12 @@
         "copy_id": "pvca-000147-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Akira Kurosawa"
+    ],
     "tmdb_id": 3782,
     "original_title": "生きる",
     "release_date": "1952-10-09",
@@ -8501,7 +8551,7 @@
         "copy_id": "pvca-000148-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 82465,
     "original_title": "Child's Play",
     "release_date": "1972-12-12",
@@ -8551,7 +8601,7 @@
     "catalog_copy_id": "pvca-000149-drive",
     "poster": "/posters/tmdb-111910-8qO1DmHYIRyniR1Goye0x5oi8M6.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Anos 1950"],
     "tmdb_id": 111910,
     "original_title": "Stage Struck",
     "release_date": "1958-04-22",
@@ -8607,7 +8657,7 @@
         "copy_id": "pvca-000150-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 184795,
     "original_title": "The Sea Gull",
     "release_date": "1968-12-23",
@@ -8663,7 +8713,7 @@
         "copy_id": "pvca-000151-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 354759,
     "original_title": "Happy Hour",
     "release_date": "2015-12-12",
@@ -8727,7 +8777,7 @@
         "copy_id": "pvca-000152-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Territórios do faroeste"],
     "tmdb_id": 429,
     "original_title": "Il buono, il brutto, il cattivo",
     "release_date": "1966-12-23",
@@ -8783,7 +8833,7 @@
         "copy_id": "pvca-000153-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 91888,
     "original_title": "ドーベルマン刑事",
     "release_date": "1977-07-02",
@@ -8839,7 +8889,7 @@
         "copy_id": "pvca-000154-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 46979,
     "original_title": "Le amiche",
     "release_date": "1955-11-18",
@@ -8895,7 +8945,7 @@
         "copy_id": "pvca-000155-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 48278,
     "original_title": "Lo sguardo di Michelangelo",
     "release_date": "2004-05-25",
@@ -8951,7 +9001,7 @@
         "copy_id": "pvca-000156-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 46043,
     "original_title": "お遊さま",
     "release_date": "1951-06-22",
@@ -9007,7 +9057,12 @@
         "copy_id": "pvca-000157-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Cinema japonês",
+      "Anos 1950",
+      "Kenji Mizoguchi",
+      "Cinema de Hong Kong"
+    ],
     "tmdb_id": 91426,
     "original_title": "楊貴妃",
     "release_date": "1955-05-03",
@@ -9063,7 +9118,7 @@
         "copy_id": "pvca-000158-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 74581,
     "original_title": "祇園の姉妹",
     "release_date": "1936-10-15",
@@ -9119,7 +9174,7 @@
         "copy_id": "pvca-000159-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 45978,
     "original_title": "元禄 忠臣蔵",
     "release_date": "1941-12-08",
@@ -9169,7 +9224,7 @@
     "catalog_copy_id": "pvca-000160-drive",
     "poster": "/posters/tmdb-179144-d6AfFUHuWHQaw8uzOnBhb0I5hcb.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 179144,
     "original_title": "La grande bellezza",
     "release_date": "2013-05-21",
@@ -9306,7 +9361,7 @@
         "copy_id": "pvca-000162-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 84278,
     "original_title": "The Group",
     "release_date": "1966-03-04",
@@ -9356,7 +9411,7 @@
     "catalog_copy_id": "pvca-000163-drive",
     "poster": "/posters/tmdb-467731-m8uDk727KpQg3S2nqLR0eSh73c2.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Anos 1950", "Justiça e instituições"],
     "tmdb_id": 467731,
     "original_title": "Tragedy in a Temporary Town",
     "release_date": "1956-02-19",
@@ -9406,7 +9461,7 @@
     "catalog_copy_id": "pvca-000164-drive",
     "poster": "/posters/tmdb-82460-nuUCEkpNf4bEQoSEv6sn1W8eDro.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 82460,
     "original_title": "Bye Bye Braverman",
     "release_date": "1968-02-21",
@@ -9462,7 +9517,7 @@
         "copy_id": "pvca-000165-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 46045,
     "original_title": "雪夫人絵図",
     "release_date": "1950-10-21",
@@ -9518,7 +9573,7 @@
         "copy_id": "pvca-000166-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 31662,
     "original_title": "Affliction",
     "release_date": "1998-02-12",
@@ -9568,7 +9623,7 @@
     "catalog_copy_id": "pvca-000167-drive",
     "poster": "/posters/tmdb-14674-fh9vTJ5mOkKK5nZ1LRhfvP5JrD7.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 14674,
     "original_title": "Man of the West",
     "release_date": "1958-10-01",
@@ -9730,7 +9785,11 @@
         "copy_id": "pvca-000170-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Cinema japonês",
+      "Kenji Mizoguchi",
+      "Trabalho e desigualdade"
+    ],
     "tmdb_id": 244115,
     "original_title": "愛怨峡",
     "release_date": "1937-06-17",
@@ -9786,7 +9845,7 @@
         "copy_id": "pvca-000171-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 101382,
     "original_title": "歌麿をめぐる五人の女",
     "release_date": "1946-12-17",
@@ -9842,7 +9901,11 @@
         "copy_id": "pvca-000172-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Kenji Mizoguchi"
+    ],
     "tmdb_id": 85844,
     "original_title": "夜の女たち",
     "release_date": "1948-05-26",
@@ -9912,7 +9975,7 @@
     "catalog_copy_id": "pvca-000173-drive",
     "poster": "/posters/tmdb-10774-gZ8hhuVEQ78CLND09trZJ45Eiy8.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 10774,
     "original_title": "Network",
     "release_date": "1976-11-27",
@@ -9968,7 +10031,7 @@
         "copy_id": "pvca-000174-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 43004,
     "original_title": "Long Day's Journey Into Night",
     "release_date": "1962-10-09",
@@ -10024,7 +10087,7 @@
         "copy_id": "pvca-000175-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Justiça e instituições"],
     "tmdb_id": 32047,
     "original_title": "Prince of the City",
     "release_date": "1981-08-19",
@@ -10080,7 +10143,7 @@
         "copy_id": "pvca-000176-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Territórios do faroeste"],
     "tmdb_id": 10772,
     "original_title": "Django",
     "release_date": "1966-04-06",
@@ -10153,7 +10216,7 @@
     "catalog_copy_id": "pvca-000177-drive",
     "poster": "/posters/tmdb-93-z43hDtfTTwPEEJXbkg6DZ0s9QE8.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 93,
     "original_title": "Anatomy of a Murder",
     "release_date": "1959-07-01",
@@ -10276,7 +10339,7 @@
         "copy_id": "pvca-000179-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Territórios do faroeste"],
     "tmdb_id": 6609,
     "original_title": "Keoma",
     "release_date": "1976-11-25",
@@ -10332,7 +10395,11 @@
         "copy_id": "pvca-000180-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Akira Kurosawa"
+    ],
     "tmdb_id": 12493,
     "original_title": "天国と地獄",
     "release_date": "1963-03-01",
@@ -10388,7 +10455,7 @@
         "copy_id": "pvca-000181-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 41069,
     "original_title": "獵魔群英",
     "release_date": "1989-08-10",
@@ -10444,7 +10511,7 @@
         "copy_id": "pvca-000182-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 93863,
     "original_title": "La signora senza camelie",
     "release_date": "1953-02-27",
@@ -10500,7 +10567,7 @@
         "copy_id": "pvca-000183-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 776,
     "original_title": "La Règle du jeu",
     "release_date": "1939-07-09",
@@ -10610,7 +10677,7 @@
         "copy_id": "pvca-000184-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Territórios do faroeste"],
     "tmdb_id": 335,
     "original_title": "C'era una volta il West",
     "release_date": "1968-12-21",
@@ -10660,7 +10727,12 @@
     "catalog_copy_id": "pvca-000185-drive",
     "poster": "/posters/tmdb-1480-1pvRgmfBaoMczIJBOi9gCOZ4FMC.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": [
+      "Noir americano",
+      "Anos 1950",
+      "Orson Welles",
+      "Justiça e instituições"
+    ],
     "tmdb_id": 1480,
     "original_title": "Touch of Evil",
     "release_date": "1958-03-30",
@@ -10716,7 +10788,7 @@
         "copy_id": "pvca-000186-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 185292,
     "original_title": "Chesty: A Tribute to a Legend",
     "release_date": "1976-04-04",
@@ -10781,7 +10853,7 @@
         "copy_id": "pvca-000187-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema português"],
     "tmdb_id": 83229,
     "original_title": "À Flor do Mar",
     "release_date": "1986-10-02",
@@ -10837,7 +10909,7 @@
         "copy_id": "pvca-000188-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 159222,
     "original_title": "N.U.",
     "release_date": "1948-05-01",
@@ -10893,7 +10965,7 @@
         "copy_id": "pvca-000189-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 172340,
     "original_title": "Lovin' Molly",
     "release_date": "1974-04-14",
@@ -10949,7 +11021,7 @@
         "copy_id": "pvca-000190-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 456747,
     "original_title": "Noto, Mandorli, Vulcano, Stromboli, Carnevale",
     "release_date": "1993-04-29",
@@ -11005,7 +11077,7 @@
         "copy_id": "pvca-000191-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 159220,
     "original_title": "Gente del Po",
     "release_date": "1947-09-01",
@@ -11061,7 +11133,7 @@
         "copy_id": "pvca-000192-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 306910,
     "original_title": "Superstizione",
     "release_date": "1948-11-01",
@@ -11173,7 +11245,7 @@
         "copy_id": "pvca-000194-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 696595,
     "original_title": "The Red, White and Blue Line",
     "release_date": "1955-06-01",
@@ -11229,7 +11301,7 @@
         "copy_id": "pvca-000195-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 414598,
     "original_title": "必勝歌",
     "release_date": "1945-02-22",
@@ -11290,7 +11362,7 @@
         "copy_id": "pvca-000197-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Kenji Mizoguchi"],
     "tmdb_id": 45987,
     "original_title": "新・平家物語",
     "release_date": "1955-09-21",
@@ -11516,7 +11588,7 @@
         "copy_id": "pvca-000199-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 567,
     "original_title": "Rear Window",
     "release_date": "1954-08-01",
@@ -11572,7 +11644,7 @@
         "copy_id": "pvca-000200-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Akira Kurosawa"],
     "tmdb_id": 1059,
     "original_title": "隠し砦の三悪人",
     "release_date": "1958-12-28",
@@ -11644,7 +11716,7 @@
     "catalog_copy_id": "pvca-000201-drive",
     "poster": "/posters/tmdb-1018-tVxGt7uffLVhIIcwuldXOMpFBPX.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 1018,
     "original_title": "Mulholland Drive",
     "release_date": "2001-06-06",
@@ -11700,7 +11772,7 @@
         "copy_id": "pvca-000202-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Anos 1950", "Akira Kurosawa"],
     "tmdb_id": 346,
     "original_title": "七人の侍",
     "release_date": "1954-04-26",
@@ -11770,7 +11842,7 @@
     "catalog_copy_id": "pvca-000203-drive",
     "poster": "/posters/tmdb-1712-wXGmfJkU83daBsqp9R8LeWguIZd.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 1712,
     "original_title": "Giant",
     "release_date": "1956-11-08",
@@ -11826,7 +11898,7 @@
         "copy_id": "pvca-000204-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 502,
     "original_title": "Fail Safe",
     "release_date": "1964-10-07",
@@ -11882,7 +11954,7 @@
         "copy_id": "pvca-000205-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Justiça e instituições"],
     "tmdb_id": 24226,
     "original_title": "The Verdict",
     "release_date": "1982-12-08",
@@ -11938,7 +12010,7 @@
         "copy_id": "pvca-000206-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 52034,
     "original_title": "鉄男 THE BULLET MAN",
     "release_date": "2010-02-27",
@@ -12009,7 +12081,7 @@
         "copy_id": "pvca-000207-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 968,
     "original_title": "Dog Day Afternoon",
     "release_date": "1975-09-21",
@@ -12105,7 +12177,7 @@
         "copy_id": "pvca-000208-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Guerra e suas marcas"],
     "tmdb_id": 11778,
     "original_title": "The Deer Hunter",
     "release_date": "1978-12-08",
@@ -12168,7 +12240,7 @@
     "catalog_copy_id": "pvca-000209-drive",
     "poster": "/posters/tmdb-576-8j9yEC3xjy1PJDSizIbaxcHaSph.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Territórios do faroeste"],
     "tmdb_id": 576,
     "original_title": "The Wild Bunch",
     "release_date": "1969-06-19",
@@ -12459,7 +12531,7 @@
         "copy_id": "pvca-000214-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 147371,
     "original_title": "Война и Мир 1: Андрей Болконский",
     "release_date": "1966-03-14",
@@ -12515,7 +12587,7 @@
         "copy_id": "pvca-000215-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 149465,
     "original_title": "Война и Мир 2: Наташа Ростова",
     "release_date": "1966-07-20",
@@ -12571,7 +12643,7 @@
         "copy_id": "pvca-000216-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 149467,
     "original_title": "Война и Мир 3: 1812 год",
     "release_date": "1967-07-21",
@@ -12627,7 +12699,7 @@
         "copy_id": "pvca-000217-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 149468,
     "original_title": "Война и Мир 4: Пьер Безухов",
     "release_date": "1967-11-04",
@@ -12696,7 +12768,7 @@
         "copy_id": "pvca-000218-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Trabalho e desigualdade"],
     "tmdb_id": 596,
     "original_title": "The Grapes of Wrath",
     "release_date": "1940-03-15",
@@ -12752,7 +12824,7 @@
         "copy_id": "pvca-000219-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 31293,
     "original_title": "L'amore in città",
     "release_date": "1953-11-27",
@@ -12831,7 +12903,7 @@
         "copy_id": "pvca-000220-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 50799,
     "original_title": "The Long Arm",
     "release_date": "1956-06-01",
@@ -12887,7 +12959,7 @@
         "copy_id": "pvca-000221-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 125657,
     "original_title": "L'amorosa menzogna",
     "release_date": "1949-05-01",
@@ -12943,7 +13015,7 @@
         "copy_id": "pvca-000222-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 514214,
     "original_title": "Sicilia",
     "release_date": "1997-01-01",
@@ -12999,7 +13071,7 @@
         "copy_id": "pvca-000223-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 205649,
     "original_title": "名刀美女丸",
     "release_date": "1945-02-08",
@@ -13055,7 +13127,7 @@
         "copy_id": "pvca-000224-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 298972,
     "original_title": "天国にいちばん近い島",
     "release_date": "1984-12-15",
@@ -13105,7 +13177,7 @@
     "catalog_copy_id": "pvca-000225-drive",
     "poster": "/posters/tmdb-184799-pecdbYnTijuZBsQ4USuEFtQOR5u.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 184799,
     "original_title": "Just Tell Me What You Want",
     "release_date": "1980-01-18",
@@ -13161,7 +13233,7 @@
         "copy_id": "pvca-000226-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 117999,
     "original_title": "Last of the Mobile Hot Shots",
     "release_date": "1970-01-14",
@@ -13217,7 +13289,7 @@
         "copy_id": "pvca-000227-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 46046,
     "original_title": "女優須磨子の恋",
     "release_date": "1947-08-16",
@@ -13273,7 +13345,7 @@
         "copy_id": "pvca-000228-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 168751,
     "original_title": "瀧の白糸",
     "release_date": "1933-06-01",
@@ -13329,7 +13401,12 @@
         "copy_id": "pvca-000229-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Kenji Mizoguchi"
+    ],
     "tmdb_id": 45993,
     "original_title": "噂の女",
     "release_date": "1954-06-20",
@@ -13400,7 +13477,7 @@
     "catalog_copy_id": "pvca-000230-drive",
     "poster": "/posters/tmdb-301-5hFxzqpucuT3AjnvcO1pHkR122S.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 301,
     "original_title": "Rio Bravo",
     "release_date": "1959-03-08",
@@ -13506,7 +13583,7 @@
         "copy_id": "pvca-000232-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 100466,
     "original_title": "宮本武蔵",
     "release_date": "1944-12-29",
@@ -13562,7 +13639,7 @@
         "copy_id": "pvca-000233-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 46488,
     "original_title": "マリヤのお雪",
     "release_date": "1935-05-30",
@@ -13618,7 +13695,7 @@
         "copy_id": "pvca-000234-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 121922,
     "original_title": "Air Mail",
     "release_date": "1932-11-03",
@@ -13682,7 +13759,7 @@
         "copy_id": "pvca-000235-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 37309,
     "original_title": "Canyon Passage",
     "release_date": "1946-07-17",
@@ -13738,7 +13815,7 @@
         "copy_id": "pvca-000236-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Infância e formação"],
     "tmdb_id": 17078,
     "original_title": "رنگ خدا",
     "release_date": "1999-02-08",
@@ -13788,7 +13865,7 @@
     "catalog_copy_id": "pvca-000237-drive",
     "poster": "/posters/tmdb-28438-g6TH86P6JwFmGh4Zvyct4gq2AkI.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Jacques Tourneur"],
     "tmdb_id": 28438,
     "original_title": "The Leopard Man",
     "release_date": "1943-05-08",
@@ -13865,7 +13942,7 @@
     "catalog_copy_id": "pvca-000238-drive",
     "poster": "/posters/tmdb-213-i3g0KIoXYx5RvyVaraYx9n2LCli.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 213,
     "original_title": "North by Northwest",
     "release_date": "1959-08-06",
@@ -13921,7 +13998,7 @@
         "copy_id": "pvca-000239-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 387603,
     "original_title": "Sette canne, un vestito",
     "release_date": "1948-10-01",
@@ -13977,7 +14054,7 @@
         "copy_id": "pvca-000240-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 299069,
     "original_title": "お嬢お吉",
     "release_date": "1935-08-29",
@@ -14027,7 +14104,7 @@
     "catalog_copy_id": "pvca-000241-drive",
     "poster": "/posters/tmdb-5924-iEX7InvPSZeMzBVjYrEnD3Od7ZY.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 5924,
     "original_title": "Papillon",
     "release_date": "1973-12-16",
@@ -14209,7 +14286,7 @@
         "copy_id": "pvca-000244-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 32716,
     "original_title": "3 Bad Men",
     "release_date": "1926-08-28",
@@ -14281,7 +14358,7 @@
         "copy_id": "pvca-000245-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 4176,
     "original_title": "Murder on the Orient Express",
     "release_date": "1974-11-22",
@@ -14331,7 +14408,7 @@
     "catalog_copy_id": "pvca-000246-drive",
     "poster": "/posters/tmdb-58192-55ocOIOUVya5I6Ihiek4WNw9qh4.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Guerra e suas marcas"],
     "tmdb_id": 58192,
     "original_title": "Broken Lullaby",
     "release_date": "1932-01-24",
@@ -14387,7 +14464,7 @@
         "copy_id": "pvca-000247-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 87589,
     "original_title": "Bucking Broadway",
     "release_date": "1917-12-24",
@@ -14443,7 +14520,7 @@
         "copy_id": "pvca-000248-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 151572,
     "original_title": "Cameo Kirby",
     "release_date": "1923-10-20",
@@ -14499,7 +14576,7 @@
         "copy_id": "pvca-000249-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 84214,
     "original_title": "Come Back, Little Sheba",
     "release_date": "1953-03-06",
@@ -14555,7 +14632,7 @@
         "copy_id": "pvca-000250-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 30941,
     "original_title": "The Anderson Tapes",
     "release_date": "1971-06-17",
@@ -14611,7 +14688,7 @@
         "copy_id": "pvca-000251-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Anos 1950", "Justiça e instituições"],
     "tmdb_id": 829921,
     "original_title": "The Challenge",
     "release_date": "1955-01-01",
@@ -14725,7 +14802,7 @@
     "catalog_copy_id": "pvca-000253-drive",
     "poster": "/posters/tmdb-61391-vgj6RPSCpyK2mgfPJY1TvQ3NUBw.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Territórios do faroeste"],
     "tmdb_id": 61391,
     "original_title": "Distant Drums",
     "release_date": "1951-12-25",
@@ -14781,7 +14858,7 @@
         "copy_id": "pvca-000254-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 72608,
     "original_title": "Doctor Bull",
     "release_date": "1933-09-22",
@@ -14837,7 +14914,7 @@
         "copy_id": "pvca-000255-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 15875,
     "original_title": "Donovan's Reef",
     "release_date": "1963-06-12",
@@ -14893,7 +14970,7 @@
         "copy_id": "pvca-000256-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 73194,
     "original_title": "Drums Along the Mohawk",
     "release_date": "1939-11-10",
@@ -14943,7 +15020,7 @@
     "catalog_copy_id": "pvca-000257-local",
     "poster": "/posters/tmdb-53156-kWIpbE4YZ9xp3SregE4h8577cI.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
     "tmdb_id": 53156,
     "original_title": "Elena et les hommes",
     "release_date": "1956-09-12",
@@ -14999,7 +15076,7 @@
         "copy_id": "pvca-000258-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 116973,
     "original_title": "Four Men and a Prayer",
     "release_date": "1938-04-29",
@@ -15055,7 +15132,7 @@
         "copy_id": "pvca-000259-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Guerra e suas marcas"],
     "tmdb_id": 95169,
     "original_title": "Four Sons",
     "release_date": "1928-02-13",
@@ -15111,7 +15188,7 @@
         "copy_id": "pvca-000260-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 44071,
     "original_title": "Gideon's Day",
     "release_date": "1958-03-25",
@@ -15167,7 +15244,7 @@
         "copy_id": "pvca-000261-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 113788,
     "original_title": "Hangman's House",
     "release_date": "1928-05-13",
@@ -15297,7 +15374,7 @@
         "copy_id": "pvca-000263-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Trabalho e desigualdade"],
     "tmdb_id": 43266,
     "original_title": "How Green Was My Valley",
     "release_date": "1941-10-28",
@@ -15347,7 +15424,7 @@
     "catalog_copy_id": "pvca-000264-drive",
     "poster": "/posters/tmdb-17590-fwrqCTcu5rAkU2dL2YqG6jjrLPn.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 17590,
     "original_title": "Deathtrap",
     "release_date": "1982-03-19",
@@ -15459,7 +15536,7 @@
         "copy_id": "pvca-000266-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 23024,
     "original_title": "Judge Priest",
     "release_date": "1934-09-15",
@@ -15515,7 +15592,11 @@
         "copy_id": "pvca-000267-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "John Ford",
+      "Infância e formação",
+      "Territórios do faroeste"
+    ],
     "tmdb_id": 111747,
     "original_title": "Just Pals",
     "release_date": "1920-10-21",
@@ -15571,7 +15652,7 @@
         "copy_id": "pvca-000268-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 3088,
     "original_title": "My Darling Clementine",
     "release_date": "1946-10-17",
@@ -15683,7 +15764,7 @@
         "copy_id": "pvca-000270-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 995,
     "original_title": "Stagecoach",
     "release_date": "1939-03-02",
@@ -15733,7 +15814,7 @@
     "catalog_copy_id": "pvca-000271-drive",
     "poster": "/posters/tmdb-63096-aLxxI4CVTLOcV3NKxI8l5h2b79Y.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Infância e formação"],
     "tmdb_id": 63096,
     "original_title": "Tea and Sympathy",
     "release_date": "1956-09-27",
@@ -15789,7 +15870,7 @@
         "copy_id": "pvca-000272-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 56143,
     "original_title": "The Battle of Midway",
     "release_date": "1942-09-14",
@@ -15845,7 +15926,7 @@
         "copy_id": "pvca-000273-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 206034,
     "original_title": "The Black Watch",
     "release_date": "1929-05-22",
@@ -15901,7 +15982,7 @@
         "copy_id": "pvca-000274-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 157904,
     "original_title": "The Blue Eagle",
     "release_date": "1926-09-12",
@@ -15951,7 +16032,7 @@
     "catalog_copy_id": "pvca-000275-drive",
     "poster": "/posters/tmdb-118910-i9aQURs2c3xvH7ah1VQF8JoDr5K.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 118910,
     "original_title": "The Court-Martial of Billy Mitchell",
     "release_date": "1955-12-31",
@@ -16015,7 +16096,7 @@
         "copy_id": "pvca-000276-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur"],
     "tmdb_id": 27446,
     "original_title": "The Fearmakers",
     "release_date": "1958-10-01",
@@ -16071,7 +16152,7 @@
         "copy_id": "pvca-000277-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford", "Territórios do faroeste"],
     "tmdb_id": 17664,
     "original_title": "The Horse Soldiers",
     "release_date": "1959-06-11",
@@ -16127,7 +16208,7 @@
         "copy_id": "pvca-000278-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 71068,
     "original_title": "The Iron Horse",
     "release_date": "1925-10-04",
@@ -16205,7 +16286,7 @@
         "copy_id": "pvca-000279-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 192,
     "original_title": "The Name of the Rose",
     "release_date": "1986-09-24",
@@ -16261,7 +16342,7 @@
         "copy_id": "pvca-000280-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 3109,
     "original_title": "The Quiet Man",
     "release_date": "1952-07-21",
@@ -16317,7 +16398,7 @@
         "copy_id": "pvca-000281-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 109539,
     "original_title": "The Sun Shines Bright",
     "release_date": "1953-05-02",
@@ -16455,7 +16536,7 @@
         "copy_id": "pvca-000283-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 18539,
     "original_title": "Tobacco Road",
     "release_date": "1941-02-20",
@@ -16511,7 +16592,7 @@
         "copy_id": "pvca-000284-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 32634,
     "original_title": "Two Rode Together",
     "release_date": "1961-05-24",
@@ -16567,7 +16648,7 @@
         "copy_id": "pvca-000285-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 72602,
     "original_title": "Up the River",
     "release_date": "1930-10-10",
@@ -16631,7 +16712,7 @@
         "copy_id": "pvca-000286-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 131473,
     "original_title": "Way of a Gaucho",
     "release_date": "1952-10-16",
@@ -16681,7 +16762,7 @@
     "catalog_copy_id": "pvca-000287-drive",
     "poster": "/posters/tmdb-114975-wUPhJkTgTnYlU83JHIKTrUIvQkF.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 114975,
     "original_title": "Wichita",
     "release_date": "1955-07-03",
@@ -16737,7 +16818,7 @@
         "copy_id": "pvca-000288-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 43838,
     "original_title": "Young Mr. Lincoln",
     "release_date": "1939-06-09",
@@ -16793,7 +16874,7 @@
         "copy_id": "pvca-000289-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 63682,
     "original_title": "L'Eau à la bouche",
     "release_date": "1960-01-20",
@@ -16849,7 +16930,7 @@
         "copy_id": "pvca-000290-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 94009,
     "original_title": "Born Reckless",
     "release_date": "1930-05-11",
@@ -16905,7 +16986,7 @@
         "copy_id": "pvca-000291-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 200503,
     "original_title": "By Indian Post",
     "release_date": "1919-05-23",
@@ -16961,7 +17042,7 @@
         "copy_id": "pvca-000292-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 100605,
     "original_title": "December 7th",
     "release_date": "1943-03-01",
@@ -17011,7 +17092,7 @@
     "catalog_copy_id": "pvca-000293-drive",
     "poster": "/posters/tmdb-94192-ghQY8BJfQKHMk6OQV79gW7X1k1D.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 94192,
     "original_title": "Great Day in the Morning",
     "release_date": "1956-05-16",
@@ -17067,7 +17148,7 @@
         "copy_id": "pvca-000294-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 302894,
     "original_title": "Hell Bent",
     "release_date": "1918-06-29",
@@ -17173,7 +17254,7 @@
         "copy_id": "pvca-000296-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 289924,
     "original_title": "Kentucky Pride",
     "release_date": "1925-09-06",
@@ -17229,7 +17310,7 @@
         "copy_id": "pvca-000297-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 168217,
     "original_title": "Lightnin'",
     "release_date": "1925-08-23",
@@ -17335,7 +17416,7 @@
         "copy_id": "pvca-000299-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 166643,
     "original_title": "Men Without Women",
     "release_date": "1930-02-08",
@@ -17391,7 +17472,7 @@
         "copy_id": "pvca-000300-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Infância e formação"],
     "tmdb_id": 189962,
     "original_title": "Mother Machree",
     "release_date": "1927-12-19",
@@ -17447,7 +17528,7 @@
         "copy_id": "pvca-000301-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 61337,
     "original_title": "Critical Care",
     "release_date": "1997-10-31",
@@ -17503,7 +17584,7 @@
         "copy_id": "pvca-000302-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 377697,
     "original_title": "North of Hudson Bay",
     "release_date": "1923-11-18",
@@ -17559,7 +17640,7 @@
         "copy_id": "pvca-000303-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 114348,
     "original_title": "Pilgrimage",
     "release_date": "1933-07-12",
@@ -17615,7 +17696,7 @@
         "copy_id": "pvca-000304-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Kenji Mizoguchi"],
     "tmdb_id": 193264,
     "original_title": "虞美人草",
     "release_date": "1935-10-31",
@@ -17671,7 +17752,7 @@
         "copy_id": "pvca-000305-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 189930,
     "original_title": "Riley the Cop",
     "release_date": "1928-11-25",
@@ -17727,7 +17808,7 @@
         "copy_id": "pvca-000306-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford", "Territórios do faroeste"],
     "tmdb_id": 11617,
     "original_title": "Rio Grande",
     "release_date": "1950-11-15",
@@ -17783,7 +17864,7 @@
         "copy_id": "pvca-000307-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 131362,
     "original_title": "Salute",
     "release_date": "1929-09-01",
@@ -17839,7 +17920,7 @@
         "copy_id": "pvca-000308-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 117001,
     "original_title": "Seas Beneath",
     "release_date": "1931-01-30",
@@ -17889,7 +17970,7 @@
     "catalog_copy_id": "pvca-000309-drive",
     "poster": "/posters/tmdb-111390-nKE6dBnB5W4AosuCrwILhnSDmUc.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Jacques Tourneur", "Territórios do faroeste"],
     "tmdb_id": 111390,
     "original_title": "Stars in My Crown",
     "release_date": "1950-05-11",
@@ -17945,7 +18026,7 @@
         "copy_id": "pvca-000310-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 72609,
     "original_title": "Steamboat Round the Bend",
     "release_date": "1935-09-06",
@@ -18001,7 +18082,7 @@
         "copy_id": "pvca-000311-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford", "Territórios do faroeste"],
     "tmdb_id": 157903,
     "original_title": "Straight Shooting",
     "release_date": "1917-08-27",
@@ -18057,7 +18138,7 @@
         "copy_id": "pvca-000312-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 257081,
     "original_title": "Submarine Patrol",
     "release_date": "1938-11-25",
@@ -18113,7 +18194,7 @@
         "copy_id": "pvca-000313-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 77250,
     "original_title": "The Hurricane",
     "release_date": "1937-11-09",
@@ -18169,7 +18250,7 @@
         "copy_id": "pvca-000314-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 57537,
     "original_title": "The Jericho Mile",
     "release_date": "1980-10-31",
@@ -18225,7 +18306,7 @@
         "copy_id": "pvca-000315-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 56156,
     "original_title": "The Last Hurrah",
     "release_date": "1958-12-31",
@@ -18281,7 +18362,7 @@
         "copy_id": "pvca-000316-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 61934,
     "original_title": "The Long Gray Line",
     "release_date": "1955-01-04",
@@ -18337,7 +18418,7 @@
         "copy_id": "pvca-000317-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 52859,
     "original_title": "The Long Voyage Home",
     "release_date": "1940-11-16",
@@ -18393,7 +18474,7 @@
         "copy_id": "pvca-000318-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 72903,
     "original_title": "The Midnight Story",
     "release_date": "1957-06-04",
@@ -18449,7 +18530,7 @@
         "copy_id": "pvca-000319-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 45712,
     "original_title": "Gloria",
     "release_date": "1999-01-22",
@@ -18499,7 +18580,7 @@
     "catalog_copy_id": "pvca-000320-drive",
     "poster": "/posters/tmdb-46948-6sj8HFCODqHah4DTCWs8uPp4IyL.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Sidney Lumet"],
     "tmdb_id": 46948,
     "original_title": "Power",
     "release_date": "1986-01-31",
@@ -18555,7 +18636,7 @@
         "copy_id": "pvca-000321-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 173456,
     "original_title": "The Plough and the Stars",
     "release_date": "1936-12-26",
@@ -18611,7 +18692,7 @@
         "copy_id": "pvca-000322-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 77245,
     "original_title": "The Prisoner of Shark Island",
     "release_date": "1936-02-28",
@@ -18667,7 +18748,7 @@
         "copy_id": "pvca-000323-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 269710,
     "original_title": "The Shamrock Handicap",
     "release_date": "1926-05-02",
@@ -18723,7 +18804,7 @@
         "copy_id": "pvca-000324-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 35172,
     "original_title": "Le Fils",
     "release_date": "2002-10-04",
@@ -18779,7 +18860,7 @@
         "copy_id": "pvca-000325-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 52561,
     "original_title": "The Whole Town's Talking",
     "release_date": "1935-02-22",
@@ -18829,7 +18910,7 @@
     "catalog_copy_id": "pvca-000326-drive",
     "poster": "/posters/tmdb-74436-jjPLFmZ8HZGYHZDinjtFjmI941y.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 74436,
     "original_title": "The World in His Arms",
     "release_date": "1952-10-09",
@@ -18885,7 +18966,7 @@
         "copy_id": "pvca-000327-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 117044,
     "original_title": "The World Moves On",
     "release_date": "1934-06-27",
@@ -18941,7 +19022,7 @@
         "copy_id": "pvca-000328-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 233352,
     "original_title": "This Is Korea!",
     "release_date": "1951-08-10",
@@ -19059,7 +19140,7 @@
         "copy_id": "pvca-000330-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 131360,
     "original_title": "Upstream",
     "release_date": "1927-01-30",
@@ -19115,7 +19196,7 @@
         "copy_id": "pvca-000331-archive"
       }
     ],
-    "selections": [],
+    "selections": ["John Ford"],
     "tmdb_id": 43869,
     "original_title": "Wee Willie Winkie",
     "release_date": "1937-07-30",
@@ -19171,7 +19252,7 @@
         "copy_id": "pvca-000332-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 72613,
     "original_title": "What Price Glory",
     "release_date": "1952-08-22",
@@ -19227,7 +19308,7 @@
         "copy_id": "pvca-000333-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "John Ford"],
     "tmdb_id": 54615,
     "original_title": "When Willie Comes Marching Home",
     "release_date": "1950-02-17",
@@ -19277,7 +19358,7 @@
     "catalog_copy_id": "pvca-000334-drive",
     "poster": "/posters/tmdb-176923-zWb01HKEZbMVKFQSRaItjCdNllc.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 176923,
     "original_title": "Sombra Verde",
     "release_date": "1954-12-23",
@@ -19341,7 +19422,7 @@
         "copy_id": "pvca-000335-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Sidney Lumet", "Anos 1950", "Justiça e instituições"],
     "tmdb_id": 389,
     "original_title": "12 Angry Men",
     "release_date": "1957-04-10",
@@ -19397,7 +19478,12 @@
         "copy_id": "pvca-000336-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Yasujirō Ozu"
+    ],
     "tmdb_id": 18148,
     "original_title": "東京物語",
     "release_date": "1953-11-03",
@@ -19447,7 +19533,7 @@
     "catalog_copy_id": "pvca-000337-local",
     "poster": "/posters/tmdb-56167-cDlxLnLMboEfdDcPelodOs71GVs.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano", "Cinema francês"],
     "tmdb_id": 56167,
     "original_title": "Le Carrosse d'or",
     "release_date": "1952-12-05",
@@ -19522,7 +19608,7 @@
     "catalog_copy_id": "pvca-000339-drive",
     "poster": "/posters/tmdb-949-umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Michael Mann"],
     "tmdb_id": 949,
     "original_title": "Heat",
     "release_date": "1995-12-15",
@@ -19578,7 +19664,7 @@
         "copy_id": "pvca-000340-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 30959,
     "original_title": "怪談",
     "release_date": "1965-01-06",
@@ -19634,7 +19720,12 @@
         "copy_id": "pvca-000341-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Anos 1950",
+      "Yasujirō Ozu"
+    ],
     "tmdb_id": 28272,
     "original_title": "彼岸花",
     "release_date": "1958-09-07",
@@ -19690,7 +19781,7 @@
         "copy_id": "pvca-000342-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 37959,
     "original_title": "GO",
     "release_date": "2001-10-20",
@@ -19746,7 +19837,7 @@
         "copy_id": "pvca-000343-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 318955,
     "original_title": "ヨコハマＢＪブルース",
     "release_date": "1981-04-25",
@@ -19802,7 +19893,7 @@
         "copy_id": "pvca-000344-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 45218,
     "original_title": "The River",
     "release_date": "1951-09-10",
@@ -19866,7 +19957,7 @@
         "copy_id": "pvca-000345-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Guerra e suas marcas"],
     "tmdb_id": 25037,
     "original_title": "The Life and Death of Colonel Blimp",
     "release_date": "1943-07-26",
@@ -19922,7 +20013,7 @@
         "copy_id": "pvca-000346-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 105125,
     "original_title": "ヌードの夜",
     "release_date": "1993-12-18",
@@ -19978,7 +20069,7 @@
         "copy_id": "pvca-000347-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 4286,
     "original_title": "L'innocente",
     "release_date": "1976-05-18",
@@ -20090,7 +20181,7 @@
         "copy_id": "pvca-000349-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema de Hong Kong"],
     "tmdb_id": 10997,
     "original_title": "霸王别姬",
     "release_date": "1993-01-01",
@@ -20202,7 +20293,7 @@
         "copy_id": "pvca-000351-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 36095,
     "original_title": "キュア",
     "release_date": "1997-12-27",
@@ -20258,7 +20349,7 @@
         "copy_id": "pvca-000352-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 51719,
     "original_title": "黒の天使 Vol.1",
     "release_date": "1998-05-30",
@@ -20370,7 +20461,7 @@
         "copy_id": "pvca-000354-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 10363,
     "original_title": "Plein soleil",
     "release_date": "1960-03-10",
@@ -20426,7 +20517,7 @@
         "copy_id": "pvca-000355-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 11553,
     "original_title": "千禧曼波",
     "release_date": "2001-10-31",
@@ -20482,7 +20573,11 @@
         "copy_id": "pvca-000356-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Michelangelo Antonioni",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 26638,
     "original_title": "Il deserto rosso",
     "release_date": "1964-09-04",
@@ -20538,7 +20633,7 @@
         "copy_id": "pvca-000357-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 2433,
     "original_title": "Les Demoiselles de Rochefort",
     "release_date": "1967-03-08",
@@ -20650,7 +20745,7 @@
         "copy_id": "pvca-000359-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 2282,
     "original_title": "À nos amours",
     "release_date": "1983-11-16",
@@ -20706,7 +20801,7 @@
         "copy_id": "pvca-000360-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 91094,
     "original_title": "按摩と女",
     "release_date": "1938-07-07",
@@ -20762,7 +20857,11 @@
         "copy_id": "pvca-000361-archive"
       }
     ],
-    "selections": [],
+    "selections": [
+      "Japão depois da guerra",
+      "Cinema japonês",
+      "Infância e formação"
+    ],
     "tmdb_id": 97714,
     "original_title": "蜂の巣の子供たち",
     "release_date": "1948-08-24",
@@ -20818,7 +20917,7 @@
         "copy_id": "pvca-000362-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 123348,
     "original_title": "Céline",
     "release_date": "1992-04-01",
@@ -20874,7 +20973,7 @@
         "copy_id": "pvca-000363-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 100033,
     "original_title": "有りがたうさん",
     "release_date": "1936-02-27",
@@ -20986,7 +21085,7 @@
         "copy_id": "pvca-000365-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema brasileiro", "Territórios do faroeste"],
     "tmdb_id": 67612,
     "original_title": "Deus e o Diabo na Terra do Sol",
     "release_date": "1964-03-13",
@@ -21042,7 +21141,7 @@
         "copy_id": "pvca-000366-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Japão depois da guerra", "Cinema japonês"],
     "tmdb_id": 255943,
     "original_title": "小原庄助さん",
     "release_date": "1949-11-08",
@@ -21400,7 +21499,7 @@
     "catalog_copy_id": "pvca-000372-drive",
     "poster": "/posters/tmdb-1052-tiq3QOrJqlVlN8q6bJqVsTzKyrb.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Michelangelo Antonioni", "Cinema italiano"],
     "tmdb_id": 1052,
     "original_title": "Blow-Up",
     "release_date": "1966-12-18",
@@ -21450,7 +21549,7 @@
     "catalog_copy_id": "pvca-000373-local",
     "poster": "/posters/tmdb-108747-pAb3sX6FYrmU5hBUlhwKIkG2JZ7.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 108747,
     "original_title": "明治・大正・昭和　猟奇女犯罪史",
     "release_date": "1969-08-27",
@@ -21500,7 +21599,7 @@
     "catalog_copy_id": "pvca-000374-drive",
     "poster": "/posters/tmdb-25673-zeVrXwljdJ7O9ZJiJPYCQ9ur2qI.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 25673,
     "original_title": "A Place in the Sun",
     "release_date": "1951-06-12",
@@ -21556,7 +21655,7 @@
         "copy_id": "pvca-000375-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema brasileiro", "Trabalho e desigualdade"],
     "tmdb_id": 183678,
     "original_title": "A Margem",
     "release_date": "1967-01-07",
@@ -21612,7 +21711,7 @@
         "copy_id": "pvca-000376-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês", "Cinema português"],
     "tmdb_id": 101342,
     "original_title": "As Bodas de Deus",
     "release_date": "1999-10-15",
@@ -21668,7 +21767,7 @@
         "copy_id": "pvca-000377-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema soviético"],
     "tmdb_id": 83539,
     "original_title": "Неотправленное письмо",
     "release_date": "1960-06-27",
@@ -21724,7 +21823,7 @@
         "copy_id": "pvca-000378-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema português"],
     "tmdb_id": 201093,
     "original_title": "Quem Espera por Sapatos de Defunto Morre Descalço",
     "release_date": "1970-01-01",
@@ -21780,7 +21879,7 @@
         "copy_id": "pvca-000379-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema português"],
     "tmdb_id": 73930,
     "original_title": "Recordações da Casa Amarela",
     "release_date": "1989-10-12",
@@ -21836,7 +21935,7 @@
         "copy_id": "pvca-000380-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema português"],
     "tmdb_id": 83233,
     "original_title": "Silvestre",
     "release_date": "1982-05-06",
@@ -21892,7 +21991,7 @@
         "copy_id": "pvca-000381-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês", "Infância e formação"],
     "tmdb_id": 115786,
     "original_title": "夏の庭 The Friends",
     "release_date": "1994-03-12",
@@ -21948,7 +22047,7 @@
         "copy_id": "pvca-000382-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês", "Cinema português"],
     "tmdb_id": 83228,
     "original_title": "Vai e Vem",
     "release_date": "2003-06-03",
@@ -22004,7 +22103,7 @@
         "copy_id": "pvca-000383-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema japonês"],
     "tmdb_id": 4241,
     "original_title": "ビジターQ",
     "release_date": "2001-03-17",
@@ -22060,7 +22159,7 @@
         "copy_id": "pvca-000384-drive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 42536,
     "original_title": "Napoléon",
     "release_date": "1927-01-10",
@@ -22110,7 +22209,7 @@
     "catalog_copy_id": "pvca-000385-drive",
     "poster": "/posters/tmdb-49065-x44v3FixjxC7fB8Q5CDVFBhmS7r.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 49065,
     "original_title": "Portrait d'un assassin",
     "release_date": "1949-11-25",
@@ -22160,7 +22259,7 @@
     "catalog_copy_id": "pvca-000386-drive",
     "poster": "/posters/tmdb-225117-gSyCFr1mC6xdA78k8TSTVDtNhtv.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 225117,
     "original_title": "King Lear",
     "release_date": "1953-10-18",
@@ -22210,7 +22309,7 @@
     "catalog_copy_id": "pvca-000387-drive",
     "poster": "/posters/tmdb-48445-yvn2Et5uS8BmsbDDNqfU5zlOFpj.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Orson Welles"],
     "tmdb_id": 48445,
     "original_title": "Orson Welles at Large: Portrait of Gina",
     "release_date": "1958-09-01",
@@ -22260,7 +22359,7 @@
     "catalog_copy_id": "pvca-000388-drive",
     "poster": "/posters/tmdb-140032-lPEeC7TgWLD96UZDWIYU8BGbA9U.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Orson Welles"],
     "tmdb_id": 140032,
     "original_title": "The Fountain of Youth",
     "release_date": "1958-09-16",
@@ -22310,7 +22409,7 @@
     "catalog_copy_id": "pvca-000389-drive",
     "poster": "/posters/tmdb-464074-dK2gPzCYx9Q561eXFQcnZ7EZA10.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema francês"],
     "tmdb_id": 464074,
     "original_title": "Désordre",
     "release_date": "1950-12-02",
@@ -22360,7 +22459,7 @@
     "catalog_copy_id": "pvca-000390-drive",
     "poster": "/posters/tmdb-109386-bn9hQCyuk8EAf2d4PPcPYpPqF3R.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 109386,
     "original_title": "Vienna",
     "release_date": "1968-01-01",
@@ -22410,7 +22509,7 @@
     "catalog_copy_id": "pvca-000391-drive",
     "poster": "/posters/tmdb-92750-iTnBlaRc6GmFAq3hcEYqGAqcfLv.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 92750,
     "original_title": "David e Golia",
     "release_date": "1960-01-22",
@@ -22460,7 +22559,7 @@
     "catalog_copy_id": "pvca-000392-drive",
     "poster": "/posters/tmdb-139453-fiuzwdZYSqs7CsJKJmoYRBMv03Z.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 139453,
     "original_title": "Trouble in the Glen",
     "release_date": "1954-06-15",
@@ -22560,7 +22659,7 @@
     "catalog_copy_id": "pvca-000394-drive",
     "poster": "/posters/tmdb-55381-hvXjKU5c15iV7G8E7v3jQIYHVKp.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 55381,
     "original_title": "Trent's Last Case",
     "release_date": "1952-09-22",
@@ -22610,7 +22709,7 @@
     "catalog_copy_id": "pvca-000395-drive",
     "poster": "/posters/tmdb-183841-uAImJthnukKD8AJ2IOB4T07CJJv.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 183841,
     "original_title": "Return to Glennascaul",
     "release_date": "1952-11-24",
@@ -22660,7 +22759,7 @@
     "catalog_copy_id": "pvca-000396-drive",
     "poster": "/posters/tmdb-207790-tM2DhNJ3XsEsvLoAy0VWHHHstks.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 207790,
     "original_title": "I tartari",
     "release_date": "1961-04-01",
@@ -22710,7 +22809,7 @@
     "catalog_copy_id": "pvca-000397-drive",
     "poster": "/posters/tmdb-409972-2J8i3NCru9SR9vRU0vIsP5tyZHU.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 409972,
     "original_title": "Portrait d'Orson Welles",
     "release_date": "1968-06-01",
@@ -22760,7 +22859,7 @@
     "catalog_copy_id": "pvca-000398-drive",
     "poster": "/posters/tmdb-45577-y4XHdfPCG21hpRohwdh6vhjr7iM.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 45577,
     "original_title": "Three Cases of Murder",
     "release_date": "1955-03-15",
@@ -22810,7 +22909,7 @@
     "catalog_copy_id": "pvca-000399-drive",
     "poster": "/posters/tmdb-193315-3M5nR79sR1CASVvMMiM1lLTas6T.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 193315,
     "original_title": "Too Much Johnson",
     "release_date": "2013-10-09",
@@ -22860,7 +22959,7 @@
     "catalog_copy_id": "pvca-000400-drive",
     "poster": "/posters/tmdb-84636-cI0IdXJWemWTyombF1n1FwK6KYT.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles", "Cinema francês"],
     "tmdb_id": 84636,
     "original_title": "The Immortal Story",
     "release_date": "1968-09-18",
@@ -22910,7 +23009,7 @@
     "catalog_copy_id": "pvca-000401-drive",
     "poster": "/posters/tmdb-35921-fdYoG4uxbTbQ8Wv4BLxWiP7rrkm.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950", "Justiça e instituições"],
     "tmdb_id": 35921,
     "original_title": "Compulsion",
     "release_date": "1959-04-01",
@@ -23010,7 +23109,7 @@
     "catalog_copy_id": "pvca-000403-drive",
     "poster": "/posters/tmdb-75799-o61Y2bK2Oqnc48C6rUM7hecpUBs.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 75799,
     "original_title": "The Roots of Heaven",
     "release_date": "1958-10-15",
@@ -23110,7 +23209,7 @@
     "catalog_copy_id": "pvca-000405-drive",
     "poster": "/posters/tmdb-44398-qtnEO3IBtdf6EfAQ9gNvGFjyovp.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 44398,
     "original_title": "The Black Rose",
     "release_date": "1950-09-01",
@@ -23260,7 +23359,7 @@
     "catalog_copy_id": "pvca-000408-drive",
     "poster": "/posters/tmdb-20246-c7qmGFZrj5AaDz9NKMeaajW38fC.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 20246,
     "original_title": "The Stranger",
     "release_date": "1946-06-02",
@@ -23310,7 +23409,7 @@
     "catalog_copy_id": "pvca-000409-drive",
     "poster": "/posters/tmdb-27883-4DbzuePqGcUY7olAKzGly7kCEmU.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 27883,
     "original_title": "Macbeth",
     "release_date": "1948-10-01",
@@ -23360,7 +23459,12 @@
     "catalog_copy_id": "pvca-000410-drive",
     "poster": "/posters/tmdb-47697-61A7EJqfMsrQO0YWsUWq8gbgbu0.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": [
+      "Anos 1950",
+      "Orson Welles",
+      "Cinema italiano",
+      "Cinema francês"
+    ],
     "tmdb_id": 47697,
     "original_title": "Othello",
     "release_date": "1951-11-28",
@@ -23410,7 +23514,7 @@
     "catalog_copy_id": "pvca-000411-drive",
     "poster": "/posters/tmdb-92796-lhs9JE5WxzcBKzXMp19bTcLIPMm.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano"],
     "tmdb_id": 92796,
     "original_title": "Black Magic",
     "release_date": "1949-08-19",
@@ -23460,7 +23564,7 @@
     "catalog_copy_id": "pvca-000412-drive",
     "poster": "/posters/tmdb-32275-fS1zUgm51bHUTwXe5FpdsjAreqL.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Territórios do faroeste"],
     "tmdb_id": 32275,
     "original_title": "Duel in the Sun",
     "release_date": "1946-12-31",
@@ -23510,7 +23614,7 @@
     "catalog_copy_id": "pvca-000413-drive",
     "poster": "/posters/tmdb-986-5Fjxyz3u2Zdco4WeuC3wQ6O5tYQ.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles", "Cinema francês"],
     "tmdb_id": 986,
     "original_title": "Campanadas a medianoche",
     "release_date": "1965-12-22",
@@ -23560,7 +23664,7 @@
     "catalog_copy_id": "pvca-000414-drive",
     "poster": "/posters/tmdb-3766-whqdqWavNMSoeXTx1X3DauO1LG6.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Noir americano", "Orson Welles"],
     "tmdb_id": 3766,
     "original_title": "The Lady from Shanghai",
     "release_date": "1947-12-24",
@@ -23660,7 +23764,12 @@
     "catalog_copy_id": "pvca-000416-drive",
     "poster": "/posters/tmdb-3009-sl3sO7rwfNsVHeH3UHKaIV3A3MW.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": [
+      "Orson Welles",
+      "Cinema italiano",
+      "Cinema francês",
+      "Justiça e instituições"
+    ],
     "tmdb_id": 3009,
     "original_title": "Le Procès",
     "release_date": "1962-08-25",
@@ -23710,7 +23819,7 @@
     "catalog_copy_id": "pvca-000417-drive",
     "poster": "/posters/tmdb-65912-hGTMVCRxJhgOeBzdDVHP0yaF4TN.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 65912,
     "original_title": "La Fayette",
     "release_date": "1962-02-16",
@@ -23770,7 +23879,7 @@
     "catalog_copy_id": "pvca-000418-drive",
     "poster": "/posters/tmdb-15-sav0jxhqiH0bPr2vZFU0Kjt2nZL.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Orson Welles"],
     "tmdb_id": 15,
     "original_title": "Citizen Kane",
     "release_date": "1941-04-17",
@@ -23820,7 +23929,7 @@
     "catalog_copy_id": "pvca-000419-drive",
     "poster": "/posters/tmdb-1692684-gv4nGcagWEgmct3XNJSesrKgVzm.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 1692684,
     "original_title": "La ricotta",
     "release_date": "1963-02-20",
@@ -23884,7 +23993,7 @@
         "copy_id": "pvca-000420-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 19618,
     "original_title": "Crime Wave",
     "release_date": "1953-10-22",
@@ -23934,7 +24043,7 @@
     "catalog_copy_id": "pvca-000421-drive",
     "poster": "/posters/tmdb-6620-r8woenvB9eqnlgXDzSt3pWTfWzq.jpg",
     "external_links": [],
-    "selections": [],
+    "selections": ["Anos 1950"],
     "tmdb_id": 6620,
     "original_title": "Sabrina",
     "release_date": "1954-09-01",
@@ -23990,7 +24099,7 @@
         "copy_id": "pvca-000422-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Anos 1950", "Cinema italiano"],
     "tmdb_id": 4173,
     "original_title": "Stromboli (Terra di Dio)",
     "release_date": "1950-02-15",
@@ -24046,7 +24155,7 @@
         "copy_id": "pvca-000423-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema italiano", "Cinema francês"],
     "tmdb_id": 2786,
     "original_title": "Pierrot le fou",
     "release_date": "1965-11-05",
@@ -24110,7 +24219,7 @@
         "copy_id": "pvca-000424-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês", "Infância e formação"],
     "tmdb_id": 51228,
     "original_title": "De bruit et de fureur",
     "release_date": "1988-06-01",
@@ -24174,7 +24283,7 @@
         "copy_id": "pvca-000425-archive"
       }
     ],
-    "selections": [],
+    "selections": ["Cinema francês"],
     "tmdb_id": 6173,
     "original_title": "Sur mes lèvres",
     "release_date": "2001-10-17",

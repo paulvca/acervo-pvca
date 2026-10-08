@@ -21,21 +21,79 @@
       "title": "Japão depois da guerra",
       "description": "Família, trabalho e transformação social no cinema japonês entre o fim dos anos 1940 e os anos 1960.",
       "rule": "manual",
-      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+      "filmSlugs": [
+        "ikiru-1952",
+        "tokyo-story-1953",
+        "late-spring-1949",
+        "an-autumn-afternoon-1962",
+        "a-geisha-1953",
+        "tokyo-twilight-1957",
+        "the-end-of-summer-1961",
+        "women-of-the-night-1948",
+        "victory-of-women-1946",
+        "the-woman-in-the-rumor-1954",
+        "high-and-low-1963",
+        "stray-dog-1949",
+        "children-of-the-beehive-1948",
+        "equinox-flower-1958",
+        "the-flavor-of-green-tea-over-rice-1952",
+        "two-in-the-shadow-1967",
+        "a-fugitive-from-the-past-1965",
+        "mr-shosuke-ohara-1949"
+      ]
     },
     {
       "id": "sidney-lumet",
       "title": "Sidney Lumet",
       "description": "Instituições, responsabilidade e conflitos morais nos filmes de Sidney Lumet.",
       "rule": "manual",
-      "filmSlugs": ["the-offence-1973"]
+      "filmSlugs": [
+        "the-offence-1973",
+        "the-pawnbroker-1965",
+        "the-appointment-1969",
+        "the-deadly-affair-1967",
+        "the-dybbuk-1960",
+        "a-view-from-the-bridge-1962",
+        "that-kind-of-woman-1959",
+        "the-fugitive-kind-1960",
+        "the-hill-1965",
+        "child-s-play-1972",
+        "stage-struck-1958",
+        "the-sea-gull-1968",
+        "the-group-1966",
+        "tragedy-in-a-temporary-town-1956",
+        "bye-bye-braverman-1968",
+        "network-1976",
+        "long-day-s-journey-into-night-1962",
+        "prince-of-the-city-1981",
+        "lovin-molly-1974",
+        "fail-safe-1964",
+        "the-verdict-1982",
+        "dog-day-afternoon-1975",
+        "just-tell-me-what-you-want-1980",
+        "last-of-the-mobile-hot-shots-1970",
+        "murder-on-the-orient-express-1974",
+        "the-anderson-tapes-1971",
+        "the-challenge-1955",
+        "deathtrap-1982",
+        "critical-care-1997",
+        "gloria-1999",
+        "power-1986",
+        "12-angry-men-1957"
+      ]
     },
     {
       "id": "noir-americano",
       "title": "Noir americano",
       "description": "Crime e fatalismo entre ruas noturnas e personagens encurralados.",
       "rule": "manual",
-      "filmSlugs": []
+      "filmSlugs": [
+        "out-of-the-past-1947",
+        "laura-1944",
+        "kiss-me-deadly-1955",
+        "touch-of-evil-1958",
+        "the-lady-from-shanghai-1947"
+      ]
     },
     {
       "id": "legendas-em-portugues",
@@ -54,16 +112,839 @@
     {
       "id": "cinema-japones",
       "title": "Cinema japonês",
-      "description": "Um percurso pelos filmes japoneses da coleção.",
+      "description": "Um percurso pelas produções e coproduções japonesas da coleção.",
       "rule": "manual",
-      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+      "filmSlugs": [
+        "ikiru-1952",
+        "tokyo-story-1953",
+        "an-autumn-afternoon-1962",
+        "farewell-to-the-ark-1984",
+        "a-geisha-1953",
+        "chikamatsu-monogatari-1954",
+        "haruka-nostalgia-1993",
+        "mishima-a-life-in-four-chapters-1985",
+        "violent-cop-1989",
+        "tokyo-twilight-1957",
+        "a-story-of-floating-weeds-1934",
+        "kikujiro-1999",
+        "the-end-of-summer-1961",
+        "robot-carnival-1987",
+        "throne-of-blood-1957",
+        "tetsuo-the-iron-man-1989",
+        "there-was-a-father-1942",
+        "ugetsu-1953",
+        "the-sword-of-doom-1966",
+        "the-burmese-harp-1956",
+        "osaka-elegy-1936",
+        "sonatine-1993",
+        "sansho-the-bailiff-1954",
+        "stray-dog-1949",
+        "the-flavor-of-green-tea-over-rice-1952",
+        "the-human-condition-i-no-greater-love-1959",
+        "the-human-condition-ii-road-to-eternity-1959",
+        "the-human-condition-iii-a-soldier-s-prayer-1961",
+        "dreams-1990",
+        "ran-1985",
+        "tokyo-march-1929",
+        "tetsuo-ii-body-hammer-1992",
+        "the-life-of-oharu-1952",
+        "kagemusha-1980",
+        "late-spring-1949",
+        "case-of-umon-hell-s-windmill-1960",
+        "rhapsody-in-august-1991",
+        "a-fugitive-from-the-past-1965",
+        "two-in-the-shadow-1967",
+        "the-downfall-of-osen-1935",
+        "victory-of-women-1946",
+        "flame-of-my-love-1949",
+        "happy-hour-2015",
+        "doberman-cop-1977",
+        "miss-oyu-1951",
+        "princess-yang-kwei-fei-1955",
+        "sisters-of-the-gion-1936",
+        "the-47-ronin-1941",
+        "portrait-of-madame-yuki-1950",
+        "affliction-1998",
+        "the-straits-of-love-and-hate-1937",
+        "utamaro-and-his-five-women-1946",
+        "women-of-the-night-1948",
+        "high-and-low-1963",
+        "victory-song-1945",
+        "taira-clan-saga-1955",
+        "the-hidden-fortress-1958",
+        "seven-samurai-1954",
+        "tetsuo-the-bullet-man-2010",
+        "the-famous-sword-bijomaru-1945",
+        "the-island-closest-to-heaven-1984",
+        "the-love-of-the-actress-sumako-1947",
+        "the-water-magician-1933",
+        "the-woman-in-the-rumor-1954",
+        "miyamoto-musashi-1944",
+        "oyuki-the-virgin-1935",
+        "miss-okichi-1935",
+        "poppy-1935",
+        "kwaidan-1965",
+        "equinox-flower-1958",
+        "go-2001",
+        "yokohama-bj-blues-1981",
+        "a-night-in-nude-1993",
+        "cure-1997",
+        "black-angel-1998",
+        "the-masseurs-and-a-woman-1938",
+        "children-of-the-beehive-1948",
+        "mr-thank-you-1936",
+        "mr-shosuke-ohara-1949",
+        "love-and-crime-1969",
+        "the-friends-1994",
+        "visitor-q-2001"
+      ],
+      "localized": {
+        "en": {
+          "title": "Japanese cinema",
+          "description": "A path through the Japanese productions and co-productions in the collection."
+        }
+      }
     },
     {
       "id": "anos-1950",
       "title": "Anos 1950",
       "description": "Filmes de uma década marcada por mudanças na sociedade e no cinema.",
       "rule": "manual",
-      "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
+      "filmSlugs": [
+        "ikiru-1952",
+        "tokyo-story-1953",
+        "senso-1954",
+        "a-geisha-1953",
+        "the-cranes-are-flying-1957",
+        "chikamatsu-monogatari-1954",
+        "night-of-the-demon-1957",
+        "kiss-me-deadly-1955",
+        "tokyo-twilight-1957",
+        "the-night-of-the-hunter-1955",
+        "throne-of-blood-1957",
+        "ugetsu-1953",
+        "the-indian-tomb-1959",
+        "the-burmese-harp-1956",
+        "sansho-the-bailiff-1954",
+        "the-flavor-of-green-tea-over-rice-1952",
+        "the-human-condition-i-no-greater-love-1959",
+        "the-human-condition-ii-road-to-eternity-1959",
+        "the-life-of-oharu-1952",
+        "the-funicular-of-mount-faloria-1950",
+        "the-villa-of-monsters-1950",
+        "anne-of-the-indies-1951",
+        "black-widow-1954",
+        "circle-of-danger-1951",
+        "the-crimson-kimono-1959",
+        "that-kind-of-woman-1959",
+        "vertigo-1958",
+        "picnic-on-the-grass-1959",
+        "johnny-guitar-1954",
+        "i-vitelloni-1953",
+        "stage-struck-1958",
+        "le-amiche-1955",
+        "miss-oyu-1951",
+        "princess-yang-kwei-fei-1955",
+        "tragedy-in-a-temporary-town-1956",
+        "portrait-of-madame-yuki-1950",
+        "man-of-the-west-1958",
+        "anatomy-of-a-murder-1959",
+        "the-lady-without-camelias-1953",
+        "touch-of-evil-1958",
+        "the-red-white-and-blue-line-1955",
+        "taira-clan-saga-1955",
+        "rear-window-1954",
+        "the-hidden-fortress-1958",
+        "seven-samurai-1954",
+        "giant-1956",
+        "love-in-the-city-1953",
+        "the-long-arm-1956",
+        "the-woman-in-the-rumor-1954",
+        "rio-bravo-1959",
+        "north-by-northwest-1959",
+        "come-back-little-sheba-1953",
+        "the-challenge-1955",
+        "distant-drums-1951",
+        "elena-and-her-men-1956",
+        "gideon-s-day-1958",
+        "tea-and-sympathy-1956",
+        "the-court-martial-of-billy-mitchell-1955",
+        "the-fearmakers-1958",
+        "the-horse-soldiers-1959",
+        "the-quiet-man-1952",
+        "the-sun-shines-bright-1953",
+        "way-of-a-gaucho-1952",
+        "wichita-1955",
+        "great-day-in-the-morning-1956",
+        "rio-grande-1950",
+        "stars-in-my-crown-1950",
+        "the-last-hurrah-1958",
+        "the-long-gray-line-1955",
+        "the-midnight-story-1957",
+        "the-world-in-his-arms-1952",
+        "this-is-korea-1951",
+        "what-price-glory-1952",
+        "when-willie-comes-marching-home-1950",
+        "untouched-1954",
+        "12-angry-men-1957",
+        "the-golden-coach-1952",
+        "equinox-flower-1958",
+        "the-river-1951",
+        "a-place-in-the-sun-1951",
+        "king-lear-1953",
+        "orson-welles-at-large-portrait-of-gina-1958",
+        "the-fountain-of-youth-1958",
+        "disorder-1950",
+        "trouble-in-the-glen-1954",
+        "trent-s-last-case-1952",
+        "return-to-glennascaul-1952",
+        "three-cases-of-murder-1955",
+        "compulsion-1959",
+        "the-roots-of-heaven-1958",
+        "the-black-rose-1950",
+        "othello-1951",
+        "crime-wave-1953",
+        "sabrina-1954",
+        "stromboli-1950"
+      ]
+    },
+    {
+      "id": "john-ford",
+      "title": "John Ford",
+      "description": "Comunidades, paisagens e histórias dos Estados Unidos, entre faroestes, dramas e documentários.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-man-who-shot-liberty-valance-1962",
+        "chesty-a-tribute-to-a-legend-1976",
+        "the-red-white-and-blue-line-1955",
+        "the-grapes-of-wrath-1940",
+        "air-mail-1932",
+        "3-bad-men-1926",
+        "bucking-broadway-1917",
+        "cameo-kirby-1923",
+        "doctor-bull-1933",
+        "donovan-s-reef-1963",
+        "drums-along-the-mohawk-1939",
+        "four-men-and-a-prayer-1938",
+        "four-sons-1928",
+        "gideon-s-day-1958",
+        "hangman-s-house-1928",
+        "how-green-was-my-valley-1941",
+        "judge-priest-1934",
+        "just-pals-1920",
+        "my-darling-clementine-1946",
+        "stagecoach-1939",
+        "the-battle-of-midway-1942",
+        "the-black-watch-1929",
+        "the-blue-eagle-1926",
+        "the-horse-soldiers-1959",
+        "the-iron-horse-1925",
+        "the-quiet-man-1952",
+        "the-sun-shines-bright-1953",
+        "tobacco-road-1941",
+        "two-rode-together-1961",
+        "up-the-river-1930",
+        "young-mr-lincoln-1939",
+        "born-reckless-1930",
+        "by-indian-post-1919",
+        "december-7th-1943",
+        "hell-bent-1918",
+        "kentucky-pride-1925",
+        "lightnin-1925",
+        "men-without-women-1930",
+        "mother-machree-1927",
+        "north-of-hudson-bay-1923",
+        "pilgrimage-1933",
+        "riley-the-cop-1928",
+        "rio-grande-1950",
+        "salute-1929",
+        "seas-beneath-1931",
+        "steamboat-round-the-bend-1935",
+        "straight-shooting-1917",
+        "submarine-patrol-1938",
+        "the-hurricane-1937",
+        "the-last-hurrah-1958",
+        "the-long-gray-line-1955",
+        "the-long-voyage-home-1940",
+        "the-plough-and-the-stars-1936",
+        "the-prisoner-of-shark-island-1936",
+        "the-shamrock-handicap-1926",
+        "the-whole-town-s-talking-1935",
+        "the-world-moves-on-1934",
+        "this-is-korea-1951",
+        "upstream-1927",
+        "wee-willie-winkie-1937",
+        "what-price-glory-1952",
+        "when-willie-comes-marching-home-1950"
+      ],
+      "localized": {
+        "en": {
+          "title": "John Ford",
+          "description": "Communities, landscapes and American histories, through westerns, dramas and documentaries."
+        }
+      }
+    },
+    {
+      "id": "kenji-mizoguchi",
+      "title": "Kenji Mizoguchi",
+      "description": "Desejo, convenções sociais e destinos de mulheres, dos dramas históricos ao Japão de seu tempo.",
+      "rule": "manual",
+      "filmSlugs": [
+        "a-geisha-1953",
+        "chikamatsu-monogatari-1954",
+        "ugetsu-1953",
+        "osaka-elegy-1936",
+        "sansho-the-bailiff-1954",
+        "tokyo-march-1929",
+        "the-life-of-oharu-1952",
+        "the-downfall-of-osen-1935",
+        "victory-of-women-1946",
+        "flame-of-my-love-1949",
+        "miss-oyu-1951",
+        "princess-yang-kwei-fei-1955",
+        "sisters-of-the-gion-1936",
+        "the-47-ronin-1941",
+        "portrait-of-madame-yuki-1950",
+        "the-straits-of-love-and-hate-1937",
+        "utamaro-and-his-five-women-1946",
+        "women-of-the-night-1948",
+        "victory-song-1945",
+        "taira-clan-saga-1955",
+        "the-famous-sword-bijomaru-1945",
+        "the-love-of-the-actress-sumako-1947",
+        "the-water-magician-1933",
+        "the-woman-in-the-rumor-1954",
+        "miyamoto-musashi-1944",
+        "oyuki-the-virgin-1935",
+        "poppy-1935"
+      ],
+      "localized": {
+        "en": {
+          "title": "Kenji Mizoguchi",
+          "description": "Desire, social conventions and the lives of women, from historical dramas to the Japan of his time."
+        }
+      }
+    },
+    {
+      "id": "michelangelo-antonioni",
+      "title": "Michelangelo Antonioni",
+      "description": "Relações, paisagens e formas de olhar, entre ficção e documentário.",
+      "rule": "manual",
+      "filmSlugs": [
+        "la-notte-1961",
+        "l-avventura-1960",
+        "the-passenger-1975",
+        "the-mystery-of-oberwald-1981",
+        "l-eclisse-1962",
+        "the-funicular-of-mount-faloria-1950",
+        "the-villa-of-monsters-1950",
+        "le-amiche-1955",
+        "michelangelo-eye-to-eye-2004",
+        "the-lady-without-camelias-1953",
+        "n-u-1948",
+        "noto-almond-trees-volcano-stromboli-carnival-1993",
+        "people-of-the-po-valley-1947",
+        "superstition-1948",
+        "love-in-the-city-1953",
+        "lies-of-love-1949",
+        "sicily-1997",
+        "seven-reeds-one-dress-1948",
+        "red-desert-1964",
+        "blow-up-1966"
+      ],
+      "localized": {
+        "en": {
+          "title": "Michelangelo Antonioni",
+          "description": "Relationships, landscapes and ways of seeing, across fiction and documentary."
+        }
+      }
+    },
+    {
+      "id": "orson-welles",
+      "title": "Orson Welles",
+      "description": "Poder, memória e encenação nos filmes dirigidos ou codirigidos por Orson Welles presentes na coleção.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-magnificent-ambersons-1942",
+        "touch-of-evil-1958",
+        "orson-welles-at-large-portrait-of-gina-1958",
+        "the-fountain-of-youth-1958",
+        "vienna-1968",
+        "too-much-johnson-2013",
+        "the-immortal-story-1968",
+        "the-stranger-1946",
+        "macbeth-1948",
+        "othello-1951",
+        "chimes-at-midnight-1965",
+        "the-lady-from-shanghai-1947",
+        "the-trial-1962",
+        "citizen-kane-1941"
+      ],
+      "localized": {
+        "en": {
+          "title": "Orson Welles",
+          "description": "Power, memory and performance in the films directed or co-directed by Orson Welles in the collection."
+        }
+      }
+    },
+    {
+      "id": "akira-kurosawa",
+      "title": "Akira Kurosawa",
+      "description": "Escolhas morais e conflitos humanos, do Japão histórico às cidades do pós-guerra.",
+      "rule": "manual",
+      "filmSlugs": [
+        "throne-of-blood-1957",
+        "stray-dog-1949",
+        "dreams-1990",
+        "ran-1985",
+        "kagemusha-1980",
+        "rhapsody-in-august-1991",
+        "ikiru-1952",
+        "high-and-low-1963",
+        "the-hidden-fortress-1958",
+        "seven-samurai-1954"
+      ],
+      "localized": {
+        "en": {
+          "title": "Akira Kurosawa",
+          "description": "Moral choices and human conflict, from historical Japan to postwar cities."
+        }
+      }
+    },
+    {
+      "id": "yasujiro-ozu",
+      "title": "Yasujirō Ozu",
+      "description": "Famílias, gerações e mudanças discretas na vida cotidiana.",
+      "rule": "manual",
+      "filmSlugs": [
+        "an-autumn-afternoon-1962",
+        "tokyo-twilight-1957",
+        "a-story-of-floating-weeds-1934",
+        "the-end-of-summer-1961",
+        "there-was-a-father-1942",
+        "the-flavor-of-green-tea-over-rice-1952",
+        "late-spring-1949",
+        "tokyo-story-1953",
+        "equinox-flower-1958"
+      ],
+      "localized": {
+        "en": {
+          "title": "Yasujirō Ozu",
+          "description": "Families, generations and quiet changes in everyday life."
+        }
+      }
+    },
+    {
+      "id": "jacques-tourneur",
+      "title": "Jacques Tourneur",
+      "description": "Sombras, ameaças e atmosferas inquietantes, entre noir, horror e faroeste.",
+      "rule": "manual",
+      "filmSlugs": [
+        "i-walked-with-a-zombie-1943",
+        "cat-people-1942",
+        "night-of-the-demon-1957",
+        "out-of-the-past-1947",
+        "anne-of-the-indies-1951",
+        "circle-of-danger-1951",
+        "canyon-passage-1946",
+        "the-leopard-man-1943",
+        "the-fearmakers-1958",
+        "way-of-a-gaucho-1952",
+        "wichita-1955",
+        "great-day-in-the-morning-1956",
+        "stars-in-my-crown-1950"
+      ],
+      "localized": {
+        "en": {
+          "title": "Jacques Tourneur",
+          "description": "Shadows, threats and unsettling atmospheres, across noir, horror and westerns."
+        }
+      }
+    },
+    {
+      "id": "michael-mann",
+      "title": "Michael Mann",
+      "description": "Crime, trabalho e obsessão nas trajetórias de homens submetidos a seus próprios códigos.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-keep-1983",
+        "manhunter-1986",
+        "thief-1981",
+        "miami-vice-2006",
+        "the-jericho-mile-1980",
+        "heat-1995"
+      ],
+      "localized": {
+        "en": {
+          "title": "Michael Mann",
+          "description": "Crime, work and obsession in the lives of men bound by their own codes."
+        }
+      }
+    },
+    {
+      "id": "cinema-italiano",
+      "title": "Cinema italiano",
+      "description": "Um percurso pelas produções e coproduções italianas da coleção.",
+      "rule": "manual",
+      "filmSlugs": [
+        "misunderstood-1967",
+        "senso-1954",
+        "la-notte-1961",
+        "lancelot-of-the-lake-1974",
+        "satyricon-1969",
+        "the-headless-woman-2008",
+        "l-avventura-1960",
+        "rocco-and-his-brothers-1960",
+        "the-passenger-1975",
+        "the-mystery-of-oberwald-1981",
+        "opera-1987",
+        "phenomena-1985",
+        "oedipus-rex-1967",
+        "suspiria-1977",
+        "l-eclisse-1962",
+        "the-indian-tomb-1959",
+        "rome-open-city-1945",
+        "the-funicular-of-mount-faloria-1950",
+        "the-villa-of-monsters-1950",
+        "ludwig-1973",
+        "a-view-from-the-bridge-1962",
+        "once-upon-a-time-in-america-1984",
+        "year-of-the-dragon-1985",
+        "i-vitelloni-1953",
+        "the-good-the-bad-and-the-ugly-1966",
+        "le-amiche-1955",
+        "michelangelo-eye-to-eye-2004",
+        "the-great-beauty-2013",
+        "django-1966",
+        "keoma-1976",
+        "the-lady-without-camelias-1953",
+        "once-upon-a-time-in-the-west-1968",
+        "n-u-1948",
+        "noto-almond-trees-volcano-stromboli-carnival-1993",
+        "people-of-the-po-valley-1947",
+        "superstition-1948",
+        "love-in-the-city-1953",
+        "lies-of-love-1949",
+        "sicily-1997",
+        "seven-reeds-one-dress-1948",
+        "elena-and-her-men-1956",
+        "the-name-of-the-rose-1986",
+        "the-golden-coach-1952",
+        "the-innocent-1976",
+        "purple-noon-1960",
+        "red-desert-1964",
+        "blow-up-1966",
+        "david-and-goliath-1960",
+        "the-tartars-1961",
+        "othello-1951",
+        "black-magic-1949",
+        "the-trial-1962",
+        "lafayette-1962",
+        "la-ricotta-1963",
+        "stromboli-1950",
+        "pierrot-le-fou-1965"
+      ],
+      "localized": {
+        "en": {
+          "title": "Italian cinema",
+          "description": "A path through the Italian productions and co-productions in the collection."
+        }
+      }
+    },
+    {
+      "id": "cinema-frances",
+      "title": "Cinema francês",
+      "description": "Um percurso pelas produções e coproduções francesas da coleção.",
+      "rule": "manual",
+      "filmSlugs": [
+        "la-notte-1961",
+        "lancelot-of-the-lake-1974",
+        "el-sur-1983",
+        "the-scent-of-green-papaya-1993",
+        "the-headless-woman-2008",
+        "l-avventura-1960",
+        "rocco-and-his-brothers-1960",
+        "the-passenger-1975",
+        "la-vie-de-boheme-1992",
+        "l-eclisse-1962",
+        "the-indian-tomb-1959",
+        "ran-1985",
+        "la-musica-1967",
+        "ludwig-1973",
+        "a-view-from-the-bridge-1962",
+        "picnic-on-the-grass-1959",
+        "the-discreet-charm-of-the-bourgeoisie-1972",
+        "syndromes-and-a-century-2006",
+        "i-vitelloni-1953",
+        "the-great-beauty-2013",
+        "the-rules-of-the-game-1939",
+        "mulholland-drive-2001",
+        "papillon-1973",
+        "elena-and-her-men-1956",
+        "the-name-of-the-rose-1986",
+        "a-game-for-six-lovers-1960",
+        "the-son-2002",
+        "the-golden-coach-1952",
+        "the-river-1951",
+        "the-innocent-1976",
+        "purple-noon-1960",
+        "millennium-mambo-2001",
+        "red-desert-1964",
+        "the-young-girls-of-rochefort-1967",
+        "a-nos-amours-1983",
+        "celine-1992",
+        "the-spousals-of-god-1999",
+        "come-and-go-2003",
+        "napoleon-1927",
+        "portrait-of-a-murderer-1949",
+        "disorder-1950",
+        "portrait-orson-welles-1968",
+        "the-immortal-story-1968",
+        "othello-1951",
+        "chimes-at-midnight-1965",
+        "the-trial-1962",
+        "lafayette-1962",
+        "la-ricotta-1963",
+        "pierrot-le-fou-1965",
+        "sound-and-fury-1988",
+        "read-my-lips-2001"
+      ],
+      "localized": {
+        "en": {
+          "title": "French cinema",
+          "description": "A path through the French productions and co-productions in the collection."
+        }
+      }
+    },
+    {
+      "id": "cinema-de-hong-kong",
+      "title": "Cinema de Hong Kong",
+      "description": "Crime, ação e relações em transformação nas produções de Hong Kong presentes no acervo.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-killer-1989",
+        "election-2005",
+        "a-better-tomorrow-iii-love-and-death-in-saigon-1989",
+        "center-stage-1991",
+        "hard-boiled-1992",
+        "a-better-tomorrow-ii-1987",
+        "bullet-in-the-head-1990",
+        "a-better-tomorrow-1986",
+        "princess-yang-kwei-fei-1955",
+        "devil-hunters-1989",
+        "farewell-my-concubine-1993"
+      ],
+      "localized": {
+        "en": {
+          "title": "Hong Kong cinema",
+          "description": "Crime, action and changing relationships in the Hong Kong productions in the collection."
+        }
+      }
+    },
+    {
+      "id": "cinema-brasileiro",
+      "title": "Cinema brasileiro",
+      "description": "Conflitos sociais, invenção formal e vidas à margem nos filmes brasileiros da coleção.",
+      "rule": "manual",
+      "filmSlugs": [
+        "they-don-t-wear-black-tie-1981",
+        "the-red-light-bandit-1968",
+        "black-god-white-devil-1964",
+        "the-margin-1967"
+      ],
+      "localized": {
+        "en": {
+          "title": "Brazilian cinema",
+          "description": "Social conflict, formal invention and life on the margins in the Brazilian films in the collection."
+        }
+      }
+    },
+    {
+      "id": "cinema-portugues",
+      "title": "Cinema português",
+      "description": "As produções e coproduções portuguesas da coleção, reunidas em um mesmo percurso.",
+      "rule": "manual",
+      "filmSlugs": [
+        "hovering-over-the-water-1986",
+        "the-spousals-of-god-1999",
+        "he-goes-long-barefoot-that-waits-for-dead-men-s-shoes-1970",
+        "recollections-of-the-yellow-house-1989",
+        "silvestre-1982",
+        "come-and-go-2003"
+      ],
+      "localized": {
+        "en": {
+          "title": "Portuguese cinema",
+          "description": "The Portuguese productions and co-productions in the collection, brought together in one path."
+        }
+      }
+    },
+    {
+      "id": "cinema-sovietico",
+      "title": "Cinema soviético",
+      "description": "As produções soviéticas da coleção, entre história, guerra e imaginação.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-cranes-are-flying-1957",
+        "stalker-1979",
+        "war-and-peace-part-i-andrei-bolkonsky-1966",
+        "war-and-peace-part-ii-natasha-rostova-1966",
+        "war-and-peace-part-iii-the-year-1812-1967",
+        "war-and-peace-part-iv-pierre-bezukhov-1967",
+        "letter-never-sent-1960"
+      ],
+      "localized": {
+        "en": {
+          "title": "Soviet cinema",
+          "description": "The Soviet productions in the collection, across history, war and imagination."
+        }
+      }
+    },
+    {
+      "id": "infancia-e-formacao",
+      "title": "Infância e formação",
+      "description": "Aprender, crescer e encontrar um lugar no mundo, entre vínculos familiares, amizade e abandono.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-friends-1994",
+        "kikujiro-1999",
+        "children-of-heaven-1997",
+        "the-color-of-paradise-1999",
+        "sound-and-fury-1988",
+        "misunderstood-1967",
+        "tea-and-sympathy-1956",
+        "children-of-the-beehive-1948",
+        "just-pals-1920",
+        "mother-machree-1927"
+      ],
+      "localized": {
+        "en": {
+          "title": "Childhood and growing up",
+          "description": "Learning, growing up and finding a place in the world, through family ties, friendship and abandonment."
+        }
+      }
+    },
+    {
+      "id": "trabalho-e-desigualdade",
+      "title": "Trabalho e desigualdade",
+      "description": "Trabalho, sobrevivência e conflitos de classe vistos por quem enfrenta os limites de uma sociedade desigual.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-grapes-of-wrath-1940",
+        "blue-collar-1978",
+        "they-don-t-wear-black-tie-1981",
+        "rocco-and-his-brothers-1960",
+        "how-green-was-my-valley-1941",
+        "the-margin-1967",
+        "heaven-s-gate-1980",
+        "a-geisha-1953",
+        "the-straits-of-love-and-hate-1937"
+      ],
+      "localized": {
+        "en": {
+          "title": "Work and inequality",
+          "description": "Work, survival and class conflict through the lives of people facing an unequal society."
+        }
+      }
+    },
+    {
+      "id": "justica-e-instituicoes",
+      "title": "Justiça e instituições",
+      "description": "Tribunais, investigações e conflitos entre a consciência individual e o poder das instituições.",
+      "rule": "manual",
+      "filmSlugs": [
+        "12-angry-men-1957",
+        "the-verdict-1982",
+        "anatomy-of-a-murder-1959",
+        "compulsion-1959",
+        "the-trial-1962",
+        "prince-of-the-city-1981",
+        "the-offence-1973",
+        "the-challenge-1955",
+        "tragedy-in-a-temporary-town-1956",
+        "the-court-martial-of-billy-mitchell-1955",
+        "victory-of-women-1946",
+        "touch-of-evil-1958"
+      ],
+      "localized": {
+        "en": {
+          "title": "Justice and institutions",
+          "description": "Courts, investigations and conflicts between individual conscience and institutional power."
+        }
+      }
+    },
+    {
+      "id": "guerra-e-suas-marcas",
+      "title": "Guerra e suas marcas",
+      "description": "A guerra nas relações, na memória e na vida de quem precisa atravessá-la ou conviver com suas consequências.",
+      "rule": "manual",
+      "filmSlugs": [
+        "the-deer-hunter-1978",
+        "the-cranes-are-flying-1957",
+        "broken-lullaby-1932",
+        "rhapsody-in-august-1991",
+        "four-sons-1928",
+        "the-life-and-death-of-colonel-blimp-1943",
+        "the-hill-1965",
+        "bullet-in-the-head-1990",
+        "a-better-tomorrow-iii-love-and-death-in-saigon-1989",
+        "the-burmese-harp-1956",
+        "the-human-condition-i-no-greater-love-1959",
+        "the-human-condition-ii-road-to-eternity-1959",
+        "the-human-condition-iii-a-soldier-s-prayer-1961"
+      ],
+      "localized": {
+        "en": {
+          "title": "War and its aftermath",
+          "description": "War in relationships, memory and the lives of those who endure it or live with its consequences."
+        }
+      }
+    },
+    {
+      "id": "territorios-do-faroeste",
+      "title": "Territórios do faroeste",
+      "description": "Fronteiras, comunidades e disputas por terra nos faroestes presentes na coleção.",
+      "rule": "manual",
+      "filmSlugs": [
+        "heaven-s-gate-1980",
+        "johnny-guitar-1954",
+        "the-man-who-shot-liberty-valance-1962",
+        "the-good-the-bad-and-the-ugly-1966",
+        "man-of-the-west-1958",
+        "django-1966",
+        "keoma-1976",
+        "once-upon-a-time-in-the-west-1968",
+        "giant-1956",
+        "the-wild-bunch-1969",
+        "rio-bravo-1959",
+        "canyon-passage-1946",
+        "3-bad-men-1926",
+        "bucking-broadway-1917",
+        "distant-drums-1951",
+        "just-pals-1920",
+        "my-darling-clementine-1946",
+        "stagecoach-1939",
+        "the-horse-soldiers-1959",
+        "the-iron-horse-1925",
+        "two-rode-together-1961",
+        "way-of-a-gaucho-1952",
+        "wichita-1955",
+        "by-indian-post-1919",
+        "great-day-in-the-morning-1956",
+        "hell-bent-1918",
+        "north-of-hudson-bay-1923",
+        "rio-grande-1950",
+        "stars-in-my-crown-1950",
+        "straight-shooting-1917",
+        "black-god-white-devil-1964",
+        "duel-in-the-sun-1946"
+      ],
+      "localized": {
+        "en": {
+          "title": "Western territories",
+          "description": "Frontiers, communities and struggles over land in the westerns in the collection."
+        }
+      }
     }
   ]
 }
