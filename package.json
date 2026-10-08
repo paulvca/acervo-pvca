@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "admin": "node scripts/admin.mjs",
     "admin:test": "node --test scripts/admin.test.mjs",
+    "presentation:test": "node --experimental-strip-types --test scripts/presentation.test.mjs",
     "data:test": "node --test scripts/database.test.mjs",
     "tmdb:test": "python3 scripts/tmdb_test.py",
     "catalog:check": "node scripts/catalog.mjs check",

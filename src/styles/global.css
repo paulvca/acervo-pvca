@@ -926,3 +926,7 @@ footer {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+.intro-stats {
+  margin-top: 40px;
+}

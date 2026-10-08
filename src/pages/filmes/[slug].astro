@@ -4,7 +4,7 @@ const {lang,t,path}=getI18n(Astro.url);
 
 import { catalog as catalogPreview } from '../../data/catalog';
 import Poster from '../../components/Poster.astro';
-import {formatGiB} from '../../lib/catalog';
+import {formatGiB, distinctCopyDetails} from '../../lib/catalog';
 import {selections} from '../../data/selections';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
@@ -44,7 +44,7 @@ const workRows = [
 
 const hasSelections = selections.some(selection => selection.films.some(member => member.slug === film.slug));
 const hasEditorialSummary = Boolean(film.synopsis);
-const copies = film.copies ?? [];
+const copies = distinctCopyDetails(film);
 const externalLinks = film.externalLinks ?? [];
 const hasMultipleCopies = copies.length > 1;
 
@@ -59,7 +59,7 @@ const copyRows = (copy: CatalogCopyInfo) => [
 
 const copyLabelForAccess = (copyId?: string) => {
   if (!copyId) return null;
-  return copies.find((copy) => copy.id === copyId)?.label ?? null;
+  return film.copies?.find((copy) => copy.id === copyId)?.label ?? null;
 };
 ---
 
@@ -125,14 +125,14 @@ const copyLabelForAccess = (copyId?: string) => {
         copies.length > 0 ? (
           <div class="film-copies">
             {
-              copies.map((copy) => {
+              copies.map((copy, index) => {
                 const rows = copyRows(copy);
 
                 return (
                   <article class="film-copy">
                     {
-                      hasMultipleCopies && (copy.label || copy.edition) && (
-                        <h3>{copy.label || copy.edition}</h3>
+                      hasMultipleCopies && (copy.label || copy.edition || index > 0) && (
+                        <h3>{copy.label || copy.edition || t("Outra cópia")}</h3>
                       )
                     }
 

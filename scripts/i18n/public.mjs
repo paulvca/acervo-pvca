@@ -1,4 +1,8 @@
 export const en = {
+  "Filmes por década": "Films by decade",
+  filme: "film",
+  filmes: "films",
+  "Outra cópia": "Another copy",
   "Os filmes e suas cópias": "The films and their copies",
   "Cada ficha apresenta a obra e a cópia preservada no acervo: direção, ano, país e duração, além de resolução, tamanho, áudio e legendas. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.":
     "Each film page presents the work and the preserved copy: director, year, country and running time, alongside resolution, file size, audio and subtitles. Details of different versions or editions appear on the same page.",

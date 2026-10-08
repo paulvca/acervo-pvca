@@ -7,6 +7,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Poster from '../components/Poster.astro';
 import CollectionStats from '../components/CollectionStats.astro';
+import DecadeChart from '../components/DecadeChart.astro';
 import {featuredFilm as sourceFeatured, recentFilms as sourceRecent} from '../data/home';
 import {selections} from '../data/selections';
 import {editorial} from '../data/editorial';
@@ -14,7 +15,7 @@ const featuredFilm=sourceFeatured?localizeFilm(sourceFeatured,lang):undefined;
 const recentFilms=sourceRecent.map((film)=>localizeFilm(film,lang));
 ---
 <BaseLayout><Header active="home" /><main id="main">
-<section class="wrap intro"><h1>{t("Meu acervo pessoal de cinema.")}</h1><p>{t("Filmes que venho reunindo, preservando e organizando ao longo do tempo.")}</p></section>
+<section class="wrap intro"><h1>{t("Meu acervo pessoal de cinema.")}</h1><p>{t("Filmes que venho reunindo, preservando e organizando ao longo do tempo.")}</p>{editorial.showStats && <div class="intro-stats"><CollectionStats /></div>}</section>
 {featuredFilm && <>
 <div class="wrap rule"></div>
 <section class="wrap section"><div class="section-title"><h2>{t("Em destaque")}</h2></div>
@@ -26,5 +27,6 @@ const recentFilms=sourceRecent.map((film)=>localizeFilm(film,lang));
 </>}
 <div class="wrap rule"></div>
 <section class="wrap section"><div class="section-title"><h2>{t("Seleções")}</h2></div><div class="home-selections">{editorial.homeSelectionIds.flatMap(id => selections.filter(selection => selection.id === id && selection.films.length)).map(selection => <a href={path(`/selecoes/${selection.id}/`)}><h3>{t(selection.localized?.[lang]?.title || selection.title)}</h3><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><span>{t("Ver seleção →")}</span></a>)}</div></section>
-{editorial.showStats && <><div class="wrap rule"></div><section class="wrap section"><div class="section-title"><h2>{t("O acervo")}</h2></div><CollectionStats /></section></>}
+<div class="wrap rule"></div>
+<section class="wrap section"><DecadeChart /></section>
 </main><Footer /></BaseLayout>
