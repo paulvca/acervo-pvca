@@ -1,4 +1,16 @@
 export const en = {
+  filmes: "films",
+  "Dados técnicos pendentes": "Technical details pending",
+  "Não informado": "Not specified",
+  "Ver no": "View on",
+  "Compartilhar ficha": "Share film page",
+  "Link copiado": "Link copied",
+  "Copie o endereço desta página": "Copy this page’s address",
+  "Cópia do Archive": "Archive copy",
+  "Cópia do Drive": "Drive copy",
+  "Cópias do Archive e do Drive": "Archive and Drive copies",
+  "Link da ficha": "Film page link",
+
   "Página não encontrada": "Page not found",
   "Este endereço não existe no acervo. Você pode voltar ao início ou explorar os filmes.":
     "This address does not exist in the collection. You can return home or browse the films.",
@@ -102,7 +114,6 @@ export const en = {
     "Development preview: missing posters, resolutions and file sizes are marked as pending.",
   "Nenhum filme encontrado": "No films found",
   filme: "film",
-  filmes: "films",
   " nesta prévia": " in this preview",
   "Resolução pendente": "Resolution pending",
   "Tamanho pendente": "Size pending",

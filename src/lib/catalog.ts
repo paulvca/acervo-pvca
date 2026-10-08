@@ -1,6 +1,7 @@
 import type {
   CatalogPreviewFilm,
   CatalogCopyInfo,
+  CatalogExternalLink,
 } from "../data/catalog-preview";
 
 export const catalogCopy = (film: CatalogPreviewFilm) =>
@@ -42,6 +43,18 @@ export function filmsByDecade(films: CatalogPreviewFilm[]) {
   });
 }
 
+function copyDetailKey(copy: CatalogCopyInfo) {
+  return JSON.stringify([
+    copy.resolution ?? null,
+    copy.sizeGiB == null ? null : Number(copy.sizeGiB.toFixed(1)),
+    copy.format ?? null,
+    [...(copy.audio ?? [])].sort(),
+    [...(copy.subtitles ?? [])].sort(),
+    copy.edition ?? null,
+    copy.label ?? null,
+  ]);
+}
+
 /** Collapse identical technical presentations, without deleting source copies or links. */
 export function distinctCopyDetails(
   film: CatalogPreviewFilm
@@ -55,15 +68,7 @@ export function distinctCopyDetails(
     : (film.copies ?? []);
   const seen = new Set<string>();
   return copies.filter((copy) => {
-    const key = JSON.stringify([
-      copy.resolution ?? null,
-      copy.sizeGiB == null ? null : Number(copy.sizeGiB.toFixed(1)),
-      copy.format ?? null,
-      [...(copy.audio ?? [])].sort(),
-      [...(copy.subtitles ?? [])].sort(),
-      copy.edition ?? null,
-      copy.label ?? null,
-    ]);
+    const key = copyDetailKey(copy);
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -84,4 +89,58 @@ export function copyDetailHeading(
       ? t("Cópia do catálogo")
       : t("Outra cópia") + (total > 2 ? ` ${index + 1}` : ""))
   );
+}
+
+/** Attach every source link to its displayed copy, retaining deduplicated sources. */
+export function copyAccessGroups(film: CatalogPreviewFilm) {
+  const links = (film.externalLinks ?? []).filter((link) => Boolean(link.url));
+  const byId = new Map(
+    (film.copies ?? []).map((copy) => [copy.id, copyDetailKey(copy)])
+  );
+  const assigned = new Set<CatalogExternalLink>();
+  const groups = distinctCopyDetails(film).map((copy) => {
+    const key = copyDetailKey(copy);
+    const associated = links.filter(
+      (link) => link.copyId && byId.get(link.copyId) === key
+    );
+    for (const link of associated) assigned.add(link);
+    return { copy, links: associated };
+  });
+  return {
+    groups,
+    remainingLinks: links.filter((link) => !assigned.has(link)),
+  };
+}
+
+export function copyAccessHeading(
+  groups: ReturnType<typeof copyAccessGroups>["groups"],
+  index: number,
+  t: (text: string) => string
+) {
+  const { copy, links } = groups[index];
+  const providers = [...new Set(links.map((link) => link.provider))];
+  let heading: string;
+  if (providers.length === 1 && providers[0] === "Internet Archive")
+    heading = t("Cópia do Archive");
+  else if (providers.length === 1 && providers[0] === "Google Drive")
+    heading = t("Cópia do Drive");
+  else if (
+    providers.length === 2 &&
+    providers.includes("Internet Archive") &&
+    providers.includes("Google Drive")
+  )
+    heading = t("Cópias do Archive e do Drive");
+  else return copyDetailHeading(copy, index, groups.length, t);
+  const detail = copy.label || copy.edition;
+  if (detail) return `${heading} — ${detail}`;
+  const matching = groups.filter((group) => {
+    const sources = [...new Set(group.links.map((link) => link.provider))];
+    return (
+      sources.length === providers.length &&
+      sources.every((provider) => providers.includes(provider))
+    );
+  });
+  return matching.length > 1
+    ? `${heading} ${matching.findIndex((group) => group.copy.id === copy.id) + 1}`
+    : heading;
 }
