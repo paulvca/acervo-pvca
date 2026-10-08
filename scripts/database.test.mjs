@@ -108,6 +108,31 @@ test("manual field and translation locks survive enrichment and reimports", () =
   assert.equal(result.year, 2001);
   assert.ok(updated.items[0].protected.includes("translations.en.synopsis"));
 });
+test("a manually corrected Brazilian title survives imports without changing other film data", () => {
+  const original = fixture();
+  original.original_title = "Original title";
+  original.external_links = [
+    {
+      provider: "google_drive",
+      url: "https://drive.google.com/file/d/fixture/view",
+    },
+  ];
+  const first = planImport(emptyDatabase(), [original], schema, temp).database;
+  const record = allRecords(first)[0];
+  record.translations["pt-BR"].title = "Título brasileiro corrigido";
+  const manual = saveManual(first, record, true);
+  const row = Object.values(manual.films)[0];
+  assert.deepEqual(row.locks, ["translations.pt-BR.title"]);
+  const incoming = structuredClone(original);
+  incoming.year = 2001;
+  const imported = planImport(manual, [incoming], schema, temp);
+  assert.equal(imported.summary.updated, 1);
+  assert.ok(imported.items[0].protected.includes("translations.pt-BR.title"));
+  const expected = structuredClone(original);
+  expected.year = 2001;
+  expected.translations["pt-BR"].title = "Título brasileiro corrigido";
+  assert.deepEqual(allRecords(imported.database)[0], expected);
+});
 test("partial imports report invalid records and retain incomplete works as private drafts", () => {
   const plan = planImport(
     emptyDatabase(),
