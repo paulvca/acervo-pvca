@@ -125,7 +125,7 @@ export const en = {
   "em 2160p": "in 2160p",
   "em 1080p": "in 1080p",
   "seleções com filmes": "selections with films",
-  "tamanho das cópias catalogadas": "total size of cataloged copies",
+  "tamanho total do acervo": "total collection size",
   "Contagens dos registros desta prévia, não do acervo completo. Dados ausentes ainda não entram nas contagens técnicas.":
     "Counts reflect the preview records, not the entire collection. Missing data is excluded from technical counts.",
   "Agrupamentos pessoais. Alguns são bem definidos, outros só refletem o que estou vendo, revisando ou pensando no momento.":

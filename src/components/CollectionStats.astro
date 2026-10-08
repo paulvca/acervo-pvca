@@ -15,7 +15,7 @@ const stats = [
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '2160p').length, t('em 2160p')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '1080p').length, t('em 1080p')],
  [selections.filter(selection => selection.films.length).length, t('seleções com filmes')],
- ...(formattedTB ? [[formattedTB, t('tamanho das cópias catalogadas')]] : []),
+ ...(formattedTB ? [[formattedTB, t('tamanho total do acervo')]] : []),
 ];
 ---
 <dl class="collection-stats" style={`--stats-columns: ${stats.length}`}>{stats.map(([value,label]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
