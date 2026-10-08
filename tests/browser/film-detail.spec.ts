@@ -9,6 +9,13 @@ for (const width of [375, 1440]) {
     await page.goto("filmes/heaven-s-gate-1980/");
     const copies = page.locator(".archive-copy");
     await expect(copies).toHaveCount(2);
+    await expect(copies.locator(".copy-spec")).toHaveText([
+      "1080p · 42,2 GiB",
+      "1080p · 42,2 GiB",
+    ]);
+    await expect(page.locator(".archive-card")).not.toContainText(
+      /Matroska|MKV|MP4\/MOV/
+    );
     await expect(copies.nth(0).locator("h3")).toHaveText("Cópia do Drive");
     await expect(copies.nth(0).locator("a")).toHaveAttribute(
       "href",

@@ -92,12 +92,13 @@ const memberSelections = selections.filter((selection) =>
                 <h3>{sourceHeading(copy, index)}</h3>
               )}
               <p class="copy-spec">
-                {[copy.resolution, copy.format].filter(Boolean).join(" · ") ||
-                  t("Dados técnicos pendentes")}
+                {[
+                  copy.resolution,
+                  copy.sizeGiB != null ? formatGiB(copy.sizeGiB, lang) : null,
+                ]
+                  .filter(Boolean)
+                  .join(" · ") || t("Dados técnicos pendentes")}
               </p>
-              {copy.sizeGiB != null && (
-                <p class="copy-size">{formatGiB(copy.sizeGiB, lang)}</p>
-              )}
               <dl class="archive-languages">
                 {Boolean(copy.audio?.length) && (
                   <>
@@ -375,15 +376,11 @@ const memberSelections = selections.filter((selection) =>
     font-weight: 560;
     margin: 0 0 16px;
   }
-  .copy-spec,
-  .copy-size {
+  .copy-spec {
     color: var(--color-text-head);
     font-size: 18px;
-    margin: 0 0 8px;
+    margin: 0 0 24px;
     line-height: 1.5;
-  }
-  .copy-size {
-    margin-bottom: 24px;
   }
   .archive-languages {
     margin: 20px 0 0;

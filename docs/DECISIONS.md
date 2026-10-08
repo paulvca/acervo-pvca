@@ -39,3 +39,5 @@ Use one responsive editorial composition: poster left, the work in the central c
 Each technical presentation carries its source-specific heading and access links. Equivalent copies remain visually deduplicated without removing any source links. Selection cards reuse the first three posters from the selections index and use the same 4px corner radius as the archive card. Keep the synopsis 32px below the title block; a tall archive card must not stretch the title row.
 
 Primary source: local branch `prototype/movie-detail-20261008`, component `src/components/MovieDetailPrototype.astro`, including the user's copy/access and selection-card adjustments. Production uses `FilmDetail.astro`; prototype controls and routes are excluded. Sharing uses the canonical URL of the current locale, with a manual copy fallback when browser sharing or clipboard access is unavailable.
+
+The approved technical summary shows resolution and size together (for example `1080p · 42,2 GiB`). File/container formats are retained in the data model and local admin but omitted from public film details, matching the existing catalog cards.
