@@ -9,6 +9,7 @@ for (const width of [375, 1440]) {
     await page.goto("filmes/heaven-s-gate-1980/");
     const copies = page.locator(".archive-copy");
     await expect(copies).toHaveCount(2);
+    await expect(page.locator("[data-share]")).toHaveText("Compartilhar filme");
     await expect(copies.locator(".copy-spec")).toHaveText([
       "1080p · 42,2 GiB",
       "1080p · 42,2 GiB",

@@ -166,11 +166,11 @@ const memberSelections = selections.filter((selection) =>
             class="archive-action"
             data-share
             data-title={film.title}
-            data-share-label={t("Compartilhar ficha")}
+            data-share-label={t("Compartilhar filme")}
             data-copied-label={t("Link copiado")}
             data-error-label={t("Copie o endereço desta página")}
           >
-            <span data-share-text>{t("Compartilhar ficha")}</span>
+            <span data-share-text>{t("Compartilhar filme")}</span>
             <svg
               width="18"
               height="18"
@@ -187,7 +187,7 @@ const memberSelections = selections.filter((selection) =>
           <p class="share-feedback" aria-live="polite" hidden></p>
           <input
             class="share-url"
-            aria-label={t("Link da ficha")}
+            aria-label={t("Link do filme")}
             readonly
             hidden
           />
