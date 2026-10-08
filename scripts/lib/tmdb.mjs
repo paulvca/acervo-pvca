@@ -34,6 +34,8 @@ function bridge(root, args) {
     });
   });
 }
+export const searchTmdb = (root, title, year) =>
+  bridge(root, ["search", title, String(year)]);
 export const tmdbStatus = (root) => bridge(root, ["probe"]);
 export async function enrichTmdb(root, id, { refresh = false } = {}) {
   if (!Number.isInteger(id) || id <= 0) throw Error("TMDB_ID_INVALID");

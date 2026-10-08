@@ -40,6 +40,16 @@ test("local editor guards origins and preserves draft/public boundaries", async 
       cpSync(new URL(name, root), join(dir, name), { recursive: true });
     mkdirSync(join(dir, "public/posters"), { recursive: true });
     writeFileSync(join(dir, "data/public/catalog.json"), "[]\n");
+    // The empty fixture uses preview films, not selections from the live catalog.
+    const fixtureEditorialPath = join(dir, "data/public/editorial.json");
+    const fixtureEditorial = JSON.parse(readFileSync(fixtureEditorialPath));
+    fixtureEditorial.selections = fixtureEditorial.selections.map(
+      (selection) => ({ ...selection, filmSlugs: [] })
+    );
+    writeFileSync(
+      fixtureEditorialPath,
+      JSON.stringify(fixtureEditorial, null, 2) + "\n"
+    );
     // Bind an ephemeral port, then recreate with its actual origin policy.
     server = createAdmin(dir, 0);
     await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));

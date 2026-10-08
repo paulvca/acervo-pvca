@@ -44,4 +44,20 @@ class AdapterTests(unittest.TestCase):
                 self.assertNotIn('SYNTHETIC_TEST_ONLY',req.full_url)
                 if 'image.tmdb.org' in req.full_url:self.assertIsNone(req.get_header('Authorization'))
 
+    def test_search_checks_release_year_and_returns_director_evidence(self):
+        requests=[]
+        class Opener:
+            def open(self,request,timeout):
+                requests.append(request.full_url)
+                if '/search/movie' in request.full_url:
+                    data={'results':[{'id':42,'title':'Film','original_title':'Original','release_date':'1971-01-01'},{'id':99,'title':'Remake','release_date':'2000-01-01'}]}
+                else:data={'crew':[{'name':'Director','job':'Director'},{'name':'Producer','job':'Producer'}]}
+                return io.BytesIO(json.dumps(data).encode())
+        with patch.object(bridge,'credential',return_value='SYNTHETIC_TEST_ONLY'),patch.object(bridge.urllib.request,'build_opener',return_value=Opener()):
+            results=bridge.search_movies('Film',1971)
+        self.assertEqual(len(results),1)
+        self.assertEqual(results[0]['directors'],['Director'])
+        self.assertTrue(any('/movie/42/credits' in url for url in requests))
+        self.assertFalse(any('/movie/99/credits' in url for url in requests))
+
 if __name__=='__main__':unittest.main()

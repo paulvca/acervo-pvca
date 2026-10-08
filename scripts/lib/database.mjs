@@ -308,12 +308,13 @@ export function planImport(db, input, schema, publicDir) {
         )
       );
       const row = normalizeFilm(next, merged, previous, safeRefs);
-      const pending = validateCatalog([merged], schema, publicDir);
+      const normalized = exportFilm(next, row);
+      const pending = validateCatalog([normalized], schema, publicDir);
       row.published = pending.length === 0;
       row.sources = { ...row.sources, lastImport: hash(stable(source)) };
       if (
         previous &&
-        stable(old) === stable(merged) &&
+        stable(old) === stable(normalized) &&
         previous.published === row.published
       ) {
         result.status = "ignored";

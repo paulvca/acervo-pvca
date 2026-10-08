@@ -31,7 +31,7 @@ def select_poster(posters, original_language):
         return (rank, -p.get('vote_count', 0), -p.get('vote_average', 0), -p.get('width', 0), p.get('file_path', ''))
     return sorted(eligible, key=key)[0] if eligible else None
 
-def enrich(movie_id, root):
+def api_requester():
     token = credential()
     opener = urllib.request.build_opener(NoRedirect())
     def request(path, params=None):
@@ -50,6 +50,22 @@ def enrich(movie_id, root):
                     continue
                 raise RuntimeError('TMDB_API_FAILED') from None
         raise RuntimeError('TMDB_RATE_LIMIT')
+    return request, opener
+
+def search_movies(query, year):
+    request, _ = api_requester()
+    matches = request("search/movie", {"query":query, "language":"en-US", "include_adult":"false"}).get("results", [])
+    results = []
+    for movie in matches:
+        date = movie.get("release_date", "")
+        if not date or abs(int(date[:4]) - year) > 1:
+            continue
+        credits = request(f'movie/{movie["id"]}/credits')
+        results.append({"id":movie["id"], "title":movie.get("title"), "original_title":movie.get("original_title"), "year":int(date[:4]), "directors":[p["name"] for p in credits.get("crew", []) if p.get("job") == "Director"]})
+    return results
+
+def enrich(movie_id, root):
+    request, opener = api_requester()
     pt = request(f'movie/{movie_id}', {'language':'pt-BR', 'append_to_response':'credits,external_ids'})
     en = request(f'movie/{movie_id}', {'language':'en-US'})
     if pt.get('id') != movie_id or en.get('id') != movie_id: raise RuntimeError('TMDB_IDENTITY_MISMATCH')
@@ -98,6 +114,8 @@ def enrich(movie_id, root):
 
 def main():
     try:
+        if sys.argv[1] == 'search':
+            print(json.dumps(search_movies(sys.argv[2], int(sys.argv[3])), ensure_ascii=False));return
         if sys.argv[1] == 'probe':
             token=credential()
             opener=urllib.request.build_opener(NoRedirect())

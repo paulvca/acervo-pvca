@@ -39,7 +39,21 @@
         "the-flavor-of-green-tea-over-rice-1952",
         "two-in-the-shadow-1967",
         "a-fugitive-from-the-past-1965",
-        "mr-shosuke-ohara-1949"
+        "mr-shosuke-ohara-1949",
+        "white-beast-1950",
+        "sound-of-the-mountain-1954",
+        "floating-clouds-1955",
+        "flowing-1956",
+        "a-whistle-in-my-heart-1959",
+        "daughters-wives-and-a-mother-1960",
+        "the-approach-of-autumn-1960",
+        "when-a-woman-ascends-the-stairs-1960",
+        "a-woman-s-place-1962",
+        "a-legend-or-was-it-1963",
+        "onibaba-1964",
+        "yearning-1964",
+        "the-stranger-within-a-woman-1966",
+        "death-by-hanging-1968"
       ]
     },
     {
@@ -196,7 +210,29 @@
         "mr-shosuke-ohara-1949",
         "love-and-crime-1969",
         "the-friends-1994",
-        "visitor-q-2001"
+        "visitor-q-2001",
+        "flunky-work-hard-1931",
+        "apart-from-you-1933",
+        "every-night-dreams-1933",
+        "wife-be-like-a-rose-1935",
+        "hideko-the-bus-conductor-1941",
+        "white-beast-1950",
+        "sound-of-the-mountain-1954",
+        "floating-clouds-1955",
+        "flowing-1956",
+        "a-whistle-in-my-heart-1959",
+        "daughters-wives-and-a-mother-1960",
+        "the-approach-of-autumn-1960",
+        "when-a-woman-ascends-the-stairs-1960",
+        "a-woman-s-place-1962",
+        "a-legend-or-was-it-1963",
+        "onibaba-1964",
+        "yearning-1964",
+        "the-stranger-within-a-woman-1966",
+        "death-by-hanging-1968",
+        "hotaru-firefly-2001",
+        "cafe-lumiere-2004",
+        "ryuichi-sakamoto-opus-2023"
       ],
       "localized": {
         "en": {
@@ -305,7 +341,27 @@
         "othello-1951",
         "crime-wave-1953",
         "sabrina-1954",
-        "stromboli-1950"
+        "stromboli-1950",
+        "imitation-of-life-1959",
+        "bonjour-tristesse-1958",
+        "the-man-from-planet-x-1951",
+        "lola-montes-1955",
+        "caicara-1950",
+        "white-beast-1950",
+        "amei-um-bicheiro-1952",
+        "the-ringer-1952",
+        "na-senda-do-crime-1954",
+        "sound-of-the-mountain-1954",
+        "floating-clouds-1955",
+        "the-man-from-laramie-1955",
+        "flowing-1956",
+        "les-mistons-1957",
+        "sweet-smell-of-success-1957",
+        "a-whistle-in-my-heart-1959",
+        "o-homem-do-sputnik-1959",
+        "some-like-it-hot-1959",
+        "the-400-blows-1959",
+        "black-orpheus-1959"
       ]
     },
     {
@@ -375,7 +431,8 @@
         "upstream-1927",
         "wee-willie-winkie-1937",
         "what-price-glory-1952",
-        "when-willie-comes-marching-home-1950"
+        "when-willie-comes-marching-home-1950",
+        "fort-apache-1948"
       ],
       "localized": {
         "en": {
@@ -642,7 +699,14 @@
         "lafayette-1962",
         "la-ricotta-1963",
         "stromboli-1950",
-        "pierrot-le-fou-1965"
+        "pierrot-le-fou-1965",
+        "the-bride-wore-black-1968",
+        "mississippi-mermaid-1969",
+        "bed-and-board-1970",
+        "der-leone-have-sept-cabecas-1971",
+        "day-for-night-1973",
+        "the-comfort-of-strangers-1990",
+        "black-orpheus-1959"
       ],
       "localized": {
         "en": {
@@ -707,7 +771,44 @@
         "la-ricotta-1963",
         "pierrot-le-fou-1965",
         "sound-and-fury-1988",
-        "read-my-lips-2001"
+        "read-my-lips-2001",
+        "the-uncertainty-principle-2002",
+        "the-hips-of-j-w-1997",
+        "lola-montes-1955",
+        "in-praise-of-love-2001",
+        "abraham-s-valley-1993",
+        "histoire-s-du-cinema-1989",
+        "l-inhumaine-1924",
+        "les-caves-du-majestic-1945",
+        "les-mistons-1957",
+        "the-400-blows-1959",
+        "shoot-the-piano-player-1960",
+        "une-histoire-d-eau-1961",
+        "antoine-et-colette-1962",
+        "jules-and-jim-1962",
+        "the-soft-skin-1964",
+        "stolen-kisses-1968",
+        "the-bride-wore-black-1968",
+        "mississippi-mermaid-1969",
+        "o-dragao-da-maldade-contra-o-santo-guerreiro-1969",
+        "bed-and-board-1970",
+        "l-enfant-sauvage-1970",
+        "der-leone-have-sept-cabecas-1971",
+        "les-deux-anglaises-et-le-continent-1971",
+        "a-gorgeous-girl-like-me-1972",
+        "day-for-night-1973",
+        "the-story-of-adele-h-1975",
+        "small-change-1976",
+        "the-man-who-loved-women-1977",
+        "the-green-room-1978",
+        "love-on-the-run-1979",
+        "the-last-metro-1980",
+        "the-woman-next-door-1981",
+        "les-ombres-1982",
+        "confidentially-yours-1983",
+        "francois-truffaut-portraits-voles-1993",
+        "three-times-2005",
+        "black-orpheus-1959"
       ],
       "localized": {
         "en": {
@@ -750,7 +851,24 @@
         "they-don-t-wear-black-tie-1981",
         "the-red-light-bandit-1968",
         "black-god-white-devil-1964",
-        "the-margin-1967"
+        "the-margin-1967",
+        "a-mulher-de-todos-1969",
+        "caicara-1950",
+        "amei-um-bicheiro-1952",
+        "na-senda-do-crime-1954",
+        "o-homem-do-sputnik-1959",
+        "barravento-1962",
+        "o-dragao-da-maldade-contra-o-santo-guerreiro-1969",
+        "der-leone-have-sept-cabecas-1971",
+        "cancer-1972",
+        "a-idade-da-terra-1980",
+        "terceiro-milenio-1981",
+        "jango-1984",
+        "ilha-das-flores-1989",
+        "o-quatrilho-1995",
+        "o-que-e-isso-companheiro-1997",
+        "cinema-aspirinas-e-urubus-2005",
+        "black-orpheus-1959"
       ],
       "localized": {
         "en": {
@@ -770,7 +888,11 @@
         "he-goes-long-barefoot-that-waits-for-dead-men-s-shoes-1970",
         "recollections-of-the-yellow-house-1989",
         "silvestre-1982",
-        "come-and-go-2003"
+        "come-and-go-2003",
+        "the-uncertainty-principle-2002",
+        "the-hips-of-j-w-1997",
+        "francisca-1981",
+        "abraham-s-valley-1993"
       ],
       "localized": {
         "en": {
@@ -791,7 +913,9 @@
         "war-and-peace-part-ii-natasha-rostova-1966",
         "war-and-peace-part-iii-the-year-1812-1967",
         "war-and-peace-part-iv-pierre-bezukhov-1967",
-        "letter-never-sent-1960"
+        "letter-never-sent-1960",
+        "one-hundred-days-after-childhood-1975",
+        "the-ascent-1977"
       ],
       "localized": {
         "en": {

@@ -138,3 +138,20 @@ test("normalizes shared genre and country identities while retaining source name
   assert.equal(merged.entity_refs.genres[0].id, "tmdb-37");
   assert.deepEqual(merged.localized_metadata["pt-BR"].genres, ["Faroeste"]);
 });
+test("retains normalized entities and both localized labels when all metadata comes from enrichment", () => {
+  const record = convertCanonical(fixture()).records[0];
+  record.countries = [];
+  record.genres = [];
+  const enriched = {
+    countries: ["França"],
+    genres: ["Comédia"],
+    entity_refs: { countries: [{ id: "FR" }], genres: [{ id: "tmdb-35" }] },
+    localized_metadata: {
+      "pt-BR": { countries: ["França"], genres: ["Comédia"] },
+      en: { countries: ["France"], genres: ["Comedy"] },
+    },
+  };
+  const merged = mergeEnrichment(record, enriched);
+  assert.deepEqual(merged.entity_refs.countries, [{ id: "FR" }]);
+  assert.deepEqual(merged.localized_metadata.en.genres, ["Comedy"]);
+});

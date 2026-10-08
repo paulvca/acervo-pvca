@@ -78,6 +78,8 @@ const knownLanguages = {
 function language(tag, subtitle, options) {
   const value = text(tag)?.toLowerCase();
   if (!value) return null;
+  if (value === "pt-br") return "pt-BR";
+  if (value === "pt-pt") return "pt-PT";
   if (
     subtitle &&
     ["por", "pt", "pt-br"].includes(value) &&
@@ -256,6 +258,11 @@ export function mergeEnrichment(record, enriched) {
     "genres",
     "original_languages",
   ]) {
+    if (!record[field]?.length) {
+      if (enriched.entity_refs?.[field])
+        refs[field] = enriched.entity_refs[field];
+      continue;
+    }
     const source = record[field]?.length
       ? record[field]
       : (enriched[field] ?? []);

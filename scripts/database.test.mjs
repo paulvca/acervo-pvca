@@ -68,6 +68,28 @@ test("bulk imports reuse entities and are idempotent at 1000 records", () => {
     publicRecords(first.database)
   );
 });
+test("reimports compare canonical entity projections when incoming labels use another locale", () => {
+  const original = {
+    ...fixture(),
+    countries: ["France"],
+    entity_refs: { countries: [{ id: "FR" }] },
+  };
+  const db = planImport(emptyDatabase(), [original], schema, temp).database;
+  const localized = {
+    ...fixture(2),
+    countries: ["França"],
+    entity_refs: { countries: [{ id: "FR" }] },
+  };
+  const first = planImport(db, [localized], schema, temp);
+  assert.equal(first.summary.created, 1);
+  const again = planImport(first.database, [localized], schema, temp);
+  assert.equal(again.summary.ignored, 1);
+  assert.equal(Object.keys(again.database.entities.countries).length, 1);
+  assert.deepEqual(
+    publicRecords(again.database),
+    publicRecords(first.database)
+  );
+});
 test("manual field and translation locks survive enrichment and reimports", () => {
   const first = planImport(emptyDatabase(), [fixture()], schema, temp).database;
   const record = allRecords(first)[0];
