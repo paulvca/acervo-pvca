@@ -45,25 +45,26 @@ export function staticTranslations(source) {
   visit(tree);
   return strings;
 }
+export function astroParts(raw) {
+  return [
+    raw.match(/^---\s*\n([\s\S]*?)\n---/)?.[1] ?? "",
+    ...[...raw.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script\s*>/gi)].map(
+      (match) => match[1]
+    ),
+    "<>" +
+      raw
+        .replace(/^---\s*\n[\s\S]*?\n---/, "")
+        .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ") +
+      "</>",
+  ];
+}
 test("all static public t() interface strings have English coverage", () => {
   const missing = [];
   for (const file of files("src").filter((file) =>
     /\.(astro|ts)$/.test(file)
   )) {
     const raw = readFileSync(file, "utf8");
-    const parts = file.endsWith(".astro")
-      ? [
-          raw.match(/^---\s*\n([\s\S]*?)\n---/)?.[1] ?? "",
-          ...[...raw.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)].map(
-            (match) => match[1]
-          ),
-          "<>" +
-            raw
-              .replace(/^---\s*\n[\s\S]*?\n---/, "")
-              .replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, " ") +
-            "</>",
-        ]
-      : [raw];
+    const parts = file.endsWith(".astro") ? astroParts(raw) : [raw];
     const found = new Set(
       parts.flatMap((part) => [...staticTranslations(part)])
     );
@@ -83,4 +84,17 @@ test("coverage detects absent keys and conditional labels, leaving dynamic cinem
     ["Missing UI", "filme", "filmes"]
   );
   assert.equal(Object.hasOwn(en, "Missing UI"), false);
+});
+
+test("Astro UI extraction accepts uppercase tags and whitespace before end-tag brackets", () => {
+  const parts = astroParts(`---
+const title = t("filme");
+---
+<SCRIPT>const label = t("filmes");</SCRIPT >
+<STYLE>p { color: red; }</STYLE >
+<p>{t("Missing UI")}</p>`);
+  assert.deepEqual(
+    parts.flatMap((part) => [...staticTranslations(part)]),
+    ["filme", "filmes", "Missing UI"]
+  );
 });
