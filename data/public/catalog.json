@@ -30505,5 +30505,168 @@
     "countries": ["Brazil", "France", "Italy"],
     "genres": ["Drama", "Romance"],
     "original_languages": ["pt"]
+  },
+  {
+    "id": "PVCA-000139",
+    "slug": "song-of-home-1925",
+    "title": "Song of Home",
+    "year": 1925,
+    "copies": [
+      {
+        "id": "pvca-000139-archive",
+        "resolution": "480p",
+        "size_gib": 0.8690967559814453,
+        "format": "AVI",
+        "audio_languages": [],
+        "subtitle_languages": []
+      }
+    ],
+    "catalog_copy_id": "pvca-000139-archive",
+    "poster": "/posters/song-of-home-1925-editorial.png",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/the-song-of-home-1925-480p",
+        "copy_id": "pvca-000139-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 184867,
+    "original_title": "ふるさとの歌",
+    "release_date": "1925-09-16",
+    "runtime_minutes": 50,
+    "imdb_id": "tt0015847",
+    "translations": {
+      "pt-BR": {
+        "title": "Canção da Terra Natal",
+        "synopsis": "Este trigésimo filme de Mizoguchi é o exemplo mais antigo preservado de sua obra e o único dos anos 1920 que sobreviveu completo. O diretor já se volta para o choque entre valores tradicionais e modernos, contrastando dois rapazes do campo: um cocheiro que nunca saiu de sua terra e um estudante que retorna de Tóquio com maneiras urbanas e discos de jazz ocidental. Produzido pelo Ministério da Educação, o filme tem uma lição pedagógica simples em seu centro, mas permanece na memória por suas qualidades mais sutis: a evocação doce e lírica de um passado rural desaparecido."
+      },
+      "en": {
+        "title": "Song of Home",
+        "synopsis": "Mizoguchi’s 30th film is the earliest surviving example of his work, and his only film of the 1920s to survive complete. Song of Home finds the director already concerning himself with the collision of traditional and modern values. The film is structured around the contrast of two country-bred boys: a coach driver who has never left his home, and a student who returns from Tokyo with city-slicker affectations and Western jazz records. Produced by the Ministry of Education, the film has a simplistic lesson-plan at its heart, but what lingers in the mind after viewing are its more ineffable qualities: The dulcet, lyric, evocation of a disappeared rural past."
+      }
+    },
+    "synopsis": "Este trigésimo filme de Mizoguchi é o exemplo mais antigo preservado de sua obra e o único dos anos 1920 que sobreviveu completo. O diretor já se volta para o choque entre valores tradicionais e modernos, contrastando dois rapazes do campo: um cocheiro que nunca saiu de sua terra e um estudante que retorna de Tóquio com maneiras urbanas e discos de jazz ocidental. Produzido pelo Ministério da Educação, o filme tem uma lição pedagógica simples em seu centro, mas permanece na memória por suas qualidades mais sutis: a evocação doce e lírica de um passado rural desaparecido.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Japão"],
+        "genres": ["Drama"]
+      },
+      "en": {
+        "countries": ["Japan"],
+        "genres": ["Drama"]
+      }
+    },
+    "directors": ["Kenji Mizoguchi"],
+    "countries": ["Japan"],
+    "genres": ["Drama"],
+    "original_languages": ["ja"]
+  },
+  {
+    "id": "PVCA-000196",
+    "slug": "we-sail-at-midnight-1943",
+    "title": "We Sail at Midnight",
+    "year": 1943,
+    "copies": [
+      {
+        "id": "pvca-000196-archive",
+        "resolution": "480p",
+        "size_gib": 0.07636743225157261,
+        "format": "MP4/MOV",
+        "audio_languages": ["und"],
+        "subtitle_languages": []
+      }
+    ],
+    "catalog_copy_id": "pvca-000196-archive",
+    "poster": "/posters/we-sail-at-midnight-1943-editorial.png",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/we-sail-at-midnight-1943-480p",
+        "copy_id": "pvca-000196-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 1198381,
+    "original_title": "We Sail at Midnight",
+    "release_date": "1943-10-30",
+    "runtime_minutes": 27,
+    "imdb_id": "tt0036517",
+    "translations": {
+      "pt-BR": {
+        "title": "We Sail at Midnight",
+        "synopsis": "Um curta em estilo documental que conta como os britânicos obtiveram dos Estados Unidos uma ferramenta especial para ajudar na construção de um tanque."
+      },
+      "en": {
+        "title": "We Sail at Midnight",
+        "synopsis": "A short documentary style film it depicts the story of The British obtaining a special tool from America to help with the building of a tank."
+      }
+    },
+    "synopsis": "Um curta em estilo documental que conta como os britânicos obtiveram dos Estados Unidos uma ferramenta especial para ajudar na construção de um tanque.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Reino Unido"],
+        "genres": ["Documentário", "Guerra"]
+      },
+      "en": {
+        "countries": ["United Kingdom"],
+        "genres": ["Documentary", "War"]
+      }
+    },
+    "directors": ["Julian Spiro", "John Ford"],
+    "countries": ["United Kingdom"],
+    "genres": ["Documentary", "War"],
+    "original_languages": ["en"]
+  },
+  {
+    "id": "PVCA-000481",
+    "slug": "los-4-golpes-1962",
+    "title": "Los 4 golpes",
+    "year": 1962,
+    "copies": [
+      {
+        "id": "pvca-000481-drive",
+        "resolution": "720p",
+        "size_gib": 0.057664779014885426,
+        "format": "MKV",
+        "audio_languages": [],
+        "subtitle_languages": []
+      }
+    ],
+    "catalog_copy_id": "pvca-000481-drive",
+    "poster": "/posters/los-4-golpes-1962-editorial.png",
+    "external_links": [],
+    "selections": [],
+    "tmdb_id": 435872,
+    "original_title": "Los 4 Golpes",
+    "release_date": "1962-08-17",
+    "runtime_minutes": 3,
+    "imdb_id": "tt5660184",
+    "translations": {
+      "pt-BR": {
+        "title": "Los 4 Golpes",
+        "synopsis": "Em 1962, durante a apresentação de Jules e Jim no Festival Internacional de Cinema de Mar del Plata, François Truffaut realizou este breve filme em 16 mm. Num esquete em preto e branco, o próprio cineasta interpreta um aspirante a assassino que encena um crime cômico no saguão do Hotel Hermitage. O curta permaneceu pouco visto até ser redescoberto e exibido no festival em 2016."
+      },
+      "en": {
+        "title": "Los 4 Golpes",
+        "synopsis": "In 1962 while presenting Jules et Jim at the Mar del Plata International Film Festival, which earned him the Best Director Award, François Truffaut shot this playful short film in 16 mm. A brief black‑and‑white sketch featuring Truffaut himself as a would-be assassin staging a comic murder in the lobby of the Hotel Hermitage. The film was rarely seen until its rediscovery and screening at MDQFF 2016."
+      }
+    },
+    "synopsis": "Em 1962, durante a apresentação de Jules e Jim no Festival Internacional de Cinema de Mar del Plata, François Truffaut realizou este breve filme em 16 mm. Num esquete em preto e branco, o próprio cineasta interpreta um aspirante a assassino que encena um crime cômico no saguão do Hotel Hermitage. O curta permaneceu pouco visto até ser redescoberto e exibido no festival em 2016.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Argentina"],
+        "genres": ["Crime", "Comédia"]
+      },
+      "en": {
+        "countries": ["Argentina"],
+        "genres": ["Crime", "Comedy"]
+      }
+    },
+    "added_at": "2026-10-07",
+    "directors": ["François Truffaut"],
+    "countries": ["Argentina"],
+    "genres": ["Crime", "Comedy"],
+    "original_languages": ["es"]
   }
 ]

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-labelledby="title desc">
+<title id="title">SONG OF HOME (1925)</title>
+<desc id="desc">Editorial typographic cover created for Acervo PVCA. Not an original theatrical poster.</desc>
+<rect width="600" height="900" fill="#1C1B1A"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#FFFCF0">
+<text x="64" y="94" font-size="20" letter-spacing="3" fill="#9F9D96">ACERVO PVCA</text>
+<path d="M64 124H536 M64 612H536" stroke="#575653" stroke-width="1"/>
+<text x="64" y="370" font-size="64" font-weight="600">SONG</text><text x="64" y="446" font-size="64" font-weight="600">OF HOME</text>
+<text x="64" y="542" font-size="38" fill="#CECDC3">1925</text>
+<text x="64" y="670" font-size="22">Kenji Mizoguchi</text>
+<text x="64" y="822" font-size="16" letter-spacing="2" fill="#9F9D96">CAPA EDITORIAL · EDITORIAL COVER</text>
+</g>
+</svg>
