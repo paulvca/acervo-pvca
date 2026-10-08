@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-labelledby="title desc">
+<title id="title">WE SAIL AT MIDNIGHT (1943)</title>
+<desc id="desc">Editorial typographic cover created for Acervo PVCA. Not an original theatrical poster.</desc>
+<rect width="600" height="900" fill="#1C1B1A"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#FFFCF0">
+<text x="64" y="94" font-size="20" letter-spacing="3" fill="#9F9D96">ACERVO PVCA</text>
+<path d="M64 124H536 M64 612H536" stroke="#575653" stroke-width="1"/>
+<text x="64" y="370" font-size="64" font-weight="600">WE SAIL</text><text x="64" y="446" font-size="64" font-weight="600">AT MIDNIGHT</text>
+<text x="64" y="542" font-size="38" fill="#CECDC3">1943</text>
+<text x="64" y="670" font-size="22">Julian Spiro</text><text x="64" y="700" font-size="22">John Ford</text>
+</g>
+</svg>
