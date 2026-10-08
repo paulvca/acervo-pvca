@@ -51,3 +51,8 @@ references/**/node_modules/
 *.part
 *.bak
 *~
+
+# Local quality reports
+playwright-report/
+test-results/
+reports/

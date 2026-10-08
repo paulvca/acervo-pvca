@@ -22,7 +22,9 @@ O frontend nunca deve consumir diretamente inventários operacionais, caminhos l
 ## Local development and data intake
 
 Use `npm run dev` for local development and `npm run build` for the static build.
-The final public catalog starts empty, preserving the existing development preview.
+The published baseline contains 526 validated works. `data/public/catalog.json`
+is the public projection; an empty projection activates the development preview
+only as an explicit fallback, not as the current publication state.
 
 The [field guide](docs/CAMPOS_DO_ACERVO.md) explains the supported information.
 Use `npm run admin` for the private local editor; see the
@@ -30,9 +32,15 @@ Use `npm run admin` for the private local editor; see the
 The [intake workflow](docs/DATA_INTAKE.md) documents validation and local imports.
 The [architecture guide](docs/ARCHITECTURE.md) describes bilingual routes,
 normalized local storage, import previews, editorial protection and TMDB enrichment.
-The environment does not require a spreadsheet. Later, compare the real catalog
-with the supported fields and review the result locally before any publication.
+The environment does not require a spreadsheet. Review intake previews and the
+public projection locally before publishing changes.
 Use `npm run catalog:test`, `npm run data:test`, `npm run admin:test` and
 `npm run tmdb:test` to verify the ingestion and local administration workflows.
+
+## Quality
+
+Run `npm run quality`, build with the Pages site/base, then run `site_check.py`
+and `npm run e2e`. See [quality and maintenance](docs/QUALITY.md). Browser tests
+require `npx --no-install playwright install chromium` once locally.
 
 A licença do código ainda não foi definida.

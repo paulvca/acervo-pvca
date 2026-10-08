@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.22.3"
   },
   "scripts": {
     "dev": "astro dev",
@@ -20,14 +20,35 @@
     "catalog:test": "node --test scripts/catalog.test.mjs",
     "prepare": "husky",
     "catalog:prepare": "node scripts/prepare-canonical.mjs",
-    "canonical:test": "node --test scripts/canonical.test.mjs"
+    "canonical:test": "node --test scripts/canonical.test.mjs",
+    "check": "astro check",
+    "test": "node --experimental-strip-types --test scripts/*.test.mjs && npm run tmdb:test && npm run site:test",
+    "browser:test": "node --test scripts/browser-behavior.test.mjs",
+    "site:test": "python3 -m unittest discover -s scripts -p \"site_check_test.py\"",
+    "format:check": "node scripts/format-check.mjs",
+    "lint": "eslint . --max-warnings 0",
+    "e2e": "playwright test",
+    "e2e:server": "node scripts/serve-dist.mjs",
+    "quality": "npm run format:check && npm run lint && npm run check && npm test && npm run catalog:check"
   },
   "dependencies": {
+    "@astrojs/sitemap": "3.7.4",
     "astro": "7.3.5"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@axe-core/playwright": "4.13.0",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.0",
+    "@types/node": "22.20.5",
+    "eslint": "10.12.0",
+    "eslint-plugin-astro": "3.2.1",
+    "globals": "17.13.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
-    "prettier": "^3.9.9"
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "1.1.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1"
   }
 }

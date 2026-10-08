@@ -1,238 +1,275 @@
 ---
-import {getI18n,localizeFilm} from '../lib/i18n';
-import FilmCard from './FilmCard.astro';
-import type {CatalogPreviewFilm} from '../data/catalog-preview';
-interface Props {films: CatalogPreviewFilm[]; title: string; description?: string; isPreview?: boolean; backHref?: string; backLabel?: string;}
-const {films,title,description,isPreview=false,backHref,backLabel}=Astro.props;
-const {lang,t}=getI18n(Astro.url);
+import { getI18n, localizeFilm } from "../lib/i18n";
+import FilmCard from "./FilmCard.astro";
+import type { CatalogPreviewFilm } from "../data/catalog-preview";
+interface Props {
+  films: CatalogPreviewFilm[];
+  title: string;
+  description?: string;
+  isPreview?: boolean;
+  backHref?: string;
+  backLabel?: string;
+}
+const {
+  films,
+  title,
+  description,
+  isPreview = false,
+  backHref,
+  backLabel,
+} = Astro.props;
+const { lang, t } = getI18n(Astro.url);
 ---
-    <section class="wrap page-head catalog-page-head">
-      {backHref && <a class="back-link" href={backHref}>{backLabel}</a>}
-      <h1>{title}</h1>
-      {description && <p>{description}</p>}
 
-      <div class="catalog-search-row">
-        <label class="search-field">
-          <span class="sr-only">{t("Buscar no catálogo")}</span>
-          <input
-            id="filmSearch"
-            type="search"
-            autocomplete="off"
-            placeholder={t("Buscar por título, diretor ou ano")}
-          />
-        </label>
+<section class="wrap page-head catalog-page-head">
+  {backHref && (
+    <a class="back-link" href={backHref}>
+      {backLabel}
+    </a>
+  )}
+  <h1>{title}</h1>
+  {description && <p>{description}</p>}
 
-        <span id="resultCount" class="result-count" aria-live="polite">
-          {films.length} {t('filmes')}{isPreview ? t(' nesta prévia') : ''}
-        </span>
+  <div class="catalog-search-row">
+    <label class="search-field">
+      <span class="sr-only">{t("Buscar no catálogo")}</span>
+      <input
+        id="filmSearch"
+        type="search"
+        autocomplete="off"
+        placeholder={t("Buscar por título, diretor ou ano")}
+      />
+    </label>
+
+    <span id="resultCount" class="result-count" aria-live="polite">
+      {films.length} {t("filmes")}
+      {isPreview ? t(" nesta prévia") : ""}
+    </span>
+  </div>
+
+  <div class="catalog-controls">
+    <div class="catalog-filters" role="group" aria-label={t("Filtrar filmes")}>
+      <button
+        class="catalog-filter active"
+        type="button"
+        data-filter="all"
+        aria-pressed="true"
+      >
+        {t("Todos")}
+      </button>
+      <button
+        class="catalog-filter"
+        type="button"
+        data-filter="ptbr"
+        aria-pressed="false"
+      >
+        pt-BR
+      </button>
+      <button
+        class="catalog-filter"
+        type="button"
+        data-filter="4k"
+        aria-pressed="false"
+      >
+        4K
+      </button>
+    </div>
+
+    <div class="catalog-display-controls">
+      <label class="catalog-sort">
+        <span class="sr-only">{t("Ordenar filmes")}</span>
+        <select id="filmSort">
+          <option value="title">{t("Título A–Z")}</option>
+          <option value="year-desc">{t("Ano: mais recente")}</option>
+          <option value="year-asc">{t("Ano: mais antigo")}</option>
+        </select>
+      </label>
+
+      <div
+        class="catalog-view-switch"
+        role="group"
+        aria-label={t("Visualização")}
+      >
+        <button
+          type="button"
+          class="catalog-view active"
+          data-view="grid"
+          data-preview={isPreview ? "true" : "false"}
+          aria-pressed="true"
+        >
+          {t("Grade")}
+        </button>
+        <button
+          type="button"
+          class="catalog-view"
+          data-view="list"
+          aria-pressed="false"
+        >
+          {t("Lista")}
+        </button>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="catalog-controls" aria-label={t("Controles do catálogo")}>
-        <div class="catalog-filters" aria-label={t("Filtrar filmes")}>
-          <button
-            class="catalog-filter active"
-            type="button"
-            data-filter="all"
-            aria-pressed="true"
-          >{t("Todos")}</button>
-          <button
-            class="catalog-filter"
-            type="button"
-            data-filter="ptbr"
-            aria-pressed="false"
-          >
-            pt-BR
-          </button>
-          <button
-            class="catalog-filter"
-            type="button"
-            data-filter="4k"
-            aria-pressed="false"
-          >
-            4K
-          </button>
-        </div>
-
-        <div class="catalog-display-controls">
-          <label class="catalog-sort">
-            <span class="sr-only">{t("Ordenar filmes")}</span>
-            <select id="filmSort">
-              <option value="title">{t("Título A–Z")}</option>
-              <option value="year-desc">{t("Ano: mais recente")}</option>
-              <option value="year-asc">{t("Ano: mais antigo")}</option>
-            </select>
-          </label>
-
-          <div class="catalog-view-switch" aria-label={t("Visualização")}>
-            <button
-              type="button"
-              class="catalog-view active"
-              data-view="grid"
-      data-preview={isPreview ? 'true' : 'false'}
-              aria-pressed="true"
-            >{t("Grade")}</button>
-            <button
-              type="button"
-              class="catalog-view"
-              data-view="list"
-              aria-pressed="false"
-            >{t("Lista")}</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {isPreview && <p class="wrap data-note">{t("Prévia de desenvolvimento: pôsteres, resoluções e tamanhos ausentes estão indicados como pendentes.")}</p>}
-    <section
-      aria-label={t("Filmes do catálogo")}
-      class="wrap film-catalog"
-      id="catalog"
-      data-view="grid"
-      data-preview={isPreview ? 'true' : 'false'}
-    >
-      {[...films].sort((a,b) => localizeFilm(a,lang).title.localeCompare(localizeFilm(b,lang).title, lang)).map((film) => <FilmCard film={film} />)}
-    </section>
-
-    <p class="wrap empty-state catalog-empty" id="emptyCatalog" hidden>
-      {t('Nenhum filme encontrado')}{isPreview ? t(' nesta prévia') : ''}.
-    </p>
-  <script>
-import {translate} from "../../scripts/i18n/public.mjs";
-const lang=document.documentElement.lang;
-const t=(text:string)=>translate(lang,text);
-    const catalog = document.querySelector('#catalog');
-    const search = document.querySelector('#filmSearch');
-    const counter = document.querySelector('#resultCount');
-    const empty = document.querySelector('#emptyCatalog');
-    const sort = document.querySelector('#filmSort');
-    const filterButtons = Array.from(
-      document.querySelectorAll<HTMLButtonElement>('.catalog-filter')
-    );
-    const viewButtons = Array.from(
-      document.querySelectorAll<HTMLButtonElement>('.catalog-view')
-    );
-
-    const cards = catalog
-      ? Array.from(catalog.querySelectorAll<HTMLElement>('.film-card'))
-      : [];
-
-    let activeFilter = 'all';
-
-    function normalize(value: string) {
-      return value
-        .normalize('NFD')
-        .replace(/\p{Diacritic}/gu, '')
-        .toLocaleLowerCase('pt-BR');
-    }
-
-    function matchesFilter(card: HTMLElement) {
-      if (activeFilter === 'ptbr') {
-        return card.dataset.ptbr === 'true';
-      }
-
-      if (activeFilter === '4k') {
-        return card.dataset.resolution === '2160p';
-      }
-
-      return true;
-    }
-
-    function compareCards(a: HTMLElement, b: HTMLElement) {
-      const mode =
-        sort instanceof HTMLSelectElement ? sort.value : 'title';
-
-      if (mode === 'year-desc') {
-        return Number(b.dataset.year) - Number(a.dataset.year);
-      }
-
-      if (mode === 'year-asc') {
-        return Number(a.dataset.year) - Number(b.dataset.year);
-      }
-
-      return (a.dataset.title ?? '').localeCompare(
-        b.dataset.title ?? '',
+{isPreview && (
+  <p class="wrap data-note">
+    {t(
+      "Prévia de desenvolvimento: pôsteres, resoluções e tamanhos ausentes estão indicados como pendentes."
+    )}
+  </p>
+)}
+<section
+  aria-label={t("Filmes do catálogo")}
+  class="wrap film-catalog"
+  id="catalog"
+  data-view="grid"
+  data-preview={isPreview ? "true" : "false"}
+>
+  {[...films]
+    .sort((a, b) =>
+      localizeFilm(a, lang).title.localeCompare(
+        localizeFilm(b, lang).title,
         lang
-      );
+      )
+    )
+    .map((film) => (
+      <FilmCard film={film} />
+    ))}
+</section>
+
+<p class="wrap empty-state catalog-empty" id="emptyCatalog" hidden>
+  {t("Nenhum filme encontrado")}
+  {isPreview ? t(" nesta prévia") : ""}.
+</p>
+<script>
+  import { translate } from "../../scripts/i18n/public.mjs";
+  const lang = document.documentElement.lang;
+  const t = (text: string) => translate(lang, text);
+  const catalog = document.querySelector("#catalog");
+  const search = document.querySelector("#filmSearch");
+  const counter = document.querySelector("#resultCount");
+  const empty = document.querySelector<HTMLElement>("#emptyCatalog");
+  const sort = document.querySelector("#filmSort");
+  const filterButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>(".catalog-filter")
+  );
+  const viewButtons = Array.from(
+    document.querySelectorAll<HTMLButtonElement>(".catalog-view")
+  );
+
+  const cards = catalog
+    ? Array.from(catalog.querySelectorAll<HTMLElement>(".film-card"))
+    : [];
+
+  let activeFilter = "all";
+
+  function normalize(value: string) {
+    return value
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLocaleLowerCase("pt-BR");
+  }
+
+  const searchable = new Map(
+    cards.map((card) => [card, normalize(card.dataset.search ?? "")])
+  );
+
+  function matchesFilter(card: HTMLElement) {
+    if (activeFilter === "ptbr") {
+      return card.dataset.ptbr === "true";
     }
 
-    function applyCatalog() {
-      const query =
-        search instanceof HTMLInputElement
-          ? normalize(search.value.trim())
-          : '';
-
-      const ordered = [...cards].sort(compareCards);
-      let visible = 0;
-
-      for (const card of ordered) {
-        const haystack = normalize(card.dataset.search ?? '');
-        const show =
-          (!query || haystack.includes(query)) &&
-          matchesFilter(card);
-
-        card.hidden = !show;
-
-        if (show) visible += 1;
-        catalog?.append(card);
-      }
-
-      if (counter) {
-        counter.textContent =
-          `${visible} ${t(visible === 1 ? 'filme' : 'filmes')}${catalog?.getAttribute('data-preview') === 'true' ? t(' nesta prévia') : ''}`;
-      }
-
-      if (empty) empty.hidden = visible !== 0;
+    if (activeFilter === "4k") {
+      return card.dataset.resolution === "2160p";
     }
 
-    function setFilter(button: HTMLButtonElement) {
-      activeFilter = button.dataset.filter ?? 'all';
+    return true;
+  }
 
-      for (const candidate of filterButtons) {
-        const selected = candidate === button;
-        candidate.classList.toggle('active', selected);
-        candidate.setAttribute(
-          'aria-pressed',
-          selected ? 'true' : 'false'
-        );
-      }
+  function compareCards(a: HTMLElement, b: HTMLElement) {
+    const mode = sort instanceof HTMLSelectElement ? sort.value : "title";
 
-      applyCatalog();
+    if (mode === "year-desc") {
+      return Number(b.dataset.year) - Number(a.dataset.year);
     }
 
-    function setView(button: HTMLButtonElement) {
-      const view = button.dataset.view === 'list' ? 'list' : 'grid';
-
-      catalog?.setAttribute('data-view', view);
-
-      for (const candidate of viewButtons) {
-        const selected = candidate === button;
-        candidate.classList.toggle('active', selected);
-        candidate.setAttribute(
-          'aria-pressed',
-          selected ? 'true' : 'false'
-        );
-      }
+    if (mode === "year-asc") {
+      return Number(a.dataset.year) - Number(b.dataset.year);
     }
 
-    if (search instanceof HTMLInputElement) {
-      const query =
-        new URLSearchParams(window.location.search).get('q') ?? '';
+    return (a.dataset.title ?? "").localeCompare(b.dataset.title ?? "", lang);
+  }
 
-      search.value = query;
-      search.addEventListener('input', applyCatalog);
+  function applyCatalog() {
+    const query =
+      search instanceof HTMLInputElement ? normalize(search.value.trim()) : "";
+
+    let visible = 0;
+
+    for (const card of cards) {
+      const haystack = searchable.get(card) ?? "";
+      const show = (!query || haystack.includes(query)) && matchesFilter(card);
+
+      card.hidden = !show;
+
+      if (show) visible += 1;
     }
 
-    if (sort instanceof HTMLSelectElement) {
-      sort.addEventListener('change', applyCatalog);
+    if (counter) {
+      counter.textContent = `${visible} ${t(visible === 1 ? "filme" : "filmes")}${catalog?.getAttribute("data-preview") === "true" ? t(" nesta prévia") : ""}`;
     }
 
-    for (const button of filterButtons) {
-      button.addEventListener('click', () => setFilter(button));
-    }
+    if (empty) empty.hidden = visible !== 0;
+  }
 
-    for (const button of viewButtons) {
-      button.addEventListener('click', () => setView(button));
+  function setFilter(button: HTMLButtonElement) {
+    activeFilter = button.dataset.filter ?? "all";
+
+    for (const candidate of filterButtons) {
+      const selected = candidate === button;
+      candidate.classList.toggle("active", selected);
+      candidate.setAttribute("aria-pressed", selected ? "true" : "false");
     }
 
     applyCatalog();
-  </script>
+  }
+
+  function setView(button: HTMLButtonElement) {
+    const view = button.dataset.view === "list" ? "list" : "grid";
+
+    catalog?.setAttribute("data-view", view);
+
+    for (const candidate of viewButtons) {
+      const selected = candidate === button;
+      candidate.classList.toggle("active", selected);
+      candidate.setAttribute("aria-pressed", selected ? "true" : "false");
+    }
+  }
+
+  if (search instanceof HTMLInputElement) {
+    const query = new URLSearchParams(window.location.search).get("q") ?? "";
+
+    search.value = query;
+    search.addEventListener("input", applyCatalog);
+  }
+
+  if (sort instanceof HTMLSelectElement) {
+    sort.addEventListener("change", () => {
+      const fragment = document.createDocumentFragment();
+      fragment.append(...[...cards].sort(compareCards));
+      catalog?.append(fragment);
+      applyCatalog();
+    });
+  }
+
+  for (const button of filterButtons) {
+    button.addEventListener("click", () => setFilter(button));
+  }
+
+  for (const button of viewButtons) {
+    button.addEventListener("click", () => setView(button));
+  }
+
+  applyCatalog();
+</script>
