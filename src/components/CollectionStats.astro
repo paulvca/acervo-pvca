@@ -7,7 +7,7 @@ import {catalogCopy, hasPtBr} from '../lib/catalog';
 import {selections} from '../data/selections';
 const stats = [
  [catalogPreview.length, isPreview ? t('filmes nesta prévia') : t('filmes catalogados')],
- [catalogPreview.filter(hasPtBr).length, t('com legenda em português')],
+ [catalogPreview.filter(hasPtBr).length, t('com legendas em português do Brasil')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '2160p').length, t('em 2160p')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '1080p').length, t('em 1080p')],
  [selections.filter(selection => selection.films.length).length, t('seleções com filmes')],

@@ -10,8 +10,8 @@ export const en = {
     "Films I have been collecting, preserving and organizing over time.",
   "O Acervo PVCA nasceu da organização da minha coleção pessoal de cinema. Ao longo do tempo, passou a reunir diferentes cópias, legendas revisadas e informações sobre cada obra.":
     "Acervo PVCA began as a way to organize my personal film collection. Over time, it came to include different copies, revised subtitles and information about each film.",
-  "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e encontrar caminhos pela coleção através das minhas seleções.":
-    "This site opens the collection to visitors. Here, you can explore the films, learn about the preserved copies and find paths through the collection with my selections.",
+  "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e percorrer a coleção pelas minhas seleções.":
+    "This site opens the collection to visitors. Here, you can browse the films, learn about the preserved copies and explore the collection through my selections.",
   "O que você encontra": "What you will find",
   "Cada ficha reúne informações sobre o filme, como direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, formato, áudio e legendas.":
     "Each film page brings together information such as director, year, country and running time, alongside the details of the preserved copy: resolution, file size, format, audio and subtitles.",
@@ -73,7 +73,7 @@ export const en = {
     "The entire collection, organized for exploring or finding a film quickly.",
   "Catálogo visual do Acervo PVCA.": "The Acervo PVCA film catalog.",
   "Buscar no catálogo": "Search the catalog",
-  "buscar por título, diretor ou ano": "search by title, director or year",
+  "Buscar por título, diretor ou ano": "Search by title, director or year",
   "Controles do catálogo": "Catalog controls",
   "Filtrar filmes": "Filter films",
   Todos: "All",
@@ -121,7 +121,7 @@ export const en = {
   "Também aparece em": "Also in",
   "filmes nesta prévia": "films in this preview",
   "filmes catalogados": "cataloged films",
-  "com legenda em português": "with Portuguese subtitles",
+  "com legendas em português do Brasil": "with Brazilian Portuguese subtitles",
   "em 2160p": "in 2160p",
   "em 1080p": "in 1080p",
   "seleções com filmes": "selections with films",
