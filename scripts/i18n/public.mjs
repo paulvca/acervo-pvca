@@ -121,7 +121,7 @@ export const en = {
   "Também aparece em": "Also in",
   "filmes nesta prévia": "films in this preview",
   "filmes catalogados": "cataloged films",
-  "com legendas em português do Brasil": "with Brazilian Portuguese subtitles",
+  "com legendas em português": "with Portuguese subtitles",
   "em 2160p": "in 2160p",
   "em 1080p": "in 1080p",
   "seleções com filmes": "selections with films",

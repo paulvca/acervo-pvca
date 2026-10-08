@@ -125,24 +125,24 @@
     {
       "id": "legendas-em-portugues",
       "title": "Com legendas em português",
-      "description": "Filmes com legendas em português do Brasil na cópia apresentada no catálogo.",
+      "description": "Filmes do acervo com legendas em português.",
       "rule": "pt-br",
       "filmSlugs": [],
       "localized": {
         "en": {
-          "description": "Films with Brazilian Portuguese subtitles in the copy shown in the catalog."
+          "description": "Films in the collection with Portuguese subtitles."
         }
       }
     },
     {
       "id": "4k",
       "title": "Em 4K",
-      "description": "Filmes cuja cópia escolhida para o catálogo está em 2160p, a resolução 4K.",
+      "description": "Filmes do acervo em 4K.",
       "rule": "4k",
       "filmSlugs": [],
       "localized": {
         "en": {
-          "description": "Films whose selected catalog copy is in 2160p, or 4K resolution."
+          "description": "Films in the collection in 4K."
         }
       }
     },

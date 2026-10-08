@@ -11,7 +11,7 @@ const totalTB = hasCompleteSizes ? copies.reduce((sum, copy) => sum + copy.sizeG
 const formattedTB = totalTB == null ? undefined : `${new Intl.NumberFormat(lang, {minimumFractionDigits: 1, maximumFractionDigits: 1}).format(totalTB)} TB`;
 const stats = [
  [catalogPreview.length, isPreview ? t('filmes nesta prévia') : t('filmes catalogados')],
- [catalogPreview.filter(hasPtBr).length, t('com legendas em português do Brasil')],
+ [catalogPreview.filter(hasPtBr).length, t('com legendas em português')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '2160p').length, t('em 2160p')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '1080p').length, t('em 1080p')],
  [selections.filter(selection => selection.films.length).length, t('seleções com filmes')],
