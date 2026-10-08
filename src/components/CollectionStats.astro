@@ -5,13 +5,18 @@ const {lang,t,path}=getI18n(Astro.url);
 import {catalog as catalogPreview, isPreview} from '../data/catalog';
 import {catalogCopy, hasPtBr} from '../lib/catalog';
 import {selections} from '../data/selections';
+const copies = catalogPreview.flatMap(film => film.copies ?? []);
+const hasCompleteSizes = copies.length > 0 && copies.every(copy => copy.sizeGiB != null && Number.isFinite(copy.sizeGiB) && copy.sizeGiB >= 0);
+const totalTB = hasCompleteSizes ? copies.reduce((sum, copy) => sum + copy.sizeGiB!, 0) * 1024 ** 3 / 10 ** 12 : undefined;
+const formattedTB = totalTB == null ? undefined : `${new Intl.NumberFormat(lang, {minimumFractionDigits: 1, maximumFractionDigits: 1}).format(totalTB)} TB`;
 const stats = [
  [catalogPreview.length, isPreview ? t('filmes nesta prévia') : t('filmes catalogados')],
  [catalogPreview.filter(hasPtBr).length, t('com legendas em português do Brasil')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '2160p').length, t('em 2160p')],
  [catalogPreview.filter(film => catalogCopy(film)?.resolution === '1080p').length, t('em 1080p')],
  [selections.filter(selection => selection.films.length).length, t('seleções com filmes')],
+ ...(formattedTB ? [[formattedTB, t('tamanho das cópias catalogadas')]] : []),
 ];
 ---
-<dl class="collection-stats">{stats.map(([value,label]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+<dl class="collection-stats" style={`--stats-columns: ${stats.length}`}>{stats.map(([value,label]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
 {isPreview && <p class="data-note">{t("Contagens dos registros desta prévia, não do acervo completo. Dados ausentes ainda não entram nas contagens técnicas.")}</p>}
