@@ -473,7 +473,7 @@
     {
       "id": "kenji-mizoguchi",
       "title": "Kenji Mizoguchi",
-      "description": "Mulheres enfrentam as exigências da família, do dinheiro e das convenções sociais, em histórias do Japão antigo e moderno.",
+      "description": "Do Japão feudal às cidades do século XX, mulheres enfrentam a pobreza, a exploração e as obrigações familiares.",
       "rule": "manual",
       "filmSlugs": [
         "a-geisha-1953",
@@ -508,7 +508,7 @@
       "localized": {
         "en": {
           "title": "Kenji Mizoguchi",
-          "description": "Women face the demands of family, money and social convention in stories of old and modern Japan."
+          "description": "From feudal Japan to twentieth-century cities, women face poverty, exploitation and family obligations."
         }
       }
     },
@@ -601,7 +601,7 @@
     {
       "id": "yasujiro-ozu",
       "title": "Yasujirō Ozu",
-      "description": "Pais e filhos, casamentos e despedidas. Nas conversas de cada dia, uma família muda e o tempo deixa suas marcas.",
+      "description": "Casamentos, despedidas e relações entre pais e filhos. Filmes em que as mudanças da família aparecem nas conversas, nos gestos e na rotina da casa.",
       "rule": "manual",
       "filmSlugs": [
         "an-autumn-afternoon-1962",
@@ -617,7 +617,7 @@
       "localized": {
         "en": {
           "title": "Yasujirō Ozu",
-          "description": "Parents and children, marriages and farewells. In everyday conversations, a family changes and time leaves its marks."
+          "description": "Marriages, farewells and relationships between parents and children. Films in which changes in family life emerge through conversations, gestures and household routines."
         }
       }
     },
@@ -671,7 +671,7 @@
     {
       "id": "cinema-italiano",
       "title": "Cinema italiano",
-      "description": "Das ruas de Rossellini aos mundos de Fellini e Antonioni, a vida social encontra novas formas de aparecer na tela.",
+      "description": "Dramas familiares, comédias, faroestes e horror, com filmes de Rossellini, Visconti, Fellini, Antonioni, Leone e Argento.",
       "rule": "manual",
       "filmSlugs": [
         "misunderstood-1967",
@@ -721,7 +721,7 @@
       "localized": {
         "en": {
           "title": "Italian cinema",
-          "description": "From Rossellini's streets to the worlds of Fellini and Antonioni, social life finds new ways to appear on screen."
+          "description": "Family dramas, comedies, westerns and horror, with films by Rossellini, Visconti, Fellini, Antonioni, Leone and Argento."
         }
       }
     },
@@ -927,7 +927,7 @@
     {
       "id": "trabalho-e-desigualdade",
       "title": "Trabalho e desigualdade",
-      "description": "Ganhar a vida, sustentar uma família, resistir. Histórias em que o trabalho revela as distâncias entre as pessoas.",
+      "description": "O trabalho nas fábricas, no campo e nas cidades, visto em filmes como Blue Collar, As Vinhas da Ira e Eles Não Usam Black-Tie.",
       "rule": "manual",
       "filmSlugs": [
         "the-grapes-of-wrath-1940",
@@ -943,7 +943,7 @@
       "localized": {
         "en": {
           "title": "Work and inequality",
-          "description": "Earning a living, supporting a family, resisting. Stories in which work reveals the divides between people."
+          "description": "Work in factories, in the countryside and in cities, as seen in films such as Blue Collar, The Grapes of Wrath and They Don’t Wear Black Tie."
         }
       }
     },
