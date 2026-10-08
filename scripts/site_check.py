@@ -62,5 +62,16 @@ for route,page in pages.items():
  if counterpart not in pages: errors.append(f'{route}: missing translation counterpart')
 assert not errors,errors
 records=json.loads(Path('data/public/catalog.json').read_text()) or json.loads(Path('data/public/catalog.preview.json').read_text())
-assert len(pages)==2*(len(records)+4),(len(pages),'unexpected route count')
+editorial=json.loads(Path('data/public/editorial.json').read_text())
+preview=not json.loads(Path('data/public/catalog.json').read_text())
+def selection_exists(selection):
+ if preview: return True
+ if selection['rule']=='manual': return any(r['slug'] in selection['filmSlugs'] or selection['title'] in r.get('selections',[]) for r in records)
+ for r in records:
+  copy=next(c for c in r['copies'] if c['id']==r['catalog_copy_id'])
+  if selection['rule']=='4k' and copy['resolution']=='2160p': return True
+  if selection['rule']=='pt-br' and any(v in ['pt-BR','Português (Brasil)'] for v in copy.get('subtitle_languages',[])): return True
+ return False
+selection_count=sum(selection_exists(s) for s in editorial['selections'])
+assert len(pages)==2*(len(records)+4+selection_count),(len(pages),'unexpected route count')
 print({'routes':len(pages),'internal_links':links,'assets':assets,'base':args.base,'errors':errors})

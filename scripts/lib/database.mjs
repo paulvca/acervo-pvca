@@ -301,7 +301,13 @@ export function planImport(db, input, schema, publicDir) {
         if ((value !== null && value !== "") || !previous)
           set(merged, path, value);
       }
-      const row = normalizeFilm(next, merged, previous, entity_refs);
+      // A protected manual relationship must not acquire IDs from different incoming names.
+      const safeRefs = Object.fromEntries(
+        Object.entries(entity_refs ?? {}).filter(
+          ([field]) => stable(merged[field]) === stable(source[field])
+        )
+      );
+      const row = normalizeFilm(next, merged, previous, safeRefs);
       const pending = validateCatalog([merged], schema, publicDir);
       row.published = pending.length === 0;
       row.sources = { ...row.sources, lastImport: hash(stable(source)) };

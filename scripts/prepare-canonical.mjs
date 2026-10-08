@@ -1,0 +1,151 @@
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+  renameSync,
+} from "node:fs";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
+import { convertCanonical, mergeEnrichment } from "./lib/canonical.mjs";
+import { enrichTmdb } from "./lib/tmdb.mjs";
+import { validateCatalog } from "./lib/catalog.mjs";
+const root = fileURLToPath(new URL("../", import.meta.url));
+const [input, ...flags] = process.argv.slice(2);
+if (
+  !input ||
+  flags.some((f) => !["--portuguese-is-brazilian", "--apply"].includes(f))
+)
+  throw Error(
+    "Uso: npm run catalog:prepare -- arquivo.json [--portuguese-is-brazilian] [--apply]"
+  );
+const raw = readFileSync(resolve(input));
+if (raw.length > 32 * 1024 * 1024) throw Error("Arquivo maior que 32 MiB.");
+let source;
+try {
+  source = JSON.parse(raw);
+} catch {
+  throw Error("JSON inválido.");
+}
+const converted = convertCanonical(source, {
+  portugueseIsBrazilian: flags.includes("--portuguese-is-brazilian"),
+});
+const folder = resolve(root, ".local-admin/canonical-import");
+mkdirSync(folder, { recursive: true });
+const records = new Array(converted.records.length),
+  errors = [];
+let completed = 0,
+  cursor = 0,
+  fatal;
+console.log(
+  `Preparando ${records.length} filmes. Somente links de Internet Archive serão projetados.`
+);
+async function worker() {
+  while (cursor < records.length && !fatal) {
+    const index = cursor++,
+      record = converted.records[index];
+    try {
+      records[index] = mergeEnrichment(
+        record,
+        await enrichTmdb(root, record.tmdb_id)
+      );
+    } catch (error) {
+      records[index] = record;
+      errors.push({
+        id: record.id,
+        tmdb_id: record.tmdb_id,
+        error: error.message,
+      });
+      if (/CREDENTIAL|AUTH_FAILED/.test(error.message)) fatal = error;
+    }
+    completed++;
+    if (completed % 10 === 0 || completed === records.length)
+      console.log(
+        `Preparados ${completed}/${records.length}; falhas de enriquecimento: ${errors.length}.`
+      );
+  }
+}
+await Promise.all([worker(), worker()]);
+if (fatal) throw fatal;
+const schema = JSON.parse(
+  readFileSync(resolve(root, "data/schema/public-catalog.schema.json"), "utf8")
+);
+const pending = records.flatMap((record) => {
+  const reasons = validateCatalog(
+    [
+      Object.fromEntries(
+        Object.entries(record).filter(([key]) => key !== "entity_refs")
+      ),
+    ],
+    schema,
+    resolve(root, "public")
+  );
+  return reasons.length
+    ? [{ id: record.id, title: record.title, reasons }]
+    : [];
+});
+const report = {
+  sourceSha256: createHash("sha256").update(raw).digest("hex"),
+  sourceVersion: source.schema_version,
+  portugueseIsBrazilian: flags.includes("--portuguese-is-brazilian"),
+  sharedLinks: "internet_archive",
+  records: records.length,
+  copies: records.reduce((n, r) => n + r.copies.length, 0),
+  ready: records.length - pending.length,
+  pending,
+  conversionRejected: converted.failures,
+  enrichmentErrors: errors,
+  missingPortugueseSynopsis: records
+    .filter((r) => !r.translations?.["pt-BR"]?.synopsis)
+    .map((r) => ({ id: r.id, title: r.title })),
+};
+function save(path, value) {
+  const tmp = path + ".tmp";
+  writeFileSync(tmp, JSON.stringify(value, null, 2) + "\n");
+  renameSync(tmp, path);
+}
+save(resolve(folder, "prepared.json"), records);
+save(resolve(folder, "report.json"), report);
+console.log(
+  JSON.stringify({
+    records: report.records,
+    copies: report.copies,
+    ready: report.ready,
+    pending: pending.length,
+    enrichmentErrors: errors.length,
+    missingPortugueseSynopsis: report.missingPortugueseSynopsis.length,
+  })
+);
+if (flags.includes("--apply")) {
+  const { seedDatabase, planImport, publicRecords } =
+    await import("./lib/database.mjs");
+  const dbFile = resolve(root, ".local-admin/database.json");
+  const before = existsSync(dbFile)
+    ? JSON.parse(readFileSync(dbFile, "utf8"))
+    : seedDatabase(
+        JSON.parse(
+          readFileSync(resolve(root, "data/public/catalog.json"), "utf8")
+        )
+      );
+  const plan = planImport(before, records, schema, resolve(root, "public"));
+  if (plan.summary.rejected)
+    throw Error("A preparação contém registros rejeitados; nada foi aplicado.");
+  const journal = resolve(root, ".local-admin/transaction.json");
+  save(
+    resolve(folder, `database-before-${before.revision}-${Date.now()}.json`),
+    before
+  );
+  save(journal, plan.database);
+  save(dbFile, plan.database);
+  save(resolve(root, "data/public/catalog.json"), publicRecords(plan.database));
+  const { unlinkSync } = await import("node:fs");
+  unlinkSync(journal);
+  save(resolve(folder, "applied.json"), {
+    summary: plan.summary,
+    items: plan.items,
+  });
+  console.log(
+    "Importação aplicada localmente. Nenhum push ou publicação realizado por esta ferramenta."
+  );
+}

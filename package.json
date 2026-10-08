@@ -17,7 +17,9 @@
     "catalog:check": "node scripts/catalog.mjs check",
     "catalog:import": "node scripts/catalog.mjs import",
     "catalog:test": "node --test scripts/catalog.test.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "catalog:prepare": "node scripts/prepare-canonical.mjs",
+    "canonical:test": "node --test scripts/canonical.test.mjs"
   },
   "dependencies": {
     "astro": "7.3.5"

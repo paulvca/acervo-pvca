@@ -213,7 +213,7 @@ const copyLabelForAccess = (copyId?: string) => {
           <section class="wrap film-detail-section">
             <h2>{t("Também aparece em")}</h2>
             <div class="film-selection-links">
-              {selections.filter(selection => selection.films.some(member => member.slug === film.slug)).map(selection => <a href={path(`/selecoes/#${selection.id}`)}>{t(selection.localized?.[lang]?.title || selection.title)}</a>)}
+              {selections.filter(selection => selection.films.some(member => member.slug === film.slug)).map(selection => <a href={path(`/selecoes/${selection.id}/`)}>{t(selection.localized?.[lang]?.title || selection.title)}</a>)}
             </div>
           </section>
         </>

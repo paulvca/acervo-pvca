@@ -19,49 +19,49 @@
     {
       "id": "japao-depois-da-guerra",
       "title": "Japão depois da guerra",
-      "description": "Família, trabalho, deslocamento e mudança social entre o fim dos anos 1940 e os anos 1960.",
+      "description": "Família, trabalho e transformação social no cinema japonês entre o fim dos anos 1940 e os anos 1960.",
       "rule": "manual",
       "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
     },
     {
       "id": "sidney-lumet",
       "title": "Sidney Lumet",
-      "description": "Instituições, culpa, responsabilidade e conflito moral.",
+      "description": "Instituições, responsabilidade e conflitos morais nos filmes de Sidney Lumet.",
       "rule": "manual",
       "filmSlugs": ["the-offence-1973"]
     },
     {
       "id": "noir-americano",
       "title": "Noir americano",
-      "description": "Crime, fatalismo, luzes noturnas e personagens encurralados.",
+      "description": "Crime e fatalismo entre ruas noturnas e personagens encurralados.",
       "rule": "manual",
       "filmSlugs": []
     },
     {
       "id": "legendas-em-portugues",
       "title": "Com legendas em português",
-      "description": "Filmes com legendas em Português (Brasil) na cópia selecionada.",
+      "description": "Filmes cuja cópia apresentada no catálogo inclui legendas em português do Brasil.",
       "rule": "pt-br",
       "filmSlugs": []
     },
     {
       "id": "4k",
       "title": "Em 4K",
-      "description": "Filmes com uma cópia selecionada em 2160p.",
+      "description": "Filmes cuja cópia apresentada no catálogo tem resolução 2160p.",
       "rule": "4k",
       "filmSlugs": []
     },
     {
       "id": "cinema-japones",
       "title": "Cinema japonês",
-      "description": "Um percurso pelos filmes japoneses do acervo.",
+      "description": "Um percurso pelos filmes japoneses da coleção.",
       "rule": "manual",
       "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
     },
     {
       "id": "anos-1950",
       "title": "Anos 1950",
-      "description": "Retratos de um período de transição, dentro e fora do cinema.",
+      "description": "Filmes de uma década marcada por mudanças na sociedade e no cinema.",
       "rule": "manual",
       "filmSlugs": ["ikiru-1952", "tokyo-story-1953"]
     }

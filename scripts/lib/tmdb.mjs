@@ -1,5 +1,11 @@
 import { spawn } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+  renameSync,
+} from "node:fs";
 import { resolve } from "node:path";
 function bridge(root, args) {
   return new Promise((done, reject) => {
@@ -33,17 +39,36 @@ export async function enrichTmdb(root, id, { refresh = false } = {}) {
   if (!Number.isInteger(id) || id <= 0) throw Error("TMDB_ID_INVALID");
   const dir = resolve(root, ".local-admin/tmdb-cache"),
     file = resolve(dir, `${id}.json`);
-  if (!refresh && existsSync(file))
-    return JSON.parse(readFileSync(file, "utf8"));
+  if (!refresh && existsSync(file)) {
+    try {
+      const cached = JSON.parse(readFileSync(file, "utf8"));
+      if (
+        !cached.poster ||
+        existsSync(resolve(root, "public", cached.poster.replace(/^\//, "")))
+      )
+        return cached;
+    } catch (error) {
+      if (!(error instanceof SyntaxError)) throw error;
+      // An interrupted cache write must not prevent a fresh lookup.
+    }
+  }
   const data = await bridge(root, [String(id), root]);
   for (const lang of ["pt-BR", "en"]) {
     const regions = new Intl.DisplayNames([lang], { type: "region" });
     data.localized_metadata[lang].countries = (
       data.entity_refs.countries ?? []
-    ).map((ref) => regions.of(ref.id));
+    ).map(
+      (ref) =>
+        ({
+          SU: lang === "en" ? "Soviet Union" : "União Soviética",
+          YU: lang === "en" ? "Yugoslavia" : "Iugoslávia",
+          AN: lang === "en" ? "Netherlands Antilles" : "Antilhas Neerlandesas",
+        })[ref.id] ?? regions.of(ref.id)
+    );
   }
   data.countries = data.localized_metadata["pt-BR"].countries;
   mkdirSync(dir, { recursive: true });
-  writeFileSync(file, JSON.stringify(data, null, 2) + "\n");
+  writeFileSync(file + ".tmp", JSON.stringify(data, null, 2) + "\n");
+  renameSync(file + ".tmp", file);
   return data;
 }

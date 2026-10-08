@@ -610,11 +610,17 @@ $("#enrich-tmdb").addEventListener("change", () => {
   importPlan = null;
   $("#import-confirm").disabled = true;
 });
+$("#portuguese-is-brazilian").addEventListener("change", () => {
+  importPlan = null;
+  $("#import-confirm").disabled = true;
+});
 $("#import-preview").addEventListener("click", () =>
   action(async () => {
     importPlan = null;
     const file = $("#import-file").files[0];
     if (!file) throw Error("Selecione um JSON primeiro.");
+    if (file.size > 32 * 1024 * 1024)
+      throw Error("Importação maior que 32 MiB.");
     let records;
     try {
       records = JSON.parse(await file.text());
@@ -625,11 +631,14 @@ $("#import-preview").addEventListener("click", () =>
     const result = await api("import/preview", {
       records,
       enrich: $("#enrich-tmdb").checked,
+      portugueseIsBrazilian: $("#portuguese-is-brazilian").checked,
     });
     importPlan = result.planId;
     const parent = $("#import-results");
     parent.replaceChildren();
     for (const [key, count] of Object.entries(result.summary))
+      parent.append(element("p", t(key) + ": " + count));
+    for (const [key, count] of Object.entries(result.readiness ?? {}))
       parent.append(element("p", t(key) + ": " + count));
     for (const item of result.items) {
       const entry = element("article");

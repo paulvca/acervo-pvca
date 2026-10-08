@@ -5,6 +5,24 @@ import {
 } from "./public.mjs";
 export { preferredLanguage, countryHint };
 export const en = {
+  "Identidade incompleta.": "Incomplete identity.",
+  "Identidade duplicada no arquivo canônico.":
+    "Duplicate identity in the canonical file.",
+  "Cópia existente sem tamanho ou resolução comprovados.":
+    "Existing copy has no verified size or resolution.",
+  "Cópia representativa ausente ou inconsistente.":
+    "Representative copy is missing or inconsistent.",
+  "Também aceita o catálogo canônico PVCA 6.1. Nesse formato, somente links do Internet Archive são incluídos; dados operacionais e links de Drive ficam fora.":
+    "Also accepts the PVCA 6.1 canonical catalog. Only Internet Archive links are included in this format; operational data and Drive links are excluded.",
+  "Confirmo que as legendas em português deste arquivo são pt-BR":
+    "I confirm that the Portuguese subtitles in this file are Brazilian Portuguese",
+  "Formato canônico PVCA 6.1 inválido.": "Invalid PVCA 6.1 canonical format.",
+  "Contagem do arquivo canônico inconsistente.":
+    "Inconsistent canonical file count.",
+  "Arquivo muito grande (limite 32 MiB).": "File too large (32 MiB limit).",
+  ready: "Ready for the site",
+  pending: "Pending information",
+
   ...publicEnglish,
   "Filme inválido.": "Invalid film.",
   "Campo de cópia fora do cadastro público.":

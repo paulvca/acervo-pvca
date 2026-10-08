@@ -1,4 +1,39 @@
 export const en = {
+  "Filmes que venho reunindo, preservando e organizando ao longo do tempo.":
+    "Films I have been collecting, preserving and organizing over time.",
+  "O Acervo PVCA nasceu da organização da minha coleção pessoal de cinema. Ao longo do tempo, passou a reunir diferentes cópias, legendas revisadas e informações sobre cada obra.":
+    "Acervo PVCA began as a way to organize my personal film collection. Over time, it came to include different copies, revised subtitles and information about each film.",
+  "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e encontrar caminhos pela coleção através das minhas seleções.":
+    "This site opens the collection to visitors. Here, you can explore the films, learn about the preserved copies and find paths through the collection with my selections.",
+  "O que você encontra": "What you will find",
+  "Cada ficha reúne informações sobre o filme, como direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, formato, áudio e legendas.":
+    "Each film page brings together information such as director, year, country and running time, alongside the details of the preserved copy: resolution, file size, format, audio and subtitles.",
+  "As seleções aproximam filmes por diferentes critérios e interesses. Os links nas fichas levam às cópias que escolhi compartilhar.":
+    "Selections bring films together around different interests and criteria. Links on the film pages lead to copies I have chosen to share.",
+  "Como a coleção é organizada": "How the collection is organized",
+  "Cada filme tem uma ficha que reúne suas cópias, versões e edições, com as características próprias de cada uma.":
+    "Each film has a page that brings together its copies, versions and editions, with the characteristics of each.",
+  "Uma dessas cópias representa o filme no catálogo. A ficha apresenta seus detalhes e, quando existem outras versões no acervo, permite conhecer as diferenças entre elas.":
+    "One copy represents the film in the catalog. The film page describes it and, when other versions are in the collection, lets you see how they differ.",
+  "Percursos pessoais pela coleção. Alguns seguem um cineasta, uma época ou uma cinematografia; outros acompanham interesses e aproximações que surgem ao longo do tempo.":
+    "Personal paths through the collection. Some follow a filmmaker, a period or a national cinema; others reflect interests and connections that emerge over time.",
+  "Família, trabalho e transformação social no cinema japonês entre o fim dos anos 1940 e os anos 1960.":
+    "Family, work and social change in Japanese cinema from the late 1940s to the 1960s.",
+  "Instituições, responsabilidade e conflitos morais nos filmes de Sidney Lumet.":
+    "Institutions, responsibility and moral conflicts in the films of Sidney Lumet.",
+  "Crime e fatalismo entre ruas noturnas e personagens encurralados.":
+    "Crime and fatalism amid nighttime streets and cornered characters.",
+  "Filmes cuja cópia apresentada no catálogo inclui legendas em português do Brasil.":
+    "Films whose catalog copy includes Brazilian Portuguese subtitles.",
+  "Filmes cuja cópia apresentada no catálogo tem resolução 2160p.":
+    "Films whose catalog copy has a resolution of 2160p.",
+  "Um percurso pelos filmes japoneses da coleção.":
+    "A path through the collection’s Japanese films.",
+  "Filmes de uma década marcada por mudanças na sociedade e no cinema.":
+    "Films from a decade of change in society and cinema.",
+
+  "Metadados e pôsteres obtidos do TMDB quando disponíveis.":
+    "Metadata and posters sourced from TMDB where available.",
   "Uma das cópias que estou revisando com mais cuidado no momento. A restauração, a duração e o trabalho de legenda tornam este um dos filmes mais trabalhosos — e interessantes — dentro do acervo.":
     "One of the copies I am reviewing most carefully at the moment. The restoration, running time and subtitle work make it one of the most demanding and interesting films in the collection.",
   "Um casal idoso deixa Onomichi para visitar os filhos adultos em Tóquio. Ocupados com suas próprias vidas, eles têm pouco tempo para os pais; quem os acolhe com maior atenção é Noriko, a nora viúva.":

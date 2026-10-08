@@ -1,0 +1,7 @@
+---
+import Page from '../../selecoes/[slug].astro';
+import {selections} from '../../../data/selections';
+import {isPreview} from '../../../data/catalog';
+export function getStaticPaths(){return selections.filter(selection=>isPreview || selection.films.length>0).map(selection=>({params:{slug:selection.id},props:{selection}}));}
+---
+<Page selection={Astro.props.selection} />

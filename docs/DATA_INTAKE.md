@@ -7,7 +7,7 @@ do not require a replacement spreadsheet or infer missing factual metadata.
 
 ## Sources and contracts
 
-- `data/public/catalog.json`: sole final public runtime source, initially `[]`.
+- `data/public/catalog.json`: sole final public runtime source.
 - `data/schema/public-catalog.schema.json`: public field allowlist, using snake_case.
 - `data/templates/film.blank.json`: blank input scaffold, intentionally invalid until
   required information is supplied. Never import this as a film.
@@ -16,7 +16,7 @@ do not require a replacement spreadsheet or infer missing factual metadata.
   is empty. Real records replace this preview; they are never mixed with it.
 - `data/public/catalog.sample.json`: historical schema example, never imported
   automatically or treated as verified film data.
-- `public/posters/`: approved local poster assets; no automatic external fetching.
+- `public/posters/`: approved local poster assets; the local TMDB enrichment downloads artwork before building.
 
 Keep raw spreadsheets, operational inventories and private staging files outside
 `public/`, `data/public/` and Git. Produce an allowlisted JSON array for intake.
@@ -107,3 +107,46 @@ titles editorially; do not reintroduce selections based on provider availability
 
 Tests use synthetic records/assets only in temporary directories, including an
 isolated Astro build. They never populate the project's real public catalog.
+
+## Canonical PVCA 6.1 inventory
+
+The local panel accepts the `pvca-clean-catalog-6.1` wrapper as well as the existing
+public JSON array. Import requests alone have a 32 MiB limit; other API operations
+retain their 8 MiB limit. Confirm Brazilian Portuguese explicitly for generic
+Portuguese subtitle tags in this source. The converter never applies that decision
+silently to other inventories.
+
+For a large first import, prepare outside the browser with progress and resumable
+per-film TMDB cache:
+
+```sh
+npm run catalog:prepare -- /absolute/path/private-inventory.json --portuguese-is-brazilian
+```
+
+Review `.local-admin/canonical-import/report.json` and `prepared.json`, then import
+that prepared array through the panel with enrichment disabled, or apply the same
+prepared conversion locally:
+
+```sh
+npm run catalog:prepare -- /absolute/path/private-inventory.json --portuguese-is-brazilian --apply
+```
+
+The original inventory never enters Git. Prepared input, reports, normalized
+private drafts, TMDB cache and transaction backups stay under ignored
+`.local-admin/`. The script creates a pre-import database backup and reuses the
+same identity matching, editorial locks and public completeness gate as the panel.
+Repeated input is ignored when unchanged. Neither command commits or publishes.
+
+Identity uses `tmdb_id`, retains `pvca_id`, and creates stable title-year addresses.
+Every available variant retains its own proven bytes, resolution, audio and
+subtitles. Only `preferred_media_source` selects the representative copy. Unknown
+audio remains empty; the original film language never fills it. Resolution uses
+the declared class, falling back to verified raster dimensions. Sizes use GiB.
+
+Only available Archive destination URLs are projected from this format. Drive
+URLs/IDs, filenames, hashes, evidence, operational states and the raw wrapper are
+excluded. Supplied synopses remain intact; missing localized text is filled only
+from official pt-BR/en-US responses, never machine-translated. Posters are chosen
+by the existing original-language/neutral/English policy and downloaded locally.
+A work without an eligible poster stays private until corrected. Import dates are
+not invented; “Recently added” requires supplied dates.

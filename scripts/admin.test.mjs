@@ -217,6 +217,57 @@ test("local editor guards origins and preserves draft/public boundaries", async 
     );
     assert.equal((await fetch(origin + "/admin/")).status, 404);
     assert.equal(readdirSync(join(dir, "public/posters")).length, 1);
+    const canonical = {
+      schema_version: "pvca-clean-catalog-6.1",
+      item_count: 1,
+      private_note: "PRIVATE" + "x".repeat(9 * 1024 * 1024),
+      items: [
+        {
+          pvca_id: "PVCA-TEST",
+          title: "Canonical fixture",
+          year: 2000,
+          identity: { tmdb: { id: 333 } },
+          availability: { preferred_media_source: "ARCHIVE" },
+          media: { source: "ARCHIVE" },
+          metadata: { credits: { directors: ["Fixture director"] } },
+          copies: {
+            archive: {
+              status: "AVAILABLE",
+              size: { bytes: 1073741824 },
+              resolution: { declared_class: "1080p" },
+              embedded_subtitles: { tracks: [{ language: { tag: "por" } }] },
+            },
+          },
+        },
+      ],
+    };
+    const publicBeforeCanonical = readFileSync(
+      join(dir, "data/public/catalog.json"),
+      "utf8"
+    );
+    const canonicalResponse = await post("import/preview", {
+      records: canonical,
+      enrich: false,
+      portugueseIsBrazilian: true,
+    });
+    assert.equal(canonicalResponse.status, 200);
+    const canonicalPlan = await canonicalResponse.json();
+    assert.equal(canonicalPlan.canonical, true);
+    assert.equal(canonicalPlan.summary.created, 1);
+    assert.equal(canonicalPlan.readiness.pending, 1);
+    assert.ok(!JSON.stringify(canonicalPlan).includes("PRIVATE"));
+    assert.equal(
+      readFileSync(join(dir, "data/public/catalog.json"), "utf8"),
+      publicBeforeCanonical
+    );
+    assert.equal(
+      (await post("import/confirm", { planId: canonicalPlan.planId })).status,
+      200
+    );
+    assert.equal(
+      readFileSync(join(dir, "data/public/catalog.json"), "utf8"),
+      publicBeforeCanonical
+    );
   } finally {
     if (server?.listening)
       await new Promise((resolve) => server.close(resolve));

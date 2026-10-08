@@ -7,24 +7,24 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Poster from '../components/Poster.astro';
 import CollectionStats from '../components/CollectionStats.astro';
-import {featuredFilm as sourceFeatured, featuredNote, recentFilms as sourceRecent} from '../data/home';
+import {featuredFilm as sourceFeatured, recentFilms as sourceRecent} from '../data/home';
 import {selections} from '../data/selections';
 import {editorial} from '../data/editorial';
 const featuredFilm=sourceFeatured?localizeFilm(sourceFeatured,lang):undefined;
 const recentFilms=sourceRecent.map((film)=>localizeFilm(film,lang));
 ---
 <BaseLayout><Header active="home" /><main id="main">
-<section class="wrap intro"><h1>{t("Meu acervo pessoal de cinema.")}</h1><p>{t("Filmes que fui reunindo, preservando, legendando e organizando ao longo do tempo.")}</p><p class="aside">{t("Este site é uma forma simples de abrir parte dessa coleção para quem quiser explorar — sem transformar o acervo em uma plataforma impessoal.")}</p></section>
+<section class="wrap intro"><h1>{t("Meu acervo pessoal de cinema.")}</h1><p>{t("Filmes que venho reunindo, preservando e organizando ao longo do tempo.")}</p></section>
 {featuredFilm && <>
 <div class="wrap rule"></div>
-<section class="wrap section"><div class="section-title"><h2>{t("Em destaque")}</h2><span>{t("uma escolha do momento")}</span></div>
-<div class="feature"><Poster film={featuredFilm} eager /><div class="feature-copy"><h3>{featuredFilm.title}</h3><p class="feature-meta">{featuredFilm.director} · {featuredFilm.year} · {featuredFilm.country}</p><p>{editorial.featuredNotes?.[lang] || (lang === "pt-BR" ? featuredNote : featuredFilm.collectionNote)}</p><a class="inline-link" href={path(`/filmes/${featuredFilm.slug}/`)}>{t("Ver ficha →")}</a></div></div></section>
+<section class="wrap section"><div class="section-title"><h2>{t("Em destaque")}</h2></div>
+<div class="feature"><Poster film={featuredFilm} eager /><div class="feature-copy"><h3>{featuredFilm.title}</h3><p class="feature-meta">{featuredFilm.director} · {featuredFilm.year} · {featuredFilm.country}</p>{featuredFilm.synopsis && <p>{featuredFilm.synopsis}</p>}<a class="inline-link" href={path(`/filmes/${featuredFilm.slug}/`)}>{t("Ver ficha →")}</a></div></div></section>
 </>}
 {recentFilms.length > 0 && <>
 <div class="wrap rule"></div>
 <section class="wrap section"><div class="section-title"><h2>{t("Recentemente")}</h2><span>{t("últimas adições")}</span></div><div class="recent-films">{recentFilms.map(film => <a href={path(`/filmes/${film.slug}/`)}><Poster film={film} /><h3>{film.title}</h3><p>{film.director} · {film.year}</p></a>)}</div></section>
 </>}
 <div class="wrap rule"></div>
-<section class="wrap section"><div class="section-title"><h2>{t("Seleções")}</h2><span>{t("algumas formas de atravessar o acervo")}</span></div><div class="home-selections">{editorial.homeSelectionIds.flatMap(id => selections.filter(selection => selection.id === id && selection.films.length)).map(selection => <a href={path(`/selecoes/#${selection.id}`)}><h3>{t(selection.localized?.[lang]?.title || selection.title)}</h3><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><span>{t("Ver seleção →")}</span></a>)}</div></section>
-{editorial.showStats && <><div class="wrap rule"></div><section class="wrap section"><div class="section-title"><h2>{t("O acervo")}</h2><span>{t("alguns números")}</span></div><CollectionStats /></section></>}
+<section class="wrap section"><div class="section-title"><h2>{t("Seleções")}</h2></div><div class="home-selections">{editorial.homeSelectionIds.flatMap(id => selections.filter(selection => selection.id === id && selection.films.length)).map(selection => <a href={path(`/selecoes/${selection.id}/`)}><h3>{t(selection.localized?.[lang]?.title || selection.title)}</h3><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><span>{t("Ver seleção →")}</span></a>)}</div></section>
+{editorial.showStats && <><div class="wrap rule"></div><section class="wrap section"><div class="section-title"><h2>{t("O acervo")}</h2></div><CollectionStats /></section></>}
 </main><Footer /></BaseLayout>

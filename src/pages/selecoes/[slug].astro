@@ -1,0 +1,16 @@
+---
+import {getI18n} from '../../lib/i18n';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FilmCatalog from '../../components/FilmCatalog.astro';
+import {selections} from '../../data/selections';
+import {isPreview} from '../../data/catalog';
+export function getStaticPaths(){return selections.filter(selection=>isPreview || selection.films.length>0).map(selection=>({params:{slug:selection.id},props:{selection}}));}
+interface Props {selection: typeof selections[number];}
+const {selection}=Astro.props;
+const {lang,t,path}=getI18n(Astro.url);
+const title=t(selection.localized?.[lang]?.title || selection.title);
+const description=t(selection.localized?.[lang]?.description || selection.description);
+---
+<BaseLayout title={`${title} — Acervo PVCA`} description={description}><Header active="selections" /><main id="main"><FilmCatalog title={title} description={description} films={selection.films} isPreview={isPreview} backHref={path('/selecoes/')} backLabel={`← ${t('Seleções')}`} /></main><Footer /></BaseLayout>

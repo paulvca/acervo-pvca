@@ -323,6 +323,26 @@ test("a real projection drives static pages without preview films or invented ed
   );
   assert.ok(englishCatalog.includes('data-ptbr="true"'));
   assert.ok(englishCatalog.includes("/en/filmes/fixture-2000/"));
+  const selectionIndex = readFileSync(
+    join(site, "dist/selecoes/index.html"),
+    "utf8"
+  );
+  assert.ok(selectionIndex.includes('href="/selecoes/selection-fixture/"'));
+  assert.ok(!selectionIndex.includes('href="/filmes/fixture-2000/"'));
+  const selectionPage = readFileSync(
+    join(site, "dist/selecoes/selection-fixture/index.html"),
+    "utf8"
+  );
+  assert.ok(selectionPage.includes('id="filmSearch"'));
+  assert.ok(selectionPage.includes('class="film-card"'));
+  assert.ok(selectionPage.includes('href="/filmes/fixture-2000/"'));
+  const englishSelection = readFileSync(
+    join(site, "dist/en/selecoes/selection-fixture/index.html"),
+    "utf8"
+  );
+  assert.ok(englishSelection.includes("English fixture"));
+  assert.ok(englishSelection.includes('lang="en"'));
+
   const pagesBuilt = spawnSync(
     process.execPath,
     [
@@ -348,5 +368,8 @@ test("a real projection drives static pages without preview films or invented ed
   assert.ok(deployed.includes("/acervo-pvca/posters/fixture.png"));
   assert.ok(deployed.includes('href="/acervo-pvca/filmes/fixture-2000/"'));
   assert.ok(deployed.includes('href="/acervo-pvca/en/filmes/"'));
+  assert.ok(
+    deployed.includes('href="/acervo-pvca/en/selecoes/selection-fixture/"')
+  );
 });
 test.after(() => rmSync(temp, { recursive: true, force: true }));

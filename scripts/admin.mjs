@@ -26,6 +26,11 @@ import {
   planImport,
 } from "./lib/database.mjs";
 import { enrichTmdb, tmdbStatus } from "./lib/tmdb.mjs";
+import {
+  isCanonical,
+  convertCanonical,
+  mergeEnrichment,
+} from "./lib/canonical.mjs";
 
 export function createAdmin(root, port = 4323) {
   const token = randomBytes(32).toString("hex");
@@ -232,7 +237,11 @@ export function createAdmin(root, port = 4323) {
       let size = 0;
       for await (const chunk of req) {
         size += chunk.length;
-        assert(size < 8 * 1024 * 1024, "Arquivo muito grande (limite 8 MiB).");
+        const limit = pathname === "/api/import/preview" ? 32 : 8;
+        assert(
+          size <= limit * 1024 * 1024,
+          `Arquivo muito grande (limite ${limit} MiB).`
+        );
         chunks.push(chunk);
       }
       const data = JSON.parse(Buffer.concat(chunks).toString("utf8"));
@@ -241,6 +250,12 @@ export function createAdmin(root, port = 4323) {
       if (pathname === "/api/import/preview") {
         importing = true;
         try {
+          const conversion = isCanonical(data.records)
+            ? convertCanonical(data.records, {
+                portugueseIsBrazilian: data.portugueseIsBrazilian === true,
+              })
+            : null;
+          if (conversion) data.records = conversion.records;
           assert(
             Array.isArray(data.records) && data.records.length <= 10000,
             "O JSON deve conter uma lista de até 10.000 filmes."
@@ -248,38 +263,17 @@ export function createAdmin(root, port = 4323) {
           const db = database(),
             records = [],
             sourceIndices = [],
-            failures = [];
+            failures = conversion?.failures ?? [];
           for (let index = 0; index < data.records.length; index++) {
             const record = data.records[index];
             if (data.enrich && record?.tmdb_id) {
               try {
                 const enriched = await enrichTmdb(root, record.tmdb_id);
-                const supplied = Object.fromEntries(
-                  Object.entries(record).filter(
-                    ([, value]) =>
-                      value !== null &&
-                      value !== "" &&
-                      (!Array.isArray(value) || value.length)
-                  )
-                );
-                records.push({
-                  ...enriched,
-                  ...supplied,
-                  translations: {
-                    "pt-BR": {
-                      ...enriched.translations?.["pt-BR"],
-                      ...record.translations?.["pt-BR"],
-                    },
-                    en: {
-                      ...enriched.translations?.en,
-                      ...record.translations?.en,
-                    },
-                  },
-                });
-                sourceIndices.push(index);
+                records.push(mergeEnrichment(record, enriched));
+                sourceIndices.push(conversion?.indices[index] ?? index);
               } catch (error) {
                 failures.push({
-                  index,
+                  index: conversion?.indices[index] ?? index,
                   status: "rejected",
                   title: record.title ?? `TMDB #${record.tmdb_id}`,
                   reasons: [error.message],
@@ -288,7 +282,7 @@ export function createAdmin(root, port = 4323) {
               }
             } else {
               records.push(record);
-              sourceIndices.push(index);
+              sourceIndices.push(conversion?.indices[index] ?? index);
             }
           }
           const plan = planImport(db, records, schema, path("public"));
@@ -305,7 +299,16 @@ export function createAdmin(root, port = 4323) {
             expires: Date.now() + 10 * 60 * 1000,
             fingerprint: JSON.stringify(db),
           });
-          json(200, { planId: id, items: plan.items, summary: plan.summary });
+          json(200, {
+            planId: id,
+            items: plan.items,
+            summary: plan.summary,
+            readiness: {
+              ready: plan.items.filter((i) => i.publicReady).length,
+              pending: plan.items.filter((i) => i.publicReady === false).length,
+            },
+            canonical: !!conversion,
+          });
           return;
         } finally {
           importing = false;

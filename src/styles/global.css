@@ -597,10 +597,19 @@ a:hover h3,
 .selection-copy .count {
   font-size: 12px;
 }
-.selection-film-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 22px;
+.selection-link:hover {
+  border-color: var(--color-text-muted);
+}
+.selection-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-bg-1);
+  color: var(--color-text-head);
+  font-size: 13px;
 }
 .about-intro {
   padding-bottom: 44px;
@@ -610,7 +619,7 @@ a:hover h3,
 }
 .about-columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px;
   padding: 40px 0;
 }

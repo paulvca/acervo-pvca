@@ -76,6 +76,7 @@ test("manual field and translation locks survive enrichment and reimports", () =
   const manual = saveManual(first, record, true);
   const incoming = fixture();
   incoming.year = 2001;
+  incoming.entity_refs = { directors: [{ id: "tmdb-999" }] };
   incoming.translations.en.synopsis = "New source synopsis";
   const updated = planImport(manual, [incoming], schema, temp);
   assert.equal(updated.summary.updated, 1);
