@@ -107,7 +107,7 @@
     {
       "id": "noir-americano",
       "title": "Noir americano",
-      "description": "Detetives, desejos e crimes que cobram seu preço. Histórias em que escapar do passado raramente é simples.",
+      "description": "Detetives às voltas com desejos e crimes que cobram seu preço. Escapar do passado raramente é simples nesses filmes.",
       "rule": "manual",
       "filmSlugs": [
         "out-of-the-past-1947",
@@ -118,7 +118,7 @@
       ],
       "localized": {
         "en": {
-          "description": "Detectives, desire and crimes that exact a price. Stories in which escaping the past is rarely simple."
+          "description": "Detectives caught up in desire and crimes that exact a price. Escaping the past is rarely simple in these films."
         }
       }
     },
@@ -267,7 +267,7 @@
     {
       "id": "anos-1950",
       "title": "Anos 1950",
-      "description": "Famílias em mudança, cidades inquietas e fronteiras em disputa. Um encontro com o cinema dos anos 1950.",
+      "description": "Filmes dos anos 1950 sobre famílias em mudança, cidades inquietas e fronteiras em disputa.",
       "rule": "manual",
       "filmSlugs": [
         "ikiru-1952",
@@ -388,7 +388,7 @@
       ],
       "localized": {
         "en": {
-          "description": "Changing families, restless cities and contested frontiers. An encounter with the cinema of the 1950s."
+          "description": "Films from the 1950s about changing families, restless cities and contested frontiers."
         }
       }
     },
@@ -577,7 +577,7 @@
     {
       "id": "akira-kurosawa",
       "title": "Akira Kurosawa",
-      "description": "Samurais, policiais e homens comuns diante de escolhas difíceis. A responsabilidade de agir num mundo em conflito.",
+      "description": "Samurais, policiais e homens comuns enfrentam escolhas difíceis e a responsabilidade de agir num mundo em conflito.",
       "rule": "manual",
       "filmSlugs": [
         "throne-of-blood-1957",
@@ -594,7 +594,7 @@
       "localized": {
         "en": {
           "title": "Akira Kurosawa",
-          "description": "Samurai, police officers and ordinary people facing difficult choices. The responsibility to act in a world of conflict."
+          "description": "Samurai, police officers and ordinary people face difficult choices and the responsibility to act in a world of conflict."
         }
       }
     },
@@ -651,7 +651,7 @@
     {
       "id": "michael-mann",
       "title": "Michael Mann",
-      "description": "Homens definidos pelo que fazem, entre o crime e a lei. O trabalho, a obsessão e o preço de viver segundo um código.",
+      "description": "Entre o crime e a lei, seus personagens se definem pelo trabalho e pela obsessão, e pagam o preço de viver segundo um código.",
       "rule": "manual",
       "filmSlugs": [
         "the-keep-1983",
@@ -664,7 +664,7 @@
       "localized": {
         "en": {
           "title": "Michael Mann",
-          "description": "Men defined by what they do, on both sides of the law. Work, obsession and the cost of living by a code."
+          "description": "On both sides of the law, his characters define themselves through work and obsession, and pay the price of living by a code."
         }
       }
     },
@@ -728,7 +728,7 @@
     {
       "id": "cinema-frances",
       "title": "Cinema francês",
-      "description": "De Renoir e Bresson à Nouvelle Vague, encontros entre a vida íntima, as tensões sociais e a liberdade de experimentar.",
+      "description": "De Renoir e Bresson à Nouvelle Vague, filmes sobre a vida íntima e as tensões sociais, com liberdade para experimentar.",
       "rule": "manual",
       "filmSlugs": [
         "lancelot-of-the-lake-1974",
@@ -791,7 +791,7 @@
       "localized": {
         "en": {
           "title": "French cinema",
-          "description": "From Renoir and Bresson to the New Wave, encounters between private lives, social tensions and the freedom to experiment."
+          "description": "From Renoir and Bresson to the New Wave, films about private lives and social tensions, with room to experiment."
         }
       }
     },

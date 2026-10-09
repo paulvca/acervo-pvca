@@ -25,18 +25,18 @@ export const en = {
   "Outra cópia": "Another copy",
   "Cópia do catálogo": "Catalog copy",
   "Os filmes e suas cópias": "The films and their copies",
-  "Em cada filme, você encontra direção, ano, país e duração, além de resolução, tamanho, áudio e legendas da cópia preservada no acervo. Quando há diferentes versões ou edições, seus detalhes aparecem na mesma página.":
-    "Each film includes director, year, country and running time, alongside resolution, file size, audio and subtitles for the copy preserved in the collection. Details of different versions or editions appear on the same page.",
+  "Na ficha de cada filme, você encontra direção, ano, país e duração. Ela também informa resolução, tamanho, áudio e legendas da cópia preservada. Se o acervo tem outras versões ou edições, os detalhes ficam na mesma página.":
+    "Each film page lists the director, year, country and running time, along with the resolution, file size, audio and subtitles of the preserved copy. Details of other versions or editions in the collection appear on the same page.",
   "Os links disponíveis levam às cópias que escolhi compartilhar.":
     "The available links lead to copies I have chosen to share.",
   "Minhas redes sociais": "My social media",
 
-  "Filmes que venho reunindo, preservando e organizando ao longo do tempo.":
-    "Films I have been collecting, preserving and organizing over time.",
-  "O Acervo PVCA nasceu da organização da minha coleção pessoal de cinema. Ao longo do tempo, passou a reunir diferentes cópias, legendas revisadas e informações sobre cada obra.":
-    "Acervo PVCA began as a way to organize my personal film collection. Over time, it came to include different copies, revised subtitles and information about each film.",
-  "Este site abre a coleção à consulta. Aqui, você pode explorar os filmes, conhecer as cópias preservadas e percorrer a coleção pelas minhas seleções.":
-    "This site opens the collection to visitors. Here, you can browse the films, learn about the preserved copies and explore the collection through my selections.",
+  "Os filmes da minha coleção, que sigo preservando e organizando.":
+    "The films I have collected and continue to preserve and organize.",
+  "Comecei o Acervo PVCA para organizar minha coleção de filmes. Com o tempo, a coleção passou a incluir diferentes cópias de cada obra, legendas revisadas e informações sobre os filmes.":
+    "I started Acervo PVCA to organize my film collection. Over time, it grew to include different copies of each film, revised subtitles and information about the films.",
+  "Você pode consultar a coleção neste site. As fichas trazem informações sobre os filmes e as cópias preservadas; minhas seleções reúnem obras por interesses em comum.":
+    "You can browse the collection here. Each film page describes the film and its preserved copies; my selections group films around shared interests.",
   "O que você encontra": "What you will find",
   "Na página de cada filme, você encontra direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, áudio e legendas.":
     "Each film page includes director, year, country and running time, alongside the details of the preserved copy: resolution, file size, audio and subtitles.",
@@ -47,8 +47,8 @@ export const en = {
     "Each film has a page that brings together its copies, versions and editions, with the characteristics of each.",
   "Uma dessas cópias representa o filme no catálogo. A página do filme apresenta seus detalhes e, quando existem outras versões no acervo, permite conhecer as diferenças entre elas.":
     "One copy represents the film in the catalog. The film page describes it and, when other versions are in the collection, lets you see how they differ.",
-  "Percursos pessoais pela coleção. Alguns seguem um cineasta, uma época ou uma cinematografia; outros acompanham interesses e aproximações que surgem ao longo do tempo.":
-    "Personal paths through the collection. Some follow a filmmaker, a period or a national cinema; others reflect interests and connections that emerge over time.",
+  "Reúno aqui filmes de um mesmo cineasta, período ou país, além de seleções por temas e outros interesses que surgem enquanto vejo e organizo a coleção.":
+    "Here I group films by filmmaker, period or country, as well as themes and other interests that emerge as I watch and organize the collection.",
   "Família, trabalho e transformação social no cinema japonês entre o fim dos anos 1940 e os anos 1960.":
     "Family, work and social change in Japanese cinema from the late 1940s to the 1960s.",
   "Instituições, responsabilidade e conflitos morais nos filmes de Sidney Lumet.":
