@@ -30,7 +30,9 @@ const recentFilms = sourceRecent.map((film) => localizeFilm(film, lang));
     <section class="wrap intro">
       <h1>{t("Meu acervo pessoal de cinema.")}</h1>
       <p>
-        {t("Os filmes da minha coleção, que sigo preservando e organizando.")}
+        {t(
+          "Filmes que venho reunindo, preservando e organizando ao longo do tempo."
+        )}
       </p>
       <a class="intro-explore" href={path("/filmes/")}>
         {t("Filmes")} <span aria-hidden="true">→</span>

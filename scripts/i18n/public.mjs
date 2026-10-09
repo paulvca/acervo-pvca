@@ -25,18 +25,18 @@ export const en = {
   "Outra cópia": "Another copy",
   "Cópia do catálogo": "Catalog copy",
   "Os filmes e suas cópias": "The films and their copies",
-  "Na ficha de cada filme, você encontra direção, ano, país e duração. Ela também informa resolução, tamanho, áudio e legendas da cópia preservada. Se o acervo tem outras versões ou edições, os detalhes ficam na mesma página.":
+  "Na ficha de cada filme, você encontra informações sobre direção, ano, país e duração, além da resolução, do tamanho, do áudio e das legendas da cópia preservada. Os detalhes de outras versões ou edições do acervo ficam na mesma página.":
     "Each film page lists the director, year, country and running time, along with the resolution, file size, audio and subtitles of the preserved copy. Details of other versions or editions in the collection appear on the same page.",
   "Os links disponíveis levam às cópias que escolhi compartilhar.":
     "The available links lead to copies I have chosen to share.",
   "Minhas redes sociais": "My social media",
 
-  "Os filmes da minha coleção, que sigo preservando e organizando.":
-    "The films I have collected and continue to preserve and organize.",
-  "Comecei o Acervo PVCA para organizar minha coleção de filmes. Com o tempo, a coleção passou a incluir diferentes cópias de cada obra, legendas revisadas e informações sobre os filmes.":
-    "I started Acervo PVCA to organize my film collection. Over time, it grew to include different copies of each film, revised subtitles and information about the films.",
-  "Você pode consultar a coleção neste site. As fichas trazem informações sobre os filmes e as cópias preservadas; minhas seleções reúnem obras por interesses em comum.":
-    "You can browse the collection here. Each film page describes the film and its preserved copies; my selections group films around shared interests.",
+  "Filmes que venho reunindo, preservando e organizando ao longo do tempo.":
+    "Films I have been collecting, preserving and organizing over time.",
+  "Comecei o Acervo PVCA para organizar minha coleção de filmes. Com o tempo, ela passou a incluir diferentes cópias das obras, legendas revisadas e informações sobre cada filme.":
+    "I started Acervo PVCA to organize my film collection. Over time, it grew to include different copies, revised subtitles and information about each film.",
+  "Você pode consultar a coleção neste site. As fichas trazem informações sobre os filmes e suas cópias preservadas. Nas minhas seleções, reúno obras por temas e interesses em comum.":
+    "You can browse the collection here. Each film page describes the film and its preserved copies. My selections group films by theme and shared interests.",
   "O que você encontra": "What you will find",
   "Na página de cada filme, você encontra direção, ano, país e duração, além das características da cópia preservada: resolução, tamanho, áudio e legendas.":
     "Each film page includes director, year, country and running time, alongside the details of the preserved copy: resolution, file size, audio and subtitles.",

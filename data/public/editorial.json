@@ -55,7 +55,7 @@
       ],
       "localized": {
         "en": {
-          "description": "Marriage, family ties and ways of making a living in a Japan transformed by the war."
+          "description": "Marriage, family ties and ways of surviving in a Japan changing after the war."
         }
       }
     },
@@ -395,7 +395,7 @@
     {
       "id": "john-ford",
       "title": "John Ford",
-      "description": "A formação das comunidades, suas promessas e contradições, vista entre paisagens do Oeste, dramas e documentários.",
+      "description": "A formação das comunidades, com suas promessas e contradições, entre paisagens do Oeste, dramas e documentários.",
       "rule": "manual",
       "filmSlugs": [
         "the-man-who-shot-liberty-valance-1962",
@@ -466,7 +466,7 @@
       "localized": {
         "en": {
           "title": "John Ford",
-          "description": "The making of communities, their promises and contradictions, across Western landscapes, dramas and documentaries."
+          "description": "Communities taking shape, with their promises and contradictions, across Western landscapes, dramas and documentaries."
         }
       }
     },
@@ -651,7 +651,7 @@
     {
       "id": "michael-mann",
       "title": "Michael Mann",
-      "description": "Entre o crime e a lei, seus personagens se definem pelo trabalho e pela obsessão, e pagam o preço de viver segundo um código.",
+      "description": "Entre o crime e a lei, seus personagens se definem pelo trabalho e pela obsessão e pagam o preço de viver segundo um código.",
       "rule": "manual",
       "filmSlugs": [
         "the-keep-1983",
@@ -664,7 +664,7 @@
       "localized": {
         "en": {
           "title": "Michael Mann",
-          "description": "On both sides of the law, his characters define themselves through work and obsession, and pay the price of living by a code."
+          "description": "On both sides of the law, his characters define themselves through work and obsession and pay the price of living by a code."
         }
       }
     },
@@ -791,7 +791,7 @@
       "localized": {
         "en": {
           "title": "French cinema",
-          "description": "From Renoir and Bresson to the New Wave, films about private lives and social tensions, with room to experiment."
+          "description": "From Renoir and Bresson to the New Wave, films about private lives and social tensions, with the freedom to experiment."
         }
       }
     },
