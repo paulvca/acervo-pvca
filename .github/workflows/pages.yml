@@ -40,9 +40,9 @@ jobs:
       - name: Validate public catalog
         run: npm run catalog:check
       - name: Build static public site
-        run: npx --no-install astro build --site "${{ steps.pages.outputs.origin || 'https://paulvca.github.io' }}" --base "${{ steps.pages.outputs.base_path || '/acervo-pvca' }}"
+        run: npx --no-install astro build --site "${{ steps.pages.outputs.origin || 'https://pv-ca.github.io' }}" --base "${{ steps.pages.outputs.base_path || '/acervo-pvca' }}"
       - name: Validate routes, links and assets
-        run: python3 scripts/site_check.py --site "${{ steps.pages.outputs.origin || 'https://paulvca.github.io' }}" --base "${{ steps.pages.outputs.base_path || '/acervo-pvca' }}"
+        run: python3 scripts/site_check.py --site "${{ steps.pages.outputs.origin || 'https://pv-ca.github.io' }}" --base "${{ steps.pages.outputs.base_path || '/acervo-pvca' }}"
       - name: Install Chromium for browser checks
         run: npx --no-install playwright install --with-deps chromium
       - name: Browser and automated WCAG smoke checks

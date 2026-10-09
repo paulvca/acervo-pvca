@@ -3,7 +3,7 @@
 ## Three synchronous defenses
 
 1. Source: `npm ci`, `npm run format:check`, `npm run lint`, `npm run check`, `npm test`, `npm run catalog:check`.
-2. Artifact: build with the Pages origin/base, then `python3 scripts/site_check.py --site https://paulvca.github.io --base /acervo-pvca`.
+2. Artifact: build with the Pages origin/base, then `python3 scripts/site_check.py --site https://pv-ca.github.io --base /acervo-pvca`.
 3. Browser: `npx --no-install playwright install chromium`, then `npm run e2e` against that artifact. CI installs Chromium's system dependencies on the hosted runner; workstation tests may select an installed Chromium-family browser with `PVCA_BROWSER_PATH`.
 
 Node 22.22.3 or newer is required by the current Astro ESLint plugin. ESLint checks code semantics, duplicate keys, unreachable/undefined code and unused bindings; Prettier owns formatting. Evidence prototypes/references and generated artifacts are outside source lint scope. No errors/warnings are waived as a baseline.

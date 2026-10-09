@@ -48,7 +48,7 @@ for (const [pathname, manual, browserLanguage] of [
     const replacements = [];
     const links = ["pt-BR", "en"].map((language) => ({
       dataset: { language },
-      href: `https://paulvca.github.io/acervo-pvca/${language === "en" ? "en/" : ""}filmes/`,
+      href: `https://pv-ca.github.io/acervo-pvca/${language === "en" ? "en/" : ""}filmes/`,
       addEventListener(type, callback) {
         this[type] = callback;
       },

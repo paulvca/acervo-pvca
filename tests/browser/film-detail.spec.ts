@@ -126,7 +126,7 @@ test("share copies the canonical locale URL and offers a manual fallback", async
   await page.goto("en/filmes/heaven-s-gate-1980/?source=example");
   await page.locator("[data-share]").click();
   const canonical =
-    "https://paulvca.github.io/acervo-pvca/en/filmes/heaven-s-gate-1980/";
+    "https://pv-ca.github.io/acervo-pvca/en/filmes/heaven-s-gate-1980/";
   await expect(page.locator("html")).toHaveAttribute("data-copied", canonical);
   await expect(page.locator(".share-feedback")).toHaveText("Link copied");
   await page.evaluate(() =>
