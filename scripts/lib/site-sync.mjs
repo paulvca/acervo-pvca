@@ -34,7 +34,7 @@ export function validateReceipt(receipt, schema) {
     proof?.status === "VERIFIED" &&
       Number.isSafeInteger(proof.bytes) &&
       proof.bytes > 0 &&
-      (proof.adapter === "archive-observed"
+      (/-observed$/.test(proof.adapter ?? "")
         ? /^[a-f0-9]{32}$/.test(proof.md5 ?? "") && !proof.sha256
         : /^[a-f0-9]{64}$/.test(proof.sha256 ?? "")),
     "REMOTE_VERIFICATION_REQUIRED"
@@ -86,7 +86,7 @@ export function validateReceipt(receipt, schema) {
     });
   } else if (destination?.provider === "google_drive") {
     requireValue(
-      proof.adapter === "rclone-check" &&
+      ["rclone-check", "drive-observed"].includes(proof.adapter) &&
         /^[a-zA-Z0-9_-]+$/.test(destination.folder_id ?? "") &&
         destination.is_film_folder === true,
       "DRIVE_FILM_FOLDER_REQUIRED"

@@ -9,7 +9,7 @@ import {
   recoverBatch,
 } from "./lib/site-sync.mjs";
 import { publish } from "./lib/site-deploy.mjs";
-import { observeArchive } from "./lib/archive-observed.mjs";
+import { observeArchive, observeDrive } from "./lib/archive-observed.mjs";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const [action, ...args] = process.argv.slice(2);
 const batch = args[0];
@@ -21,7 +21,7 @@ try {
     result = await prepare(root, read(resolve(args[0])), {
       enrich: !args.includes("--no-enrich"),
     });
-  } else if (action === "archive") {
+  } else if (action === "archive" || action === "drive") {
     // Options are --name value pairs after the identifier.
     const options = Object.fromEntries(
       args
@@ -37,9 +37,11 @@ try {
       )
     )
       throw Error(
-        "archive IDENTIFIER --authorized REFERENCE [--tmdb ID] [--overrides FILE] [--batch BATCH]"
+        "archive IDENTIFIER | drive REMOTE_FILM_FOLDER, then --authorized REFERENCE [--tmdb ID] [--overrides FILE] [--batch BATCH]"
       );
-    const observed = await observeArchive(root, args[0], {
+    const observed = await (
+      action === "archive" ? observeArchive : observeDrive
+    )(root, args[0], {
       tmdbId: options.tmdb ? Number(options.tmdb) : undefined,
       authorization: options.authorized,
       batch: options.batch,
@@ -50,6 +52,7 @@ try {
       await prepare(root, observed.receipt);
       result = apply(root, observed.receipt.batch_id);
       result.warnings = observed.warnings;
+      result.link = observed.link;
     }
   } else if (action === "status") result = status(root, batch);
   else if (action === "recover") result = recoverBatch(root, batch);
@@ -61,7 +64,7 @@ try {
     result = await publish(root, batch);
   } else
     throw Error(
-      "Use archive IDENTIFIER | prepare RECEIPT | apply BATCH | publish BATCH | status BATCH | recover BATCH | resume BATCH"
+      "Use archive IDENTIFIER | drive REMOTE_FILM_FOLDER | prepare RECEIPT | apply BATCH | publish BATCH | status BATCH | recover BATCH | resume BATCH"
     );
   // Private receipts stay on disk; console output is a compact operational summary.
   console.log(
@@ -70,6 +73,7 @@ try {
         status: result.status,
         id: result.id,
         warnings: result.warnings,
+        link: result.link,
         batch_id: result.batch_id,
         events: Object.entries(result.events ?? {}).map(([id, e]) => ({
           id,
