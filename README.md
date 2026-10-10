@@ -2,13 +2,13 @@
 
 [English below](#english)
 
-O Acervo PVCA é um catálogo público da minha coleção pessoal de cinema. Traz informações sobre os filmes e suas cópias preservadas, além de seleções que organizo por temas e interesses em comum.
+O Acervo PVCA é um catálogo público da minha coleção pessoal de cinema. Traz informações sobre os filmes e suas cópias preservadas, além de seleções que organizo por temas e afinidades.
 
 [Acesse o catálogo](https://pv-ca.github.io/acervo-pvca/).
 
 ## O que você encontra no site
 
-Cada filme tem uma ficha com direção, ano, país e duração. Cada cópia do acervo traz resolução, tamanho do arquivo, áudio e legendas. Quando há outras versões ou edições de uma obra, elas ficam na mesma página.
+Cada filme tem uma ficha com direção, ano, país e duração. As cópias do acervo informam resolução, tamanho do arquivo, áudio e legendas. Quando há outras versões ou edições de uma obra, elas ficam na mesma página.
 
 Os links nas fichas levam às cópias que escolhi compartilhar. O site tem versões em português e inglês.
 
@@ -16,7 +16,7 @@ Os links nas fichas levam às cópias que escolhi compartilhar. O site tem vers�
 
 Este repositório contém o código do site e os dados públicos do catálogo. O site é feito com Astro, TypeScript e CSS próprio.
 
-Os dados publicados são uma seleção da base privada que uso para organizar a coleção. Caminhos locais, informações internas de armazenamento e registros de revisão ficam fora do catálogo público.
+No catálogo público entra apenas uma parte da base privada que uso para organizar a coleção. Caminhos locais, informações internas de armazenamento e registros de revisão ficam de fora.
 
 ## Desenvolvimento
 
@@ -44,13 +44,13 @@ A licença do código ainda não foi definida.
 
 ## English
 
-Acervo PVCA is a public catalog of my personal film collection. It has information about the films and their preserved copies, along with selections I put together around shared themes and interests.
+Acervo PVCA is a public catalog of my personal film collection. It includes information about the films and the copies I preserve, along with selections I put together around shared themes and interests.
 
 [Browse the catalog](https://pv-ca.github.io/acervo-pvca/en/).
 
 ## What you can find on the website
 
-Each film has a page with its director, year, country, and runtime. Each copy lists resolution, file size, audio, and subtitles. When a film has other versions or editions in the collection, they appear on the same page.
+Each film has a page with its director, year, country, and runtime. Copies in the collection also list resolution, file size, audio, and subtitles. When a film has other versions or editions in the collection, they appear on the same page.
 
 Links on the film pages lead to the copies I have chosen to share. The website is available in Portuguese and English.
 
@@ -58,7 +58,7 @@ Links on the film pages lead to the copies I have chosen to share. The website i
 
 This repository contains the website's source code and the catalog's public data. The site is built with Astro, TypeScript, and custom CSS.
 
-The published data is a selection from the private database I use to organize the collection. Local paths, internal storage information, and review records stay out of the public catalog.
+Only part of the private database I use to organize the collection is published here. Local paths, internal storage information, and review records stay out of the public catalog.
 
 ## Development
 
