@@ -366,6 +366,62 @@ test("isolated batch deploy excludes prototype, verifies both languages and resu
   );
   await publish(root, "batch", { run, fetchPage });
   assert.equal(pushes, 2);
+
+  // A failed Pages run stays pending until a later commit on main deploys the same pages.
+  await command(["git", "fetch", result.deployment.staging, "HEAD"], root);
+  await command(["git", "update-ref", "refs/heads/main", "FETCH_HEAD"], root);
+  const other = receipt(root);
+  other.event_id = "second";
+  other.record.tmdb_id = 2;
+  other.record.id = "PVCA-000002";
+  other.record.slug = "second-film-2000";
+  other.record.copies[0].id = other.record.catalog_copy_id = "pvca-000002-a";
+  await stage(root, other);
+  let repaired = [];
+  const failing = async (argv, cwd) => {
+    if (argv[0] === "gh")
+      return JSON.stringify(
+        argv.includes("--branch")
+          ? repaired
+          : [{ databaseId: 23, status: "completed", conclusion: "failure" }]
+      );
+    if (argv[1] === "merge-base" && argv[4] === "fix") return "";
+    if (argv[0] === "npx") {
+      await run(argv, cwd);
+      for (const prefix of ["", "en/"]) {
+        const dir = resolve(cwd, "dist", prefix, "filmes/second-film-2000");
+        mkdirSync(dir, { recursive: true });
+        writeFileSync(
+          resolve(dir, "index.html"),
+          prefix + "verified film page"
+        );
+      }
+      return "";
+    }
+    return run(argv, cwd);
+  };
+  await assert.rejects(
+    publish(root, "batch", { run: failing, fetchPage }),
+    /PAGES_WORKFLOW_FAILED/
+  );
+  repaired = [
+    {
+      databaseId: 24,
+      status: "completed",
+      conclusion: "success",
+      headSha: "fix",
+    },
+  ];
+  const fixed = await publish(root, "batch", {
+    run: failing,
+    fetchPage,
+    sleep: async () => {},
+  });
+  assert.equal(fixed.status, "PUBLISHED");
+  assert.deepEqual(
+    [fixed.deployment.workflow_id, fixed.deployment.deployed_by],
+    [24, "fix"]
+  );
 });
 
 import { recoverBatch } from "./lib/site-sync.mjs";
@@ -473,11 +529,23 @@ test("an Archive item becomes a film from public evidence alone; repeats and mis
 
   const observed = await observe();
   assert.equal(observed.status, "OBSERVED");
-  assert.deepEqual(observed.warnings, []);
+  assert.deepEqual(observed.warnings, [
+    "pt-BR synopsis is a translation not yet reviewed",
+  ]);
   const queue = await stage(root, observed.receipt);
   assert.equal(
     queue.events["archive-test-film-2000-1080p-pvca"].status,
     "APPLIED"
+  );
+  assert.equal(
+    Object.values(readDatabase(root).films)[0].sources.portugueseSynopsis
+      .method,
+    "unreviewed_translation"
+  );
+  assert.ok(
+    !readFileSync(resolve(root, "data/public/catalog.json"), "utf8").includes(
+      "unreviewed"
+    )
   );
   const [film] = allRecords(readDatabase(root));
   assert.deepEqual(
@@ -566,7 +634,8 @@ test("a Drive film folder becomes a ficha with its link only when the folder ope
       observed.link,
       "https://drive.google.com/drive/folders/folder_123"
     );
-    assert.equal(observed.warnings.length, shared ? 0 : 1);
+    // Each carries the unreviewed-translation notice; the private folder adds its own.
+    assert.equal(observed.warnings.length, shared ? 1 : 2);
     const queue = await stage(root, observed.receipt);
     assert.equal(queue.events["drive-folder_123"].status, "APPLIED");
     const [film] = allRecords(readDatabase(root));
