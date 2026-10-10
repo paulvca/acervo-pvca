@@ -179,7 +179,14 @@ export async function publish(
         staging
       );
       await run(
-        ["python3", "scripts/site_check.py", "--base", "/acervo-pvca"],
+        [
+          "python3",
+          "scripts/site_check.py",
+          "--site",
+          "https://pv-ca.github.io",
+          "--base",
+          "/acervo-pvca",
+        ],
         staging
       );
       if (publicSnapshot(root).fingerprint !== snapshot.fingerprint)
