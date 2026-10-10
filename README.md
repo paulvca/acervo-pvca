@@ -1,46 +1,83 @@
 # Acervo PVCA
 
-Site pessoal de cinema e catálogo público do Acervo PVCA.
+[English below](#english)
 
-O projeto parte de uma base canônica privada e publica apenas uma projeção sanitizada dos dados. A direção visual é editorial, pessoal e minimalista, com Flexoki Dark, muito espaço negativo, listas e tipografia como elementos principais de composição.
+O Acervo PVCA é um catálogo público da minha coleção pessoal de cinema. Traz informações sobre os filmes e suas cópias preservadas, além de seleções que organizo por temas e interesses em comum.
 
-## Estrutura
+[Acesse o catálogo](https://pv-ca.github.io/acervo-pvca/).
 
-- `docs/` — produto, arquitetura, design, dados, privacidade e roadmap.
-- `prototype/` — protótipos aprovados antes da implementação final.
-- `src/` — site estático em Astro, TypeScript e CSS próprio.
-- `public/` — assets públicos.
-- `data/public/` — projeções sanitizadas para o frontend.
-- `data/schema/` — contratos dos dados públicos.
-- `references/` — referências técnicas derivadas e auditadas.
-- `scripts/` — ferramentas de geração e validação.
+## O que você encontra no site
 
-## Princípio de dados
+Cada filme tem uma ficha com direção, ano, país e duração. Cada cópia do acervo traz resolução, tamanho do arquivo, áudio e legendas. Quando há outras versões ou edições de uma obra, elas ficam na mesma página.
 
-O frontend nunca deve consumir diretamente inventários operacionais, caminhos locais, hashes, estados privados de QA ou dados internos do Google Drive.
+Os links nas fichas levam às cópias que escolhi compartilhar. O site tem versões em português e inglês.
 
-## Local development and data intake
+## Sobre o repositório
 
-Use `npm run dev` for local development and `npm run build` for the static build.
-The published baseline contains 526 validated works. `data/public/catalog.json`
-is the public projection; an empty projection activates the development preview
-only as an explicit fallback, not as the current publication state.
+Este repositório contém o código do site e os dados públicos do catálogo. O site é feito com Astro, TypeScript e CSS próprio.
 
-The [field guide](docs/CAMPOS_DO_ACERVO.md) explains the supported information.
-Use `npm run admin` for the private local editor; see the
-[panel guide](docs/PAINEL_LOCAL.md) and [technical setup](docs/LOCAL_ADMIN.md).
-The [intake workflow](docs/DATA_INTAKE.md) documents validation and local imports.
-The [architecture guide](docs/ARCHITECTURE.md) describes bilingual routes,
-normalized local storage, import previews, editorial protection and TMDB enrichment.
-The environment does not require a spreadsheet. Review intake previews and the
-public projection locally before publishing changes.
-Use `npm run catalog:test`, `npm run data:test`, `npm run admin:test` and
-`npm run tmdb:test` to verify the ingestion and local administration workflows.
+Os dados publicados são uma seleção da base privada que uso para organizar a coleção. Caminhos locais, informações internas de armazenamento e registros de revisão ficam fora do catálogo público.
 
-## Quality
+## Desenvolvimento
 
-Run `npm run quality`, build with the Pages site/base, then run `site_check.py`
-and `npm run e2e`. See [quality and maintenance](docs/QUALITY.md). Browser tests
-require `npx --no-install playwright install chromium` once locally.
+Com as dependências instaladas, use `npm run dev` para iniciar o servidor local e `npm run build` para gerar o site estático. O comando `npm run quality` confere formatação, lint, tipos, testes e a validação do catálogo.
+
+Mais detalhes na documentação:
+
+- [Campos do acervo](docs/CAMPOS_DO_ACERVO.md)
+- [Arquitetura do projeto](docs/ARCHITECTURE.md)
+- [Importação de dados](docs/DATA_INTAKE.md)
+- [Qualidade e manutenção](docs/QUALITY.md)
+
+## Créditos e licença
+
+Metadados e pôsteres vêm do [TMDB](https://www.themoviedb.org/), quando disponíveis. Este projeto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.
 
 A licença do código ainda não foi definida.
+
+## Outros perfis
+
+- [Letterboxd](https://letterboxd.com/pvca/)
+- [X](https://x.com/vaidadehumana)
+
+---
+
+## English
+
+Acervo PVCA is a public catalog of my personal film collection. It has information about the films and their preserved copies, along with selections I put together around shared themes and interests.
+
+[Browse the catalog](https://pv-ca.github.io/acervo-pvca/en/).
+
+## What you can find on the website
+
+Each film has a page with its director, year, country, and runtime. Each copy lists resolution, file size, audio, and subtitles. When a film has other versions or editions in the collection, they appear on the same page.
+
+Links on the film pages lead to the copies I have chosen to share. The website is available in Portuguese and English.
+
+## About the repository
+
+This repository contains the website's source code and the catalog's public data. The site is built with Astro, TypeScript, and custom CSS.
+
+The published data is a selection from the private database I use to organize the collection. Local paths, internal storage information, and review records stay out of the public catalog.
+
+## Development
+
+With dependencies installed, use `npm run dev` to start the local server and `npm run build` to generate the static site. `npm run quality` checks formatting, lint, types, tests, and catalog validation.
+
+More details in the documentation:
+
+- [Catalog fields](docs/CAMPOS_DO_ACERVO.md)
+- [Project architecture](docs/ARCHITECTURE.md)
+- [Data imports](docs/DATA_INTAKE.md)
+- [Quality and maintenance](docs/QUALITY.md)
+
+## Credits and license
+
+Metadata and posters come from [TMDB](https://www.themoviedb.org/) when available. This product uses the TMDB API but is not endorsed or certified by TMDB.
+
+A license for the code has not yet been chosen.
+
+## Other profiles
+
+- [Letterboxd](https://letterboxd.com/pvca/)
+- [X](https://x.com/vaidadehumana)
