@@ -30852,5 +30852,62 @@
     "countries": ["Japan"],
     "genres": ["Drama", "History"],
     "original_languages": ["ja"]
+  },
+  {
+    "id": "PVCA-000532",
+    "slug": "new-year-trip-1968",
+    "title": "New Year Trip",
+    "year": 1968,
+    "copies": [
+      {
+        "id": "pvca-000532-archive",
+        "resolution": "1080p",
+        "size_gib": 2.648027223534882,
+        "format": "MKV",
+        "audio_languages": ["ja"],
+        "subtitle_languages": ["pt-BR", "en"]
+      }
+    ],
+    "catalog_copy_id": "pvca-000532-archive",
+    "poster": "/posters/tmdb-391153-qnRN5Ii7gcnvZ4mC5Attzufwwqa.jpg",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/kigeki-hatsumode-ressha-1968-1080p-pvca",
+        "copy_id": "pvca-000532-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 391153,
+    "added_at": "2026-10-10",
+    "original_title": "喜劇　初詣列車",
+    "release_date": "1968-01-03",
+    "runtime_minutes": 91,
+    "imdb_id": "tt0293319",
+    "translations": {
+      "pt-BR": {
+        "title": "喜劇　初詣列車",
+        "synopsis": null
+      },
+      "en": {
+        "title": "New Year Trip",
+        "synopsis": "A comedy about a good-natured train conductor Shinsaku helping his old friend Miwako find her missing brother."
+      }
+    },
+    "synopsis": null,
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Japão"],
+        "genres": ["Comédia"]
+      },
+      "en": {
+        "countries": ["Japan"],
+        "genres": ["Comedy"]
+      }
+    },
+    "directors": ["Masaharu Segawa"],
+    "countries": ["Japan"],
+    "genres": ["Comedy"],
+    "original_languages": ["ja"]
   }
 ]
