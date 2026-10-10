@@ -30795,5 +30795,62 @@
     "countries": ["France"],
     "genres": ["Mystery", "Drama", "Crime"],
     "original_languages": ["fr"]
+  },
+  {
+    "id": "PVCA-000531",
+    "slug": "black-rain-1989",
+    "title": "Black Rain",
+    "year": 1989,
+    "copies": [
+      {
+        "id": "pvca-000531-archive",
+        "resolution": "1080p",
+        "size_gib": 31.23717558197677,
+        "format": "MKV",
+        "audio_languages": ["ja"],
+        "subtitle_languages": ["pt-BR", "en"]
+      }
+    ],
+    "catalog_copy_id": "pvca-000531-archive",
+    "poster": "/posters/tmdb-185987-azws1wRBy37PTbkf8wxbBkFFjYL.jpg",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/black-rain-1989-1080p-pvca",
+        "copy_id": "pvca-000531-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 185987,
+    "added_at": "2026-10-10",
+    "original_title": "黒い雨",
+    "release_date": "1989-05-13",
+    "runtime_minutes": 123,
+    "imdb_id": "tt0097694",
+    "translations": {
+      "pt-BR": {
+        "title": "Black Rain: A Coragem de uma Raça",
+        "synopsis": "Cinco anos se passaram desde que a bomba atômica atingiu Hiroshima, matando milhares de pessoas. Ainda assim, a população sobrevivente sofre com a radiação deixada pelo bombardeio, que por muitas vezes chega na forma de uma chuva negra. Nesse cenário, Yasuko, seu tio e sua tia são forçados a lidar com as provações dessa catástrofe. Baseado no livro homônimo de Masuji Ibuse."
+      },
+      "en": {
+        "title": "Black Rain",
+        "synopsis": "Shigematsu Shizuma, who lives with his family in a village near Fukuyama, was in Hiroshima with his wife and niece just after the devastating atomic bombing, a tragedy that cruelly took the lives of thousands of people and forever marked the harsh existence of the survivors."
+      }
+    },
+    "synopsis": "Cinco anos se passaram desde que a bomba atômica atingiu Hiroshima, matando milhares de pessoas. Ainda assim, a população sobrevivente sofre com a radiação deixada pelo bombardeio, que por muitas vezes chega na forma de uma chuva negra. Nesse cenário, Yasuko, seu tio e sua tia são forçados a lidar com as provações dessa catástrofe. Baseado no livro homônimo de Masuji Ibuse.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Japão"],
+        "genres": ["Drama", "História"]
+      },
+      "en": {
+        "countries": ["Japan"],
+        "genres": ["Drama", "History"]
+      }
+    },
+    "directors": ["Shōhei Imamura"],
+    "countries": ["Japan"],
+    "genres": ["Drama", "History"],
+    "original_languages": ["ja"]
   }
 ]
