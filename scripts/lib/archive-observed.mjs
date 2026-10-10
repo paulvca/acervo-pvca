@@ -1,6 +1,6 @@
 // Site receipts built only from what the destination itself serves: an Internet Archive item or a
 // Google Drive film folder. No local media and no upload job are needed, so any transport can end here.
-import { execFile } from "node:child_process";
+import { spawn } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { createHash } from "node:crypto";
@@ -27,46 +27,58 @@ async function fetchMetadata(identifier) {
   requireValue(response.ok, "ARCHIVE_METADATA_UNAVAILABLE");
   return response.json();
 }
-const PROBE = "ffprobe -v error -print_format json -show_format -show_streams";
-function run(file, args) {
-  return new Promise((done, reject) =>
-    execFile(
-      file,
-      args,
-      { timeout: 300000, maxBuffer: 16 * 1024 * 1024 },
-      (error, stdout) => (error ? reject(error) : done(stdout))
-    )
-  );
+const PROBE = ["-v", "error", "-print_format", "json", "-show_format"].concat(
+  "-show_streams"
+);
+// JSON printed by a fixed program started without a shell; arguments are never interpreted as commands.
+function printed(child, failure) {
+  return new Promise((done, reject) => {
+    let text = "";
+    const timer = setTimeout(() => child.kill(), 300000);
+    child.stdout.on("data", (chunk) => {
+      text += chunk;
+      if (text.length > 16 * 1024 * 1024) child.kill();
+    });
+    child.on("error", () => reject(Error(failure)));
+    child.on("close", () => {
+      clearTimeout(timer);
+      try {
+        done(JSON.parse(text));
+      } catch {
+        reject(Error(failure));
+      }
+    });
+  });
 }
-async function json(file, args, failure) {
-  try {
-    return JSON.parse(await run(file, args));
-  } catch {
-    throw Error(failure);
-  }
-}
+const quiet = { stdio: ["ignore", "pipe", "ignore"] };
 const remoteProbe = (url) =>
-  json("ffprobe", [...PROBE.split(" ").slice(1), url], "MEDIA_PROBE_FAILED");
+  printed(spawn("ffprobe", [...PROBE, url], quiet), "MEDIA_PROBE_FAILED");
 // Read-only Drive access: listings with hashes, and the container header streamed into ffprobe.
 const drive = {
   list: (remote, kind) =>
-    json(
-      "rclone",
-      ["lsjson", remote, kind, "--hash"],
+    printed(
+      spawn("rclone", ["lsjson", remote, kind, "--hash"], quiet),
       "DRIVE_LISTING_UNAVAILABLE"
     ),
-  // ffprobe stops reading once it has the header, so the exit status of the truncated stream says nothing.
-  probe: (remote) =>
-    json(
-      "bash",
-      [
-        "-c",
-        `rclone cat "$1" --head 33554432 | ${PROBE} -i pipe:0`,
-        "probe",
-        remote,
-      ],
-      "MEDIA_PROBE_FAILED"
-    ),
+  // ffprobe stops reading once it has the header; the truncated stream is then closed, not an error.
+  async probe(remote) {
+    const source = spawn(
+      "rclone",
+      ["cat", remote, "--head", "33554432"],
+      quiet
+    );
+    const reader = spawn("ffprobe", [...PROBE, "-i", "pipe:0"], {
+      stdio: ["pipe", "pipe", "ignore"],
+    });
+    reader.stdin.on("error", () => {});
+    source.on("error", () => reader.stdin.end());
+    source.stdout.pipe(reader.stdin);
+    try {
+      return await printed(reader, "MEDIA_PROBE_FAILED");
+    } finally {
+      source.kill();
+    }
+  },
   // A folder that opens without signing in is shared with anyone who has the link.
   async opensAnonymously(url) {
     const response = await fetch(url, { signal: AbortSignal.timeout(30000) });
