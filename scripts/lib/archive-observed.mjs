@@ -55,12 +55,11 @@ const drive = {
       ["lsjson", remote, kind, "--hash"],
       "DRIVE_LISTING_UNAVAILABLE"
     ),
+  // ffprobe stops reading once it has the header, so the exit status of the truncated stream says nothing.
   probe: (remote) =>
     json(
       "bash",
       [
-        "-o",
-        "pipefail",
         "-c",
         `rclone cat "$1" --head 33554432 | ${PROBE} -i pipe:0`,
         "probe",
