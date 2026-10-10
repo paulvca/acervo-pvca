@@ -243,12 +243,21 @@ async function receiptFor(root, source, options) {
     warnings.push(
       `Reviewed year ${source.year} differs from TMDB ${work.year}`
     );
-  if (
-    !known &&
-    !work.translations?.["pt-BR"]?.synopsis &&
-    !overrides.translations?.["pt-BR"]?.synopsis
-  )
-    warnings.push("No official pt-BR synopsis; supply one in --overrides");
+  // Without an official pt-BR text the ficha still goes out; a supplied translation is recorded as unreviewed.
+  let provenance;
+  if (!known && !work.translations?.["pt-BR"]?.synopsis) {
+    if (overrides.translations?.["pt-BR"]?.synopsis) {
+      provenance = {
+        portugueseSynopsis: {
+          method: "unreviewed_translation",
+          source: "site_tail_overrides",
+          translatedAt: today,
+        },
+      };
+      warnings.push("pt-BR synopsis is a translation not yet reviewed");
+    } else
+      warnings.push("No official pt-BR synopsis; supply one in --overrides");
+  }
   return {
     status: "OBSERVED",
     warnings,
@@ -259,6 +268,7 @@ async function receiptFor(root, source, options) {
       batch_id: batch ?? `site-${today.replaceAll("-", "")}`,
       authorization: { site: true, reference: authorization },
       record,
+      ...(provenance ? { provenance } : {}),
       destination: source.destination,
       verification: {
         status: "VERIFIED",

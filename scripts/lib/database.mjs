@@ -348,7 +348,14 @@ export function planImport(db, input, schema, publicDir) {
 }
 
 // Additive publication updates. Import remains a separate, replacement-oriented API.
-export function planPublication(db, record, schema, publicDir, sha256) {
+export function planPublication(
+  db,
+  record,
+  schema,
+  publicDir,
+  sha256,
+  provenance = {}
+) {
   const matches = Object.entries(db.films).filter(
     ([, row]) =>
       row.fields.tmdb_id === record.tmdb_id ||
@@ -408,6 +415,8 @@ export function planPublication(db, record, schema, publicDir, sha256) {
   next.sources.copySha256 = { ...next.sources.copySha256 };
   for (const copy of record.copies ?? [])
     next.sources.copySha256[copy.id] = sha256;
+  // Private provenance, such as an unreviewed translation, never reaches the public record.
+  if (!old) Object.assign(next.sources, provenance);
   // A repeated receipt must not increment the revision or rewrite source provenance.
   if (
     JSON.stringify({ ...plan.database, revision: db.revision }) ===

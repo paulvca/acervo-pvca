@@ -23,11 +23,26 @@ const PUBLIC_URL = "https://pv-ca.github.io/acervo-pvca";
 const environment = Object.fromEntries(
   Object.entries(process.env).filter(([name]) => !name.startsWith("GIT_"))
 );
-export function command(argv, cwd) {
+// CI installs Chromium; the workstation runs the browser checks with an installed Chromium-family browser.
+function browserEnvironment() {
+  if (process.env.PVCA_BROWSER_PATH) return {};
+  for (const name of [
+    "chromium",
+    "chromium-browser",
+    "google-chrome",
+    "microsoft-edge",
+  ])
+    for (const dir of (process.env.PATH ?? "").split(":")) {
+      const file = resolve(dir, name);
+      if (dir && existsSync(file)) return { PVCA_BROWSER_PATH: file };
+    }
+  return {};
+}
+export function command(argv, cwd, extra = {}) {
   return new Promise((done, reject) => {
     const child = spawn(argv[0], argv.slice(1), {
       cwd,
-      env: environment,
+      env: { ...environment, ...extra },
       stdio: ["ignore", "pipe", "pipe"],
       signal: AbortSignal.timeout(15 * 60 * 1000),
     });
@@ -189,6 +204,10 @@ export async function publish(
         ],
         staging
       );
+      // The remaining CI steps that depend on catalog data run here, before anything reaches main.
+      await run(["npm", "run", "format:check"], staging);
+      await run(["npm", "test"], staging);
+      await run(["npm", "run", "e2e"], staging, browserEnvironment());
       if (publicSnapshot(root).fingerprint !== snapshot.fingerprint)
         throw Error("CATALOG_CHANGED_DURING_BUILD");
       const pages = [];
@@ -247,7 +266,18 @@ export async function publish(
       deployment.commit
     )
       throw Error("DEPLOYMENT_CHECKOUT_CHANGED");
-    await run(["git", "push", "origin", "HEAD:main"], deployment.staging);
+    const contained = (descendant) =>
+      run(
+        ["git", "merge-base", "--is-ancestor", deployment.commit, descendant],
+        deployment.staging
+      ).then(
+        () => true,
+        () => false
+      );
+    // A commit that main already contains, for instance under a later fix, is not pushed again.
+    await run(["git", "fetch", "origin", "main"], deployment.staging);
+    if (!(await contained("origin/main")))
+      await run(["git", "push", "origin", "HEAD:main"], deployment.staging);
     persist(root, batch, (q) => {
       q.deployment.status = "PUSHED";
     });
@@ -277,17 +307,48 @@ export async function publish(
         runs.find(
           (item) => item.status === "completed" && item.conclusion === "success"
         ) ?? runs[0];
-      if (workflow?.status === "completed") {
-        if (workflow.conclusion !== "success")
-          throw Error("PAGES_WORKFLOW_FAILED");
-        break;
-      }
+      if (workflow?.status === "completed") break;
       await sleep(10000);
+    }
+    if (workflow?.status === "completed" && workflow.conclusion !== "success") {
+      // A later commit on main can repair the build and deploy this one with it.
+      workflow = undefined;
+      for (const item of JSON.parse(
+        await run(
+          [
+            "gh",
+            "run",
+            "list",
+            "--repo",
+            REPOSITORY,
+            "--workflow",
+            "pages.yml",
+            "--branch",
+            "main",
+            "--status",
+            "success",
+            "--json",
+            "databaseId,status,conclusion,headSha",
+            "--limit",
+            "20",
+          ],
+          root
+        )
+      ))
+        if (
+          item.headSha !== deployment.commit &&
+          (await contained(item.headSha))
+        ) {
+          workflow = item;
+          break;
+        }
+      if (!workflow) throw Error("PAGES_WORKFLOW_FAILED");
     }
     if (workflow?.conclusion !== "success")
       throw Error("PAGES_WORKFLOW_PENDING");
     persist(root, batch, (q) => {
       q.deployment.workflow_id = workflow.databaseId;
+      if (workflow.headSha) q.deployment.deployed_by = workflow.headSha;
     });
     for (const page of deployment.pages) {
       let matched = false;
