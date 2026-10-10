@@ -30,7 +30,7 @@ The abbreviated `record` above is illustrative: use a public-schema draft includ
 For a single film, set `finalize_batch: true`. For a batch, keep it false on every item and finalize once after all items have either verified or reached a recorded pending state:
 
 ```sh
-cd /home/pvca/Documentos/Workspace-IA/projetos/local/linux/acervo-pvca
+cd acervo-pvca  # the site checkout
 npm run site:sync -- resume batch-20261008
 ```
 
