@@ -9,6 +9,7 @@ export default [
       "dist/**",
       ".astro/**",
       "node_modules/**",
+      ".local-admin/**",
       "prototype/**",
       "references/**",
       "data/**",

@@ -1,7 +1,10 @@
-import { readFileSync, writeFileSync, renameSync, unlinkSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateCatalog, mergeCatalog } from "./lib/catalog.mjs";
+
+import { updateDatabase } from "./lib/store.mjs";
+import { saveManual, publicRecords } from "./lib/database.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const [command, inputPath, ...flags] = process.argv.slice(2);
@@ -39,29 +42,18 @@ try {
   } else {
     if (!incoming.length)
       throw new Error("Entrada vazia: nenhum filme foi alterado.");
-    const existing = JSON.parse(readFileSync(target, "utf8"));
-    const merged = mergeCatalog(
-      existing,
-      incoming,
-      flags.includes("--replace")
-    );
-    const mergedErrors = validateCatalog(
-      merged,
-      schema,
-      resolve(root, "public")
-    );
-    if (mergedErrors.length) throw new Error(mergedErrors.join("\n"));
-    const temporary = `${target}.${process.pid}.tmp`;
-    try {
-      writeFileSync(temporary, JSON.stringify(merged, null, 2) + "\n", {
-        flag: "wx",
-      });
-      renameSync(temporary, target);
-    } finally {
-      try {
-        unlinkSync(temporary);
-      } catch {}
-    }
+    let merged;
+    updateDatabase(root, (db) => {
+      merged = mergeCatalog(
+        publicRecords(db),
+        incoming,
+        flags.includes("--replace")
+      );
+      const errors = validateCatalog(merged, schema, resolve(root, "public"));
+      if (errors.length) throw Error(errors.join("\n"));
+      for (const film of incoming) db = saveManual(db, film, true);
+      return db;
+    });
     console.log(
       `${incoming.length} registro(s) importado(s) localmente. Total: ${merged.length}. Rode npm run build e revise. Nenhum commit, upload ou publicação realizado.`
     );

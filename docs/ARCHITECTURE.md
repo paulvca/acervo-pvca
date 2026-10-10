@@ -162,3 +162,7 @@ members/titles and manual members attached to automatic rules. Builds validate
 these references against the active public catalog; the admin validates against
 its current editable catalog before saving. Selection pages, counts, preview strips,
 home entries and film backlinks all derive from the same resolved selections.
+
+## Verified upload handoff
+
+For Archive/Drive upload synchronization, catalog transactions, batch deployment and site-only recovery, follow [the integration contract](PUBLICATION_INTEGRATION.md). Ordinary intake and panel editing remain local until that explicitly authorized publication workflow is used.
