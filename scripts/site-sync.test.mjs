@@ -503,3 +503,89 @@ test("an Archive item becomes a film from public evidence alone; repeats and mis
   assert.equal(resolutionClass({ width: 3840, height: 1608 }), "2160p");
   assert.equal(resolutionClass({ width: 960, height: 720 }), "720p");
 });
+test("a Drive film folder becomes a ficha with its link only when the folder opens without signing in", async () => {
+  const { observeDrive } = await import("./lib/archive-observed.mjs");
+  const bytes = 2 * 2 ** 30;
+  const options = (shared) => ({
+    tmdbId: 123,
+    authorization: "current user request",
+    batch: "batch",
+    today: "2026-10-10",
+    overrides: {
+      countries: ["France"],
+      poster: "/posters/test.png",
+      translations: {
+        "pt-BR": { synopsis: "Texto" },
+        en: { synopsis: "Text" },
+      },
+    },
+    enrich: async () => ({
+      title: "Filme",
+      year: 2000,
+      directors: ["Director"],
+    }),
+    search: async () => [],
+    remoteDrive: {
+      list: async (remote, kind) =>
+        kind === "--dirs-only"
+          ? [
+              { Name: "Test film (2000)", ID: "folder_123" },
+              { Name: "Other (1999)", ID: "x" },
+            ]
+          : [
+              {
+                Name: "Test film (2000).mkv",
+                Size: bytes,
+                Hashes: { md5: "d".repeat(32) },
+              },
+              {
+                Name: "Test film (2000).en.srt",
+                Size: 10,
+                Hashes: { md5: "e".repeat(32) },
+              },
+            ],
+      probe: async () => ({
+        format: { format_name: "matroska,webm" },
+        streams: [
+          { codec_type: "video", width: 1280, height: 720 },
+          { codec_type: "audio", tags: { language: "eng" } },
+        ],
+      }),
+      opensAnonymously: async () => shared,
+    },
+  });
+  const remote = "gdrive:Acervo/Director & Other Person/Test film (2000)";
+  await assert.rejects(
+    observeDrive(environment(), "gdrive:Acervo/Director", options(true)),
+    /DRIVE_FILM_FOLDER_REQUIRED/
+  );
+  for (const shared of [true, false]) {
+    const root = environment();
+    const observed = await observeDrive(root, remote, options(shared));
+    assert.equal(
+      observed.link,
+      "https://drive.google.com/drive/folders/folder_123"
+    );
+    assert.equal(observed.warnings.length, shared ? 0 : 1);
+    const queue = await stage(root, observed.receipt);
+    assert.equal(queue.events["drive-folder_123"].status, "APPLIED");
+    const [film] = allRecords(readDatabase(root));
+    assert.deepEqual(
+      [
+        film.title,
+        film.directors,
+        film.copies[0].id,
+        film.copies[0].resolution,
+      ],
+      ["Test film", ["Director", "Other Person"], "pvca-000001-drive", "720p"]
+    );
+    assert.deepEqual(
+      film.external_links.map((link) => link.url),
+      shared ? ["https://drive.google.com/drive/folders/folder_123"] : []
+    );
+    assert.equal(
+      (await observeDrive(root, remote, options(shared))).status,
+      "ALREADY_ON_SITE"
+    );
+  }
+});
