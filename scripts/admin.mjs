@@ -6,7 +6,6 @@ import {
   mkdirSync,
   renameSync,
   existsSync,
-  unlinkSync,
 } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -18,19 +17,15 @@ import {
   validateLink,
 } from "./lib/catalog.mjs";
 import { validateEditorial } from "./lib/editorial.mjs";
-import {
-  seedDatabase,
-  saveManual,
-  allRecords,
-  publicRecords,
-  planImport,
-} from "./lib/database.mjs";
+import { saveManual, allRecords, planImport } from "./lib/database.mjs";
 import { enrichTmdb, tmdbStatus } from "./lib/tmdb.mjs";
 import {
   isCanonical,
   convertCanonical,
   mergeEnrichment,
 } from "./lib/canonical.mjs";
+
+import { readDatabase, updateDatabase, fingerprint } from "./lib/store.mjs";
 
 export function createAdmin(root, port = 4323) {
   const token = randomBytes(32).toString("hex");
@@ -61,33 +56,9 @@ export function createAdmin(root, port = 4323) {
     existsSync(path(".local-admin/drafts.json"))
       ? read(".local-admin/drafts.json")
       : [];
-  const database = () => {
-    if (existsSync(path(".local-admin/transaction.json"))) {
-      const pending = read(".local-admin/transaction.json");
-      save(".local-admin/database.json", pending);
-      save("data/public/catalog.json", publicRecords(pending));
-      unlinkSync(path(".local-admin/transaction.json"));
-    }
-    const records = read("data/public/catalog.json");
-    if (!existsSync(path(".local-admin/database.json")))
-      return seedDatabase(records);
-    let db = read(".local-admin/database.json");
-    const existing = new Map(
-      allRecords(db).map((record) => [record.id, record])
-    );
-    for (const record of records) {
-      const old = existing.get(record.id);
-      if (JSON.stringify(old) !== JSON.stringify(record))
-        db = saveManual(db, record, true);
-    }
-    return db;
-  };
-  const commitDatabase = (db) => {
-    save(".local-admin/transaction.json", db);
-    save(".local-admin/database.json", db);
-    save("data/public/catalog.json", publicRecords(db));
-    unlinkSync(path(".local-admin/transaction.json"));
-  };
+  const database = () => readDatabase(root);
+  const commitDatabase = (db, expected) =>
+    updateDatabase(root, () => db, expected);
   const assert = (condition, message) => {
     if (!condition) throw new Error(message);
   };
@@ -324,7 +295,7 @@ export function createAdmin(root, port = 4323) {
           JSON.stringify(database()) === plan.fingerprint,
           "O catálogo mudou. Valide o JSON novamente."
         );
-        commitDatabase(plan.database);
+        commitDatabase(plan.database, plan.fingerprint);
         plans.delete(data.planId);
         json(200, {
           summary: plan.summary,
@@ -383,9 +354,10 @@ export function createAdmin(root, port = 4323) {
             JSON.stringify(catalog[index].selections)
         );
         if (changed.length) {
-          let db = database();
-          for (const film of changed) db = saveManual(db, film, true);
-          commitDatabase(db);
+          updateDatabase(root, (db) => {
+            for (const film of changed) db = saveManual(db, film, true);
+            return db;
+          });
         }
       } else if (pathname === "/api/draft") {
         validateDraft(data);
@@ -407,7 +379,11 @@ export function createAdmin(root, port = 4323) {
           (row) => row.fields.id === data.id
         );
         if (!existing?.published)
-          save(".local-admin/database.json", saveManual(db, data, false));
+          updateDatabase(
+            root,
+            (current) => saveManual(current, data, false),
+            fingerprint(db)
+          );
       } else if (pathname === "/api/apply") {
         validateDraft(data);
         const errors = validateCatalog([data], schema, path("public"));
@@ -419,7 +395,7 @@ export function createAdmin(root, port = 4323) {
         );
         const mergedErrors = validateCatalog(catalog, schema, path("public"));
         assert(!mergedErrors.length, mergedErrors.join("\n"));
-        commitDatabase(saveManual(database(), data, true));
+        updateDatabase(root, (current) => saveManual(current, data, true));
         save(
           ".local-admin/drafts.json",
           drafts().filter((f) => f.id !== data.id)

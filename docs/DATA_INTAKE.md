@@ -150,3 +150,7 @@ from official pt-BR/en-US responses, never machine-translated. Posters are chose
 by the existing original-language/neutral/English policy and downloaded locally.
 A work without an eligible poster stays private until corrected. Import dates are
 not invented; “Recently added” requires supplied dates.
+
+## Verified upload handoff
+
+For Archive/Drive upload synchronization, catalog transactions, batch deployment and site-only recovery, follow [the integration contract](PUBLICATION_INTEGRATION.md). Ordinary intake and panel editing remain local until that explicitly authorized publication workflow is used.
