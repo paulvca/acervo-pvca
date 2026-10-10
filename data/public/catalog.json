@@ -30624,5 +30624,176 @@
     "countries": ["Argentina"],
     "genres": ["Crime", "Comedy"],
     "original_languages": ["es"]
+  },
+  {
+    "id": "PVCA-000528",
+    "slug": "book-paper-scissors-2020",
+    "title": "Book-Paper-Scissors",
+    "year": 2020,
+    "copies": [
+      {
+        "id": "pvca-000528-archive",
+        "resolution": "1080p",
+        "size_gib": 6.335509997792542,
+        "format": "MKV",
+        "audio_languages": ["ja"],
+        "subtitle_languages": ["pt-BR", "en"]
+      }
+    ],
+    "catalog_copy_id": "pvca-000528-archive",
+    "poster": "/posters/tmdb-637240-pdnd6zDRJsZbn8Hk9hY7XswCVff.jpg",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/book-paper-scissors-2019-1080p-pvca",
+        "copy_id": "pvca-000528-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 637240,
+    "original_title": "つつんで、ひらいて",
+    "release_date": "2020-07-09",
+    "runtime_minutes": 93,
+    "imdb_id": "tt10256196",
+    "translations": {
+      "pt-BR": {
+        "title": "Book-Paper-Scissors",
+        "synopsis": "Nobuyoshi Kikuchi dedicou a vida aos livros. Ao longo da carreira, criou mais de 15 mil capas. Mesmo na era digital, continua trabalhando com régua, tesoura e lápis, desenhando fontes próprias e escolhendo com rigor as propriedades de cada papel. Ele aprecia a conversa pessoal com os autores, uma boa xícara de café e um passeio pelo mercado de pulgas. Nanako Hirose apresenta o retrato fascinante de uma personalidade aparentemente antiquada — mas talvez seja justamente esse tipo de personalidade que nos inspire a refletir sobre o que realmente tem valor na vida."
+      },
+      "en": {
+        "title": "Book-Paper-Scissors",
+        "synopsis": "Nobuyoshi Kikuchi has devoted his life to books. Over the course of his career, he has designed more than 15,000 book covers. Even in the digital age, he still works with a ruler, scissors, and pencils, creating unique fonts, and being meticulous about the properties of the chosen paper. He enjoys the personal exchange with authors, a good cup of coffee, and a stroll through the flea market. Nanako Hirose presents a fascinating portrait of a seemingly old-fashioned personality – but maybe it is exactly this kind of personality which can give an inspiration to reflect on the really valuable things in life?"
+      }
+    },
+    "synopsis": "Nobuyoshi Kikuchi dedicou a vida aos livros. Ao longo da carreira, criou mais de 15 mil capas. Mesmo na era digital, continua trabalhando com régua, tesoura e lápis, desenhando fontes próprias e escolhendo com rigor as propriedades de cada papel. Ele aprecia a conversa pessoal com os autores, uma boa xícara de café e um passeio pelo mercado de pulgas. Nanako Hirose apresenta o retrato fascinante de uma personalidade aparentemente antiquada — mas talvez seja justamente esse tipo de personalidade que nos inspire a refletir sobre o que realmente tem valor na vida.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Japão"],
+        "genres": ["Documentário"]
+      },
+      "en": {
+        "countries": ["Japan"],
+        "genres": ["Documentary"]
+      }
+    },
+    "added_at": "2026-10-10",
+    "directors": ["Nanako Hirose"],
+    "countries": ["Japan"],
+    "genres": ["Documentary"],
+    "original_languages": ["ja"]
+  },
+  {
+    "id": "PVCA-000529",
+    "slug": "last-scene-2002",
+    "title": "Last Scene",
+    "year": 2002,
+    "copies": [
+      {
+        "id": "pvca-000529-archive",
+        "resolution": "480p",
+        "size_gib": 4.11886106338352,
+        "format": "MKV",
+        "audio_languages": ["ja"],
+        "subtitle_languages": ["pt-BR", "en"]
+      }
+    ],
+    "catalog_copy_id": "pvca-000529-archive",
+    "poster": "/posters/tmdb-206575-qswI4qL8bT1UC189oQZTeVs3v8N.jpg",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/last-scene-2002-pvca",
+        "copy_id": "pvca-000529-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 206575,
+    "original_title": "ラストシーン",
+    "release_date": "2002-11-09",
+    "runtime_minutes": 100,
+    "imdb_id": "tt0347386",
+    "translations": {
+      "pt-BR": {
+        "title": "Last Scene",
+        "synopsis": "O jovem astro de cinema Ken Mihara está prestes a perder o estrelato. Sua ascensão é atribuída unicamente à parceira de cena, Keiko, que acaba de anunciar que deixará a carreira para se casar. Frustrado e impotente, Ken se entrega ao álcool: provoca brigas, tenta levar uma garota para a cama e discute com a esposa, que foi visitá-lo no estúdio. Embora já tenha passado do auge, ele ainda consegue dar a uma jovem cineasta a motivação para perseguir o sonho de dirigir."
+      },
+      "en": {
+        "title": "Last Scene",
+        "synopsis": "Young film star Ken Mihara is about to fall from stardom. His rise as a celebrity is solely credited to his onscreen counterpart, Keiko, who recently announced her retirement from acting in order to get married. Feeling frustrated and helpless, Ken turns to alcohol as he begins to provoke fights, attempts to lure a girl into bed, and argues with his wife, who came to visit him at the studio. Although he's past his prime, he still manages to infuse a young filmmaker with the motivation to pursue her dreams as a director."
+      }
+    },
+    "synopsis": "O jovem astro de cinema Ken Mihara está prestes a perder o estrelato. Sua ascensão é atribuída unicamente à parceira de cena, Keiko, que acaba de anunciar que deixará a carreira para se casar. Frustrado e impotente, Ken se entrega ao álcool: provoca brigas, tenta levar uma garota para a cama e discute com a esposa, que foi visitá-lo no estúdio. Embora já tenha passado do auge, ele ainda consegue dar a uma jovem cineasta a motivação para perseguir o sonho de dirigir.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["Japão"],
+        "genres": ["Drama"]
+      },
+      "en": {
+        "countries": ["Japan"],
+        "genres": ["Drama"]
+      }
+    },
+    "added_at": "2026-10-10",
+    "directors": ["Hideo Nakata"],
+    "countries": ["Japan"],
+    "genres": ["Drama"],
+    "original_languages": ["ja"]
+  },
+  {
+    "id": "PVCA-000530",
+    "slug": "picpus-1943",
+    "title": "Picpus",
+    "year": 1943,
+    "copies": [
+      {
+        "id": "pvca-000530-archive",
+        "resolution": "1080p",
+        "size_gib": 6.908049551770091,
+        "format": "MKV",
+        "audio_languages": ["fr"],
+        "subtitle_languages": ["pt-BR", "fr", "en"]
+      }
+    ],
+    "catalog_copy_id": "pvca-000530-archive",
+    "poster": "/posters/tmdb-117885-9GBDrS9VjrzvPkiW1UIavTdkuh1.jpg",
+    "external_links": [
+      {
+        "provider": "internet_archive",
+        "url": "https://archive.org/details/picpus-1943-pvca",
+        "copy_id": "pvca-000530-archive"
+      }
+    ],
+    "selections": [],
+    "tmdb_id": 117885,
+    "original_title": "Picpus",
+    "release_date": "1943-02-12",
+    "runtime_minutes": 95,
+    "imdb_id": "tt0160664",
+    "translations": {
+      "pt-BR": {
+        "title": "Picpus",
+        "synopsis": "Picpus é uma rua e uma estação de metrô onde foram cometidos vários assassinatos. Maigret tenta encontrar o assassino."
+      },
+      "en": {
+        "title": "Picpus",
+        "synopsis": "Picpus is a street and a subway stop where a number of murders have been committed. Maigret tries to find the killer."
+      }
+    },
+    "synopsis": "Picpus é uma rua e uma estação de metrô onde foram cometidos vários assassinatos. Maigret tenta encontrar o assassino.",
+    "localized_metadata": {
+      "pt-BR": {
+        "countries": ["França"],
+        "genres": ["Mistério", "Drama", "Crime"]
+      },
+      "en": {
+        "countries": ["France"],
+        "genres": ["Mystery", "Drama", "Crime"]
+      }
+    },
+    "added_at": "2026-10-10",
+    "directors": ["Richard Pottier"],
+    "countries": ["France"],
+    "genres": ["Mystery", "Drama", "Crime"],
+    "original_languages": ["fr"]
   }
 ]
