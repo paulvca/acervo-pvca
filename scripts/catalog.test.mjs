@@ -195,6 +195,8 @@ test("CLI check does not write; rejected imports preserve the existing catalog",
   mkdirSync(join(temp, "data/schema"), { recursive: true });
   mkdirSync(join(temp, "data/public"), { recursive: true });
   cpSync(new URL("scripts", root), join(temp, "scripts"), { recursive: true });
+  // The catalog writer formats with the repository's own Prettier.
+  symlinkSync(new URL("node_modules", root), join(temp, "node_modules"));
   writeFileSync(
     join(temp, "data/schema/public-catalog.schema.json"),
     JSON.stringify(schema)

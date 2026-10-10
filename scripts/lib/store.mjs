@@ -13,6 +13,8 @@ import {
 } from "node:fs";
 import { resolve } from "node:path";
 import { randomUUID } from "node:crypto";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import {
   seedDatabase,
   allRecords,
@@ -20,10 +22,12 @@ import {
   saveManual,
 } from "./database.mjs";
 export const fingerprint = (db) => JSON.stringify(db);
-export function atomicJson(file, value) {
+export const atomicJson = (file, value) =>
+  atomicText(file, JSON.stringify(value, null, 2) + "\n");
+function atomicText(file, text) {
   mkdirSync(resolve(file, ".."), { recursive: true, mode: 0o700 });
   const temporary = `${file}.${randomUUID()}.tmp`;
-  writeFileSync(temporary, JSON.stringify(value, null, 2) + "\n", {
+  writeFileSync(temporary, text, {
     mode: 0o600,
     flag: "wx",
   });
@@ -40,6 +44,35 @@ export function atomicJson(file, value) {
   } finally {
     closeSync(directory);
   }
+}
+const site = fileURLToPath(new URL("../../", import.meta.url));
+// Published order and Prettier layout are kept, so a new film is a small diff that CI accepts.
+export function writeCatalog(file, records) {
+  const rank = new Map(
+    (existsSync(file) ? read(file) : []).map((film, index) => [film.id, index])
+  );
+  const ordered = [...records].sort(
+    (a, b) =>
+      (rank.get(a.id) ?? Infinity) - (rank.get(b.id) ?? Infinity) ||
+      a.id.localeCompare(b.id)
+  );
+  atomicText(
+    file,
+    execFileSync(
+      process.execPath,
+      [
+        resolve(site, "node_modules/prettier/bin/prettier.cjs"),
+        "--stdin-filepath",
+        resolve(site, "data/public/catalog.json"),
+      ],
+      {
+        cwd: site,
+        input: JSON.stringify(ordered, null, 2),
+        encoding: "utf8",
+        maxBuffer: 256 * 1024 * 1024,
+      }
+    )
+  );
 }
 export function withStoreLock(root, action, timeout = 10000) {
   const dir = resolve(root, ".local-admin");
@@ -71,7 +104,10 @@ function recover(root) {
   if (!existsSync(journal)) return;
   const pending = read(journal);
   atomicJson(resolve(root, ".local-admin/database.json"), pending);
-  atomicJson(resolve(root, "data/public/catalog.json"), publicRecords(pending));
+  writeCatalog(
+    resolve(root, "data/public/catalog.json"),
+    publicRecords(pending)
+  );
   unlinkSync(journal);
 }
 function load(root) {

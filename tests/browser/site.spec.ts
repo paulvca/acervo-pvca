@@ -56,7 +56,9 @@ test("catalog search, both filters, sort, grid/list and counts", async ({
   page,
 }) => {
   await page.goto("filmes/");
-  await expect(page.locator("#resultCount")).toHaveText("529 filmes");
+  await expect(page.locator("#resultCount")).toHaveText(
+    `${catalog.length} filmes`
+  );
   const order = await page
     .locator(".film-card")
     .evaluateAll((cards) => cards.map((card) => card.getAttribute("href")));

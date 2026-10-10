@@ -15,14 +15,19 @@ import {
   queueFile,
   hash,
 } from "./site-sync.mjs";
-import { withStoreLock } from "./store.mjs";
+import { withStoreLock, writeCatalog } from "./store.mjs";
 import { validateCatalog } from "./catalog.mjs";
 const REPOSITORY = "pv-ca/acervo-pvca";
 const PUBLIC_URL = "https://pv-ca.github.io/acervo-pvca";
+// Inside a git hook, inherited GIT_* variables would point child git commands at the caller's index.
+const environment = Object.fromEntries(
+  Object.entries(process.env).filter(([name]) => !name.startsWith("GIT_"))
+);
 export function command(argv, cwd) {
   return new Promise((done, reject) => {
     const child = spawn(argv[0], argv.slice(1), {
       cwd,
+      env: environment,
       stdio: ["ignore", "pipe", "pipe"],
       signal: AbortSignal.timeout(15 * 60 * 1000),
     });
@@ -122,7 +127,7 @@ export async function publish(
       for (const film of snapshot.records)
         if (!old.some((f) => f.id === film.id) && !allowed.has(film.tmdb_id))
           throw Error("UNRELATED_CATALOG_CHANGES");
-      atomicJson(
+      writeCatalog(
         resolve(staging, "data/public/catalog.json"),
         snapshot.records
       );
