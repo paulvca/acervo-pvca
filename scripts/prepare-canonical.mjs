@@ -120,27 +120,16 @@ console.log(
 if (flags.includes("--apply")) {
   const { seedDatabase, planImport, publicRecords } =
     await import("./lib/database.mjs");
-  const dbFile = resolve(root, ".local-admin/database.json");
-  const before = existsSync(dbFile)
-    ? JSON.parse(readFileSync(dbFile, "utf8"))
-    : seedDatabase(
-        JSON.parse(
-          readFileSync(resolve(root, "data/public/catalog.json"), "utf8")
-        )
+  const { updateDatabase } = await import("./lib/store.mjs");
+  let plan;
+  updateDatabase(root, (before) => {
+    plan = planImport(before, records, schema, resolve(root, "public"));
+    if (plan.summary.rejected)
+      throw Error(
+        "A preparação contém registros rejeitados; nada foi aplicado."
       );
-  const plan = planImport(before, records, schema, resolve(root, "public"));
-  if (plan.summary.rejected)
-    throw Error("A preparação contém registros rejeitados; nada foi aplicado.");
-  const journal = resolve(root, ".local-admin/transaction.json");
-  save(
-    resolve(folder, `database-before-${before.revision}-${Date.now()}.json`),
-    before
-  );
-  save(journal, plan.database);
-  save(dbFile, plan.database);
-  save(resolve(root, "data/public/catalog.json"), publicRecords(plan.database));
-  const { unlinkSync } = await import("node:fs");
-  unlinkSync(journal);
+    return plan.database;
+  });
   save(resolve(folder, "applied.json"), {
     summary: plan.summary,
     items: plan.items,

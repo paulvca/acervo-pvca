@@ -346,3 +346,73 @@ export function planImport(db, input, schema, publicDir) {
     ),
   };
 }
+
+// Additive publication updates. Import remains a separate, replacement-oriented API.
+export function planPublication(db, record, schema, publicDir, sha256) {
+  const matches = Object.entries(db.films).filter(
+    ([, row]) =>
+      row.fields.tmdb_id === record.tmdb_id ||
+      row.fields.id === record.id ||
+      row.fields.slug === record.slug
+  );
+  if (matches.length > 1) throw Error("PUBLICATION_IDENTITY_CONFLICT");
+  const [key, row] = matches[0] ?? [];
+  const old = row ? exportFilm(db, row) : undefined;
+  if (old && old.tmdb_id !== record.tmdb_id)
+    throw Error("PUBLICATION_IDENTITY_CONFLICT");
+  const incoming = structuredClone(record);
+  if (old) {
+    incoming.id = old.id;
+    incoming.slug = old.slug;
+    incoming.catalog_copy_id = old.catalog_copy_id;
+    incoming.selections = old.selections;
+    incoming.copies = structuredClone(old.copies);
+    for (const copy of record.copies ?? []) {
+      const known = incoming.copies.find((c) => c.id === copy.id);
+      const proof = row.sources?.copySha256?.[copy.id];
+      if (proof && proof !== sha256)
+        throw Error("PUBLICATION_COPY_IDENTITY_CONFLICT");
+      if (
+        known &&
+        Object.keys({ ...known, ...copy }).some(
+          (field) =>
+            JSON.stringify(known[field]) !== JSON.stringify(copy[field])
+        )
+      )
+        throw Error("PUBLICATION_COPY_METADATA_CONFLICT");
+      if (!known) incoming.copies.push(copy);
+    }
+    incoming.external_links = structuredClone(old.external_links);
+    for (const link of record.external_links ?? []) {
+      if (
+        !incoming.external_links.some(
+          (l) =>
+            l.provider === link.provider &&
+            l.url === link.url &&
+            l.copy_id === link.copy_id
+        )
+      )
+        incoming.external_links.push(link);
+    }
+  }
+  if (!incoming.title) delete incoming.title;
+  if (!incoming.directors?.length) delete incoming.directors;
+  const plan = planImport(db, [incoming], schema, publicDir);
+  if (plan.items[0].protected.length)
+    throw Error(
+      "PUBLICATION_EDITORIAL_CONFLICT: " + plan.items[0].protected.join(", ")
+    );
+  if (plan.summary.rejected) throw Error(plan.items[0].reasons.join("\n"));
+  const target = key ?? `tmdb:${record.tmdb_id}`;
+  const next = plan.database.films[target];
+  next.sources.copySha256 = { ...next.sources.copySha256 };
+  for (const copy of record.copies ?? [])
+    next.sources.copySha256[copy.id] = sha256;
+  // A repeated receipt must not increment the revision or rewrite source provenance.
+  if (
+    JSON.stringify({ ...plan.database, revision: db.revision }) ===
+    JSON.stringify(db)
+  )
+    plan.database.revision = db.revision;
+  return plan;
+}

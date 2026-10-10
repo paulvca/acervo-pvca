@@ -15,14 +15,14 @@ in the deployment artifact. The workflow uploads only `dist/`.
    to `main`. The workflow builds, validates routes/assets and deploys the site.
 4. Confirm both the successful deployment and the live public URL.
 
-Expected URL: `https://paulvca.github.io/acervo-pvca/`.
+Expected URL: `https://pv-ca.github.io/acervo-pvca/`.
 
 ## Local checks
 
 Normal local previews retain `/` as their base path. To test the Pages path:
 
 ```sh
-npx --no-install astro build --site https://paulvca.github.io --base /acervo-pvca
+npx --no-install astro build --site https://pv-ca.github.io --base /acervo-pvca
 python3 scripts/site_check.py --base /acervo-pvca
 ```
 

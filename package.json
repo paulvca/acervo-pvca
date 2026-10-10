@@ -20,7 +20,9 @@
     "catalog:test": "node --test scripts/catalog.test.mjs",
     "prepare": "husky",
     "catalog:prepare": "node scripts/prepare-canonical.mjs",
-    "canonical:test": "node --test scripts/canonical.test.mjs"
+    "canonical:test": "node --test scripts/canonical.test.mjs",
+    "site:sync": "node scripts/site-sync.mjs",
+    "site:sync:test": "node --test scripts/site-sync.test.mjs"
   },
   "dependencies": {
     "astro": "7.3.5"

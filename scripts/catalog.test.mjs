@@ -354,7 +354,7 @@ test("a real projection drives static pages without preview films or invented ed
       new URL(`node_modules/astro/${astroPackage.bin.astro}`, root).pathname,
       "build",
       "--site",
-      "https://paulvca.github.io",
+      "https://pv-ca.github.io",
       "--base",
       "/acervo-pvca",
     ],

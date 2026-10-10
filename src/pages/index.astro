@@ -4,6 +4,7 @@ const {lang,t,path}=getI18n(Astro.url);
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
+import PrototypeHome from '../components/prototype/PrototypeHome.astro';
 import Footer from '../components/Footer.astro';
 import Poster from '../components/Poster.astro';
 import CollectionStats from '../components/CollectionStats.astro';
@@ -15,6 +16,7 @@ const featuredFilm=sourceFeatured?localizeFilm(sourceFeatured,lang):undefined;
 const recentFilms=sourceRecent.map((film)=>localizeFilm(film,lang));
 ---
 <BaseLayout><Header active="home" /><main id="main">
+<div data-pv="A">
 <section class="wrap intro"><h1>{t("Meu acervo pessoal de cinema.")}</h1><p>{t("Filmes que venho reunindo, preservando e organizando ao longo do tempo.")}</p>{editorial.showStats && <div class="intro-stats"><CollectionStats /></div>}</section>
 {featuredFilm && <>
 <div class="wrap rule"></div>
@@ -29,4 +31,6 @@ const recentFilms=sourceRecent.map((film)=>localizeFilm(film,lang));
 <section class="wrap section"><div class="section-title"><h2>{t("Seleções")}</h2></div><div class="home-selections">{editorial.homeSelectionIds.flatMap(id => selections.filter(selection => selection.id === id && selection.films.length)).map(selection => <a href={path(`/selecoes/${selection.id}/`)}><h3>{t(selection.localized?.[lang]?.title || selection.title)}</h3><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><span>{t("Ver seleção →")}</span></a>)}</div></section>
 <div class="wrap rule"></div>
 <section class="wrap section"><DecadeChart /></section>
+</div>
+{import.meta.env.DEV && <PrototypeHome />}
 </main><Footer /></BaseLayout>

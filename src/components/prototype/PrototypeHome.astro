@@ -1,0 +1,165 @@
+---
+// PROTOTYPE (throwaway): três variantes alternativas da home, na rota "/" via ?variant=A|B|C|D.
+// A = página atual (em index.astro). B/C/D vivem aqui. Somente leitura, só em `astro dev`.
+import {catalog} from '../../data/catalog';
+import {selections} from '../../data/selections';
+import {editorial} from '../../data/editorial';
+import {featuredFilm, recentFilms} from '../../data/home';
+import {filmsByDecade, catalogCopy, hasPtBr} from '../../lib/catalog';
+import {assetPath} from '../../lib/i18n';
+
+const withPoster = catalog.filter(f => f.poster);
+const wall = [...recentFilms, ...withPoster.filter(f => !recentFilms.includes(f))].slice(0, 12);
+const decades = filmsByDecade(catalog);
+const maxDec = Math.max(1, ...decades.map(d => d.count));
+const sels = selections.filter(s => s.films.length);
+const total = catalog.length;
+const n4k = catalog.filter(f => catalogCopy(f)?.resolution === '2160p').length;
+const nPt = catalog.filter(hasPtBr).length;
+const film = (f: any) => `/filmes/${f.slug}/`;
+---
+<!-- ============ B: BUSCA PRIMEIRO ============ -->
+<div data-pv="B" hidden class="pv pv-b">
+  <section class="pv-wide">
+    <h1>Encontre um filme no acervo.</h1>
+    <form action="/filmes/" method="get" role="search">
+      <input type="search" name="q" placeholder={`Buscar entre ${total} filmes: título, diretor ou ano`} aria-label="Buscar filmes" />
+      <button>Buscar</button>
+    </form>
+    <p class="pv-chips">
+      <a href="/filmes/">Todos os {total}</a>
+      <a href="/selecoes/">Com legendas pt-BR · {nPt}</a>
+      <a href="/selecoes/">Em 4K · {n4k}</a>
+      {sels.slice(0,4).map(s => <a href={`/selecoes/${s.id}/`}>{s.title}</a>)}
+    </p>
+  </section>
+  <section class="pv-wide">
+    <div class="pv-head"><h2>Adições recentes</h2><a href="/filmes/">Ver todos →</a></div>
+    <div class="pv-wall">{wall.map(f => <a href={film(f)}><img src={assetPath(f.poster!)} alt={f.title} loading="lazy" /><span class="pv-cap"><b>{f.title}</b>{f.year}</span></a>)}</div>
+  </section>
+  <p class="pv-wide pv-line">{total} filmes · {nPt} com legendas pt-BR · {n4k} em 4K · {sels.length} seleções</p>
+</div>
+
+<!-- ============ C: CARTAZ + TRILHOS ============ -->
+<div data-pv="C" hidden class="pv pv-c">
+  {featuredFilm && <section class="pv-hero">
+    <img class="pv-bg" src={assetPath(featuredFilm.poster!)} alt="" aria-hidden="true" />
+    <div class="pv-hero-in pv-wide">
+      <a href={film(featuredFilm)}><img class="pv-hero-poster" src={assetPath(featuredFilm.poster!)} alt={featuredFilm.title} /></a>
+      <div>
+        <p class="pv-eyebrow">Em destaque</p>
+        <h1>{featuredFilm.title}</h1>
+        <p class="pv-meta">{featuredFilm.director} · {featuredFilm.year} · {featuredFilm.country}</p>
+        <p class="pv-syn">{featuredFilm.synopsis}</p>
+        <a class="pv-btn" href={film(featuredFilm)}>Ver ficha</a>
+        <a class="pv-btn pv-ghost" href="/filmes/">Explorar os {total} filmes</a>
+      </div>
+    </div>
+  </section>}
+  <section class="pv-wide">
+    <div class="pv-head"><h2>Recentemente</h2></div>
+    <div class="pv-rail">{wall.map(f => <a href={film(f)}><img src={assetPath(f.poster!)} alt={f.title} loading="lazy" /><b>{f.title}</b><small>{f.director} · {f.year}</small></a>)}</div>
+  </section>
+  <section class="pv-wide">
+    <div class="pv-head"><h2>Seleções</h2><a href="/selecoes/">Ver todas →</a></div>
+    <div class="pv-rail pv-rail-sel">{sels.slice(0,10).map(s => <a href={`/selecoes/${s.id}/`}>
+      <span class="pv-stack">{s.films.filter((f:any)=>f.poster).slice(0,3).map((f:any,i:number) => <img src={assetPath(f.poster)} alt="" style={`--i:${i}`} loading="lazy" />)}</span>
+      <b>{s.title}</b><small>{s.films.length} filmes</small></a>)}</div>
+  </section>
+</div>
+
+<!-- ============ D: ÍNDICE EDITORIAL ============ -->
+<div data-pv="D" hidden class="pv pv-d">
+  <div class="pv-wide pv-cols">
+    <aside>
+      <h1>Acervo PVCA</h1>
+      <p>Meu acervo pessoal de cinema. {total} filmes reunidos, preservados e organizados ao longo do tempo.</p>
+      <form action="/filmes/" method="get" role="search"><input type="search" name="q" placeholder="Buscar…" aria-label="Buscar filmes" /></form>
+      <h2>Por década</h2>
+      <ol class="pv-dec">{decades.filter(d => d.count).map(d => <li><a href={`/filmes/?q=${String(d.decade).slice(0,3)}`}><span>{d.decade}s</span><i style={`width:${d.count/maxDec*100}%`}></i><em>{d.count}</em></a></li>)}</ol>
+    </aside>
+    <div>
+      <h2>Seleções</h2>
+      <ul class="pv-sellist">{sels.slice(0,8).map(s => <li><a href={`/selecoes/${s.id}/`}>
+        <span class="pv-mini">{s.films.filter((f:any)=>f.poster).slice(0,3).map((f:any) => <img src={assetPath(f.poster)} alt="" loading="lazy" />)}</span>
+        <span><b>{s.title}</b><small>{s.description}</small></span><em>{s.films.length}</em></a></li>)}</ul>
+      <h2>Recentemente</h2>
+      <div class="pv-wall pv-wall-sm">{wall.slice(0,8).map(f => <a href={film(f)}><img src={assetPath(f.poster!)} alt={f.title} loading="lazy" /></a>)}</div>
+    </div>
+  </div>
+</div>
+
+<nav class="pv-switch" aria-label="Protótipo: variantes">
+  <button data-dir="-1" aria-label="Variante anterior">←</button><span id="pv-label">A</span><button data-dir="1" aria-label="Próxima variante">→</button>
+</nav>
+
+<style is:global>
+.pv{padding-bottom:64px}
+.pv-wide{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.pv h1{font-size:clamp(32px,5vw,56px);line-height:1.05;color:var(--color-text-head);margin:48px 0 24px;letter-spacing:-.035em}
+.pv h2{font-size:18px;color:var(--color-text-head);margin:0}
+.pv small{display:block;color:var(--color-text-muted);font-size:13px}
+.pv-head{display:flex;justify-content:space-between;align-items:baseline;margin:40px 0 16px}
+.pv-head a{color:var(--color-text-muted);font-size:14px}
+.pv img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:3px;background:#1c1b1a}
+.pv form{display:flex;gap:8px}
+.pv input[type=search]{flex:1;min-height:52px;padding:0 18px;font-size:18px;background:#1c1b1a;color:var(--color-text-head);border:1px solid #575653;border-radius:6px}
+.pv input[type=search]:focus{outline:2px solid #fffcf0;outline-offset:2px}
+.pv form button,.pv-btn{min-height:52px;padding:0 24px;border:0;border-radius:6px;background:#fffcf0;color:#100f0f;font-weight:600;display:inline-flex;align-items:center;cursor:pointer}
+.pv-ghost{background:transparent;color:var(--color-text-head);border:1px solid #575653;margin-left:8px}
+.pv-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.pv-chips a{padding:6px 14px;border:1px solid var(--color-border);border-radius:99px;font-size:14px}
+.pv-chips a:hover{border-color:#fffcf0;color:#fffcf0}
+.pv-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.pv-wall a{position:relative;display:block}
+.pv-cap{display:flex;flex-direction:column;font-size:13px;color:var(--color-text-muted);margin-top:8px}.pv-cap b{color:var(--color-text-head);font-weight:600}
+.pv-wall a:hover img{outline:2px solid #fffcf0}
+.pv-line{color:var(--color-text-muted);font-size:14px;margin-top:40px;border-top:1px solid var(--color-border);padding-top:16px}
+.pv-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--color-border)}
+.pv-bg{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;filter:blur(50px) brightness(.35);transform:scale(1.2);border-radius:0}
+.pv-hero-in{position:relative;display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;padding:48px 0}
+.pv-hero-poster{box-shadow:0 20px 60px #000a}
+.pv-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--color-text-muted);margin:0}
+.pv-hero h1{margin-top:8px}
+.pv-meta{color:var(--color-text-muted)}.pv-syn{max-width:60ch;font-size:17px;margin-bottom:24px}
+.pv-rail{display:grid;grid-auto-flow:column;grid-auto-columns:168px;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
+.pv-rail a{scroll-snap-align:start}.pv-rail b{display:block;color:var(--color-text-head);font-size:14px;margin-top:8px}
+.pv-rail-sel{grid-auto-columns:220px}
+.pv-stack{display:flex;padding-left:0}.pv-stack img{width:33%;aspect-ratio:2/3;margin-left:-14%;box-shadow:4px 0 12px #000a}.pv-stack img:first-child{margin-left:0}
+.pv-cols{display:grid;grid-template-columns:300px 1fr;gap:64px;padding-top:24px}
+.pv-d aside{position:sticky;top:24px;align-self:start}
+.pv-d aside h1{font-size:40px;margin-top:24px}.pv-d aside h2,.pv-d .pv-cols>div>h2{margin:32px 0 12px}
+.pv-d aside form input{min-height:42px;font-size:15px}
+.pv-dec{list-style:none;padding:0;margin:0}
+.pv-dec a{display:grid;grid-template-columns:56px 1fr 32px;align-items:center;gap:8px;padding:5px 0;font-size:14px}
+.pv-dec i{height:8px;background:#6f6e69;border-radius:1px}.pv-dec a:hover i{background:#fffcf0}.pv-dec em{font-style:normal;text-align:right;color:var(--color-text-muted)}
+.pv-sellist{list-style:none;padding:0;margin:0}
+.pv-sellist a{display:grid;grid-template-columns:96px 1fr 40px;gap:16px;align-items:center;padding:14px 0;border-top:1px solid var(--color-border)}
+.pv-sellist a:hover b{text-decoration:underline}.pv-sellist b{color:var(--color-text-head);display:block}.pv-sellist em{font-style:normal;color:var(--color-text-muted);text-align:right}
+.pv-mini{display:flex}.pv-mini img{width:33%;margin-left:-8%;aspect-ratio:2/3}.pv-mini img:first-child{margin-left:0}
+.pv-wall-sm{grid-template-columns:repeat(8,1fr);gap:8px}
+.pv-switch{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:99;display:flex;align-items:center;gap:12px;padding:6px 8px;background:#fffcf0;color:#100f0f;border-radius:99px;box-shadow:0 8px 30px #000c;font:600 14px/1 system-ui}
+.pv-switch button{border:0;background:#100f0f;color:#fffcf0;width:32px;height:32px;border-radius:50%;cursor:pointer}
+.pv-switch span{min-width:170px;text-align:center}
+@media(max-width:800px){.pv-wall{grid-template-columns:repeat(3,1fr)}.pv-hero-in,.pv-cols{grid-template-columns:1fr}.pv-hero-poster{max-width:200px}.pv-d aside{position:static}.pv-wall-sm{grid-template-columns:repeat(4,1fr)}}
+</style>
+
+<script>
+// Seletor do protótipo: ?variant=, setas ← → (ignora campos de texto).
+const keys=['A','B','C','D'];
+const names:Record<string,string>={A:'A (atual)',B:'B (busca primeiro)',C:'C (cartaz + trilhos)',D:'D (índice editorial)'};
+const cur=()=>{const v=new URLSearchParams(location.search).get('variant')?.toUpperCase();return keys.includes(v!)?v!:'A'};
+function show(v:string){
+  document.querySelectorAll<HTMLElement>('[data-pv]').forEach(el=>el.hidden=el.dataset.pv!==v);
+  document.getElementById('pv-label')!.textContent=names[v];
+  const u=new URL(location.href);u.searchParams.set('variant',v);history.replaceState(null,'',u);
+}
+function step(d:number){show(keys[(keys.indexOf(cur())+d+keys.length)%keys.length])}
+document.querySelectorAll<HTMLButtonElement>('.pv-switch button').forEach(b=>b.onclick=()=>step(+b.dataset.dir!));
+addEventListener('keydown',e=>{
+  const t=e.target as HTMLElement;
+  if(t.matches('input,textarea,[contenteditable]'))return;
+  if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);
+});
+show(cur());
+</script>

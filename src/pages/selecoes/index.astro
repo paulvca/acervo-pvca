@@ -10,7 +10,7 @@ import {isPreview} from '../../data/catalog';
 import {selections} from '../../data/selections';
 ---
 <BaseLayout title="Seleções — Acervo PVCA"><Header active="selections" /><main id="main">
-<section class="wrap page-head"><h1>{t("Seleções")}</h1><p>{t("Percursos pessoais pela coleção. Alguns seguem um cineasta, uma época ou uma cinematografia; outros acompanham interesses e aproximações que surgem ao longo do tempo.")}</p></section>
+<section class="wrap page-head"><h1>{t("Seleções")}</h1><p>{t("Reúno aqui filmes de um mesmo cineasta, período ou país, além de seleções por temas e outros interesses que surgem enquanto vejo e organizo a coleção.")}</p></section>
 <section class="wrap selection-list">{selections.filter(selection => isPreview || selection.films.length > 0).map(selection => <article class="selection-row" id={selection.id}>
 <div class="selection-strip">{selection.films.slice(0,3).map(film => <Poster film={localizeFilm(film,lang)} />)}</div>
 <div class="selection-copy"><h2>{t(selection.localized?.[lang]?.title || selection.title)}</h2><p>{t(selection.localized?.[lang]?.description || selection.description)}</p><p class="count">{selection.films.length} {t(selection.films.length === 1 ? 'filme' : 'filmes')}{isPreview ? t(' nesta prévia') : ''}</p><a class="selection-link" href={path(`/selecoes/${selection.id}/`)} aria-label={`${t("Ver seleção →")} ${t(selection.localized?.[lang]?.title || selection.title)}`}>{t("Ver seleção →")}</a></div>
