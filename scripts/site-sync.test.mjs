@@ -401,3 +401,105 @@ test("missing cinematic fields remain a private draft when enrichment is unavail
     0
   );
 });
+test("an Archive item becomes a film from public evidence alone; repeats and mismatches change nothing", async () => {
+  const { observeArchive, resolutionClass } =
+    await import("./lib/archive-observed.mjs");
+  const root = environment(),
+    bytes = 3 * 2 ** 30;
+  const item = {
+    metadata: {
+      identifier: "test-film-2000-1080p-pvca",
+      title: "Test film (2000)",
+      creator: "Director",
+      year: "2000",
+      "external-identifier": "urn:tmdb:123",
+    },
+    files: [
+      {
+        name: "Test.mkv",
+        source: "original",
+        size: String(bytes),
+        md5: "b".repeat(32),
+      },
+      {
+        name: "Test.mp4",
+        source: "derivative",
+        size: "1",
+        md5: "c".repeat(32),
+      },
+    ],
+  };
+  const ffprobe = {
+    format: { format_name: "matroska,webm", size: String(bytes) },
+    streams: [
+      { codec_type: "video", width: 1920, height: 804 },
+      { codec_type: "audio", tags: { language: "fre" } },
+      { codec_type: "subtitle", tags: { language: "por", title: "Brasil" } },
+    ],
+  };
+  const options = {
+    authorization: "current user request",
+    batch: "batch",
+    today: "2026-10-10",
+    overrides: {
+      countries: ["France"],
+      poster: "/posters/test.png",
+      translations: {
+        "pt-BR": { synopsis: "Texto" },
+        en: { synopsis: "Text" },
+      },
+    },
+    metadataOf: async () => item,
+    probe: async () => ffprobe,
+    // TMDB names the director in the original script; the English search result carries the romanized name.
+    enrich: async () => ({ title: "Filme", year: 2000, directors: ["監督"] }),
+    search: async () => [{ id: 123, directors: ["Diréctor"] }],
+  };
+  const observe = (changes = {}) =>
+    observeArchive(root, item.metadata.identifier, { ...options, ...changes });
+  await assert.rejects(
+    observe({
+      search: async () => [{ id: 123, directors: ["Someone else"] }],
+    }),
+    /TMDB_DIRECTOR_DOES_NOT_MATCH/
+  );
+  await assert.rejects(observe({ tmdbId: 999 }), /TMDB_IDENTITY_CONFLICT/);
+  await assert.rejects(
+    observe({ probe: async () => ({ ...ffprobe, format: { size: "1" } }) }),
+    /ARCHIVE_MEDIA_SIZE_MISMATCH/
+  );
+  await assert.rejects(observe({ authorization: " " }), /SITE_AUTHORIZATION/);
+  assert.equal(allRecords(readDatabase(root)).length, 0);
+
+  const observed = await observe();
+  assert.equal(observed.status, "OBSERVED");
+  assert.deepEqual(observed.warnings, []);
+  const queue = await stage(root, observed.receipt);
+  assert.equal(
+    queue.events["archive-test-film-2000-1080p-pvca"].status,
+    "APPLIED"
+  );
+  const [film] = allRecords(readDatabase(root));
+  assert.deepEqual(
+    [film.id, film.slug, film.added_at, film.copies[0].resolution],
+    ["PVCA-000001", "test-film-2000", "2026-10-10", "1080p"]
+  );
+  assert.deepEqual([film.title, film.directors], ["Test film", ["Director"]]);
+  assert.deepEqual(film.copies[0].audio_languages, ["fr"]);
+  assert.deepEqual(film.copies[0].subtitle_languages, ["pt-BR"]);
+  assert.equal(film.copies[0].size_gib, 3);
+  assert.equal(
+    film.external_links[0].url,
+    "https://archive.org/details/test-film-2000-1080p-pvca"
+  );
+  assert.deepEqual(await observe(), {
+    status: "ALREADY_ON_SITE",
+    id: "PVCA-000001",
+  });
+  assert.equal(
+    resolutionClass({ width: 720, height: 480, field_order: "tt" }),
+    "480i"
+  );
+  assert.equal(resolutionClass({ width: 3840, height: 1608 }), "2160p");
+  assert.equal(resolutionClass({ width: 960, height: 720 }), "720p");
+});

@@ -29,11 +29,14 @@ export function validateReceipt(receipt, schema) {
     "SITE_AUTHORIZATION_REQUIRED"
   );
   const proof = receipt.verification;
+  // A remotely observed Archive copy is identified by the MD5 the Archive itself publishes.
   requireValue(
     proof?.status === "VERIFIED" &&
       Number.isSafeInteger(proof.bytes) &&
       proof.bytes > 0 &&
-      /^[a-f0-9]{64}$/.test(proof.sha256 ?? ""),
+      (proof.adapter === "archive-observed"
+        ? /^[a-f0-9]{32}$/.test(proof.md5 ?? "") && !proof.sha256
+        : /^[a-f0-9]{64}$/.test(proof.sha256 ?? "")),
     "REMOTE_VERIFICATION_REQUIRED"
   );
   requireValue(
@@ -71,8 +74,9 @@ export function validateReceipt(receipt, schema) {
   if (destination?.provider === "internet_archive") {
     requireValue(
       safe(destination.identifier) &&
-        proof.adapter === "archive-job" &&
-        proof.public_status === "VERIFIED_PUBLIC_DESCRIPTION",
+        (proof.adapter === "archive-observed" ||
+          (proof.adapter === "archive-job" &&
+            proof.public_status === "VERIFIED_PUBLIC_DESCRIPTION")),
       "ARCHIVE_PUBLIC_READBACK_REQUIRED"
     );
     film.external_links.push({
@@ -102,6 +106,7 @@ export function validateReceipt(receipt, schema) {
   } else throw Error("UNSUPPORTED_DESTINATION");
   return film;
 }
+const copyProof = (proof) => proof.sha256 ?? `md5:${proof.md5}`;
 function assertEvidence(receipt) {
   for (const entry of receipt.verification.evidence) {
     const info = lstatSync(entry.path);
@@ -231,7 +236,7 @@ export function apply(root, batch) {
           event.record,
           schema,
           resolve(root, "public"),
-          event.receipt.verification.sha256
+          copyProof(event.receipt.verification)
         );
         return plan.database;
       });
