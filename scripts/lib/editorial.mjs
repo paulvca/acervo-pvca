@@ -127,12 +127,15 @@ export function manualSelectionFilms(selection, catalog) {
   return catalog.filter((film) => slugs.has(film.slug));
 }
 
+// Films added on the same day keep the order they entered the catalog, newest first.
 export function recentEntries(catalog, limit) {
   return catalog
     .filter((film) => film.addedAt)
     .sort(
       (a, b) =>
-        b.addedAt.localeCompare(a.addedAt) || a.title.localeCompare(b.title)
+        b.addedAt.localeCompare(a.addedAt) ||
+        (b.id ?? "").localeCompare(a.id ?? "") ||
+        a.title.localeCompare(b.title)
     )
     .slice(0, limit);
 }

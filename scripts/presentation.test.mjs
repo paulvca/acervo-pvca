@@ -206,3 +206,22 @@ test("equivalent cross-provider copies share details and retain both access acti
     "Cópias do Archive e do Drive"
   );
 });
+
+test("a title with no readable translation falls back to the main title", async () => {
+  const { localizeFilm } = await import("../src/lib/i18n.ts");
+  const film = {
+    slug: "new-year-trip-1968",
+    title: "New Year Trip",
+    originalTitle: "喜劇　初詣列車",
+    director: "Masaharu Segawa",
+    year: 1968,
+    translations: {
+      "pt-BR": { title: "喜劇　初詣列車" },
+      en: { title: "New Year Trip" },
+    },
+  };
+  assert.equal(localizeFilm(film, "pt-BR").title, "New Year Trip");
+  assert.equal(localizeFilm(film, "pt-BR").originalTitle, "喜劇　初詣列車");
+  film.translations["pt-BR"].title = "Viagem de Ano-Novo";
+  assert.equal(localizeFilm(film, "pt-BR").title, "Viagem de Ano-Novo");
+});

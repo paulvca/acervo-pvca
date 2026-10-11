@@ -16,6 +16,7 @@ export interface CatalogExternalLink {
 }
 
 export interface CatalogPreviewFilm {
+  id?: string;
   slug: string;
   title: string;
   originalTitle?: string;
