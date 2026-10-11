@@ -26,6 +26,15 @@ test("recent films use supplied entry dates, not array position or resolution", 
     ["New", "Old"]
   );
   assert.equal(films[0].title, "Old");
+  const sameDay = ["PVCA-000001", "PVCA-000003", "PVCA-000002"].map((id) => ({
+    id,
+    title: id === "PVCA-000003" ? "Zebra" : "Alpha " + id,
+    addedAt: "2026-10-10",
+  }));
+  assert.deepEqual(
+    recentEntries(sameDay, 3).map((f) => f.id),
+    ["PVCA-000003", "PVCA-000002", "PVCA-000001"]
+  );
   const config = JSON.parse(
     readFileSync(new URL("data/public/editorial.json", root))
   );

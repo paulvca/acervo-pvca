@@ -156,6 +156,7 @@ export function validateCatalog(value, schema, publicDir) {
 // Project only allowlisted fields; source rows never pass through to the UI.
 export function toRuntimeFilm(film) {
   return {
+    id: film.id,
     slug: film.slug,
     title: film.title,
     addedAt: film.added_at ?? undefined,

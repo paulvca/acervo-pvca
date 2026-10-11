@@ -33,6 +33,10 @@ export function languageName(value: string, lang: string) {
   }
   return translate(lang, value);
 }
+// TMDB returns the original title when a language has no translation; one in
+// a non-Latin script gives way to the main title and stays as the original.
+const readableTitle = (title?: string | null) =>
+  title && /\p{Script=Latin}|\p{N}/u.test(title) ? title : undefined;
 export function localizeFilm(
   film: CatalogPreviewFilm,
   lang: string
@@ -41,7 +45,7 @@ export function localizeFilm(
   const metadata = film.localizedMetadata?.[lang as "en" | "pt-BR"];
   return {
     ...film,
-    title: values?.title || film.title,
+    title: readableTitle(values?.title) || film.title,
     synopsis:
       values?.synopsis ||
       (film.synopsis ? translate(lang, film.synopsis) : undefined),
